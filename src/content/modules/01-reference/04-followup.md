@@ -59,7 +59,9 @@ of you a wasted visit.
 
 Write `outputs/archives-researcher-followup.md`:
 
-`Read outputs/archives-request-brief.md and outputs/archives-access-points.xlsx. Draft a 200-260 word reply to the researcher and write it to outputs/archives-researcher-followup.md. Summarize how the request has been scoped, name the candidate units of description without choosing between them, state plainly which of the requester's stated assumptions we will need to correct and what the actual position is, list the next three archivist actions, and identify the one question we need them to answer before a visit is worth booking. Do not state that any material is open, digitized, or cleared for publication. Do not promise a reproduction turnaround. Offer a consultation.`
+```cowork-prompt
+Read outputs/archives-request-brief.md and outputs/archives-access-points.xlsx. Draft a 200-260 word reply to the researcher and write it to outputs/archives-researcher-followup.md. Summarize how the request has been scoped, name the candidate units of description without choosing between them, state plainly which of the requester's stated assumptions we will need to correct and what the actual position is, list the next three archivist actions, and identify the one question we need them to answer before a visit is worth booking. Do not state that any material is open, digitized, or cleared for publication. Do not promise a reproduction turnaround. Offer a consultation.
+```
 
 Then add the disclosure sentence as in step 1, and run the send gate in step 2 with two items added:
 nothing in the reply asserts an access condition or a rights position that the description actually

@@ -106,7 +106,11 @@ Open `sample-data/archives/digitization-inventory.csv` yourself first, as step 0
 before you prompt anything: how many items you think are in the batch, and what you think "complete"
 means in the transcription column. Both of those are the assumptions this exercise is about.
 
-Then substitute this for step 1: `Read sample-data/archives/digitization-inventory.csv from the connected folder. Report the row count, the column names, every distinct value in each of the date, condition, rights, access, and transcription columns, and any empty fields. Then state explicitly which column identifies an item, how a count of the items in this batch would be derived from the file, and what you are assuming the transcription status column measures — on what basis, and what would have to be checked to confirm it. Do not calculate anything and do not normalize any value.`
+Then substitute this for step 1:
+
+```cowork-prompt
+Read sample-data/archives/digitization-inventory.csv from the connected folder. Report the row count, the column names, every distinct value in each of the date, condition, rights, access, and transcription columns, and any empty fields. Then state explicitly which column identifies an item, how a count of the items in this batch would be derived from the file, and what you are assuming the transcription status column measures — on what basis, and what would have to be checked to confirm it. Do not calculate anything and do not normalize any value.
+```
 
 For step 2, write the analysis to `outputs/archives-digitization-analysis.md`, showing the formula,
 the inputs, and the denominator for every figure: the completion rate, stated together with the

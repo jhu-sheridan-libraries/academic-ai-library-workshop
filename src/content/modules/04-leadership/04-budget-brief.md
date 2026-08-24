@@ -8,9 +8,7 @@ steps:
     label: "Open a skill you already have"
     type: "workspace"
     instruction: |
-      Before writing one, read one. Ask Claude:
-
-      `Show me the SKILL.md file for the reference-interview practice skill I installed, exactly as it is written. Then show me the one for the review-ai-research-output skill.`
+      Before writing one, read one. Send Claude the prompt below.
 
       Look at what arrives. Each is a Markdown file with two lines at the top between two rows of dashes, then ordinary prose headings and numbered instructions. That is the whole format:
 
@@ -28,6 +26,8 @@ steps:
       Now read the two `description` lines side by side and notice what they are doing. Neither one describes the steps the skill performs. Both describe the situations in which the skill applies — "use when a librarian... wants to practice question negotiation," "use when a research librarian... asks to inspect a research report, search plan, citation list." They are lists of circumstances, written in the words someone would actually use when they had that problem.
 
       That is not a stylistic choice. The `description` is the only part Claude reads when deciding whether to load the skill.
+    prompt_text: |
+      Show me the SKILL.md file for the reference-interview practice skill I installed, exactly as it is written. Then show me the one for the review-ai-research-output skill.
     checkpoint: "You have read both SKILL.md files and can name the two frontmatter fields and say which one determines whether the skill triggers."
     facilitator_note: "Spend real time here — two or three minutes of reading buys back ten minutes of debugging later. The insight to land is descriptions describe situations, not procedures. If anyone asks about YAML, tell them the format is a name and a description between two rows of dashes and move on. Nobody needs the specification."
   - index: 1
@@ -40,9 +40,9 @@ steps:
 
       List several situations rather than one. Include the words people actually say: reproducible search, evidence scan, literature request, handoff, search log, methods note.
 
-      Then paste your draft to Claude and ask:
-
-      `Here is a draft skill description. Does it describe situations someone would find themselves in, or does it describe steps the skill performs? Rewrite it as situations if I have got that wrong, and tell me which realistic requests it would fail to catch.`
+      Then send Claude the prompt below and paste your draft after it.
+    prompt_text: |
+      Here is a draft skill description. Does it describe situations someone would find themselves in, or does it describe steps the skill performs? Rewrite it as situations if I have got that wrong, and tell me which realistic requests it would fail to catch.
     checkpoint: "You have a description written in situational language, naming several distinct circumstances, in the vocabulary a colleague would use."
     facilitator_note: "Almost everyone writes a procedure description on the first attempt — 'this skill takes a request and produces a search log.' That is the mistake worth making here rather than at step four. Do not correct it for them; let Claude's rewrite show the difference."
   - index: 2
@@ -78,13 +78,13 @@ steps:
     instruction: |
       A saved skill that never loads is worse than no skill, because you will assume it ran. So test it, and test it the way it will actually be used.
 
-      Start a **fresh conversation**. Not a new message in this one — the context here would help it along and tell you nothing.
+      Start a **fresh conversation**. Not a new message in this one — the context here would help it along and tell you nothing. The link below opens one.
 
-      Then describe the task in ordinary words, as a colleague would, and do not name the skill or the file:
-
-      `A faculty member has sent me a literature request and I need to produce a search record I can hand to another librarian.`
+      Then describe the task in ordinary words, as a colleague would, and do not name the skill or the file. The prompt below is written that way.
 
       Watch what happens. You are looking for two things: whether Claude loaded your skill at all, and whether what it then did resembles your workflow — the same stages, the same files, and crucially the same places where it stops and asks you.
+    prompt_text: |
+      A faculty member has sent me a literature request and I need to produce a search record I can hand to another librarian.
     checkpoint: "You have run a plainly worded request in a fresh conversation and can say whether the skill loaded and whether its behaviour matched your workflow."
     facilitator_note: "Insist on the fresh conversation; testing in context is the mistake that makes people think a broken skill works. Expect roughly half the room to see it fail to trigger. That is a good outcome and the next step is the most valuable minutes of the course — do not rescue anyone here."
   - index: 5
@@ -93,13 +93,13 @@ steps:
     instruction: |
       If it did not trigger, the problem is almost certainly your description, not your instructions. This is the most common way an authored skill fails, and it fails silently — Claude answers helpfully from general knowledge and nothing tells you the skill sat unused.
 
-      Diagnose it. In the fresh conversation, ask:
-
-      `Read my reproducible-search-handoff skill's description. I asked you for help with a faculty literature request and a search record, and the skill did not load. Which words in my request should have matched, and what is the description missing?`
+      Diagnose it. Send the prompt below — it only has to read your description, so it works in the conversation where the skill failed or in a fresh one.
 
       Then revise the description in `outputs/reproducible-search-handoff/SKILL.md` — usually by adding the plain vocabulary you actually used and the neighbouring situations you did not think of. Repackage, save the skill again, start another fresh conversation, and test again with *different* wording than last time.
 
       If it triggered the first time, do not stop. Test it with a request that should *not* match — ask for help finding a book on the shelf — and confirm it stays out of the way. A description broad enough to catch everything is its own failure.
+    prompt_text: |
+      Read my reproducible-search-handoff skill's description. I asked you for help with a faculty literature request and a search record, and the skill did not load. Which words in my request should have matched, and what is the description missing?
     checkpoint: "You have revised the description and retested in a fresh conversation, and you can name the specific change that fixed the triggering, or confirm the skill correctly stays out of an unrelated request."
     facilitator_note: "The durable lesson of the whole course is here: authoring a skill is a test-and-revise loop, and the description is the part under test. Timebox to about five minutes and accept a skill that triggers unreliably — knowing why is worth more than a working artifact. Ask two or three people to read out the words they had to add."
   - index: 6
@@ -197,7 +197,9 @@ descriptive audit."
 
 For step 2, substitute:
 
-`Read outputs/archives-workflow.md from the connected folder. Turn it into a skill. Write outputs/description-remediation-review/SKILL.md with frontmatter containing exactly two fields, name and description. Use name: description-remediation-review. For description, use the wording I gave you, unchanged — do not improve it. Below the frontmatter, write the instructions as prose and numbered steps, addressed to you rather than to me: what to read, what to produce, which file each stage writes, where to stop and ask, and which decisions to hand back to the archivist. Carry across every stop-or-escalate condition and every human-only marking from outputs/archives-workflow.md. Do not soften them. Include a final section instructing you to assemble a review package with the sections named in the workflow, marking anything not completed as pending rather than filling it in. Then package the folder as outputs/description-remediation-review.skill so I can install it.`
+```cowork-prompt
+Read outputs/archives-workflow.md from the connected folder. Turn it into a skill. Write outputs/description-remediation-review/SKILL.md with frontmatter containing exactly two fields, name and description. Use name: description-remediation-review. For description, use the wording I gave you, unchanged — do not improve it. Below the frontmatter, write the instructions as prose and numbered steps, addressed to you rather than to me: what to read, what to produce, which file each stage writes, where to stop and ask, and which decisions to hand back to the archivist. Carry across every stop-or-escalate condition and every human-only marking from outputs/archives-workflow.md. Do not soften them. Include a final section instructing you to assemble a review package with the sections named in the workflow, marking anything not completed as pending rather than filling it in. Then package the folder as outputs/description-remediation-review.skill so I can install it.
+```
 
 If you chose digitization rights triage instead, use `outputs/digitization-rights-triage/SKILL.md` and
 the matching name and package. Either way, one stop condition has to survive into the skill intact: it

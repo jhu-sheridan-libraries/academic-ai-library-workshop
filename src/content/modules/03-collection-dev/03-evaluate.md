@@ -90,7 +90,9 @@ the one that gets approved and the one that fails.
 
 Write `outputs/archives-processing-plan.md` from the matrix and nothing else:
 
-`Read outputs/archives-evidence-matrix.xlsx from the connected folder and write a processing proposal to outputs/archives-processing-plan.md. Keep it to about 220 words. Organize by decision rather than by material: what can be described now, what cannot be described until something else is resolved, what cannot be opened until it is surveyed, and what no amount of processing will settle. Refer to each body of material as the matrix names it. Use only the matrix — not the accession note, not your own knowledge of archival practice, and nothing outside the connected folder. Do not propose a timeline the matrix gives you no basis for.`
+```cowork-prompt
+Read outputs/archives-evidence-matrix.xlsx from the connected folder and write a processing proposal to outputs/archives-processing-plan.md. Keep it to about 220 words. Organize by decision rather than by material: what can be described now, what cannot be described until something else is resolved, what cannot be opened until it is surveyed, and what no amount of processing will settle. Refer to each body of material as the matrix names it. Use only the matrix — not the accession note, not your own knowledge of archival practice, and nothing outside the connected folder. Do not propose a timeline the matrix gives you no basis for.
+```
 
 Then ask for the strongest alternative reading, as step 1 does — a different order of priorities built
 from the same rows, contradicting nothing, and a short statement of which weighting choices separate

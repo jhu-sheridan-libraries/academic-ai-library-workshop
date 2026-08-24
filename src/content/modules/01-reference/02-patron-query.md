@@ -20,11 +20,9 @@ steps:
     instruction: |
       A brief built from a written request is missing whatever the requester did not think to write down. Recovering that is the reference interview, and it is a conversation, not a form.
 
-      Ask Claude, in your own words:
-
-      `Practise a reference interview with me. Intermediate difficulty, about six minutes.`
-
-      The reference-interview practice skill you installed during setup will pick this up. Claude plays a patron who volunteers only what a real patron would volunteer. Interview them, then read the debrief it gives you.
+      Ask for the role-play in your own words, or send the prompt below as it stands. The reference-interview practice skill you installed during setup will pick it up either way. Claude plays a patron who volunteers only what a real patron would volunteer. Interview them, then read the debrief it gives you.
+    prompt_text: |
+      Practise a reference interview with me. Intermediate difficulty, about six minutes.
     checkpoint: "You completed a role-played interview and received a debrief naming at least one question that came too late or went unasked."
     facilitator_note: "This is a skill, not a scripted prompt, so no two runs are identical — that is the point. If the skill does not trigger, have the learner say 'use the reference interview practice skill'. Timebox firmly; the role-play is absorbing and will overrun."
   - index: 2
@@ -81,7 +79,9 @@ the archives track reads it.
 
 Substitute this for step 0:
 
-`Read sample-data/archives/collection-request.txt and write a reading room request brief to outputs/archives-request-brief.md in the connected folder. Use these headings: Deliverable; Subject as stated; Candidate units of description; Creator or provenance in question; Date range; Formats needed; Access conditions to check; Reproduction and rights needs; Requester's assumptions to correct; Known ambiguities; Missing information. Under candidate units, list every kind of holding the subject could be documented in and do not choose between them. Use only the request file. Mark anything absent as "ask the researcher."`
+```cowork-prompt
+Read sample-data/archives/collection-request.txt and write a reading room request brief to outputs/archives-request-brief.md in the connected folder. Use these headings: Deliverable; Subject as stated; Candidate units of description; Creator or provenance in question; Date range; Formats needed; Access conditions to check; Reproduction and rights needs; Requester's assumptions to correct; Known ambiguities; Missing information. Under candidate units, list every kind of holding the subject could be documented in and do not choose between them. Use only the request file. Mark anything absent as "ask the researcher."
+```
 
 Then run the interview role-play in step 1 exactly as written — question negotiation is question
 negotiation, and the practice skill plays a patron rather than a discipline. For step 2, generate

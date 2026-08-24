@@ -96,7 +96,9 @@ column nobody exports.
 
 Build `outputs/archives-description-inventory.xlsx`:
 
-`Read sample-data/archives/digitization-inventory.csv from the connected folder and write outputs/archives-description-inventory.xlsx, one row per record in the file. Copy every field exactly as given, including anything incomplete, inconsistent, or contradictory. Do not correct it, do not normalize the dates, do not complete it from your own knowledge, and do not merge or drop any row. Add four empty columns for me: my verification level; what this row asserts that its own notes do not support; remediation needed; my note. Then tell me how many distinct identifiers the file contains and how many rows.`
+```cowork-prompt
+Read sample-data/archives/digitization-inventory.csv from the connected folder and write outputs/archives-description-inventory.xlsx, one row per record in the file. Copy every field exactly as given, including anything incomplete, inconsistent, or contradictory. Do not correct it, do not normalize the dates, do not complete it from your own knowledge, and do not merge or drop any row. Add four empty columns for me: my verification level; what this row asserts that its own notes do not support; remediation needed; my note. Then tell me how many distinct identifiers the file contains and how many rows.
+```
 
 For step 1, do your own checking without leaving the folder. Choose at least four rows and read each
 one against the rest of the material: the finding aid, the accession note, and the row's own notes
@@ -111,7 +113,9 @@ already in the folder. Three files describe photographic material from the same 
 `sample-data/archives/finding-aid-draft.md`, and `sample-data/archives/accession-note.txt`. Read all
 three and set their descriptions beside one another:
 
-`Add a sheet named "Cross-check" to outputs/archives-description-inventory.xlsx. Read sample-data/archives/finding-aid-draft.md and sample-data/archives/accession-note.txt. For every photographic holding described in any of the three files, put side by side: the file it comes from; the creator each file gives it; the dates each file gives it; the rights position each file takes; the access condition each file states; and a final column reading "agrees", "disagrees", or "cannot tell". Fill the final column only from these three files. Do not decide which file is right and do not resolve any disagreement. Report it.`
+```cowork-prompt
+Add a sheet named "Cross-check" to outputs/archives-description-inventory.xlsx. Read sample-data/archives/finding-aid-draft.md and sample-data/archives/accession-note.txt. For every photographic holding described in any of the three files, put side by side: the file it comes from; the creator each file gives it; the dates each file gives it; the rights position each file takes; the access condition each file states; and a final column reading "agrees", "disagrees", or "cannot tell". Fill the final column only from these three files. Do not decide which file is right and do not resolve any disagreement. Report it.
+```
 
 ## Discussion
 

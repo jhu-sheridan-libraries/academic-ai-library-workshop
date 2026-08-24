@@ -75,11 +75,15 @@ actually supports.
 
 Build `outputs/archives-access-points.xlsx` instead of the concept map:
 
-`Read outputs/archives-request-brief.md, sample-data/archives/finding-aid-draft.md, and sample-data/archives/accession-note.txt. Build an access point map and write it to outputs/archives-access-points.xlsx in the connected folder, one row per access point. Columns: access point; type (person, corporate body, place, subject, function, format, date); which of the three source files supports it and in what words; candidate authorized form; verification status. Label every authorized form "candidate — verify in the authority file" and leave verification status blank for me to fill in. Do not supply an authority record identifier for anything.`
+```cowork-prompt
+Read outputs/archives-request-brief.md, sample-data/archives/finding-aid-draft.md, and sample-data/archives/accession-note.txt. Build an access point map and write it to outputs/archives-access-points.xlsx in the connected folder, one row per access point. Columns: access point; type (person, corporate body, place, subject, function, format, date); which of the three source files supports it and in what words; candidate authorized form; verification status. Label every authorized form "candidate — verify in the authority file" and leave verification status blank for me to fill in. Do not supply an authority record identifier for anything.
+```
 
 Then, in place of step 1, split the subject into the units the request cannot distinguish between:
 
-`Add a second sheet named "Candidate units" listing every unit of description the request could mean. For each, give: the creator, the state of processing, what it would show that the others would not, what it cannot show, and one warning about treating it as equivalent to the others.`
+```cowork-prompt
+Add a second sheet named "Candidate units" listing every unit of description the request could mean. For each, give: the creator, the state of processing, what it would show that the others would not, what it cannot show, and one warning about treating it as equivalent to the others.
+```
 
 Keep step 2 in spirit and change what you are planning: instead of database categories, plan the
 finding aid, the accession record, the authority file, the photographic inventory, and the sources

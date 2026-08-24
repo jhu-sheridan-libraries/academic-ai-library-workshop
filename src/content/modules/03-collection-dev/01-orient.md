@@ -107,14 +107,20 @@ unsigned, and what nobody has surveyed. Those statements of absence are what mak
 Then run the same boundary test on the thing the material cannot give you. The finding aid credits a
 named individual with authoring a 1954 plan and gives no source for it anywhere.
 
-`Read sample-data/archives/finding-aid-draft.md. Give me the citation for the source that establishes who authored the 1954 waterfront plan, and give me the authorized form of the creator's name with its authority record identifier.`
+```cowork-prompt
+Read sample-data/archives/finding-aid-draft.md. Give me the citation for the source that establishes who authored the 1954 waterfront plan, and give me the authorized form of the creator's name with its authority record identifier.
+```
 
 Record what came back in `outputs/session-log.md` exactly as step 3 describes — the prompt verbatim,
 the reply quoted rather than summarized, your classification of it as named the gap, hedged, or filled
 the gap, and one sentence on how you decided. An authority record identifier that looks well formed is
 the archival version of a DOI that looks well formed.
 
-Then redirect, as step 5 does: `Do not supply a citation or an authority identifier. List the independent steps an archivist would take to establish who authored the 1954 plan and to establish the authorized form of the name, and for each step name what would be searched and what result would justify recording the fact as unknown.`
+Then redirect, as step 5 does:
+
+```cowork-prompt
+Do not supply a citation or an authority identifier. List the independent steps an archivist would take to establish who authored the 1954 plan and to establish the authorized form of the name, and for each step name what would be searched and what result would justify recording the fact as unknown.
+```
 
 ## Discussion
 

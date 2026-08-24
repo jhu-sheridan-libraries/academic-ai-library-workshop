@@ -97,7 +97,9 @@ That note is this file's equivalent of the scan's run statistics.
 
 Substitute this for step 1:
 
-`Read sample-data/archives/finding-aid-draft.md from the connected folder. List every assertion the finding aid makes about the collection, in the order it makes them. For each one give: the assertion in the file's own words; the element it appears in; and what it would have to be checked against — the containers, an external source, a donor agreement, an authority file, or nothing available. Do not evaluate the assertions, do not check anything, and do not add anything from your own knowledge. Append the list to outputs/session-log.md under a new heading "Module 2 - assertions in the finding aid".`
+```cowork-prompt
+Read sample-data/archives/finding-aid-draft.md from the connected folder. List every assertion the finding aid makes about the collection, in the order it makes them. For each one give: the assertion in the file's own words; the element it appears in; and what it would have to be checked against — the containers, an external source, a donor agreement, an authority file, or nothing available. Do not evaluate the assertions, do not check anything, and do not add anything from your own knowledge. Append the list to outputs/session-log.md under a new heading "Module 2 - assertions in the finding aid".
+```
 
 Keep step 2 as written but change the three tasks: **A.** reformat a container list you supply into a
 table. **B.** pull the stated date range, extent, and restriction out of the finding aid. **C.**

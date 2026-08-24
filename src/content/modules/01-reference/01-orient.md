@@ -10,9 +10,9 @@ steps:
     instruction: |
       Open Cowork and confirm the workshop folder is connected. The folder path should be the workshop folder itself, not your Documents folder and not your home directory.
 
-      Ask Claude: `List the files you can see in the connected folder, and tell me what you cannot reach.`
-
-      Read the answer against what you expected. This is the data boundary, and unlike a chat window it is a boundary you set deliberately and can see.
+      Then send Claude the prompt below and read the answer against what you expected. This is the data boundary, and unlike a chat window it is a boundary you set deliberately and can see.
+    prompt_text: |
+      List the files you can see in the connected folder, and tell me what you cannot reach.
     checkpoint: "You can state which folder Claude can read and write, and name something outside it that Claude cannot reach."
     facilitator_note: "Learners coming from ChatGPT or Copilot often expect an upload button. Draw out the difference: a connected folder is standing access to everything inside it, including files added later, rather than a per-message attachment."
   - index: 1
@@ -43,11 +43,11 @@ steps:
     label: "Watch an action before you approve it"
     type: "workspace"
     instruction: |
-      Cowork can change files, so it will ask before it does. Give it something to ask about:
-
-      `Create a file called outputs/session-log.md in the connected folder. Put today's date in it and a one-line note that I have started the workshop.`
+      Cowork can change files, so it will ask before it does. Give it something to ask about by sending the prompt below.
 
       Before you approve, read what it proposes to do: which file, where, and what goes in it. Approve it, then open the file yourself to confirm it says what you expected.
+    prompt_text: |
+      Create a file called outputs/session-log.md in the connected folder. Put today's date in it and a one-line note that I have started the workshop.
     checkpoint: "The file exists in outputs/, you read the proposed action before approving it, and its contents match what you asked for."
     facilitator_note: "First encounter with an approval prompt. The habit being built is reading the action rather than clicking through it. If someone approves without reading, that is the teachable moment, not a failure."
   - index: 4

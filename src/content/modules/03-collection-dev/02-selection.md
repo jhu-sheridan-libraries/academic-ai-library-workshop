@@ -117,7 +117,9 @@ unmeasured may land on a status meaning measured.
 Then build the matrix at the level archives decisions are actually made at — the accession, not the
 item:
 
-`Read sample-data/archives/accession-note.txt and outputs/archives-description-standard.md from the connected folder. Build an appraisal and processing matrix and write it to outputs/archives-evidence-matrix.xlsx, one row per body of material the accession note distinguishes. Columns: material; extent as stated in the note; whether that extent was measured or estimated; formats; what the note establishes about it; what the note explicitly does not establish; donor condition attached, if any; access status; status from my standard; next action. Use only these two files. Do not total any extent the note does not total, do not estimate an unmeasured extent, and add no fact about the records that the note does not state.`
+```cowork-prompt
+Read sample-data/archives/accession-note.txt and outputs/archives-description-standard.md from the connected folder. Build an appraisal and processing matrix and write it to outputs/archives-evidence-matrix.xlsx, one row per body of material the accession note distinguishes. Columns: material; extent as stated in the note; whether that extent was measured or estimated; formats; what the note establishes about it; what the note explicitly does not establish; donor condition attached, if any; access status; status from my standard; next action. Use only these two files. Do not total any extent the note does not total, do not estimate an unmeasured extent, and add no fact about the records that the note does not state.
+```
 
 For step 3, the distinction the module turns on has an exact archival form. Add a column classifying
 each row as: a rights position established by an agreement; a rights position asserted without one; an

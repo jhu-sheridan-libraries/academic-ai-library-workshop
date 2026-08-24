@@ -25,7 +25,9 @@ steps:
 
       Edit the file yourself, or tell Claude exactly which stages to change. At minimum, decide for each stage whether AI is optional, assistive-only, or excluded, and mark at least two stages as human-only.
 
-      Then ask Claude: `Read outputs/workflow.md again and tell me which of my human-only markings would be expensive to honour in practice, and why.`
+      When your markings are in the file, send Claude the prompt below and read what it pushes back on.
+    prompt_text: |
+      Read outputs/workflow.md again and tell me which of my human-only markings would be expensive to honour in practice, and why.
     checkpoint: "At least two stages are marked human-only by you, and you can say what enforcing those markings costs."
     facilitator_note: "Learners defer to the model's allocation here. Push them to overrule it at least once. The friction Claude names in the second half is the useful part — it surfaces where policy and workload conflict."
   - index: 2
@@ -95,7 +97,9 @@ screening; creator and date verification; rights determination; documented right
 rightsholder is unclear; access condition decision; description review before publication; publication;
 takedown route and who may authorize it; recording the determination.
 
-`Read outputs/archives-request-brief.md and sample-data/archives/accession-note.txt from the connected folder. Then write an AI-assisted workflow to outputs/archives-workflow.md, one section per stage, using the stages I give you in this order: [paste your chosen stage list]. For each stage give: the input file or material, the output file it produces, whether AI is optional, assistive-only, or excluded at that stage, the human expertise required, and one stop-or-escalate condition. Where a stage produces a file we have already made today, name that file. Do not invent work we did not do.`
+```cowork-prompt
+Read outputs/archives-request-brief.md and sample-data/archives/accession-note.txt from the connected folder. Then write an AI-assisted workflow to outputs/archives-workflow.md, one section per stage, using the stages I give you in this order: [paste your chosen stage list]. For each stage give: the input file or material, the output file it produces, whether AI is optional, assistive-only, or excluded at that stage, the human expertise required, and one stop-or-escalate condition. Where a stage produces a file we have already made today, name that file. Do not invent work we did not do.
+```
 
 Then do steps 1 through 3 as written. Mark at least two stages human-only yourself — rights
 determination and the language review are the obvious candidates, and overruling Claude on one of them

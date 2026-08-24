@@ -44,11 +44,9 @@ steps:
 
       Decide on three to five changes you would have required before allowing this search to run. For each one, name what it would have prevented. Think about geography, publication model, contrary and null findings, what counts as an acceptable source, and what must be recorded as the run proceeds.
 
-      Then tell Claude:
-
-      `Record the following under a new heading "Module 2 - plan revisions I would have required" in outputs/session-log.md. Copy my wording exactly. Do not improve it, expand it, or add revisions of your own.`
-
-      Then give it your list.
+      Then send Claude the prompt below, and give it your list.
+    prompt_text: |
+      Record the following under a new heading "Module 2 - plan revisions I would have required" in outputs/session-log.md. Copy my wording exactly. Do not improve it, expand it, or add revisions of your own.
     checkpoint: "The file holds your revisions in your own words, and each one names the specific weakness it would have addressed."
     facilitator_note: "Expect pressure to let Claude draft this. Hold the line - the verbatim instruction is the point, and the contrast with the model's phrasing is worth naming out loud. Timebox to five minutes and take three revisions rather than five."
   - index: 3
@@ -93,7 +91,9 @@ the processor thought mattered, and it also tells you where they stopped.
 
 Substitute this for step 0:
 
-`Read sample-data/archives/finding-aid-draft.md and outputs/archives-request-brief.md from the connected folder. Working backwards from the finding aid alone, reconstruct the processing decisions it implies: the arrangement scheme chosen and what it privileges; where the description is granular and where it is not, series by series; what appears to have been appraised, retained, or left unexamined; the descriptive standard and period the language belongs to; and which parts of the collection a researcher cannot discover from this file at all. Mark every item "stated in the file" or "inferred". Do not fill gaps from your own knowledge of archival practice or of this period. Append the reconstruction to outputs/session-log.md under a new heading "Module 2 - reconstructed processing decisions".`
+```cowork-prompt
+Read sample-data/archives/finding-aid-draft.md and outputs/archives-request-brief.md from the connected folder. Working backwards from the finding aid alone, reconstruct the processing decisions it implies: the arrangement scheme chosen and what it privileges; where the description is granular and where it is not, series by series; what appears to have been appraised, retained, or left unexamined; the descriptive standard and period the language belongs to; and which parts of the collection a researcher cannot discover from this file at all. Mark every item "stated in the file" or "inferred". Do not fill gaps from your own knowledge of archival practice or of this period. Append the reconstruction to outputs/session-log.md under a new heading "Module 2 - reconstructed processing decisions".
+```
 
 For step 1, hold the finding aid to the map you already built: read the "Candidate units" sheet of
 `outputs/archives-access-points.xlsx` and state, for each access point, whether the finding aid makes
