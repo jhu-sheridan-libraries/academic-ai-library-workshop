@@ -2,7 +2,11 @@ name: Release Workshop Materials
 
 on:
   push:
-    branches: [main]
+    # jhu-main is the branded JHU Sheridan Libraries branch and the one that should
+    # publish. `main` is retained only in case a fork's default still points there.
+    # Getting this wrong is quiet and costly: the public zip keeps serving stale
+    # materials while the repo looks current.
+    branches: [jhu-main]
     paths:
       - 'src/content/library-context/**'
   workflow_dispatch:

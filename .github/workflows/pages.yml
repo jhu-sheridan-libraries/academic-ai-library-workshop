@@ -5,7 +5,7 @@ on:
     # jhu-main is the branded JHU Sheridan Libraries branch and the one that should
     # publish. `main` is retained only because a fork's default may still point there;
     # if this repository has no `main`, the extra entry is simply never matched.
-    branches: [jhu-main, main]
+    branches: [jhu-main]
   workflow_dispatch:
 
 permissions:
