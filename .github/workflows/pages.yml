@@ -2,9 +2,9 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    # jhu-main is the branded JHU Sheridan Libraries branch and the one that should
-    # publish. `main` is retained only because a fork's default may still point there;
-    # if this repository has no `main`, the extra entry is simply never matched.
+    # jhu-main is the branded JHU Sheridan Libraries branch and the only one that
+    # publishes. `main` is deliberately excluded: in this fork it tracks upstream and
+    # would publish the unbranded, pre-conversion course.
     branches: [jhu-main]
   workflow_dispatch:
 

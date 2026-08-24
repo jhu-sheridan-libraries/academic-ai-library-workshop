@@ -112,8 +112,11 @@ the course exists.
   and writes files in a folder you choose, and it is where the exercises take place. If you are on
   another agentic platform such as ChatGPT Codex or Kiro, read `docs/OTHER-PLATFORMS.md` before you
   start; most of the course transfers, and that file says honestly which parts do not.
-- **The workshop folder**, which your facilitator will send you. It holds the workspace brief, the
-  simulated data the exercises use, and it is where your own output lands.
+- **The workshop folder.** Download `library-context.zip` from the
+  [workshop materials release](https://github.com/jhu-sheridan-libraries/academic-ai-library-workshop/releases/tag/workshop-materials)
+  and unzip it. It holds the workspace brief, the simulated data the exercises use, and it is where
+  your own output lands. Take the release asset rather than cloning the repository — the repository
+  also contains the application source and facilitator notes that give away several exercises.
 - **Two practice skills**, sent as separate files. They run two of the exercises for you, and they
   are the worked examples you learn the format from.
 
