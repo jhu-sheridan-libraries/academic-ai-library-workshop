@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 460" width="860" height="460" role="img" aria-label="Diagram of the folder picker and the confirmation showing the connected workshop folder, with the folder path highlighted">
+<style>
+  text { font-family: -apple-system, "Segoe UI", "Helvetica Neue", Arial, sans-serif; }
+  .ttl  { font-size: 13px; font-weight: 600; fill: #3c4149; }
+  .row  { font-size: 13px; fill: #23272e; }
+  .rowS { font-size: 13px; font-weight: 600; fill: #ffffff; }
+  .lbl  { font-size: 11.5px; font-weight: 700; fill: #7b828b; letter-spacing: 0.06em; }
+  .path { font-family: "SF Mono", Consolas, "Courier New", monospace; font-size: 11.5px; fill: #23272e; }
+  .body { font-size: 13px; fill: #5a616b; }
+  .btn  { font-size: 13px; fill: #23272e; }
+  .btnP { font-size: 13px; font-weight: 600; fill: #ffffff; }
+  .ann  { font-size: 12.5px; font-weight: 600; fill: #d93025; }
+  .tag  { font-size: 11px; fill: #8a9099; }
+</style>
+
+<rect width="860" height="460" fill="#eef1f4"/>
+
+<!-- folder picker -->
+<rect x="40" y="50" width="350" height="300" rx="9" fill="#ffffff" stroke="#c3c8cf"/>
+<path d="M40 59 a9 9 0 0 1 9 -9 h332 a9 9 0 0 1 9 9 v25 h-350 z" fill="#f1f3f5"/>
+<line x1="40" y1="84" x2="390" y2="84" stroke="#dfe3e7"/>
+<circle cx="58" cy="67" r="5.5" fill="#ff5f57"/>
+<text x="215" y="72" class="ttl" text-anchor="middle">Choose a folder</text>
+
+<rect x="58" y="98" width="15" height="12" rx="2" fill="#8cc4f0"/>
+<text x="82" y="109" class="row">Documents</text>
+
+<rect x="56" y="122" width="318" height="28" rx="5" fill="#1a6be0"/>
+<rect x="76" y="130" width="15" height="12" rx="2" fill="#ffffff" opacity="0.85"/>
+<text x="100" y="141" class="rowS">library-ai-workshop</text>
+
+<rect x="58" y="164" width="15" height="12" rx="2" fill="#8cc4f0"/>
+<text x="82" y="175" class="row">Downloads</text>
+
+<rect x="58" y="196" width="15" height="12" rx="2" fill="#8cc4f0"/>
+<text x="82" y="207" class="row">Desktop</text>
+
+<rect x="196" y="300" width="80" height="30" rx="6" fill="#ffffff" stroke="#c4c9d0"/>
+<text x="236" y="320" class="btn" text-anchor="middle">Cancel</text>
+<rect x="290" y="300" width="80" height="30" rx="6" fill="#12141a"/>
+<text x="330" y="320" class="btnP" text-anchor="middle">Open</text>
+
+<!-- arrow -->
+<path d="M404 200 L446 200" stroke="#8a9099" stroke-width="2.5"/>
+<path d="M446 200 l-10 -5 v10 z" fill="#8a9099"/>
+
+<!-- confirmation card -->
+<rect x="470" y="100" width="350" height="200" rx="9" fill="#ffffff" stroke="#c3c8cf"/>
+<text x="494" y="138" class="lbl">CONNECTED FOLDER</text>
+<rect x="494" y="152" width="302" height="32" rx="5" fill="#f7f8fa" stroke="#dfe3e7"/>
+<text x="506" y="173" class="path">/Users/you/Documents/library-ai-workshop</text>
+<rect x="486" y="144" width="318" height="48" rx="9" fill="none" stroke="#d93025" stroke-width="2.5"/>
+
+<text x="494" y="222" class="body">Claude can create and change files in this folder</text>
+<text x="494" y="242" class="body">and in the folders inside it.</text>
+<text x="494" y="272" class="body">Give it the narrowest folder that holds what you need.</text>
+
+<path d="M645 328 L645 310" stroke="#d93025" stroke-width="2.5"/>
+<path d="M645 310 l-5 10 h10 z" fill="#d93025"/>
+<text x="645" y="346" class="ann" text-anchor="middle">check the path before continuing</text>
+
+<text x="40" y="426" class="body">Not your whole Documents folder, and not your home directory.</text>
+<text x="840" y="426" class="tag" text-anchor="end">Illustration · not a screenshot · your screen may differ</text>
+</svg>

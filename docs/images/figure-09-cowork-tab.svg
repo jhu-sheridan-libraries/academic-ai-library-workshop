@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 500" width="860" height="500" role="img" aria-label="Diagram of the main Claude window with the Cowork tab selected and highlighted">
+<style>
+  text { font-family: -apple-system, "Segoe UI", "Helvetica Neue", Arial, sans-serif; }
+  .ttl  { font-size: 13px; font-weight: 600; fill: #3c4149; }
+  .tab  { font-size: 13.5px; fill: #4a5057; }
+  .tabS { font-size: 13.5px; font-weight: 600; fill: #ffffff; }
+  .h    { font-size: 19px; font-weight: 600; fill: #23272e; }
+  .body { font-size: 13.5px; fill: #5a616b; }
+  .btnP { font-size: 13.5px; font-weight: 600; fill: #ffffff; }
+  .ann  { font-size: 12.5px; font-weight: 600; fill: #d93025; }
+  .tag  { font-size: 11px; fill: #8a9099; }
+</style>
+
+<rect width="860" height="500" fill="#eef1f4"/>
+
+<!-- window -->
+<rect x="60" y="40" width="740" height="390" rx="10" fill="#ffffff" stroke="#c3c8cf"/>
+<path d="M60 50 a10 10 0 0 1 10 -10 h720 a10 10 0 0 1 10 10 v26 h-740 z" fill="#f1f3f5"/>
+<circle cx="82" cy="58" r="5.5" fill="#ff5f57"/>
+<circle cx="100" cy="58" r="5.5" fill="#febc2e"/>
+<circle cx="118" cy="58" r="5.5" fill="#28c840"/>
+<text x="430" y="63" class="ttl" text-anchor="middle">Claude</text>
+
+<!-- tab strip -->
+<rect x="60" y="76" width="740" height="40" fill="#f7f8fa"/>
+<line x1="60" y1="116" x2="800" y2="116" stroke="#dfe3e7"/>
+<rect x="300" y="84" width="76" height="26" rx="13" fill="#e6e9ed"/>
+<text x="338" y="101" class="tab" text-anchor="middle">Chat</text>
+<rect x="384" y="84" width="76" height="26" rx="13" fill="#e6e9ed"/>
+<text x="422" y="101" class="tab" text-anchor="middle">Code</text>
+<rect x="468" y="84" width="92" height="26" rx="13" fill="#12141a"/>
+<text x="514" y="101" class="tabS" text-anchor="middle">Cowork</text>
+
+<!-- highlight on cowork tab -->
+<rect x="460" y="78" width="108" height="38" rx="12" fill="none" stroke="#d93025" stroke-width="2.5"/>
+<path d="M514 148 L514 130" stroke="#d93025" stroke-width="2.5"/>
+<path d="M514 130 l-5 10 h10 z" fill="#d93025"/>
+<text x="514" y="166" class="ann" text-anchor="middle">click the Cowork tab</text>
+
+<!-- sidebar -->
+<rect x="60" y="116" width="164" height="314" fill="#fafbfc"/>
+<line x1="224" y1="116" x2="224" y2="430" stroke="#e6e9ed"/>
+<rect x="78" y="140" width="128" height="12" rx="3" fill="#e2e6ea"/>
+<rect x="78" y="166" width="104" height="12" rx="3" fill="#e8ebef"/>
+<rect x="78" y="192" width="118" height="12" rx="3" fill="#e8ebef"/>
+<rect x="78" y="218" width="92" height="12" rx="3" fill="#e8ebef"/>
+
+<!-- empty state -->
+<text x="512" y="248" class="h" text-anchor="middle">No folder connected yet</text>
+<text x="512" y="278" class="body" text-anchor="middle">Cowork reads and writes files in a folder you choose.</text>
+<rect x="452" y="300" width="120" height="34" rx="7" fill="#12141a"/>
+<text x="512" y="322" class="btnP" text-anchor="middle">Add folder</text>
+
+<text x="60" y="446" class="body">If the Cowork tab is missing, the account is most likely on a plan that does not include it.</text>
+<text x="840" y="466" class="tag" text-anchor="end">Illustration · not a screenshot · your screen may differ</text>
+</svg>

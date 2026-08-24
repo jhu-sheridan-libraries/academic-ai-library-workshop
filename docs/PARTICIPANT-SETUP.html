@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Setting Up Claude for the Academic AI Library Workshop</title>
+<style>
+  body { font-family: Calibri, "Segoe UI", Helvetica, Arial, sans-serif;
+         font-size: 11.5pt; line-height: 1.5; color: #1a1a1a;
+         max-width: 6.5in; margin: 0.6in auto; }
+  h1 { font-size: 22pt; margin: 0 0 4pt 0; line-height: 1.2; }
+  h2 { font-size: 15pt; margin: 26pt 0 6pt 0; border-bottom: 1px solid #c8c8c8;
+       padding-bottom: 3pt; }
+  h3 { font-size: 12.5pt; margin: 16pt 0 4pt 0; }
+  p.subtitle { font-size: 12pt; color: #555; margin: 0 0 18pt 0; }
+  table { border-collapse: collapse; width: 100%; margin: 10pt 0; font-size: 10.5pt; }
+  th, td { border: 1px solid #bbb; padding: 5pt 7pt; text-align: left;
+           vertical-align: top; }
+  th { background: #eef1f4; font-weight: 600; }
+  code { font-family: Consolas, "Courier New", monospace; font-size: 10.5pt;
+         background: #f2f2f2; padding: 1pt 3pt; }
+  ol, ul { margin: 8pt 0 8pt 0; padding-left: 24pt; }
+  li { margin-bottom: 5pt; }
+  .url { font-family: Consolas, "Courier New", monospace; font-size: 12pt;
+         font-weight: bold; display: block; margin: 10pt 0; }
+  .menupath { font-weight: bold; display: block; margin: 8pt 0; }
+  .figure { border: 1pt solid #d5d9de; background: #fafbfc;
+            padding: 10pt 12pt; margin: 14pt 0; page-break-inside: avoid; }
+  .figure .cap { font-weight: bold; display: block; margin-bottom: 6pt; }
+  .figure img { display: block; max-width: 100%; height: auto;
+                border: 1pt solid #c4c9d0; background: #fff; }
+  /* Capture instructions for whoever takes the screenshots. Kept in the source
+     so the shot list travels with the document, but hidden from participants.
+     Set to `block` while producing the figures, then back to `none`. */
+  .figure .note { display: none; font-size: 10pt; color: #444; margin: 7pt 0 0 0; }
+  .callout { border-left: 3pt solid #5b6b7d; background: #f4f6f8;
+             padding: 8pt 12pt; margin: 12pt 0; }
+  .prompt { border-left: 3pt solid #999; padding: 6pt 12pt; margin: 10pt 0;
+            font-family: Consolas, "Courier New", monospace; font-size: 10.5pt;
+            background: #f8f8f8; }
+</style>
+</head>
+<body>
+
+<h1>Setting Up Claude for the Academic AI Library Workshop</h1>
+<p class="subtitle">A step-by-step installation guide for workshop participants</p>
+
+<h2>About this guide</h2>
+<p>This guide walks you through installing the Claude desktop application on your own computer and connecting it to the Amazon Bedrock account the workshop provides. When you finish, you will be able to open Claude Cowork, point it at the workshop folder, and begin the exercises.</p>
+<p>You do not need any programming experience. You will not write code, use a command line, or install developer software. You will, however, turn on a setting called Developer Mode. That name is misleading: in this context it does nothing more than reveal the menu that lets you tell Claude which company's servers to use. There is an explanation of what it does and does not do at the end of this guide, in case the name gives you pause.</p>
+<p>Set aside about twenty minutes. Most of that is downloading and waiting.</p>
+<p>The figures in this guide are simplified diagrams rather than photographs of a screen. They show where to look and what to click. The application is updated often, so expect the wording and arrangement on your own screen to differ in small ways; match by meaning rather than by appearance.</p>
+<p>If you get stuck at any point, stop and contact the workshop facilitator rather than working around the problem. A misconfigured connection is much easier to diagnose before you have changed several other settings.</p>
+
+<h2>Before you start</h2>
+<p>Collect these items. Three of them come from your facilitator on a credential card, either printed or sent to you directly.</p>
+<table>
+<tr><th>What you need</th><th>Where it comes from</th><th>What it looks like</th></tr>
+<tr><td>A computer running macOS 11 (Big Sur) or later, or Windows 10 or later</td><td>Your own machine</td><td>&mdash;</td></tr>
+<tr><td>Your Claude account sign-in</td><td>Your institution, or the account you registered for the workshop</td><td>An email address and password, or a single sign-on button</td></tr>
+<tr><td>A Bedrock API key</td><td>Facilitator's credential card</td><td>One long unbroken string of characters</td></tr>
+<tr><td>An AWS region</td><td>Facilitator's credential card</td><td>Something like <code>us-east-1</code></td></tr>
+<tr><td>A model identifier</td><td>Facilitator's credential card</td><td>Something like <code>us.anthropic.claude-sonnet-4-5-20250929-v1:0</code></td></tr>
+<tr><td>Two practice skills</td><td>Facilitator, sent separately</td><td>Two files whose names end in <code>.skill</code>; you install them in Step 8</td></tr>
+</table>
+<p>You also need the workshop folder on your computer. If your facilitator sent it as a compressed archive, unzip it now and note where it lives, for example in your Documents folder. You will point Claude at this folder in Step 7.</p>
+<div class="callout">
+<p><strong>A note on the API key.</strong> The key is a password. It authorizes spending against the workshop's Amazon account. Do not post it in a shared chat, commit it to a repository, paste it into a support ticket, or forward it to a colleague who missed the session. If you think it has been exposed, tell your facilitator; keys are quick to revoke and reissue, and nobody will be annoyed with you for reporting it.</p>
+</div>
+
+<h2>Step 1 &mdash; Download the application</h2>
+<p>Open a web browser and go to:</p>
+<span class="url">https://claude.com/download</span>
+<p>The page detects your operating system and offers the matching installer. If it offers the wrong one, there are links for each platform further down the page.</p>
+<ul>
+<li>On <strong>macOS</strong> you will download a file ending in <code>.dmg</code>.</li>
+<li>On <strong>Windows</strong> you will download a file ending in <code>.exe</code>.</li>
+</ul>
+
+<div class="figure">
+<span class="cap">Figure 1 &mdash; The download page</span>
+<img src="images/figure-01-download-page.svg" alt="The claude.com/download page, with the primary download button outlined">
+<p class="note"><em>Capture:</em> the full browser window at https://claude.com/download, showing the primary download button.<br>
+<em>Highlight:</em> draw a box around the download button.</p>
+</div>
+
+<h2>Step 2 &mdash; Install the application</h2>
+
+<h3>On macOS</h3>
+<ol>
+<li>Open the downloaded <code>.dmg</code> file. It will appear in your Downloads folder or in your browser's downloads list.</li>
+<li>A window opens showing the Claude icon and a shortcut to your Applications folder. Drag the Claude icon onto the Applications folder.</li>
+<li>Wait for the copy to finish, then close the window. You can eject the disk image from the Finder sidebar.</li>
+<li>Open your Applications folder and double-click Claude.</li>
+<li>macOS will ask whether you are sure you want to open an application downloaded from the internet. This is normal and appears for every application not installed through the App Store. Click <strong>Open</strong>.</li>
+</ol>
+
+<div class="figure">
+<span class="cap">Figure 2 &mdash; The macOS install window</span>
+<img src="images/figure-02-macos-dmg.svg" alt="The mounted disk image window, with an arrow from the Claude icon to the Applications folder shortcut">
+<p class="note"><em>Capture:</em> the mounted disk image window showing the Claude icon and the Applications folder shortcut.<br>
+<em>Highlight:</em> draw an arrow from the Claude icon to the Applications folder.</p>
+</div>
+
+<div class="figure">
+<span class="cap">Figure 3 &mdash; The macOS first-launch prompt</span>
+<img src="images/figure-03-macos-gatekeeper.svg" alt="The macOS dialog asking whether to open an application downloaded from the internet, with the Open button outlined">
+<p class="note"><em>Capture:</em> the dialog asking whether you want to open an application downloaded from the internet.<br>
+<em>Highlight:</em> draw a box around the Open button.</p>
+</div>
+
+<h3>On Windows</h3>
+<ol>
+<li>Open the downloaded <code>.exe</code> file from your Downloads folder or your browser's downloads list.</li>
+<li>Windows may show a blue screen headed "Windows protected your PC". This appears for newly published installers and does not mean anything is wrong. Click <strong>More info</strong>, check that the publisher is listed as Anthropic, then click <strong>Run anyway</strong>.</li>
+<li>Follow the installer prompts. The defaults are correct; you do not need to change the install location.</li>
+<li>When the installer finishes, open Claude from the Start menu.</li>
+</ol>
+
+<div class="figure">
+<span class="cap">Figure 4 &mdash; The Windows SmartScreen prompt</span>
+<img src="images/figure-04-windows-smartscreen.svg" alt="The Windows protected your PC dialog expanded by More info, with the Anthropic publisher name and the Run anyway button outlined">
+<p class="note"><em>Capture:</em> the "Windows protected your PC" dialog after clicking More info, with the publisher name visible.<br>
+<em>Highlight:</em> draw boxes around the publisher name and the Run anyway button.</p>
+</div>
+
+<h2>Step 3 &mdash; Do not sign in yet</h2>
+<p>When Claude opens for the first time it shows a sign-in screen. Leave it there for a moment. The next step is easier to reach from this screen than from inside the application, particularly on Windows.</p>
+<p>If you have already signed in, that is fine. Nothing is broken and you do not need to sign out.</p>
+
+<h2>Step 4 &mdash; Turn on Developer Mode</h2>
+<p>This reveals the menu you need in Step 5. The path differs slightly between the two operating systems.</p>
+
+<h3>On macOS</h3>
+<p>In the menu bar at the very top of the screen, choose:</p>
+<span class="menupath">Help &rarr; Troubleshooting &rarr; Enable Developer Mode</span>
+<p>The menu bar belongs to the application, not to the Claude window, so look at the top edge of your display rather than inside the window itself.</p>
+
+<h3>On Windows</h3>
+<p>Click the menu button &mdash; three stacked horizontal lines, sometimes called a hamburger menu &mdash; in the <strong>top-left corner of the sign-in screen</strong>, then choose:</p>
+<span class="menupath">Help &rarr; Troubleshooting &rarr; Enable Developer Mode</span>
+<p>After you enable it, a new <strong>Developer</strong> menu appears. If you do not see it immediately, close and reopen Claude.</p>
+
+<div class="figure">
+<span class="cap">Figure 5 &mdash; Enabling Developer Mode (macOS)</span>
+<img src="images/figure-05-devmode-macos.svg" alt="The macOS menu bar with Help open and Troubleshooting expanded, showing Enable Developer Mode outlined">
+<p class="note"><em>Capture:</em> the macOS menu bar with Help open and the Troubleshooting submenu expanded, so that Enable Developer Mode is visible.<br>
+<em>Highlight:</em> draw a box around Enable Developer Mode.</p>
+</div>
+
+<div class="figure">
+<span class="cap">Figure 6 &mdash; Enabling Developer Mode (Windows)</span>
+<img src="images/figure-06-devmode-windows.svg" alt="The Windows sign-in screen with the hamburger menu open, the Help and Troubleshooting path expanded, and Enable Developer Mode outlined">
+<p class="note"><em>Capture:</em> the sign-in screen with the hamburger menu open and the Help &rarr; Troubleshooting path expanded.<br>
+<em>Highlight:</em> circle the hamburger button in the top-left, and draw a box around Enable Developer Mode.</p>
+</div>
+
+<h2>Step 5 &mdash; Connect Claude to Bedrock</h2>
+<p>Now tell Claude to send your requests to the workshop's Amazon Bedrock account instead of to Anthropic's own service.</p>
+<p>From the newly visible menu, choose:</p>
+<span class="menupath">Developer &rarr; Configure Third-Party Inference&hellip;</span>
+<p>A configuration window opens. Fill it in using the credential card from your facilitator:</p>
+<ol>
+<li>For the <strong>provider</strong>, choose <strong>Amazon Bedrock</strong>. Other options such as Google Vertex AI may be listed; ignore them.</li>
+<li>For the <strong>authentication method</strong>, choose the option for an <strong>API key</strong> or <strong>bearer token</strong>, rather than the options for AWS sign-in, a named profile, or a credential helper. Your facilitator issued you a key, which is the simplest of the four methods.</li>
+<li>Paste the <strong>API key</strong> exactly as supplied. Copy and paste it rather than typing it. Take care not to include a trailing space, and check that your email or chat client has not inserted a line break in the middle of it.</li>
+<li>Enter the <strong>region</strong>, for example <code>us-east-1</code>. It must match the card exactly.</li>
+<li>Enter the <strong>model identifier</strong> from the card, for example <code>us.anthropic.claude-sonnet-4-5-20250929-v1:0</code>. The leading <code>us.</code> is part of the identifier and is required. Do not remove it.</li>
+<li>Save the configuration and, if prompted, restart Claude.</li>
+</ol>
+<p>The exact wording of the labels in this window may differ a little from the words above, since the application is updated frequently. Match by meaning rather than by exact phrase: one field takes the provider, one takes the key, one takes the region, and one takes the model.</p>
+
+<div class="figure">
+<span class="cap">Figure 7 &mdash; The Developer menu</span>
+<img src="images/figure-07-developer-menu.svg" alt="The Developer menu open, with Configure Third-Party Inference outlined">
+<p class="note"><em>Capture:</em> the Developer menu open, showing Configure Third-Party Inference.<br>
+<em>Highlight:</em> draw a box around Configure Third-Party Inference.</p>
+</div>
+
+<div class="figure">
+<span class="cap">Figure 8 &mdash; The third-party inference configuration window</span>
+<img src="images/figure-08-bedrock-config.svg" alt="The third-party inference configuration window with Amazon Bedrock selected and each field numbered to match the steps above; the API key is masked">
+<p class="note"><em>Capture:</em> the configuration window with Amazon Bedrock selected and every field filled in.<br>
+<em>Highlight:</em> number each field to match steps 1 through 5 above.<br>
+<strong>Before publishing this figure, replace the API key with a masked value such as</strong> <code>bdrk-&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;</code>. <strong>Do not distribute a screenshot containing a live key.</strong></p>
+</div>
+
+<div class="callout">
+<p><strong>If you have signed into AWS in this application before.</strong> Claude accepts four kinds of Bedrock credential and uses whichever it finds first, in this order: an in-app AWS sign-in, a named profile, a credential helper, and last of all a bearer token. Your API key is a bearer token, so it sits at the bottom of that list. If an old AWS sign-in or profile is still configured, it will be used instead of your key and the workshop account will not be billed correctly. If you have any history of AWS configuration on this machine, clear it in this window before saving, or ask your facilitator to check the screen with you.</p>
+</div>
+
+<h2>Step 6 &mdash; Check that the connection works</h2>
+<p>Sign in to Claude if you have not already, then open a new conversation and send something short, such as:</p>
+<div class="prompt">Reply with the single word: connected.</div>
+<p>A normal reply means Claude reached Bedrock with your key and the workshop account is working. An error mentioning credentials, authorization, or an unrecognized model means something in Step 5 needs another look; see the troubleshooting table below.</p>
+<p>One thing to know about running through Bedrock: web search is not included automatically. It reaches Claude through Anthropic's own infrastructure, which you are now bypassing, so a search provider has to be configured separately. Some other features that depend on Anthropic-hosted services may also be unavailable or behave differently. None of this blocks the workshop exercises, which use the simulated files in the workshop folder rather than live web results. If you want the full detail, the current feature comparison is published at https://claude.com/docs/third-party/claude-desktop/feature-matrix.</p>
+
+<h2>Step 7 &mdash; Open Cowork and connect the workshop folder</h2>
+<p>Cowork is the part of the application that can read and write files in a folder you choose. It is where the workshop exercises take place.</p>
+<ol>
+<li>In the main Claude window, click the <strong>Cowork</strong> tab along the top, alongside Chat and Code.</li>
+<li>Add the workshop folder as Cowork's working folder, using the option to add a local folder. Select the workshop folder you unzipped earlier, then confirm.</li>
+<li>Claude will confirm which folder it can see. Check that the path shown is the workshop folder and not your whole Documents folder or your home directory. Cowork can create and change files in the folder you give it, so give it the narrowest folder that contains what you need.</li>
+</ol>
+<p>Cowork requires a paid Claude plan: Pro, Max, Team, or Enterprise. It is not part of the free tier. If the Cowork tab is missing, your account is most likely on the wrong plan, or, on a Team or Enterprise account, an administrator has not switched Cowork on for the organization. Either way this is not something you can fix from your own settings &mdash; send your facilitator a screenshot of your Claude window and they will sort it out.</p>
+<p>Note that Cowork itself does not require Developer Mode. You enabled Developer Mode only to reach the Bedrock setting in Step 5.</p>
+
+<div class="figure">
+<span class="cap">Figure 9 &mdash; The Cowork tab</span>
+<img src="images/figure-09-cowork-tab.svg" alt="The main Claude window with the Cowork tab selected and outlined">
+<p class="note"><em>Capture:</em> the main Claude window with the Cowork tab selected.<br>
+<em>Highlight:</em> draw a box around the Cowork tab.</p>
+</div>
+
+<div class="figure">
+<span class="cap">Figure 10 &mdash; Connecting the workshop folder</span>
+<img src="images/figure-10-connect-folder.svg" alt="Cowork confirming the connected workshop folder, with the folder path outlined">
+<p class="note"><em>Capture:</em> the folder selection step, and then the confirmation showing the connected folder name.<br>
+<em>Highlight:</em> draw a box around the connected folder path.</p>
+</div>
+
+<h2>Step 8 &mdash; Add the two practice skills</h2>
+<p>Two of the workshop exercises are run by <em>skills</em> rather than by instructions you read off a page. A skill is a set of instructions Claude loads by itself when it recognises the kind of task you are describing. Once a skill is saved you never have to name a file or paste anything in: you describe what you want in ordinary words and Claude picks it up.</p>
+<p>Your facilitator will send you two files whose names end in <code>.skill</code>.</p>
+<p><strong>Practice a library reference interview.</strong> Claude plays a fictional patron while you practise the interview. It holds back the things a real patron would not think to volunteer, so you have to ask for the details that actually change a search, and it introduces at most one complication once you have established the core need. When you are done it steps out of character and debriefs what worked, which question came too late, and where a privacy or access boundary came up. It does not score you, and it does not run the search &mdash; the interview itself is the exercise.</p>
+<p><strong>Review AI research output.</strong> Claude audits an AI-assisted research output before you rely on it: whether each material claim is actually supported by the source cited for it, whether those sources exist and say what they are said to say, which perspectives or databases are missing, whether the calculations hold up, and whether another librarian could reproduce the search. It reports what it could not check instead of quietly treating unchecked as supported, and it leaves the professional judgment with you.</p>
+<p>To install each one:</p>
+<ol>
+<li>Save both files somewhere you can find them again.</li>
+<li>Open one of them. Claude shows a card for the file with a <strong>Save skill</strong> button.</li>
+<li>Click <strong>Save skill</strong>, then do the same for the second file.</li>
+</ol>
+<p>Both skills are then available in every conversation, including ones you have already started.</p>
+<p>To use them, describe the task rather than naming the skill:</p>
+<div class="prompt">Practise a reference interview with me &mdash; intermediate difficulty, about fifteen minutes.</div>
+<div class="prompt">Review this research scan before I send it to the patron.</div>
+<div class="callout"><strong>One thing to take seriously.</strong> The review skill will ask you to remove or de-identify patron records, student data, health information, unpublished research, credentials, and licensed full text before you hand anything over. That is not a formality. Use the simulated material in the workshop folder, or genuinely public sources of your own, for these exercises.</div>
+
+<div class="figure">
+<span class="cap">Figure 11 &mdash; Saving a skill</span>
+<img src="images/figure-11-save-skill.svg" alt="A .skill file shown as a card in Claude with a Save skill button, outlined">
+<p class="note"><em>Capture:</em> the card Claude shows when a .skill file is opened, before it is saved.<br>
+<em>Highlight:</em> draw a box around the Save skill button.</p>
+</div>
+
+<h2>Step 9 &mdash; Start the workshop</h2>
+<p>With the folder connected, ask Cowork to begin:</p>
+<div class="prompt">Coach me through the library AI workshop from the beginning.</div>
+<p>Claude will pick up the workshop materials from the connected folder and take you through the first module one step at a time. It will wait for your attempt at each step rather than working ahead, so the pace is yours.</p>
+<p>You are set up. Everything from here happens inside the workshop itself.</p>
+
+<h2>If something goes wrong</h2>
+<table>
+<tr><th>What you see</th><th>What it usually means</th><th>What to do</th></tr>
+<tr><td>No <strong>Developer</strong> menu after Step 4</td><td>The application needs restarting, or the menu was enabled on a different screen</td><td>Quit Claude completely and reopen it, then check the menu bar (macOS) or hamburger menu (Windows) again</td></tr>
+<tr><td>An error mentioning credentials, authorization, or access denied</td><td>The API key is wrong, incomplete, or an older AWS credential is taking priority</td><td>Re-paste the key, checking for a trailing space or a line break inserted by email; then clear any earlier AWS sign-in or profile as described at the end of Step 5</td></tr>
+<tr><td>An error naming the model, or saying a model was not found</td><td>The model identifier does not match, or the region does not offer that model</td><td>Re-enter both the model identifier and the region exactly as printed on the card, including the leading <code>us.</code></td></tr>
+<tr><td>A quota, throttling, or rate limit message</td><td>The workshop account is busy, or your key's allowance is exhausted</td><td>Wait a minute and try again; if it persists, tell your facilitator, who can check the account</td></tr>
+<tr><td>No <strong>Cowork</strong> tab</td><td>Your plan does not include Cowork, or an administrator has not enabled it</td><td>Send your facilitator a screenshot of the window; this is fixed on their side</td></tr>
+<tr><td>Cowork cannot see the workshop files</td><td>A different folder was connected, or the archive was never unzipped</td><td>Confirm the archive is unzipped, then reconnect, selecting the folder that directly contains the workshop files</td></tr>
+<tr><td>Windows blocks the installer and offers no "Run anyway"</td><td>Your institution manages this computer and restricts installations</td><td>Contact your IT service desk, or use a personal machine for the workshop</td></tr>
+<tr><td>No <strong>Save skill</strong> button when you open a <code>.skill</code> file</td><td>The file was altered in transit, or it was unzipped before being opened</td><td>Ask your facilitator to resend it, ideally as a download link rather than a mail attachment, and open the <code>.skill</code> file itself rather than its contents</td></tr>
+<tr><td>A saved skill never seems to trigger</td><td>The request did not read as the kind of task the skill is for</td><td>Name it directly, as in "use the reference interview practice skill", and tell your facilitator which wording failed</td></tr>
+</table>
+<p>When you write to your facilitator, a screenshot of the error is worth several paragraphs of description. Cover or crop the API key first.</p>
+
+<h2>What Developer Mode actually does</h2>
+<p>Developer Mode has an intimidating name and a narrow effect. It reveals a menu containing settings that most people never need, the relevant one here being the choice of which company's servers process your requests. By default that is Anthropic. This workshop routes requests through Amazon Bedrock instead, because that is where the workshop's account and its spending limits live, and that setting is only reachable once Developer Mode is on.</p>
+<p>It does not install anything, does not grant Claude new access to your computer, and does not turn off any safety behavior. You can switch it off again through the same menu path once the workshop is over, though leaving it on causes no harm.</p>
+<p>Cowork's ability to read and change files is a separate matter, and it is the one worth paying attention to. That access comes from the folder you connect in Step 7, not from Developer Mode, and it extends to that folder and the folders inside it. This is why the guide asks you to connect the workshop folder specifically rather than your Documents folder or your entire user account.</p>
+
+<h2>Keeping the credential safe</h2>
+<p>Four habits cover almost everything that matters. Keep the API key out of shared documents, chat channels, and email threads that include people outside the workshop. Do not paste it into a screenshot without masking it first. Do not reuse it for anything outside the workshop, since the account it draws on is metered and shared. When the workshop ends, tell your facilitator you are finished so the key can be revoked, and remove the Bedrock configuration from the application if you do not plan to use it again.</p>
+<p>If you think a key has leaked, say so promptly. Revoking and reissuing takes a minute, and an unreported key is a far bigger problem than a reported one.</p>
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 540" width="860" height="540" role="img" aria-label="Diagram of the macOS dialog asking whether to open an application downloaded from the internet, with the Open button highlighted">
+<style>
+  text { font-family: -apple-system, "Segoe UI", "Helvetica Neue", Arial, sans-serif; }
+  .msg  { font-size: 14.5px; font-weight: 600; fill: #1a1d23; }
+  .body { font-size: 13px; fill: #5a616b; }
+  .btn  { font-size: 13.5px; fill: #23272e; }
+  .btnP { font-size: 13.5px; font-weight: 600; fill: #ffffff; }
+  .ann  { font-size: 12.5px; font-weight: 600; fill: #d93025; }
+  .tag  { font-size: 11px; fill: #8a9099; }
+  .star { font-size: 30px; fill: #ffffff; }
+</style>
+
+<rect width="860" height="540" fill="#dfe3e8"/>
+
+<!-- dialog -->
+<rect x="215" y="110" width="430" height="286" rx="12" fill="#f2f3f5" stroke="#bcc2c9"/>
+
+<rect x="252" y="146" width="64" height="64" rx="15" fill="#d97757"/>
+<text x="284" y="189" class="star" text-anchor="middle">✳</text>
+
+<text x="336" y="164" class="msg">“Claude” is an app downloaded from the</text>
+<text x="336" y="184" class="msg">Internet. Are you sure you want to open it?</text>
+<text x="336" y="212" class="body">Safari downloaded this file today.</text>
+
+<line x1="252" y1="244" x2="608" y2="244" stroke="#dcdfe3"/>
+<text x="252" y="272" class="body">This prompt appears for every application that was not</text>
+<text x="252" y="290" class="body">installed through the App Store. It is expected here.</text>
+
+<!-- buttons -->
+<rect x="252" y="326" width="92" height="32" rx="7" fill="#ffffff" stroke="#c4c9d0"/>
+<text x="298" y="347" class="btn" text-anchor="middle">Cancel</text>
+
+<rect x="356" y="326" width="124" height="32" rx="7" fill="#ffffff" stroke="#c4c9d0"/>
+<text x="418" y="347" class="btn" text-anchor="middle">Show Web Page</text>
+
+<rect x="516" y="326" width="92" height="32" rx="7" fill="#1a6be0"/>
+<text x="562" y="347" class="btnP" text-anchor="middle">Open</text>
+
+<!-- annotation -->
+<rect x="506" y="316" width="112" height="52" rx="11" fill="none" stroke="#d93025" stroke-width="2.5"/>
+<path d="M562 388 L562 376" stroke="#d93025" stroke-width="2.5"/>
+<path d="M562 376 l-5 10 h10 z" fill="#d93025"/>
+<text x="562" y="406" class="ann" text-anchor="middle">click Open</text>
+
+<text x="840" y="502" class="tag" text-anchor="end">Illustration · not a screenshot · your screen may differ</text>
+</svg>
