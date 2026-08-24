@@ -36,6 +36,28 @@ so it does not need rewriting when the image is swapped.
 | 9 | `figure-09-cowork-tab` | Either | Main Claude window with Cowork selected | Box around the Cowork tab |
 | 10 | `figure-10-connect-folder` | Either | Cowork's confirmation of the connected folder | Box around the connected folder path |
 | 11 | `figure-11-save-skill` | Either | A `.skill` file opened in Claude, showing its card before it is saved | Box around the Save skill button |
+| 12 | `figure-12-releases-download` | Either | The repository's `workshop-materials` release page, scrolled so the Assets list is visible | Box around `library-context.zip`. **Not yet drawn** — see below |
+| 13 | `figure-13-folder-picker` | Either | Cowork's folder chooser, opened to show `library-context` nested inside the unzipped parent folder | Box around `library-context`; a lighter marker on the parent to show which one *not* to pick. **Not yet drawn** — see below |
+
+## Figures 12 and 13 — identified, not yet made
+
+Neither exists yet, and neither is referenced from the guide, so nothing is broken today. Both cover
+steps added after the original eleven were drawn, and both address a place where participants are
+known to go wrong:
+
+**Figure 12** supports the download in "Before you start". A GitHub release page puts its release
+notes above a collapsed-looking Assets list, and a participant who has never used one tends to click
+the green *Code* button or the auto-generated "Source code (zip)" instead of `library-context.zip`.
+Those give them the whole repository — larger, and containing facilitator notes that spoil several
+exercises. This is the single most useful figure still missing.
+
+**Figure 13** supports Step 7. The recurring mistake is selecting the folder one level above
+`library-context`, which leaves Claude unable to see `WORKSPACE-BRIEF.md`. The troubleshooting table
+names this twice, which is a sign it wants a picture instead. What matters is showing the nesting,
+not the chrome of the file dialog.
+
+Add them to the guide only once the images exist; a reference to a missing file renders as a broken
+image, which is worse than no figure.
 
 Capture at a normal display scale, crop to the window or menu rather than the whole screen, and
 aim for roughly 1400 px wide for full-window shots. Annotations go on top of the capture before

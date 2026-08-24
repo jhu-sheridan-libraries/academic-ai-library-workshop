@@ -25,7 +25,7 @@ Collect these four things. Three of them come from your facilitator on a credent
 | What you need | Where it comes from | What it looks like |
 |---|---|---|
 | A computer running macOS 11 (Big Sur) or later, or Windows 10 or later | Your own machine | — |
-| Your Claude account sign-in | Your institution, or the account you registered for the workshop | An email address and password, or a single sign-on button |
+| Your Claude account sign-in, **on a paid plan** | Your institution, or the account you registered for the workshop | An email address and password, or a single sign-on button |
 | A Bedrock API key | Facilitator's credential card | One long unbroken string of characters |
 | An AWS region | Facilitator's credential card | Something like `us-east-1` |
 | A model identifier | Facilitator's credential card | Something like `us.anthropic.claude-sonnet-4-5-20250929-v1:0` |
@@ -38,6 +38,8 @@ You also need the workshop folder on your computer. Download it yourself from th
 Take the file called **`library-context.zip`**, unzip it, and note where it lives — your Documents folder is fine. Inside you will find a folder called `library-context`. That folder, the one that directly contains `WORKSPACE-BRIEF.md` and `sample-data`, is the one you point Claude at in Step 7. If your facilitator sent you the archive directly instead, use that; it is the same thing.
 
 **Download the release asset, not the whole repository.** Cloning or downloading the repository gets you the application source code, the facilitator's materials, and a set of notes that spoil several exercises. It is also far larger than you need. The zip on the releases page contains exactly the workshop folder and nothing else, which is the point — and connecting the narrowest folder that holds what you need is a habit the first exercise is about.
+
+**Check the plan before you start installing.** Cowork, the part of the application the whole workshop runs in, needs a paid Claude plan — Pro, Max, Team, or Enterprise. It is not in the free tier, and on a Team or Enterprise account an administrator may additionally need to switch it on. This is worth confirming now rather than after you have installed the application and configured a credential: sign in at claude.ai and check that a **Cowork** tab appears alongside Chat and Code. If it does not, send your facilitator a screenshot before going further, because it is not something you can fix from your own settings.
 
 **A note on the API key.** The key is a password. It authorizes spending against the workshop's Amazon account. Do not post it in a shared chat, commit it to a repository, paste it into a support ticket, or forward it to a colleague who missed the session. If you think it has been exposed, tell your facilitator; keys are quick to revoke and reissue, and nobody will be annoyed with you for reporting it.
 
@@ -271,13 +273,15 @@ To use them, describe the task rather than naming the skill:
 
 ## Step 9 — Start the workshop
 
-With the folder connected, ask Cowork to begin:
+The exercises themselves live on the workshop site, not in the connected folder. If you are reading this page on that site already, the modules are in the navigation at the top. If you are reading this as a file, open the site in a browser — your facilitator will have given you the address.
 
-> Coach me through the library AI workshop from the beginning.
+Work through the modules one exercise at a time. Each exercise tells you what to do, and where it supplies a prompt you can either copy it or click **Open in Claude Cowork**, which opens Claude with the prompt already in place. Keep the site in one window and Claude in another; you will be moving between them all the way through.
 
-Claude will pick up the workshop materials from the connected folder and take you through the first module one step at a time. It will wait for your attempt at each step rather than working ahead, so the pace is yours.
+You are set up. Nothing else needs configuring.
 
-You are set up. Everything from here happens inside the workshop itself.
+Two things worth knowing before you begin. The site keeps track of which steps you have finished, so you can close it and come back later without losing your place — the course is designed to be done in pieces. And the work itself accumulates in the connected folder as real files, so by the end you have a folder of briefs, matrices, and logs you can open in Word or Excel and keep.
+
+If you would rather not use the site, the exercises are also readable as plain Markdown files in the workshop repository. You lose the progress tracking and the one-click prompt links, but nothing else.
 
 ---
 
