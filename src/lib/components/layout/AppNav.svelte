@@ -12,7 +12,9 @@
 		learnerName: string | null;
 	} = $props();
 
-	const workshopTitle = import.meta.env.PUBLIC_WORKSHOP_TITLE ?? 'Library AI Workshop';
+	// Hardcoded to match +layout.svelte. A missing env var silently rendering a
+	// generic title on the branded site is the worse failure.
+	const workshopTitle = 'Agents and Skills with Claude';
 
 	const moduleColors: Record<string, string> = {
 		'01-reference': 'text-white',
@@ -76,6 +78,16 @@
 					{mod.title}
 				</a>
 			{/each}
+			<a
+				href="{base}/help"
+				class="border-b-2 pb-0.5 text-sm font-medium transition-colors {page.url.pathname.endsWith(
+					'/help'
+				)
+					? 'border-current text-jhu-gold'
+					: 'border-transparent text-white/50 hover:text-white'}"
+			>
+				Setup
+			</a>
 		</div>
 
 		<div class="flex items-center gap-3">
@@ -149,6 +161,12 @@
 						{mod.title}
 					</a>
 				{/each}
+				<a
+					href="{base}/help"
+					class="flex items-center rounded-lg border-l-2 border-transparent px-3 py-2.5 text-sm font-medium text-white/50 transition-colors hover:bg-white/8 hover:text-white"
+				>
+					Setup help
+				</a>
 			</div>
 			{#if learnerName}
 				<div class="mt-4 border-t border-white/10 pt-4">

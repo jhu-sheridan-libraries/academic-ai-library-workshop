@@ -87,6 +87,14 @@ Human review
 			<p class="mt-2 font-mono text-[0.6875rem] tracking-wide text-gray-400">
 				exercises run in <a href="{base}/terminal-primer" class="text-jhu-blue/50 underline underline-offset-2 hover:text-jhu-blue transition-colors">Claude Cowork</a> &nbsp;·&nbsp; no coding &nbsp;·&nbsp; self-paced
 			</p>
+			<p class="mt-5 text-sm text-gray-500">
+				First time here?
+				<a
+					href="{base}/help"
+					class="font-medium text-jhu-blue underline underline-offset-2 hover:text-blue-950"
+					>Set up Claude first</a
+				> — about twenty minutes, once.
+			</p>
 			<div class="mx-auto mt-6 h-px w-10 bg-jhu-gold"></div>
 		</div>
 
