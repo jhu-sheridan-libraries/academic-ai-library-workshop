@@ -11,6 +11,12 @@
 		isComplete: boolean;
 		onComplete: () => void;
 	} = $props();
+
+	const coworkUrl = $derived(
+		step.prompt_text
+			? `claude://cowork?q=${encodeURIComponent(step.prompt_text.trim())}`
+			: null
+	);
 </script>
 
 <div class="space-y-3.5">
@@ -24,11 +30,24 @@
 
 	{#if step.prompt_text}
 		<div class="relative rounded-lg border border-jhu-blue/20 bg-jhu-blue/5">
-			<div class="absolute right-2 top-2">
+			<div class="absolute right-2 top-2 flex items-center gap-1.5">
 				<CopyButton text={step.prompt_text} />
 			</div>
 			<pre class="overflow-x-auto whitespace-pre-wrap p-4 pr-16 font-mono text-sm leading-relaxed text-jhu-blue">{step.prompt_text.trim()}</pre>
 		</div>
+		{#if coworkUrl}
+			<a
+				href={coworkUrl}
+				class="inline-flex items-center gap-2 rounded-lg border border-amber-200 bg-amber-50 px-3.5 py-2 text-sm font-medium text-amber-900 transition-colors hover:border-amber-300 hover:bg-amber-100"
+			>
+				<svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+					<path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+					<polyline points="15 3 21 3 21 9" />
+					<line x1="10" y1="14" x2="21" y2="3" />
+				</svg>
+				Open in Claude Cowork
+			</a>
+		{/if}
 	{/if}
 
 	{#if isComplete && step.checkpoint}
