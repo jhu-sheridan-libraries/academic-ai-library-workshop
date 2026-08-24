@@ -1,8 +1,9 @@
+<p align="center">
+  <img src="docs/images/jhu-sheridan-libraries-banner.jpg" alt="Johns Hopkins Sheridan Libraries & University Museums" width="480">
+</p>
+
 # Agents and Skills with Claude — A Walkthrough
 
-> **Johns Hopkins University · Sheridan Libraries**
-> Research Services & Data Services
->
 > A self-paced workshop developed by the Sheridan Libraries for library staff learning to work with agentic AI tools.
 
 A self-paced workshop for library staff on what an agentic desktop can actually do for research
