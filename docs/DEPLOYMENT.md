@@ -109,6 +109,29 @@ your dashboard stays empty even though everything is configured correctly. Send 
 URL, and treat Pages as the shop window. If you do not want two versions in circulation, disable the
 workflow.
 
+### Keeping credentials out of the repository
+
+This repository is public, and the facilitator works with a live Bedrock key, an AWS profile, and a
+facilitator token. Three things keep those out of it.
+
+`.gitignore` excludes `.env` and `.env.*` while allowing `.env.example`, plus the usual credential
+file shapes (`*.pem`, `*.key`, `credentials*`, `.aws/`). Real values go in `.env`, which is never
+committed; `.env.example` holds placeholders only, and `FACILITATOR_TOKEN` should be left as
+`changeme` there and set to something real only in your local `.env`.
+
+Nothing in the tracked tree contains a credential. Every key reference is a placeholder: the setup
+guide describes the Bedrock key as "one long unbroken string of characters" rather than showing one,
+and figure 8 renders it masked. If you replace that diagram with a real screenshot, mask the key
+before saving — a screenshot containing a live key is a leaked key.
+
+Turn on GitHub secret scanning and push protection for the repository. Both are free for public
+repositories and will reject a push containing a recognised credential format, which is a better
+safety net than remembering to check.
+
+If a key is ever exposed, revoke and reissue rather than rewriting history. Rotation takes a minute
+and is reliable; scrubbing a public repository's history is neither, since the old object may already
+have been fetched or cached.
+
 ### Who needs credentials
 
 Only the facilitator. Participants have no AWS account and need none — they get the in-process store

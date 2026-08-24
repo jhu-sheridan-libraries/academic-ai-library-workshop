@@ -7,6 +7,10 @@ node_modules
 .wrangler
 /.svelte-kit
 /build
+# The static build. GitHub Pages builds this fresh in CI, so a committed copy is
+# never the one that gets served — it only rots. A stale copy here has already
+# been observed containing the pre-conversion course.
+/build-static
 
 # Packaged participant skills (regenerate with scripts/package-workshop-skills.sh)
 /dist-skills
@@ -20,6 +24,21 @@ Thumbs.db
 .env.*
 !.env.example
 !.env.test
+
+# Credentials — belt and braces. Nothing here should ever hold a key, but this
+# repository is public and a facilitator works with a live Bedrock key and an AWS
+# profile, so the cost of these lines is nil and the cost of one mistake is a
+# revoked key and an awkward conversation.
+*.pem
+*.key
+*.p12
+*.pfx
+credentials
+credentials.*
+.aws/
+# Facilitator credential cards, if anyone ever drafts one in-repo.
+credential-card*
+*-credentials.md
 
 # Vite
 vite.config.js.timestamp-*
