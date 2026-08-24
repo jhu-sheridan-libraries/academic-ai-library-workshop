@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 540" width="860" height="540" role="img" aria-label="Diagram of the mounted macOS disk image, with an arrow from the Claude icon to the Applications folder shortcut">
+<style>
+  text { font-family: -apple-system, "Segoe UI", "Helvetica Neue", Arial, sans-serif; }
+  .ttl  { font-size: 13px; font-weight: 600; fill: #3c4149; }
+  .icon { font-size: 13px; fill: #23272e; }
+  .sub  { font-size: 15px; fill: #5a616b; }
+  .ann  { font-size: 12.5px; font-weight: 600; fill: #d93025; }
+  .tag  { font-size: 11px; fill: #8a9099; }
+  .star { font-size: 44px; fill: #ffffff; }
+</style>
+
+<rect width="860" height="540" fill="#f4f6f8"/>
+
+<!-- finder window -->
+<rect x="110" y="60" width="640" height="380" rx="10" fill="#ffffff" stroke="#c3c8cf"/>
+<path d="M110 70 a10 10 0 0 1 10 -10 h620 a10 10 0 0 1 10 10 v38 h-640 z" fill="#e9ebee"/>
+<line x1="110" y1="108" x2="750" y2="108" stroke="#c3c8cf"/>
+<circle cx="132" cy="79" r="5.5" fill="#ff5f57"/>
+<circle cx="150" cy="79" r="5.5" fill="#febc2e"/>
+<circle cx="168" cy="79" r="5.5" fill="#28c840"/>
+<text x="430" y="84" class="ttl" text-anchor="middle">Claude</text>
+
+<!-- claude app icon -->
+<rect x="240" y="190" width="96" height="96" rx="22" fill="#d97757"/>
+<text x="288" y="253" class="star" text-anchor="middle">✳</text>
+<text x="288" y="308" class="icon" text-anchor="middle">Claude</text>
+
+<!-- applications folder icon -->
+<path d="M524 196 h34 l12 14 h56 a8 8 0 0 1 8 8 v60 a8 8 0 0 1 -8 8 h-102 a8 8 0 0 1 -8 -8 v-74 a8 8 0 0 1 8 -8 z" fill="#6fb2e6"/>
+<path d="M516 220 h118 a8 8 0 0 1 8 8 v50 a8 8 0 0 1 -8 8 h-118 a8 8 0 0 1 -8 -8 v-50 a8 8 0 0 1 8 -8 z" fill="#8cc4f0"/>
+<text x="575" y="308" class="icon" text-anchor="middle">Applications</text>
+
+<!-- drag arrow -->
+<path d="M352 232 C 410 190, 460 190, 500 228" fill="none" stroke="#d93025" stroke-width="3"/>
+<path d="M500 228 l-11 -3 l4 11 z" fill="#d93025"/>
+<text x="426" y="176" class="ann" text-anchor="middle">drag the icon onto the folder</text>
+
+<text x="430" y="392" class="sub" text-anchor="middle">Wait for the copy to finish, then eject the disk image.</text>
+
+<text x="840" y="502" class="tag" text-anchor="end">Illustration · not a screenshot · your screen may differ</text>
+</svg>

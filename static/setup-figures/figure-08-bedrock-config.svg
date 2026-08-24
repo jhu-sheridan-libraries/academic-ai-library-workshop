@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 540" width="860" height="540" role="img" aria-label="Diagram of the third-party inference configuration window with Amazon Bedrock selected, each field numbered one to five, and the API key masked">
+<style>
+  text { font-family: -apple-system, "Segoe UI", "Helvetica Neue", Arial, sans-serif; }
+  .ttl  { font-size: 13.5px; font-weight: 600; fill: #3c4149; }
+  .lbl  { font-size: 12px; font-weight: 600; fill: #5a616b; letter-spacing: 0.02em; }
+  .val  { font-family: "SF Mono", Consolas, "Courier New", monospace; font-size: 12.5px; fill: #23272e; }
+  .valS { font-size: 13px; fill: #23272e; }
+  .num  { font-size: 12px; font-weight: 700; fill: #ffffff; }
+  .btn  { font-size: 13.5px; fill: #23272e; }
+  .btnP { font-size: 13.5px; font-weight: 600; fill: #ffffff; }
+  .warn { font-size: 12.5px; font-weight: 600; fill: #d93025; }
+  .tag  { font-size: 11px; fill: #8a9099; }
+</style>
+
+<rect width="860" height="540" fill="#eef1f4"/>
+
+<!-- window -->
+<rect x="170" y="40" width="520" height="420" rx="10" fill="#ffffff" stroke="#c3c8cf"/>
+<path d="M170 50 a10 10 0 0 1 10 -10 h500 a10 10 0 0 1 10 10 v26 h-520 z" fill="#f1f3f5"/>
+<line x1="170" y1="76" x2="690" y2="76" stroke="#dfe3e7"/>
+<circle cx="190" cy="58" r="5.5" fill="#ff5f57"/>
+<text x="430" y="63" class="ttl" text-anchor="middle">Third-Party Inference</text>
+
+<!-- 1 provider -->
+<circle cx="196" cy="127" r="11" fill="#d93025"/>
+<text x="196" y="131" class="num" text-anchor="middle">1</text>
+<text x="218" y="104" class="lbl">PROVIDER</text>
+<rect x="218" y="112" width="442" height="30" rx="5" fill="#fbfbfc" stroke="#d7dbe0"/>
+<text x="232" y="132" class="valS">Amazon Bedrock</text>
+<text x="646" y="132" class="valS" text-anchor="end">▾</text>
+
+<!-- 2 auth -->
+<circle cx="196" cy="187" r="11" fill="#d93025"/>
+<text x="196" y="191" class="num" text-anchor="middle">2</text>
+<text x="218" y="164" class="lbl">AUTHENTICATION</text>
+<rect x="218" y="172" width="442" height="30" rx="5" fill="#fbfbfc" stroke="#d7dbe0"/>
+<text x="232" y="192" class="valS">API key / bearer token</text>
+<text x="646" y="192" class="valS" text-anchor="end">▾</text>
+
+<!-- 3 key -->
+<circle cx="196" cy="247" r="11" fill="#d93025"/>
+<text x="196" y="251" class="num" text-anchor="middle">3</text>
+<text x="218" y="224" class="lbl">API KEY</text>
+<rect x="218" y="232" width="442" height="30" rx="5" fill="#fbfbfc" stroke="#d7dbe0"/>
+<text x="232" y="252" class="val">bdrk-••••••••••••••••••••••••</text>
+
+<!-- 4 region -->
+<circle cx="196" cy="307" r="11" fill="#d93025"/>
+<text x="196" y="311" class="num" text-anchor="middle">4</text>
+<text x="218" y="284" class="lbl">REGION</text>
+<rect x="218" y="292" width="442" height="30" rx="5" fill="#fbfbfc" stroke="#d7dbe0"/>
+<text x="232" y="312" class="val">us-east-1</text>
+
+<!-- 5 model -->
+<circle cx="196" cy="367" r="11" fill="#d93025"/>
+<text x="196" y="371" class="num" text-anchor="middle">5</text>
+<text x="218" y="344" class="lbl">MODEL</text>
+<rect x="218" y="352" width="442" height="30" rx="5" fill="#fbfbfc" stroke="#d7dbe0"/>
+<text x="232" y="372" class="val">us.anthropic.claude-sonnet-4-5-20250929-v1:0</text>
+
+<!-- buttons -->
+<rect x="470" y="408" width="88" height="32" rx="6" fill="#ffffff" stroke="#c4c9d0"/>
+<text x="514" y="429" class="btn" text-anchor="middle">Cancel</text>
+<rect x="572" y="408" width="88" height="32" rx="6" fill="#12141a"/>
+<text x="616" y="429" class="btnP" text-anchor="middle">Save</text>
+
+<text x="170" y="490" class="warn">The API key here is masked on purpose. Never publish or share a figure containing a live key.</text>
+<text x="840" y="514" class="tag" text-anchor="end">Illustration · not a screenshot · your screen may differ</text>
+</svg>

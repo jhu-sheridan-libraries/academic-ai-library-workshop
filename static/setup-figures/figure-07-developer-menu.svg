@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 380" width="860" height="380" role="img" aria-label="Diagram of the Developer menu open, with Configure Third-Party Inference highlighted">
+<style>
+  text { font-family: -apple-system, "Segoe UI", "Helvetica Neue", Arial, sans-serif; }
+  .mb   { font-size: 13px; fill: #23272e; }
+  .mbB  { font-size: 13px; font-weight: 600; fill: #23272e; }
+  .item { font-size: 13.5px; fill: #23272e; }
+  .itemS{ font-size: 13.5px; fill: #ffffff; }
+  .ann  { font-size: 12.5px; font-weight: 600; fill: #d93025; }
+  .cap  { font-size: 13px; fill: #5a616b; }
+  .tag  { font-size: 11px; fill: #8a9099; }
+</style>
+
+<rect width="860" height="380" fill="#eef1f4"/>
+
+<!-- menu bar -->
+<rect x="20" y="20" width="820" height="28" rx="6" fill="#f7f8fa" stroke="#d5d9de"/>
+<text x="42" y="39" class="mbB">Claude</text>
+<text x="132" y="39" class="mb">File</text>
+<text x="176" y="39" class="mb">Edit</text>
+<text x="222" y="39" class="mb">View</text>
+<text x="268" y="39" class="mb">Window</text>
+<text x="336" y="39" class="mb">Help</text>
+<rect x="386" y="22" width="82" height="24" rx="4" fill="#1a6be0"/>
+<text x="396" y="39" class="itemS">Developer</text>
+
+<!-- developer dropdown -->
+<rect x="386" y="52" width="290" height="180" rx="8" fill="#f7f8fa" stroke="#cfd4da"/>
+<text x="404" y="80" class="item">Open DevTools</text>
+<text x="404" y="108" class="item">Reload</text>
+<line x1="396" y1="124" x2="666" y2="124" stroke="#e0e4e8"/>
+<text x="404" y="152" class="item">Configure Third-Party Inference…</text>
+<line x1="396" y1="170" x2="666" y2="170" stroke="#e0e4e8"/>
+<text x="404" y="198" class="item">Reset Onboarding</text>
+
+<!-- annotation -->
+<rect x="394" y="132" width="274" height="30" rx="6" fill="none" stroke="#d93025" stroke-width="2.5"/>
+<path d="M531 258 L531 240" stroke="#d93025" stroke-width="2.5"/>
+<path d="M531 240 l-5 10 h10 z" fill="#d93025"/>
+<text x="531" y="276" class="ann" text-anchor="middle">choose this</text>
+
+<text x="42" y="278" class="cap">The Developer menu appears only after</text>
+<text x="42" y="298" class="cap">Developer Mode is enabled in Step 4. If it</text>
+<text x="42" y="318" class="cap">is missing, quit Claude and reopen it.</text>
+
+<text x="840" y="348" class="tag" text-anchor="end">Illustration · not a screenshot · your screen may differ</text>
+</svg>

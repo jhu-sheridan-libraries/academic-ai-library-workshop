@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 460" width="860" height="460" role="img" aria-label="Diagram of a .skill file shown as a card in Claude with the Save skill button highlighted">
+<style>
+  text { font-family: -apple-system, "Segoe UI", "Helvetica Neue", Arial, sans-serif; }
+  .ttl  { font-size: 13px; font-weight: 600; fill: #3c4149; }
+  .name { font-size: 15px; font-weight: 600; fill: #1a1d23; }
+  .kind { font-size: 11.5px; font-weight: 700; fill: #7b828b; letter-spacing: 0.06em; }
+  .body { font-size: 12.5px; fill: #5a616b; }
+  .btnP { font-size: 13px; font-weight: 600; fill: #ffffff; }
+  .btn  { font-size: 13px; fill: #23272e; }
+  .ann  { font-size: 12.5px; font-weight: 600; fill: #d93025; }
+  .tag  { font-size: 11px; fill: #8a9099; }
+</style>
+
+<rect width="860" height="460" fill="#eef1f4"/>
+
+<!-- window -->
+<rect x="120" y="40" width="620" height="330" rx="10" fill="#ffffff" stroke="#c3c8cf"/>
+<path d="M120 50 a10 10 0 0 1 10 -10 h600 a10 10 0 0 1 10 10 v26 h-620 z" fill="#f1f3f5"/>
+<line x1="120" y1="76" x2="740" y2="76" stroke="#dfe3e7"/>
+<circle cx="142" cy="58" r="5.5" fill="#ff5f57"/>
+<circle cx="160" cy="58" r="5.5" fill="#febc2e"/>
+<circle cx="178" cy="58" r="5.5" fill="#28c840"/>
+<text x="430" y="63" class="ttl" text-anchor="middle">Claude</text>
+
+<!-- skill card -->
+<rect x="164" y="112" width="532" height="164" rx="10" fill="#fafbfc" stroke="#d7dbe0"/>
+<rect x="188" y="140" width="40" height="40" rx="9" fill="#e7ecf2" stroke="#cfd6de"/>
+<text x="208" y="166" class="kind" text-anchor="middle">SK</text>
+<text x="244" y="152" class="kind">SKILL</text>
+<text x="244" y="176" class="name">practice-library-reference-interview</text>
+<text x="244" y="204" class="body">Role-play and debrief a simulated research-library reference</text>
+<text x="244" y="222" class="body">interview. No real patron data is used.</text>
+
+<!-- buttons on the card -->
+<rect x="188" y="238" width="112" height="30" rx="7" fill="#12141a"/>
+<text x="244" y="258" class="btnP" text-anchor="middle">Save skill</text>
+<rect x="312" y="238" width="96" height="30" rx="7" fill="#ffffff" stroke="#c4c9d0"/>
+<text x="360" y="258" class="btn" text-anchor="middle">Preview</text>
+
+<!-- highlight -->
+<rect x="178" y="228" width="132" height="50" rx="11" fill="none" stroke="#d93025" stroke-width="2.5"/>
+<path d="M244 320 L244 298" stroke="#d93025" stroke-width="2.5"/>
+<path d="M244 298 l-5 10 h10 z" fill="#d93025"/>
+<text x="244" y="338" class="ann" text-anchor="middle">click Save skill</text>
+
+<text x="470" y="322" class="body">Repeat for the second file. Saved skills stay</text>
+<text x="470" y="340" class="body">available in every conversation.</text>
+
+<text x="120" y="410" class="body">A .skill file is a compressed folder. Open the file itself rather than unpacking it first.</text>
+<text x="840" y="410" class="tag" text-anchor="end">Illustration · not a screenshot · your screen may differ</text>
+</svg>

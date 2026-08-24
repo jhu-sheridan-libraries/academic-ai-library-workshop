@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 400" width="860" height="400" role="img" aria-label="Diagram of the macOS menu bar with Help open and Troubleshooting expanded, showing Enable Developer Mode highlighted">
+<style>
+  text { font-family: -apple-system, "Segoe UI", "Helvetica Neue", Arial, sans-serif; }
+  .mb   { font-size: 13px; fill: #23272e; }
+  .mbB  { font-size: 13px; font-weight: 600; fill: #23272e; }
+  .item { font-size: 13.5px; fill: #23272e; }
+  .itemS{ font-size: 13.5px; fill: #ffffff; }
+  .dim  { font-size: 13.5px; fill: #a2a8b0; }
+  .ann  { font-size: 12.5px; font-weight: 600; fill: #d93025; }
+  .cap  { font-size: 13px; fill: #5a616b; }
+  .tag  { font-size: 11px; fill: #8a9099; }
+</style>
+
+<rect width="860" height="400" fill="#eef1f4"/>
+
+<!-- menu bar -->
+<rect x="20" y="20" width="820" height="28" rx="6" fill="#f7f8fa" stroke="#d5d9de"/>
+<text x="42" y="39" class="mbB">Claude</text>
+<text x="132" y="39" class="mb">File</text>
+<text x="176" y="39" class="mb">Edit</text>
+<text x="222" y="39" class="mb">View</text>
+<text x="268" y="39" class="mb">Window</text>
+<rect x="326" y="22" width="48" height="24" rx="4" fill="#1a6be0"/>
+<text x="336" y="39" class="itemS">Help</text>
+
+<!-- help dropdown -->
+<rect x="326" y="52" width="212" height="150" rx="8" fill="#f7f8fa" stroke="#cfd4da"/>
+<text x="344" y="80" class="item">Claude Help</text>
+<text x="344" y="108" class="item">Release Notes</text>
+<text x="344" y="136" class="item">Report an Issue</text>
+<line x1="336" y1="152" x2="528" y2="152" stroke="#e0e4e8"/>
+<rect x="330" y="164" width="204" height="28" rx="4" fill="#1a6be0"/>
+<text x="344" y="183" class="itemS">Troubleshooting</text>
+<text x="518" y="183" class="itemS" text-anchor="end">▸</text>
+
+<!-- troubleshooting submenu -->
+<rect x="540" y="158" width="256" height="128" rx="8" fill="#f7f8fa" stroke="#cfd4da"/>
+<text x="558" y="186" class="item">Show Logs</text>
+<text x="558" y="214" class="item">Clear Cache</text>
+<line x1="550" y1="230" x2="786" y2="230" stroke="#e0e4e8"/>
+<text x="558" y="262" class="item">Enable Developer Mode</text>
+
+<!-- annotation -->
+<rect x="548" y="242" width="240" height="30" rx="6" fill="none" stroke="#d93025" stroke-width="2.5"/>
+<path d="M668 306 L668 288" stroke="#d93025" stroke-width="2.5"/>
+<path d="M668 288 l-5 10 h10 z" fill="#d93025"/>
+<text x="668" y="324" class="ann" text-anchor="middle">choose this</text>
+
+<text x="42" y="264" class="cap">The menu bar belongs to the application, not to the</text>
+<text x="42" y="284" class="cap">Claude window — look at the top edge of your display.</text>
+<text x="42" y="318" class="cap">Help → Troubleshooting → Enable Developer Mode</text>
+
+<text x="840" y="368" class="tag" text-anchor="end">Illustration · not a screenshot · your screen may differ</text>
+</svg>
