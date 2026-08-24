@@ -20,7 +20,7 @@ If you get stuck at any point, stop and contact the workshop facilitator rather 
 
 ## Before you start
 
-Collect these four things. Three of them come from your facilitator on a credential card, either printed or sent to you directly.
+Collect these items. Three of them come from your facilitator on a credential card, either printed or sent to you directly.
 
 | What you need | Where it comes from | What it looks like |
 |---|---|---|

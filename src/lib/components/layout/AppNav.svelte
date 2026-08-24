@@ -68,16 +68,6 @@
 
 		<!-- Desktop module links -->
 		<div class="hidden items-center gap-6 md:flex">
-			{#each modules as mod}
-				<a
-					href="{base}/learn/{mod.id}"
-					class="border-b-2 pb-0.5 text-sm font-medium transition-colors {currentModuleId === mod.id
-						? 'border-current ' + (moduleColors[mod.id] ?? 'text-white')
-						: 'border-transparent text-white/70 hover:text-white'}"
-				>
-					{mod.title}
-				</a>
-			{/each}
 			<a
 				href="{base}/help"
 				class="border-b-2 pb-0.5 text-sm font-medium transition-colors {page.url.pathname.endsWith(
@@ -88,6 +78,16 @@
 			>
 				Setup
 			</a>
+			{#each modules as mod}
+				<a
+					href="{base}/learn/{mod.id}"
+					class="border-b-2 pb-0.5 text-sm font-medium transition-colors {currentModuleId === mod.id
+						? 'border-current ' + (moduleColors[mod.id] ?? 'text-white')
+						: 'border-transparent text-white/70 hover:text-white'}"
+				>
+					{mod.title}
+				</a>
+			{/each}
 		</div>
 
 		<div class="flex items-center gap-3">
@@ -150,6 +150,12 @@
 	{#if menuOpen}
 		<div class="absolute inset-x-0 top-full border-t border-blue-950 bg-jhu-blue px-6 py-4 shadow-lg md:hidden">
 			<div class="space-y-1">
+				<a
+					href="{base}/help"
+					class="flex items-center rounded-lg border-l-2 border-transparent px-3 py-2.5 text-sm font-medium text-white/50 transition-colors hover:bg-white/8 hover:text-white"
+				>
+					Setup help
+				</a>
 				{#each modules as mod}
 					<a
 						href="{base}/learn/{mod.id}"
@@ -161,12 +167,6 @@
 						{mod.title}
 					</a>
 				{/each}
-				<a
-					href="{base}/help"
-					class="flex items-center rounded-lg border-l-2 border-transparent px-3 py-2.5 text-sm font-medium text-white/50 transition-colors hover:bg-white/8 hover:text-white"
-				>
-					Setup help
-				</a>
 			</div>
 			{#if learnerName}
 				<div class="mt-4 border-t border-white/10 pt-4">

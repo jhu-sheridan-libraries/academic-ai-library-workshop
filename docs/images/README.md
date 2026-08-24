@@ -83,6 +83,17 @@ away closes the menu.
 `contact-sheet.html` shows all eleven side by side with their figure numbers, which is the
 quickest way to check them after an edit.
 
+## The HTML guide is generated
+
+`PARTICIPANT-SETUP.html` is built from `PARTICIPANT-SETUP.md` by
+`npm run build:guide`. Do not edit the HTML by hand — it will be overwritten, and the two files
+drifting apart is exactly what the generator exists to prevent. Edit the Markdown and rebuild.
+
+The generator turns each figure blockquote into the `.figure` structure by looking for an `<img>`
+inside it, lifts the bold caption into `<span class="cap">`, and converts the HTML comment into the
+hidden `<p class="note">`. So a new figure needs no change to the script: write it in the Markdown
+the same shape as the existing eleven and it will come through.
+
 ## Where the capture notes live
 
 The capture and highlight instructions are also embedded in the two guide documents — as HTML
