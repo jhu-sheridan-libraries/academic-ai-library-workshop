@@ -66,6 +66,12 @@ const STYLE = `
         margin: 10pt 0; overflow-x: auto; page-break-inside: avoid; }
   pre code { background: none; padding: 0; font-size: 10.5pt; }
   hr { border: none; border-top: 1px solid #d5d9de; margin: 22pt 0; }
+  /* A paragraph that is nothing but bold text is a URL or a menu path set on its
+     own line — the hand-built guide gave those block treatment, and :has keeps
+     that without needing a marker in the Markdown. Browsers without :has simply
+     render them as ordinary bold, which is a fair fallback. */
+  p:has(> strong:only-child) { margin: 10pt 0; font-size: 12pt; }
+  p:has(> strong:only-child) strong { font-weight: bold; }
   @media print {
     body { margin: 0; max-width: none; }
     h2 { page-break-after: avoid; }
