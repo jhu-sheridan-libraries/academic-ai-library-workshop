@@ -3,7 +3,7 @@
 </script>
 
 <svelte:head>
-	<title>Pick Your AI Tool — Research with AI</title>
+	<title>What an Agentic Desktop Does — Agents and Skills with Claude</title>
 </svelte:head>
 
 <div class="mx-auto max-w-3xl px-6 py-14">
@@ -13,26 +13,29 @@
 
 	<div class="mb-12">
 		<p class="mb-3 text-xs font-medium uppercase tracking-wider text-jhu-blue/50">Before you begin</p>
-		<h1 class="font-serif text-4xl font-bold leading-tight tracking-tight text-jhu-blue">Pick your AI tool</h1>
+		<h1 class="font-serif text-4xl font-bold leading-tight tracking-tight text-jhu-blue">What an agentic desktop does</h1>
 		<p class="mt-5 text-[1.0625rem] leading-relaxed text-gray-500">
-			This course works in ChatGPT, Claude, Gemini, or Microsoft 365 Copilot. Use the one your library has chosen for the workshop. You need chat, file upload, and—for Module 2—web search or a longer-running research mode.
+			This course runs in Claude Cowork with a folder on your own computer connected to it. That is a different thing from a chat window, and the difference is worth five minutes before you start. Everything you need is in the folder — there is nothing to upload, and your work comes out as files you keep.
+		</p>
+		<p class="mt-4 text-[1.0625rem] leading-relaxed text-gray-500">
+			Working on ChatGPT Codex, Kiro, or another agentic desktop instead? The concepts carry over. Ask your facilitator for the <span class="font-medium text-jhu-blue">Other Platforms</span> note, which says what maps across and what does not.
 		</p>
 		<div class="mt-7 h-px w-10 bg-jhu-gold"></div>
 	</div>
 
 	<section class="mb-12">
-		<h2 class="mb-5 font-serif text-2xl font-bold text-jhu-blue">Shared capability map</h2>
+		<h2 class="mb-5 font-serif text-2xl font-bold text-jhu-blue">The five things to know</h2>
 		<div class="overflow-x-auto rounded-xl border border-slate-200 bg-white">
 			<table class="w-full text-left text-sm">
 				<thead class="border-b border-slate-200 bg-slate-50 text-gray-700">
-					<tr><th class="p-4">Course term</th><th class="p-4">What to look for</th></tr>
+					<tr><th class="p-4">Course term</th><th class="p-4">What it means</th></tr>
 				</thead>
 				<tbody class="divide-y divide-slate-100 text-gray-600">
-					<tr><td class="p-4 font-medium text-gray-800">Project or notebook</td><td class="p-4">A persistent space for chats, files, and instructions</td></tr>
-					<tr><td class="p-4 font-medium text-gray-800">Standing brief</td><td class="p-4">Project instructions, notebook instructions, knowledge, or an uploaded file</td></tr>
-					<tr><td class="p-4 font-medium text-gray-800">Quick web search</td><td class="p-4">A current answer with links for a narrow fact</td></tr>
-					<tr><td class="p-4 font-medium text-gray-800">Research mode</td><td class="p-4">A multi-step search with a plan, activity view, or cited report</td></tr>
-					<tr><td class="p-4 font-medium text-gray-800">Connected source</td><td class="p-4">Optional access to drives, email, or organizational content</td></tr>
+					<tr><td class="p-4 font-medium text-gray-800">Connected folder</td><td class="p-4">A folder on your computer Claude can read and write. Standing access to everything inside it, including files added later — so scope it narrowly</td></tr>
+					<tr><td class="p-4 font-medium text-gray-800">Standing brief</td><td class="p-4"><code>WORKSPACE-BRIEF.md</code> in that folder. The professional standards Claude works to, already in place</td></tr>
+					<tr><td class="p-4 font-medium text-gray-800">File output</td><td class="p-4">Deliverables written to <code>outputs/</code> as documents and spreadsheets you keep, not text in a conversation</td></tr>
+					<tr><td class="p-4 font-medium text-gray-800">Action approval</td><td class="p-4">Claude asks before it changes a file. Read what it proposes, then decide — this is the habit worth building</td></tr>
+					<tr><td class="p-4 font-medium text-gray-800">Skill</td><td class="p-4">A Markdown file of reusable instructions Claude loads on its own when it recognises the task. You will write one in Module 4</td></tr>
 				</tbody>
 			</table>
 		</div>
@@ -43,7 +46,7 @@
 		<ol class="space-y-4 text-sm leading-relaxed text-gray-600">
 			<li><span class="font-semibold text-jhu-blue">1. Purpose:</span> What research decision or deliverable will this support?</li>
 			<li><span class="font-semibold text-jhu-blue">2. Data:</span> Is every file de-identified, necessary, and approved for this system?</li>
-			<li><span class="font-semibold text-jhu-blue">3. Sources:</span> Can the tool use uploads, the web, or connected services? Which are actually needed?</li>
+			<li><span class="font-semibold text-jhu-blue">3. Sources:</span> What can this session actually reach — which folder, and the web or not? Is anything connected that need not be?</li>
 			<li><span class="font-semibold text-jhu-blue">4. Review:</span> Who will verify citations, calculations, search syntax, and claims?</li>
 			<li><span class="font-semibold text-jhu-blue">5. Closure:</span> What will be exported, retained, disconnected, or deleted?</li>
 		</ol>
@@ -57,13 +60,17 @@
 	</div>
 
 	<section class="mb-12">
-		<h2 class="mb-4 font-serif text-2xl font-bold text-jhu-blue">Current feature guides</h2>
-		<ul class="space-y-3 text-sm text-gray-600">
-			<li><a class="text-jhu-blue underline" href="https://help.openai.com/en/articles/10500283-research-faq" target="_blank" rel="noopener noreferrer">ChatGPT deep research</a></li>
-			<li><a class="text-jhu-blue underline" href="https://support.claude.com/en/articles/11088861-use-research-on-claude" target="_blank" rel="noopener noreferrer">Claude Research</a></li>
-			<li><a class="text-jhu-blue underline" href="https://support.google.com/gemini/answer/15719111?hl=en" target="_blank" rel="noopener noreferrer">Gemini Deep Research</a></li>
-			<li><a class="text-jhu-blue underline" href="https://support.microsoft.com/en-us/microsoft-365-copilot/use-researcher-in-microsoft-365-copilot-notebooks" target="_blank" rel="noopener noreferrer">Researcher in Microsoft 365 Copilot Notebooks</a></li>
-		</ul>
+		<h2 class="mb-4 font-serif text-2xl font-bold text-jhu-blue">If you get stuck</h2>
+		<p class="text-sm leading-relaxed text-gray-600">
+			Setup is covered step by step in <span class="font-medium text-jhu-blue">docs/PARTICIPANT-SETUP.md</span>, including a troubleshooting table for the errors people actually hit. There are office hours on Fridays, 2:30&ndash;3:15pm, through September 4 &mdash; bring a screenshot of the error and mask any credential before you send it.
+		</p>
+		<p class="mt-4 text-sm leading-relaxed text-gray-600">
+			The practice baseline for this course is the
+			<a class="text-jhu-blue underline" href="https://www.ala.org/acrl/standards/ai" target="_blank" rel="noopener noreferrer">ACRL AI Competencies for Academic Library Workers</a>
+			and the
+			<a class="text-jhu-blue underline" href="https://www.ala.org/sites/default/files/2026-06/ALA%20CD%2044.2%20AI%20Guidance%20Document%20-%20Final.pdf" target="_blank" rel="noopener noreferrer">ALA Guidance on the Use of Artificial Intelligence in Libraries</a>.
+			Those principles, not any product's feature list, define what completing this course means.
+		</p>
 	</section>
 
 	<div class="text-center">

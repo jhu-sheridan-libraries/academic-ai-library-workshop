@@ -76,16 +76,16 @@ Human review
 	<div class="relative mx-auto max-w-4xl px-6 py-16">
 		<div class="mb-12 text-center">
 			<p class="mb-3 text-xs font-medium uppercase tracking-wider text-jhu-blue/60">
-				Johns Hopkins University Libraries
+				The Sheridan Libraries &middot; Johns Hopkins University
 			</p>
 			<h1 class="font-serif text-[2.5rem] font-bold leading-tight tracking-tight text-jhu-blue">
-				Research with AI
+				Agents and Skills with Claude
 			</h1>
 			<p class="mx-auto mt-4 max-w-md text-[0.9375rem] leading-7 text-gray-500">
-				A hands-on workshop for librarians using ChatGPT, Claude, Gemini, or Copilot.
+				What an agentic desktop can do, and how to compose a Skill of your own. For library staff; no programming experience required.
 			</p>
 			<p class="mt-2 font-mono text-[0.6875rem] tracking-wide text-gray-400">
-				exercises run in <a href="{base}/terminal-primer" class="text-jhu-blue/50 underline underline-offset-2 hover:text-jhu-blue transition-colors">your AI tool</a> &nbsp;·&nbsp; no coding &nbsp;·&nbsp; self-paced
+				exercises run in <a href="{base}/terminal-primer" class="text-jhu-blue/50 underline underline-offset-2 hover:text-jhu-blue transition-colors">Claude Cowork</a> &nbsp;·&nbsp; no coding &nbsp;·&nbsp; self-paced
 			</p>
 			<div class="mx-auto mt-6 h-px w-10 bg-jhu-gold"></div>
 		</div>

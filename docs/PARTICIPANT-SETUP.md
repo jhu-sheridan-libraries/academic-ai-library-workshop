@@ -188,7 +188,9 @@ Sign in to Claude if you have not already, then open a new conversation and send
 
 A normal reply means Claude reached Bedrock with your key and the workshop account is working. An error mentioning credentials, authorization, or an unrecognized model means something in Step 5 needs another look; see the troubleshooting table below.
 
-One thing to know about running through Bedrock: web search is not included automatically. It reaches Claude through Anthropic's own infrastructure, which you are now bypassing, so a search provider has to be configured separately. Some other features that depend on Anthropic-hosted services may also be unavailable or behave differently. None of this blocks the workshop exercises, which use the simulated files in the workshop folder rather than live web results. If you want the full detail, the current feature comparison is published at https://claude.com/docs/third-party/claude-desktop/feature-matrix.
+One thing to know about running through Bedrock: web search is not included automatically. It reaches Claude through Anthropic's own infrastructure, which you are now bypassing, so a search provider has to be configured separately. Some other features that depend on Anthropic-hosted services may also be unavailable or behave differently. If you want the full detail, the current feature comparison is published at https://claude.com/docs/third-party/claude-desktop/feature-matrix.
+
+The exercises are built around this, and none of them need web access at all. Every file they need is in the workshop folder, including a simulated AI research report that Module 2 examines in place of running a live search, a set of captured retrieval results — one per citation in that report — that you read instead of resolving a DOI or opening a publisher's landing page, and a fictional search platform with its own syntax help, thesaurus, and search history that Module 4 tests search syntax against instead of a subscription database. There is nothing to sign into and nothing to look up. If an exercise ever seems to require a search, a login, or a live page, that is a bug in the exercise; tell your facilitator.
 
 ---
 
@@ -199,6 +201,10 @@ Cowork is the part of the application that can read and write files in a folder 
 1. In the main Claude window, click the **Cowork** tab along the top, alongside Chat and Code.
 2. Add the workshop folder as Cowork's working folder, using the option to add a local folder. Select the workshop folder you unzipped earlier, then confirm.
 3. Claude will confirm which folder it can see. Check that the path shown is the workshop folder and not your whole Documents folder or your home directory. Cowork can create and change files in the folder you give it, so give it the narrowest folder that contains what you need.
+
+Inside the folder you will find `WORKSPACE-BRIEF.md`, which sets the standards Claude works to throughout the workshop, and a `sample-data` folder holding the simulated material the exercises use — a research request, an evidence log, a serials usage report, a draft AI research report, and a retrieved web page. Inside that there are three subfolders. `mock-sources/` holds the captured retrieval result for each citation in the draft report, so you check sources by opening a file rather than by going online. `mock-database/` holds a fictional search platform's syntax help, thesaurus extract, search session history, and name authority file, which is what Module 4 tests search syntax and authorized name forms against. `archives/` holds a reading room inquiry, a legacy finding aid, a digitization inventory, and an accession note; if you work in archives or special collections, those are the files your track uses. All of it is invented for teaching. Your own work will be written into this folder as you go, so by the end it also holds the briefs, matrices, logs, and records you produced.
+
+This is the main way Cowork differs from a chat window, and it is worth pausing on. You will not upload files. The files are simply there, and Claude reads and writes them in place. When an exercise asks you to produce something, the result is a file you can open in Word, Excel, or a text editor after the workshop ends — not a block of text in a conversation you have to copy out before you lose it.
 
 Cowork requires a paid Claude plan: Pro, Max, Team, or Enterprise. It is not part of the free tier. If the Cowork tab is missing, your account is most likely on the wrong plan, or, on a Team or Enterprise account, an administrator has not switched Cowork on for the organization. Either way this is not something you can fix from your own settings — send your facilitator a screenshot of your Claude window and they will sort it out.
 
@@ -222,7 +228,9 @@ Note that Cowork itself does not require Developer Mode. You enabled Developer M
 
 ## Step 8 — Add the two practice skills
 
-Two of the workshop exercises are run by *skills* rather than by instructions you read off a page. A skill is a set of instructions Claude loads by itself when it recognises the kind of task you are describing. Once a skill is saved you never have to name a file or paste anything in: you describe what you want in ordinary words and Claude picks it up.
+Two of the workshop exercises are run by *skills* rather than by instructions you read off a page — the reference interview in Module 1 and the output review in Module 2. A skill is a set of instructions Claude loads by itself when it recognises the kind of task you are describing. Once a skill is saved you never have to name a file or paste anything in: you describe what you want in ordinary words and Claude picks it up.
+
+Skills matter beyond those two exercises, which is why they are worth installing properly rather than treating as a formality. By the end of Module 4 you will write one yourself, turning the workflow you have built over the day into something your colleagues can load and use. The two below are the worked examples you learn from first.
 
 Your facilitator will send you two files whose names end in `.skill`.
 

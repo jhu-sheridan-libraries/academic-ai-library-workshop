@@ -1,37 +1,75 @@
 ---
 id: "02-cataloging"
-title: "Search & Source Verification"
-tagline: "Use research modes without outsourcing source judgment"
+title: "Audit an AI Research Scan"
+tagline: "A cited report is not a verified one"
 icon: "tag"
-estimated_minutes: 60
-role_tags: ["reference", "liaison", "systematic_review", "research_support"]
+estimated_minutes: 70
+role_tags: ["reference", "liaison", "systematic_review", "research_support", "archives"]
 exercises:
   - id: "01-orient"
-    title: "Choose Chat, Search, or Research Mode"
+    title: "Open the Scan and Size the Task"
     estimated_minutes: 15
   - id: "02-marc-record"
-    title: "Review the Research Plan"
+    title: "Reconstruct the Research Plan"
     estimated_minutes: 15
   - id: "03-subject-headings"
-    title: "Inspect the Source Set"
-    estimated_minutes: 15
+    title: "Inventory the Sources Yourself"
+    estimated_minutes: 20
   - id: "04-abstract"
-    title: "Audit Claims and Citations"
-    estimated_minutes: 15
+    title: "Build a Claim Ledger, Then Read the Skill"
+    estimated_minutes: 20
 ---
 
 ## About This Module
 
-Leading GUI tools now offer web search and longer-running research modes that can combine public web sources, uploaded files, and optional connected services. These features can accelerate environmental scans, but a cited report is not the same as a reproducible database search or a critically appraised evidence review.
+Your connected folder contains `sample-data/research-scan-draft.md` — a simulated AI research scan,
+produced for the same faculty request you worked from in Module 1 by a long autonomous run: eleven
+sources, six searches, one polished report in under eight minutes. No librarian has checked it.
+
+This module audits that file. You will not run a search of your own; you will do the work that
+arrives after someone else's search, which is the work most likely to land on a librarian's desk and
+least likely to come with time attached. By the end you will have two artifacts you keep — a source
+inventory and a claim ledger — and a defensible answer to the question of whether any of it can be
+sent to the person who asked.
+
+The scan is deliberately imperfect. Finding out where and how is the exercise, so read it before you
+read anything about it.
 
 ## What You'll Learn
 
-- How to match ordinary chat, quick web search, and deep-research modes to the task
-- How to constrain source domains and review a research plan where the tool exposes one
-- How to inspect source identity, methods, date, access, and claim fit
-- How to detect fabricated, misattributed, or weakly supported citations
-- How to document coverage gaps, paywall effects, and platform limits
+- How to choose the right amount of machinery for a task, and why a long autonomous run is a setting
+  rather than an upgrade
+- How to reconstruct and critique the research plan behind a finished report
+- How to separate a source's identity from its fit to the claim attached to it
+- How to record verification levels honestly, including for sources you could not reach
+- How to build a claim ledger that keeps "not checked" from drifting into "supported"
+- How to read what a report leaves out — unused sources, erased disagreement, absent limits
 
-## Tool Notes (June 2026)
+## Skills in This Module
 
-The comparable long-form features are [ChatGPT deep research](https://help.openai.com/en/articles/10500283-research-faq), [Claude Research](https://support.claude.com/en/articles/11088861-use-research-on-claude), [Gemini Deep Research](https://support.google.com/gemini/answer/15719111?hl=en), and [Researcher in Microsoft 365 Copilot Notebooks](https://support.microsoft.com/en-us/microsoft-365-copilot/use-researcher-in-microsoft-365-copilot-notebooks). Names, limits, connected sources, and plan controls differ by account.
+You will **read** a skill. In Module 1 you used one; here you run the `review-ai-research-output`
+skill over the scan, compare its findings with your own, and then open its instructions and read
+them as a document. Look for the places where it deliberately stops — where it declines to conclude,
+insists that something stay marked unchecked, and hands the decision back to a named person. That
+restraint is the most transferable thing in the file, and in Module 4 you will have to write it
+yourself.
+
+## Archives track
+
+Archives staff audit a different artifact and learn the same thing. Your objects are
+`sample-data/archives/finding-aid-draft.md` — a legacy finding aid retyped for the web — and
+`sample-data/archives/digitization-inventory.csv`, item metadata for a digitization batch. Neither has
+been checked, and both assert a great deal.
+
+The parallel is exact and worth stating plainly at the start: **unverified description asserted with
+confidence is the same failure mode as an unverified citation.** A scope note, a date range, an extent,
+a restriction, a rights statement, and a creator attribution are all claims. A finding aid states them
+all in one flat voice, and so does the scan's source table — one register for claims that were checked
+to very different depths. You will build `outputs/archives-description-inventory.xlsx` and
+`outputs/archives-description-ledger.xlsx`, reading both against
+`sample-data/archives/accession-note.txt`, the repository's own record of related material.
+
+Follow the `## Archives track` section in each exercise. The steps in the frontmatter stay on the
+research scan; the archives section gives you the substitutions.
+
+Working on a different agentic desktop? See `docs/OTHER-PLATFORMS.md`.

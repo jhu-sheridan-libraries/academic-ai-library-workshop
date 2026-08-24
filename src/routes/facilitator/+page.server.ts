@@ -1,6 +1,7 @@
 import type { PageServerLoad } from './$types.js';
 import { error } from '@sveltejs/kit';
 import { getLearnersByCohort, getLearnerProgress } from '$lib/db/queries.js';
+import { persistenceStatus } from '$lib/db/client.js';
 
 export const prerender = false;
 import { loadAllModules, loadExercise } from '$lib/content/loader.js';
@@ -131,6 +132,8 @@ export const load: PageServerLoad = async ({ url }) => {
 		medianLabel,
 		totalLearners: learnerItems.length,
 		cohort,
-		token
+		token,
+		// Surfaced so an empty table cannot be mistaken for a quiet cohort.
+		persistence: persistenceStatus()
 	};
 };

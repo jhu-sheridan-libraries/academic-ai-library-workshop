@@ -1,0 +1,20 @@
+# SIMULATED WORKSHOP MATERIAL - item-level metadata for a digitization batch.
+# Fictional repository, fictional collection, fictional people. Retyped from a legacy card file and
+# a spreadsheet kept by the digitization technician. Not reviewed by a curator or a rights officer.
+# Some of what follows is wrong or unresolved. Do not cite this file outside the workshop.
+# Collection: Tidal Flats Photographic Survey (PH-041), Calderwood Institute Archives, Weldon Harbor
+identifier,title,creator,date,format,dimensions,condition,rights_statement,access_condition,transcription_status,notes
+TF-001,Weldon Harbor waterfront looking north from Pier 4,Calderwood Institute Photographic Services,1948,gelatin silver print,8 x 10 in,Good,No Copyright - United States,Open,Complete,Verso carries Institute photographic services stamp
+TF-002,"Tidal Flats survey, block 12, dwellings on Marrow Lane",Weldon Harbor Redevelopment Authority,circa 1952,gelatin silver print,5 x 7 in,"Good, slight silvering at edges",No Copyright - United States,Open,Complete,One of a numbered survey sequence; sheet 12 of 40
+TF-003,Portrait of Harlan Ferris at his desk,Unknown,1961,gelatin silver print,8 x 10 in,Good,No Copyright - United States,Open,Complete,"Blind-stamped ""Halloran Studio, Weldon Harbor"" lower right; no agreement on file"
+TF-004,Slum children at the Tidal Flats standpipe,Unknown,195-?,gelatin silver print,4 x 5 in,Fair; surface abrasion,No Copyright - United States,Open,Complete,Record created from an earlier card file
+TF-005,"Proposed seawall alignment, annotated print",Harlan Ferris,1955-06-14,gelatin silver print with ink annotation,8 x 10 in,Good,No Copyright - United States,Open,Not started,Unsigned. Handwriting on verso resembles annotations elsewhere in MS-114
+TF-006,"Demolition, Marrow Lane and Tenth",Weldon Harbor Redevelopment Authority,6/1957,gelatin silver print,5 x 7 in,Good,No Copyright - United States,Open,Complete,Two near-identical exposures; only one scanned
+TF-006,"Demolition, Marrow Lane and Tenth (second exposure)",Weldon Harbor Redevelopment Authority,6/1957,gelatin silver print,5 x 7 in,Good,No Copyright - United States,Open,Not started,See preceding record
+TF-007,Relocation office interior,Weldon Harbor Redevelopment Authority,1948,gelatin silver print,5 x 7 in,Good,No Copyright - United States,Open,Complete,No date on item or verso
+TF-008,"Harbor commission hearing, City Hall",Unknown,1960s,gelatin silver print,,"Good, mounted on board",,Open,Not started,Mount is acidic and discoloring the print edges
+TF-009,"Tidal Flats, aerial view before clearance",Unknown,n.d.,cellulose nitrate negative,4 x 5 in,"Active mold bloom; strong odor; base cockling",No Copyright - United States,Queued for scanning,Not started,Pulled from cold storage 2026-03-11
+TF-010,Negro tenants awaiting relocation interviews,Unknown,1954,gelatin silver print,5 x 7 in,Good,No Copyright - United States,Open,Complete,Caption transcribed from verso
+TF-011,"Crowd at the Tidal Flats clearance protest, Marrow Lane",Tidewater Press Photo Service,1959,gelatin silver print,8 x 10 in,Good,Unknown,Open - published on collection website,Complete,"Verso carries agency credit line and ""must credit"" instruction"
+TF-012,"Ada Ferris addressing the harbor commission",Unknown,circa 1958,gelatin silver print,5 x 7 in,Good,In Copyright - Rights-holder(s) Unlocatable or Unidentifiable,Open - published on collection website,Complete,Donor unknown; accession record for this item not located
+TF-013,"Waterfront plan presentation board, panel 3",Calderwood Institute Photographic Services,1954,gelatin silver print,11 x 14 in,"Poor; brittle, two tears entering image area",No Copyright - United States,Open,Not started,Handle with support; conservation consult requested 2026-01-08

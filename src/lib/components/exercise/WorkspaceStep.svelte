@@ -14,7 +14,7 @@
 
 <div class="space-y-3">
 	<div class="mb-1 flex items-center gap-2">
-		<span class="rounded-md bg-gray-900/8 px-2 py-0.5 font-mono text-[11px] font-medium tracking-wide text-gray-500">IN YOUR AI TOOL</span>
+		<span class="rounded-md bg-gray-900/8 px-2 py-0.5 font-mono text-[11px] font-medium tracking-wide text-gray-500">DO THIS YOURSELF</span>
 	</div>
 
 	<div class="prose prose-sm max-w-none rounded-lg border border-slate-200 bg-white p-4 text-sm leading-relaxed text-gray-700">

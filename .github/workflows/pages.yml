@@ -2,7 +2,10 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [main]
+    # jhu-main is the branded JHU Sheridan Libraries branch and the one that should
+    # publish. `main` is retained only because a fork's default may still point there;
+    # if this repository has no `main`, the extra entry is simply never matched.
+    branches: [jhu-main, main]
   workflow_dispatch:
 
 permissions:
@@ -30,6 +33,10 @@ jobs:
       - name: Build static site
         env:
           PUBLIC_STATIC: 'true'
+          # Institutional branding is hardcoded in src/routes/+layout.svelte so that a
+          # missing variable cannot publish an unbranded site. Only the cohort label is
+          # configured here.
+          PUBLIC_COHORT: fall2026
           # GitHub Pages serves from /repo-name/ for project pages.
           # Remove BASE_PATH (or set it to '') for a custom domain or user/org root page.
           BASE_PATH: /${{ github.event.repository.name }}

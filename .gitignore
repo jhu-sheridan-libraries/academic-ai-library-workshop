@@ -8,6 +8,9 @@ node_modules
 /.svelte-kit
 /build
 
+# Packaged participant skills (regenerate with scripts/package-workshop-skills.sh)
+/dist-skills
+
 # OS
 .DS_Store
 Thumbs.db
