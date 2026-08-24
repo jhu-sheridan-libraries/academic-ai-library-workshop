@@ -31,7 +31,13 @@ Collect these four things. Three of them come from your facilitator on a credent
 | A model identifier | Facilitator's credential card | Something like `us.anthropic.claude-sonnet-4-5-20250929-v1:0` |
 | Two practice skills | Facilitator, sent separately | Two files whose names end in `.skill`; you install them in Step 8 |
 
-You also need the workshop folder on your computer. If your facilitator sent it as a compressed archive, unzip it now and note where it lives, for example in your Documents folder. You will point Claude at this folder in Step 7.
+You also need the workshop folder on your computer. Download it yourself from the workshop repository's releases page:
+
+**https://github.com/jhu-sheridan-libraries/academic-ai-library-workshop/releases/tag/workshop-materials**
+
+Take the file called **`library-context.zip`**, unzip it, and note where it lives — your Documents folder is fine. Inside you will find a folder called `library-context`. That folder, the one that directly contains `WORKSPACE-BRIEF.md` and `sample-data`, is the one you point Claude at in Step 7. If your facilitator sent you the archive directly instead, use that; it is the same thing.
+
+**Download the release asset, not the whole repository.** Cloning or downloading the repository gets you the application source code, the facilitator's materials, and a set of notes that spoil several exercises. It is also far larger than you need. The zip on the releases page contains exactly the workshop folder and nothing else, which is the point — and connecting the narrowest folder that holds what you need is a habit the first exercise is about.
 
 **A note on the API key.** The key is a password. It authorizes spending against the workshop's Amazon account. Do not post it in a shared chat, commit it to a repository, paste it into a support ticket, or forward it to a colleague who missed the session. If you think it has been exposed, tell your facilitator; keys are quick to revoke and reissue, and nobody will be annoyed with you for reporting it.
 
@@ -199,7 +205,7 @@ The exercises are built around this, and none of them need web access at all. Ev
 Cowork is the part of the application that can read and write files in a folder you choose. It is where the workshop exercises take place.
 
 1. In the main Claude window, click the **Cowork** tab along the top, alongside Chat and Code.
-2. Add the workshop folder as Cowork's working folder, using the option to add a local folder. Select the workshop folder you unzipped earlier, then confirm.
+2. Add the workshop folder as Cowork's working folder, using the option to add a local folder. Select the `library-context` folder you unzipped earlier — the one that directly contains `WORKSPACE-BRIEF.md` and `sample-data`, not the folder above it — then confirm.
 3. Claude will confirm which folder it can see. Check that the path shown is the workshop folder and not your whole Documents folder or your home directory. Cowork can create and change files in the folder you give it, so give it the narrowest folder that contains what you need.
 
 Inside the folder you will find `WORKSPACE-BRIEF.md`, which sets the standards Claude works to throughout the workshop, and a `sample-data` folder holding the simulated material the exercises use — a research request, an evidence log, a serials usage report, a draft AI research report, and a retrieved web page. Inside that there are three subfolders. `mock-sources/` holds the captured retrieval result for each citation in the draft report, so you check sources by opening a file rather than by going online. `mock-database/` holds a fictional search platform's syntax help, thesaurus extract, search session history, and name authority file, which is what Module 4 tests search syntax and authorized name forms against. `archives/` holds a reading room inquiry, a legacy finding aid, a digitization inventory, and an accession note; if you work in archives or special collections, those are the files your track uses. All of it is invented for teaching. Your own work will be written into this folder as you go, so by the end it also holds the briefs, matrices, logs, and records you produced.
@@ -284,7 +290,8 @@ You are set up. Everything from here happens inside the workshop itself.
 | An error naming the model, or saying a model was not found | The model identifier does not match, or the region does not offer that model | Re-enter both the model identifier and the region exactly as printed on the card, including the leading `us.` |
 | A quota, throttling, or rate limit message | The workshop account is busy, or your key's allowance is exhausted | Wait a minute and try again; if it persists, tell your facilitator, who can check the account |
 | No **Cowork** tab | Your plan does not include Cowork, or an administrator has not enabled it | Send your facilitator a screenshot of the window; this is fixed on their side |
-| Cowork cannot see the workshop files | A different folder was connected, or the archive was never unzipped | Confirm the archive is unzipped, then reconnect, selecting the folder that directly contains the workshop files |
+| Cowork cannot see the workshop files | A different folder was connected, or the archive was never unzipped | Confirm the archive is unzipped, then reconnect, selecting the `library-context` folder itself — the one directly containing `WORKSPACE-BRIEF.md`. Selecting the folder one level above is the usual mistake |
+| Claude lists far more files than expected, including source code | You connected a clone of the whole repository rather than the workshop folder | Download `library-context.zip` from the releases page instead, and connect that folder. The repository contains notes that spoil several exercises |
 | Windows blocks the installer and offers no "Run anyway" | Your institution manages this computer and restricts installations | Contact your IT service desk, or use a personal machine for the workshop |
 | No **Save skill** button when you open a `.skill` file | The file was altered in transit, or it was unzipped before being opened | Ask your facilitator to resend it, ideally as a download link rather than a mail attachment, and open the `.skill` file itself rather than its contents |
 | A saved skill never seems to trigger | The request did not read as the kind of task the skill is for | Name it directly, as in "use the reference interview practice skill", and tell your facilitator which wording failed |

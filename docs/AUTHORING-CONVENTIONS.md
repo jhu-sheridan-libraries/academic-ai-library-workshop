@@ -48,6 +48,37 @@ what a librarian *would* check outside the folder is fine and is often the point
 and check it is not. Local, non-networked work — a calculator, a spreadsheet, a text editor, a file
 the learner produced — is always fine.
 
+## Every prompt gets a one-click link
+
+Any prompt a learner is meant to send must be reachable in one click. Two mechanisms, both of which
+build the `claude://cowork/new?q=…` deep link and URL-encode it for you. **Never hand-write a
+`claude://` URL** — encoding mistakes there fail silently, which is the worst way for a link to fail.
+
+**In a step:** put the prompt in `prompt_text`. This works on `prompt` steps and, since the
+components were unified, on `workspace` steps too — a workspace step that asks the learner to do
+something *and* send a prompt should carry both. Do not leave a prompt quoted inside `instruction`;
+move it to `prompt_text` so it renders in a prompt box with a copy button and a link.
+
+**In body markdown**, chiefly the `## Archives track` sections, use a fenced block:
+
+    ```cowork-prompt
+    Read outputs/archives-request-brief.md and ...
+    ```
+
+`expandCoworkPrompts()` in `src/lib/content/loader.ts` turns that into the same prompt box and link.
+
+Two things that are correctly *not* linked: a `workspace` step where the learner reads a fixture,
+edits a file, checks arithmetic, or clicks something in the interface — those are deliberately not
+prompt-driven, and inventing a prompt to justify a link would undo the lesson. And `observe` and
+`reflect` steps, which have no prompts at all.
+
+## Markdown in steps
+
+`instruction` on `prompt` and `workspace` steps is rendered as Markdown, so backticks, emphasis, and
+paragraph breaks work. `instruction` on `observe` and `reflect` steps is rendered as plain text — no
+Markdown, because those components print it directly. `prompt_text`, `checkpoint`,
+`reflection_prompt`, and `observe_items` are never rendered as Markdown; write them as plain prose.
+
 ## Cowork vocabulary
 
 | Do not write | Write |
