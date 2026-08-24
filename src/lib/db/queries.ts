@@ -226,7 +226,7 @@ export async function recordStepComplete(opts: {
 	if (useLocal()) return localRecordStepComplete(opts);
 	const now = new Date().toISOString();
 	const db = getDocClient();
-	await withFallback(
+	await writeWithFallback(
 		() =>
 			db.send(
 				new PutCommand({
@@ -280,7 +280,7 @@ export async function upsertNote(opts: {
 	const now = new Date().toISOString();
 	const db = getDocClient();
 	// Use UpdateItem to upsert: set body + updatedAt, preserve createdAt if exists
-	await withFallback(
+	await writeWithFallback(
 		() =>
 			db.send(
 				new UpdateCommand({
