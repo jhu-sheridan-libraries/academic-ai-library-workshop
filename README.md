@@ -1,5 +1,10 @@
 # Agents and Skills with Claude — A Walkthrough
 
+> **Johns Hopkins University · Sheridan Libraries**
+> Research Services & Data Services
+>
+> A self-paced workshop developed by the Sheridan Libraries for library staff learning to work with agentic AI tools.
+
 A self-paced workshop for library staff on what an agentic desktop can actually do for research
 support and archives work, and how to build one of your own tools for it. No programming experience
 is required, and you will not write code.
@@ -207,5 +212,5 @@ Editing the exercises? See `docs/AUTHORING-CONVENTIONS.md`.
 
 ## License
 
-Copyright (c) 2026 Steven J. Miklovic. Licensed under the
-[Mozilla Public License 2.0](LICENSE).
+Copyright (c) 2026 Steven J. Miklovic, Johns Hopkins University Sheridan Libraries.
+Licensed under the [Mozilla Public License 2.0](LICENSE).
