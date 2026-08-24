@@ -12,9 +12,14 @@
 		onComplete: () => void;
 	} = $props();
 
+	// Documented deep-link form is `claude://cowork/new?q=<url-encoded prompt>`.
+	// The `/new` segment is required; `claude://cowork?q=` does not open a session.
+	// `folder=` is deliberately omitted — the learner connected their own folder in
+	// Module 1, and a folder passed by link is treated as untrusted and re-prompts.
+	// Prompts are truncated around 14,000 characters; ours are far shorter.
 	const coworkUrl = $derived(
 		step.prompt_text
-			? `claude://cowork?q=${encodeURIComponent(step.prompt_text.trim())}`
+			? `claude://cowork/new?q=${encodeURIComponent(step.prompt_text.trim())}`
 			: null
 	);
 </script>
