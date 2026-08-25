@@ -100,9 +100,6 @@
 						{isComplete ? '✓' : i + 1}
 					</span>
 					<span class="truncate">{ex.title}</span>
-					{#if ex.estimated_minutes}
-						<span class="ml-auto shrink-0 text-[11px] tabular-nums text-gray-400">{ex.estimated_minutes}m</span>
-					{/if}
 				</a>
 			{/each}
 		</nav>

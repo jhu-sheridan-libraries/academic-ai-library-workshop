@@ -32,8 +32,8 @@
 			Setting up Claude
 		</h1>
 		<p class="mt-5 text-[1.0625rem] leading-relaxed text-gray-500">
-			Everything you need to do once, before the exercises. Allow about twenty minutes, most of it
-			downloading and waiting. You will not write code or use a command line.
+			Everything you need to do once, before the exercises. You will not write code or use a command
+			line.
 		</p>
 		<div class="mt-7 h-px w-10 bg-jhu-gold"></div>
 	</div>
@@ -55,7 +55,7 @@
 	<div class="mt-14 rounded-xl border border-jhu-spirit/30 bg-jhu-spirit/5 px-7 py-6">
 		<p class="text-sm leading-relaxed text-gray-600">
 			<span class="font-semibold text-jhu-blue">Still stuck?</span> Office hours run Fridays,
-			2:30&ndash;3:15pm, through September 4. Bring a screenshot of what you are seeing &mdash; and
+			2:30&ndash;3:15pm, through November 6. Bring a screenshot of what you are seeing &mdash; and
 			mask your API key before sending it anywhere.
 		</p>
 	</div>

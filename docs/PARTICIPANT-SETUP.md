@@ -10,7 +10,7 @@ This guide walks you through installing the Claude desktop application on your o
 
 You do not need any programming experience. You will not write code, use a command line, or install developer software. You will, however, turn on a setting called Developer Mode. That name is misleading: in this context it does nothing more than reveal the menu that lets you tell Claude which company's servers to use. There is an explanation of what it does and does not do at the end of this guide, in case the name gives you pause.
 
-Set aside about twenty minutes. Most of that is downloading and waiting.
+You can pause and return to this setup whenever you need to.
 
 The figures in this guide are simplified diagrams rather than photographs of a screen. They show where to look and what to click. The application is updated often, so expect the wording and arrangement on your own screen to differ in small ways; match by meaning rather than by appearance.
 

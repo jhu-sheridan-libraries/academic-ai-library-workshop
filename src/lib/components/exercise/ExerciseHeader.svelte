@@ -2,13 +2,11 @@
 	let {
 		title,
 		currentStep,
-		totalSteps,
-		estimatedMinutes
+		totalSteps
 	}: {
 		title: string;
 		currentStep: number;
 		totalSteps: number;
-		estimatedMinutes: number;
 	} = $props();
 
 	const pct = $derived(totalSteps > 0 ? (currentStep / totalSteps) * 100 : 0);
@@ -25,7 +23,5 @@
 			></div>
 		</div>
 		<span class="text-xs tabular-nums text-gray-400">{currentStep}/{totalSteps} steps</span>
-		<span class="text-xs text-gray-400">·</span>
-		<span class="text-xs text-gray-400">~{estimatedMinutes} min</span>
 	</div>
 </div>

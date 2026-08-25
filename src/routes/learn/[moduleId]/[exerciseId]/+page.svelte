@@ -143,7 +143,6 @@
 				title={exercise.title}
 				currentStep={completedIndices.length}
 				totalSteps={exercise.steps.length}
-				estimatedMinutes={exercise.estimated_minutes}
 			/>
 
 			<!-- Exercise introduction -->

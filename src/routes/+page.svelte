@@ -78,31 +78,42 @@ Human review
 			<p class="mb-3 text-xs font-medium uppercase tracking-wider text-jhu-blue/60">
 				The Sheridan Libraries &middot; Johns Hopkins University
 			</p>
-			<h1 class="font-serif text-[2.5rem] font-bold leading-tight tracking-tight text-jhu-blue">
-				Agents and Skills with Claude
-			</h1>
-			<p class="mx-auto mt-4 max-w-md text-[0.9375rem] leading-7 text-gray-500">
-				What an agentic desktop can do, and how to compose a Skill of your own. For library staff; no programming experience required.
-			</p>
-			<p class="mt-2 font-mono text-[0.6875rem] tracking-wide text-gray-400">
-				exercises run in <a href="{base}/terminal-primer" class="text-jhu-blue/50 underline underline-offset-2 hover:text-jhu-blue transition-colors">Claude, with a folder attached</a> &nbsp;·&nbsp; no coding &nbsp;·&nbsp; self-paced
-			</p>
-			<p class="mt-5 text-sm text-gray-500">
-				First time here?
-				<a
-					href="{base}/help"
-					class="font-medium text-jhu-blue underline underline-offset-2 hover:text-blue-950"
-					>Set up Claude first</a
-				> — about twenty minutes, once.
-			</p>
-			<p class="mx-auto mt-3 max-w-lg text-[0.8125rem] leading-6 text-gray-400">
-				You work through this alone and at your own pace. Each step says how long it should take and
-				what counts as enough, and stopping partway is fine — your place is saved. Your facilitator is
-				remote: they can see which steps you have completed and anything you type into a reflection
-				box, which is how they know where people are getting stuck. Bring whatever will not resolve
-				itself to the optional walkthrough or the office hours in your invitation.
-			</p>
-			<div class="mx-auto mt-6 h-px w-10 bg-jhu-gold"></div>
+			<div class="mx-auto max-w-2xl rounded-2xl border border-jhu-blue/10 bg-white/80 px-6 py-8 shadow-sm sm:px-10">
+				<h1 class="font-serif text-[2.5rem] font-bold leading-tight tracking-tight text-jhu-blue">
+					Agents and Skills with Claude
+				</h1>
+				<p class="mx-auto mt-4 max-w-lg text-[0.9375rem] leading-7 text-gray-600">
+					What an agentic desktop can do, and how to compose a Skill of your own. For library staff;
+					no programming experience required.
+				</p>
+				<div class="my-6 h-px bg-jhu-blue/10"></div>
+				<p class="font-mono text-[0.6875rem] tracking-wide text-jhu-blue/60">
+					exercises run in
+					<a
+						href="{base}/terminal-primer"
+						class="underline decoration-jhu-gold/70 underline-offset-2 transition-colors hover:text-jhu-blue"
+						>Claude, with a folder attached</a
+					>
+					&nbsp;·&nbsp; no coding &nbsp;·&nbsp; self-paced
+				</p>
+				<div class="mt-5 rounded-xl bg-jhu-blue/[0.04] px-5 py-4 text-left">
+					<p class="text-sm leading-6 text-gray-600">
+						First time here?
+						<a
+							href="{base}/help"
+							class="font-medium text-jhu-blue underline decoration-jhu-gold/70 underline-offset-2 hover:text-blue-950"
+							>Set up Claude first</a
+						>.
+					</p>
+					<p class="mt-3 text-sm leading-6 text-gray-500">
+						You work through this alone and at your own pace. Each step explains what counts as enough,
+						and stopping partway is fine — your place is saved. Your facilitator is remote: they can see
+						which steps you have completed and anything you type into a reflection box, which is how they
+						know where people are getting stuck. Bring whatever will not resolve itself to the optional
+						walkthrough or the office hours in your invitation.
+					</p>
+				</div>
+			</div>
 		</div>
 
 		<div class="flex flex-wrap justify-center gap-6">

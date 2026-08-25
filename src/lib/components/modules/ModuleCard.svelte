@@ -115,9 +115,7 @@
 					Exercise {currentExerciseNum} of {module.exercises.length}
 				</span>
 			{:else}
-				<span class="text-xs text-gray-400">
-					{module.exercises.length} exercises · {module.estimated_minutes} min
-				</span>
+				<span class="text-xs text-gray-400">{module.exercises.length} exercises</span>
 			{/if}
 			<span
 				class="inline-flex items-center gap-1.5 rounded-full px-3.5 py-1.5 text-xs font-semibold text-white shadow-sm transition-all duration-150 group-hover:gap-2.5 group-hover:shadow"

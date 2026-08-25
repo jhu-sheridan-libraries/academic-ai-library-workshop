@@ -15,7 +15,7 @@
 		<p class="mb-3 text-xs font-medium uppercase tracking-wider text-jhu-blue/50">Before you begin</p>
 		<h1 class="font-serif text-4xl font-bold leading-tight tracking-tight text-jhu-blue">What an agentic desktop does</h1>
 		<p class="mt-5 text-[1.0625rem] leading-relaxed text-gray-500">
-			This course runs in Claude, in a project with a folder on your own computer attached to it. That is a different thing from a chat window, and the difference is worth five minutes before you start. Everything you need is in the folder — there is nothing to upload, and your work comes out as files you keep.
+			This course runs in Claude, in a project with a folder on your own computer attached to it. That is a different thing from a chat window. Everything you need is in the folder — there is nothing to upload, and your work comes out as files you keep.
 		</p>
 		<p class="mt-4 text-[1.0625rem] leading-relaxed text-gray-500">
 			Working on ChatGPT Codex, Kiro, or another agentic desktop instead? The concepts carry over. Ask your facilitator for the <span class="font-medium text-jhu-blue">Other Platforms</span> note, which says what maps across and what does not.
@@ -62,7 +62,7 @@
 	<section class="mb-12">
 		<h2 class="mb-4 font-serif text-2xl font-bold text-jhu-blue">If you get stuck</h2>
 		<p class="text-sm leading-relaxed text-gray-600">
-			Setup is covered step by step in <span class="font-medium text-jhu-blue">docs/PARTICIPANT-SETUP.md</span>, including a troubleshooting table for the errors people actually hit. There are office hours on Fridays, 2:30&ndash;3:15pm, through September 4 &mdash; bring a screenshot of the error and mask any credential before you send it.
+			Setup is covered step by step in <span class="font-medium text-jhu-blue">docs/PARTICIPANT-SETUP.md</span>, including a troubleshooting table for the errors people actually hit. There are office hours on Fridays, 2:30&ndash;3:15pm, through November 6 &mdash; bring a screenshot of the error and mask any credential before you send it.
 		</p>
 		<p class="mt-4 text-sm leading-relaxed text-gray-600">
 			The practice baseline for this course is the
