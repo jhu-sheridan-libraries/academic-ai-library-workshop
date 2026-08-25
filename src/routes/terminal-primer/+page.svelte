@@ -3,7 +3,7 @@
 </script>
 
 <svelte:head>
-	<title>What an Agentic Desktop Does — Agents and Skills with Claude</title>
+	<title>What an Agentic Desktop Does - Agents and Skills with Claude</title>
 </svelte:head>
 
 <div class="mx-auto max-w-3xl px-6 py-14">
@@ -13,12 +13,12 @@
 
 	<div class="mb-12">
 		<p class="mb-3 text-xs font-medium uppercase tracking-wider text-jhu-blue/50">Before you begin</p>
-		<h1 class="font-serif text-4xl font-bold leading-tight tracking-tight text-jhu-blue">What an agentic desktop does</h1>
+		<h1 class="font-serif text-4xl font-bold leading-tight tracking-tight text-jhu-blue">How This AI Workspace Works</h1>
 		<p class="mt-5 text-[1.0625rem] leading-relaxed text-gray-500">
-			This course runs in Claude, in a project with a folder on your own computer attached to it. That is a different thing from a chat window. Everything you need is in the folder — there is nothing to upload, and your work comes out as files you keep.
+			This course runs in Claude, in a project with a folder on your own computer attached to it. That is a different thing from a chat window. Everything you need is in the folder - there is nothing to upload, and your work comes out as files you keep.
 		</p>
 		<p class="mt-4 text-[1.0625rem] leading-relaxed text-gray-500">
-			Working on ChatGPT Codex, Kiro, or another agentic desktop instead? The concepts carry over. Ask your facilitator for the <span class="font-medium text-jhu-blue">Other Platforms</span> note, which says what maps across and what does not.
+			Working on ChatGPT Codex, Kiro, or another agentic desktop instead? The concepts carry over. Ask your facilitator for the <span class="font-medium text-jhu-blue">Other Platforms</span> note, which explains which parts work the same and which do not.
 		</p>
 		<div class="mt-7 h-px w-10 bg-jhu-gold"></div>
 	</div>
@@ -31,11 +31,11 @@
 					<tr><th class="p-4">Course term</th><th class="p-4">What it means</th></tr>
 				</thead>
 				<tbody class="divide-y divide-slate-100 text-gray-600">
-					<tr><td class="p-4 font-medium text-gray-800">Connected folder</td><td class="p-4">A folder on your computer that you attach to a project so Claude can read and write it. Standing access to everything inside it, including files added later — so scope it narrowly</td></tr>
-					<tr><td class="p-4 font-medium text-gray-800">Standing brief</td><td class="p-4"><code>WORKSPACE-BRIEF.md</code> in that folder. The professional standards Claude works to, already in place</td></tr>
+					<tr><td class="p-4 font-medium text-gray-800">Connected folder</td><td class="p-4">A folder on your computer that you attach to a project so Claude can read and write it. Claude can access everything inside it, including files added later, so choose a folder with only the material you intend to share</td></tr>
+					<tr><td class="p-4 font-medium text-gray-800">Standing brief</td><td class="p-4"><code>WORKSPACE-BRIEF.md</code> in that folder. It contains the professional standards and limits Claude should follow</td></tr>
 					<tr><td class="p-4 font-medium text-gray-800">File output</td><td class="p-4">Deliverables written to <code>outputs/</code> as documents and spreadsheets you keep, not text in a conversation</td></tr>
-					<tr><td class="p-4 font-medium text-gray-800">Action approval</td><td class="p-4">Claude asks before it changes a file. Read what it proposes, then decide — this is the habit worth building</td></tr>
-					<tr><td class="p-4 font-medium text-gray-800">Skill</td><td class="p-4">A Markdown file of reusable instructions Claude loads on its own when it recognises the task. You will write one in Module 4</td></tr>
+					<tr><td class="p-4 font-medium text-gray-800">Action approval</td><td class="p-4">Claude asks before it changes a file. Read what it proposes, then decide - this is the habit worth building</td></tr>
+					<tr><td class="p-4 font-medium text-gray-800">Skill</td><td class="p-4">A Markdown file with reusable instructions that Claude loads automatically when the request matches. You will write one in Module 4</td></tr>
 				</tbody>
 			</table>
 		</div>
@@ -46,7 +46,7 @@
 		<ol class="space-y-4 text-sm leading-relaxed text-gray-600">
 			<li><span class="font-semibold text-jhu-blue">1. Purpose:</span> What research decision or deliverable will this support?</li>
 			<li><span class="font-semibold text-jhu-blue">2. Data:</span> Is every file de-identified, necessary, and approved for this system?</li>
-			<li><span class="font-semibold text-jhu-blue">3. Sources:</span> What can this session actually reach — which folder, and the web or not? Is anything connected that need not be?</li>
+			<li><span class="font-semibold text-jhu-blue">3. Sources:</span> Which folder can this session access? Can it use the web? Is anything connected that it does not need?</li>
 			<li><span class="font-semibold text-jhu-blue">4. Review:</span> Who will verify citations, calculations, search syntax, and claims?</li>
 			<li><span class="font-semibold text-jhu-blue">5. Closure:</span> What will be exported, retained, disconnected, or deleted?</li>
 		</ol>
@@ -75,7 +75,7 @@
 
 	<div class="text-center">
 		<a href="{base}/" class="inline-flex items-center gap-2 rounded-full bg-jhu-blue px-8 py-3 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-jhu-blue/90">
-			I'm ready — take me to the modules →
+			I'm ready - take me to the modules →
 		</a>
 	</div>
 </div>

@@ -7,7 +7,7 @@ steps:
   - index: 0
     label: "Build the source inventory"
     type: "prompt"
-    instruction: "Turn the scan's source table into a workbook you can sort, filter, and hand to a colleague. Transcription only at this stage — no corrections, no additions."
+    instruction: "Turn the scan's source table into a workbook you can sort, filter, and hand to a colleague. Transcription only at this stage - no corrections, no additions."
     prompt_text: |
       Read sample-data/research-scan-draft.md from the connected folder and write outputs/source-inventory.xlsx, one row for each of the eleven sources in its source table.
 
@@ -17,12 +17,12 @@ steps:
 
       Tell me how many of the eleven sources the body actually cites.
     checkpoint: "The workbook has one row per source, the metadata matches the file exactly, every row records either the claim it supports or that the body never uses it, and the two verification columns are empty."
-    facilitator_note: "The last line of the prompt produces a count that lands hard and that a learner working alone has nobody to say it to — expect it in office hours, and let it come up there rather than pre-empting it. If a model tidies the metadata despite the instruction, that is a finding in its own right and worth collecting across the cohort; it varies by run."
+    facilitator_note: "The last line of the prompt produces a count that lands hard and that a learner working alone has nobody to say it to - expect it in office hours, and let it come up there rather than pre-empting it. If a model tidies the metadata despite the instruction, that is a finding in its own right and worth collecting across the cohort; it varies by run."
   - index: 1
     label: "Open a sample of the records yourself"
     type: "workspace"
     instruction: |
-      Claude cannot make this judgment for you, and nobody in this workshop has web search. So the retrieval has already been done and captured in `sample-data/mock-sources/` — one file per cited source, named by the ID the scan gives it, so that all eleven results are the same for every learner. What has not been done is the judgment.
+      Claude cannot make this judgment for you, and nobody in this workshop has web search. So the retrieval has already been done and captured in `sample-data/mock-sources/` - one file per cited source, named by the ID the scan gives it, so that all eleven results are the same for every learner. What has not been done is the judgment.
 
       Read `sample-data/mock-sources/index.md` first. Then choose at least four sources and open their records yourself:
 
@@ -37,7 +37,7 @@ steps:
 
       Give this about eight minutes and stop at four sources. Checking all eleven is not a better version of this step, and if more than one verification level could apply to a row, pick the one that most limits what the source can support.
     checkpoint: "You have personally opened at least four records, compared each one against the citation that pointed at it, and every verification level in the workbook records what you saw rather than what the scan asserted."
-    facilitator_note: "The highest-dropout step in Module 2, and the reassurance learners need — that a record which gives them nothing is a result rather than a failure to keep grinding at — is now in the step itself, along with the eight-minute budget and the four-source ceiling. Remotely, this is where people quietly stop for the day. A learner sitting on this step for a long stretch on the dashboard is worth a message that says four is enough."
+    facilitator_note: "The highest-dropout step in Module 2, and the reassurance learners need - that a record which gives them nothing is a result rather than a failure to keep grinding at - is now in the step itself, along with the eight-minute budget and the four-source ceiling. Remotely, this is where people quietly stop for the day. A learner sitting on this step for a long stretch on the dashboard is worth a message that says four is enough."
   - index: 2
     label: "Cross-check against the library's own evidence log"
     type: "prompt"
@@ -64,7 +64,7 @@ steps:
   - index: 4
     label: "Reflect on what looked safe"
     type: "reflect"
-    instruction: "A record that comes back proves that something exists. It does not prove that the source is what the citation says it is, that it is appropriate to the claim, or that anyone read it."
+    instruction: "A record that comes back proves something exists. It does not prove that the source matches the citation, that it is relevant to the claim, or that anyone read it."
     reflection_prompt: "Which of the sources would you have accepted without checking, and what specifically made it look safe?"
 ---
 
@@ -75,12 +75,12 @@ it. This exercise takes that table apart into a workbook, and then does the part
 you: opening a sample and looking.
 
 The looking has been made possible without leaving the folder. `sample-data/mock-sources/` holds one
-file per cited source — what came back when each citation was followed. Some came back with a record,
+file per cited source - what came back when each citation was followed. Some came back with a record,
 some with an abstract and a locked door, some with nothing. Every learner sees the same eleven
 results, which means the difference between two learners' inventories is entirely in the judgment.
 
 Two things are worth separating as you work. The first is whether a source exists and is what the
-citation says it is — identity. The second is whether it supports the claim attached to it — fit.
+citation says it is - identity. The second is whether it supports the claim attached to it - fit.
 They fail independently, and a report can pass the first while failing the second everywhere.
 
 The third thing to watch is the source set as a whole. A list of sources consulted is not
@@ -92,11 +92,11 @@ Then read the library's own evidence log against the scan. Someone already did s
 ## Archives track
 
 Identity and fit fail independently here too. An item record can be accurate about what the object
-is and wrong about who made it, when, or whether anyone may publish it — and the fields that carry
+is and wrong about who made it, when, or whether anyone may publish it - and the fields that carry
 those judgments are the ones that get indexed, harvested, and reused, while the hedge sits in a notes
 column nobody exports.
 
-Transcribe the item metadata into a workbook first — transcription only, no corrections and no
+Transcribe the item metadata into a workbook first - transcription only, no corrections and no
 additions:
 
 ```cowork-prompt
@@ -110,7 +110,7 @@ the rest of the material: `sample-data/archives/finding-aid-draft.md`,
 verification level" yourself, using exactly one of: confirmed from the record itself; supported by
 another file in the folder; contradicted by another file in the folder; asserted with no support
 available; cannot tell from the folder. A field you cannot confirm is a finding rather than a task to
-keep grinding at — record it, move on, and do not let Claude tidy it.
+keep grinding at - record it, move on, and do not let Claude tidy it.
 
 Then set the descriptions beside one another. This is the centre of the exercise. Three files describe
 photographic material from the same subject and place, and nobody has reconciled them.

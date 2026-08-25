@@ -9,7 +9,7 @@ steps:
     type: "prompt"
     instruction: "One row per claim, with the verification status kept separate from the claim itself. This is the artifact a release decision is actually made from."
     prompt_text: |
-      Read outputs/session-log.md, sample-data/research-scan-draft.md, and outputs/source-inventory.xlsx from the connected folder. The session log holds the claim list I made in the first exercise of this module, under "Module 2 - claims in the scan" — build the ledger from that list rather than enumerating the claims again, and use the scan to fill in anything the list does not carry. If that section is missing, work from the scan itself.
+      Read outputs/session-log.md, sample-data/research-scan-draft.md, and outputs/source-inventory.xlsx from the connected folder. The session log holds the claim list I made in the first exercise of this module, under "Module 2 - claims in the scan" - build the ledger from that list rather than enumerating the claims again, and use the scan to fill in anything the list does not carry. If that section is missing, work from the scan itself.
 
       Write outputs/claim-ledger.xlsx, one row for each material factual claim in the scan.
 
@@ -26,7 +26,7 @@ steps:
     instruction: |
       Open `outputs/claim-ledger.xlsx` and take over the status column for the claims that cite the five sources you cross-checked in the previous exercise.
 
-      For each, set the status from what you actually saw — not from what the scan asserts and not from what you assume is true about the literature. The records are still in `sample-data/mock-sources/`, so open the file for a source again whenever you need to. Before you judge whether a source fits a claim, satisfy yourself that the record in front of you is the one the citation names: the author, the year, and the venue in the record should match the citation that pointed at it. Where they do not, "citation mismatch" is the status, and it is a different problem from a source that does not fit.
+      For each, set the status from what you actually saw - not from what the scan asserts and not from what you assume is true about the literature. The records are still in `sample-data/mock-sources/`, so open the file for a source again whenever you need to. Before you judge whether a source fits a claim, satisfy yourself that the record in front of you is the one the citation names: the author, the year, and the venue in the record should match the citation that pointed at it. Where they do not, "citation mismatch" is the status, and it is a different problem from a source that does not fit.
 
       Then write the smallest accurate revision for any claim you did not mark supported: the narrowest wording the evidence you personally saw would carry. If the evidence you saw carries nothing, say that.
 
@@ -46,11 +46,11 @@ steps:
 
       Give me the review as the skill defines it, including its provisional state and what it could not check.
     checkpoint: "The review states a provisional release state, orders its findings by consequence, and names what the available evidence did not let it check - rather than scoring the scan."
-    facilitator_note: "If the skill does not trigger, the fix is naming it exactly: 'use the review-ai-research-output skill'. Runs vary, so two learners get differently ordered findings from the same file — which is a strength of doing this apart rather than together, and worth pooling in office hours instead of smoothing over. Ask two people what their review put first."
+    facilitator_note: "If the skill does not trigger, the fix is naming it exactly: 'use the review-ai-research-output skill'. Runs vary, so two learners get differently ordered findings from the same file - which is a strength of doing this apart rather than together, and worth pooling in office hours instead of smoothing over. Ask two people what their review put first."
   - index: 3
     label: "Compare the review with your ledger"
     type: "prompt"
-    instruction: "Two independent audits of the same artifact. The interesting material is where they diverge."
+    instruction: "Two independent audits of the same artifact. The places where they diverge are the most informative."
     prompt_text: |
       Add a sheet named "Review comparison" to outputs/claim-ledger.xlsx with three sections:
       1. findings the review and my ledger agree on;
@@ -59,7 +59,7 @@ steps:
 
       For section 3, do not defend the review and do not defend me. Just record what it did not reach and, where you can tell, why.
     checkpoint: "All three sections are populated, and section 3 is not empty."
-    facilitator_note: "Section 3 is the point of the step. A learner who reports it empty should check the records they opened in exercise 3 against the review and then move on rather than manufacturing entries — that is the whole of the reply if the question comes in. What the section actually contains varies by learner, which makes it good office-hours material."
+    facilitator_note: "Section 3 is the point of the step. A learner who reports it empty should check the records they opened in exercise 3 against the review and then move on rather than manufacturing entries - that is the whole of the reply if the question comes in. What the section actually contains varies by learner, which makes it good office-hours material."
   - index: 4
     label: "Read the skill"
     type: "workspace"
@@ -79,7 +79,7 @@ steps:
     prompt_text: |
       Show me the review-ai-research-output skill's own instructions and its rubric, exactly as they are written.
     checkpoint: "You can quote at least one place where the skill declines to decide, and say who it expects to decide instead."
-    facilitator_note: "First time a learner reads a skill as a document rather than using one, and a dependency rather than a digression: Module 3 modifies a rubric and Module 4 authors one. Anyone who skips it arrives at the capstone cold. The reassurance to repeat wherever you have their attention — cohort message, office hours, the walkthrough — is that a skill is plain prose with a two-line header and no code."
+    facilitator_note: "First time a learner reads a skill as a document rather than using one, and a dependency rather than a digression: Module 3 modifies a rubric and Module 4 authors one. Anyone who skips it arrives at the capstone cold. The reassurance to repeat wherever you have their attention - cohort message, office hours, the walkthrough - is that a skill is plain prose with a two-line header and no code."
   - index: 5
     label: "Run the release gate"
     type: "observe"
@@ -95,7 +95,7 @@ steps:
   - index: 6
     label: "Reflect on divided labor"
     type: "reflect"
-    instruction: "The skill found things you did not. You found things it did not, and it was written to stop before some of them on purpose."
+    instruction: "The skill found things you did not. You found things it did not - and it was designed to stop before some of them on purpose."
     reflection_prompt: "Which of your findings could no skill have made for you, however well written?"
 ---
 
@@ -103,7 +103,7 @@ steps:
 
 The question is not whether the scan has citations. It is whether each material claim accurately
 represents an identifiable source that says what the claim needs it to say. Answering that requires
-a ledger — one row per claim, with the status of the claim held separately from the claim itself, so
+a ledger - one row per claim, with the status of the claim held separately from the claim itself, so
 that "we have not checked this" cannot quietly become "this is fine."
 
 Two questions sit inside that, and they fail independently. Is this the source the citation names?
@@ -116,7 +116,7 @@ independently, is a better test than either one alone, and the disagreements are
 
 Finally you read the skill itself. This is the first of three encounters with the format: you read
 one here, you modify one in Module 3, and you write one in Module 4. What matters at this stage is
-not the syntax — there is barely any — but noticing that the skill's most important sentences are
+not the syntax - there is barely any - but noticing that the skill's most important sentences are
 the ones where it refuses. A well-written skill is specific about where its judgment ends, and it
 ends before the professional decision.
 
@@ -128,12 +128,12 @@ that "nobody has checked this against the containers" cannot quietly become "thi
 date range."
 
 ```cowork-prompt
-Read sample-data/archives/finding-aid-draft.md and outputs/archives-description-inventory.xlsx from the connected folder. Write outputs/archives-description-ledger.xlsx, one row for each assertion the finding aid or the item metadata makes. Columns: assertion as written; where it appears; what it would have to be checked against for it to hold as written; whether anything in the connected folder confirms or contradicts it; status; smallest accurate revision; remediation flag. Use only these statuses: contradicted by the records; unsupported; supported by another file; cannot tell from the available material; not yet checked. Do not use a status meaning verified — I have not told you that I checked anything against the physical records. Leave "smallest accurate revision" empty. Use the remediation flag only to mark assertions whose problem is the language they are written in rather than their accuracy, and do not propose replacement wording.
+Read sample-data/archives/finding-aid-draft.md and outputs/archives-description-inventory.xlsx from the connected folder. Write outputs/archives-description-ledger.xlsx, one row for each assertion the finding aid or the item metadata makes. Columns: assertion as written; where it appears; what it would have to be checked against for it to hold as written; whether anything in the connected folder confirms or contradicts it; status; smallest accurate revision; remediation flag. Use only these statuses: contradicted by the records; unsupported; supported by another file; cannot tell from the available material; not yet checked. Do not use a status meaning verified - I have not told you that I checked anything against the physical records. Leave "smallest accurate revision" empty. Use the remediation flag only to mark assertions whose problem is the language they are written in rather than their accuracy, and do not propose replacement wording.
 ```
 
 Then open `outputs/archives-description-ledger.xlsx` and take over the status column yourself for the
 assertions you cross-checked in the previous exercise, setting each one from what you actually read in
-the folder. Write the smallest accurate revision for each yourself — the narrowest statement the
+the folder. Write the smallest accurate revision for each yourself - the narrowest statement the
 material actually carries. In archival description the revision is usually a subtraction: an element
 the material does not support is better recorded as unknown than stated confidently, and "unknown" is a
 legitimate value in every one of these fields. Add no evidence.
@@ -171,7 +171,7 @@ Show me the review-ai-research-output skill's own instructions and its rubric, e
 Read for what it refuses to do, what it insists must stay
 recorded as unchecked, what it treats as untrusted content, and the sentences where it hands the
 decision back to a person. Then note where a skill written for research output does and does not reach
-a descriptive product — that gap is the material for your own skill in Module 4.
+a descriptive product - that gap is the material for your own skill in Module 4.
 
 Last, make the release decision yourself. The question is whether this finding aid can remain on the
 public web unchanged, and if not, what the minimum honest interim step is; a holding notice on a

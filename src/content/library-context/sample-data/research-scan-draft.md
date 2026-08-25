@@ -1,4 +1,4 @@
-# DRAFT AI-GENERATED RESEARCH SCAN — SIMULATED WORKSHOP MATERIAL
+# DRAFT AI-GENERATED RESEARCH SCAN - SIMULATED WORKSHOP MATERIAL
 
 > **What this file is.** A simulated output from an AI research mode, produced for the request in
 > `research-request.txt`. It was generated for teaching purposes and has **not** been checked by a

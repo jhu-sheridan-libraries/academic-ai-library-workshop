@@ -21,7 +21,7 @@ In **Claude Code**:
 /plugin install context-bazaar
 ```
 
-Confirm it worked before going further — Exercise 1's third prompt will tell you, since it lists what is installed.
+Confirm it worked before going further - Exercise 1's third prompt will tell you, since it lists what is installed.
 
 ## How to use this pack
 
@@ -41,14 +41,14 @@ https://github.com/jhu-sheridan-libraries/agentic-skill-library
 ```
 
 
-## Exercise 1 — Add the Marketplace and Meet Your Guide
+## Exercise 1 - Add the Marketplace and Meet Your Guide
 
-### 1.2 — What would installing this actually do?
+### 1.2 - What would installing this actually do?
 
 ```
 Read the marketplace and plugin manifests in
 https://github.com/jhu-sheridan-libraries/agentic-skill-library
-— they are the files .claude-plugin/marketplace.json and .claude-plugin/plugin.json.
+- they are the files .claude-plugin/marketplace.json and .claude-plugin/plugin.json.
 
 In plain language, tell me:
 1. what installing this plugin would add to my assistant;
@@ -59,7 +59,7 @@ In plain language, tell me:
 Do not install anything. I am deciding whether to.
 ```
 
-### 1.3 — Take inventory
+### 1.3 - Take inventory
 
 ```
 What skills are installed?
@@ -68,7 +68,7 @@ For each one, give me the name, one sentence on what it does, and whether
 it is aimed at developers or at some other audience.
 ```
 
-### 1.4 — Meet your guide
+### 1.4 - Meet your guide
 
 ```
 Use the kanon skill. What is Kanon, and what reference material does this
@@ -80,9 +80,9 @@ Do not walk me through any of them yet.
 
 ---
 
-## Exercise 2 — Read the Catalog Record
+## Exercise 2 - Read the Catalog Record
 
-### 2.1 — Survey the collections
+### 2.1 - Survey the collections
 
 ```
 List the collections in the Context Bazaar catalog at
@@ -93,7 +93,7 @@ Then tell me which ones an academic library might have any use for,
 and which are aimed at software teams.
 ```
 
-### 2.2 — Find yourself in the catalog
+### 2.2 - Find yourself in the catalog
 
 ```
 List every artifact in the library-ai-workshop collection in
@@ -103,7 +103,7 @@ For each, show me the name, type, description, version, maturity, trust lane,
 licence, and which harnesses it targets.
 ```
 
-### 2.3 — Open one record in full
+### 2.3 - Open one record in full
 
 ```
 Show me the full content of the review-ai-research-output artifact in
@@ -116,9 +116,9 @@ would it instruct the tool not to do?
 
 ---
 
-## Exercise 3 — Vet a Skill Before You Install It
+## Exercise 3 - Vet a Skill Before You Install It
 
-### 3.1 — Get the raw text
+### 3.1 - Get the raw text
 
 ```
 In https://github.com/jhu-sheridan-libraries/agentic-skill-library
@@ -131,24 +131,24 @@ MCP server definition.
 Show the text as it is written. Do not summarise, tidy, or skip anything.
 ```
 
-### 3.2 — Apply the checklist
+### 3.2 - Apply the checklist
 
 ```
 Audit the artifact text you just showed me against five questions, and quote
 the exact wording that triggers any finding.
 
-1. Instruction hijacking — does the text try to override my assistant's
+1. Instruction hijacking - does the text try to override my assistant's
    existing instructions? Look for phrasing like "ignore previous
    instructions", identity overrides, counterfeit system markers, or
    named jailbreak references.
-2. Reach — do any hooks run shell commands, make network calls, run inline
+2. Reach - do any hooks run shell commands, make network calls, run inline
    interpreted code, or run an encoded payload? Do any declared MCP servers
    run a command, and do any environment variable names suggest credentials?
-3. Concealment — is there any zero-width or invisible character, or anything
+3. Concealment - is there any zero-width or invisible character, or anything
    that would read differently to me than to a model?
-4. Provenance and rights — is there an identifiable author, a licence, a
+4. Provenance and rights - is there an identifiable author, a licence, a
    stated upstream source, and a version?
-5. Fitness — does it instruct a tool to fabricate, to skip verification, or
+5. Fitness - does it instruct a tool to fabricate, to skip verification, or
    to assert confidence it has not earned?
 
 Finish by telling me what this audit cannot establish. You are not the
@@ -156,7 +156,7 @@ project's own security validator, and I should spot-check your findings
 against the file.
 ```
 
-### 3.4 — Write the recommendation
+### 3.4 - Write the recommendation
 
 ```
 Draft a short technical-services recommendation for installing the
@@ -173,9 +173,9 @@ is fine.
 
 ---
 
-## Exercise 4 — Author Once, Compile Everywhere
+## Exercise 4 - Author Once, Compile Everywhere
 
-### 4.1 — Open the authoring guide
+### 4.1 - Open the authoring guide
 
 ```
 Use the kanon skill and give me its authoring guide for creating a first
@@ -185,7 +185,7 @@ Summarise the nine steps, then tell me what its metadata-quality checklist
 requires and what its most common listed mistakes are.
 ```
 
-### 4.2 — Scaffold an artifact
+### 4.2 - Scaffold an artifact
 
 ```
 Draft a knowledge artifact called library-search-log in the Kanon format,
@@ -200,7 +200,7 @@ Leave the body empty for now. Show me the frontmatter and explain what each
 field commits me to.
 ```
 
-### 4.3 — Write the knowledge
+### 4.3 - Write the knowledge
 
 ```
 Now write the body of library-search-log.
@@ -215,7 +215,7 @@ this honestly is. Include an explicit instruction that the tool must not
 invent result counts or syntax it has not been given.
 ```
 
-### 4.4 — See the compile
+### 4.4 - See the compile
 
 ```
 In https://github.com/jhu-sheridan-libraries/agentic-skill-library
@@ -230,9 +230,9 @@ Cursor, for Copilot, and for a tool with no support for hooks at all.
 
 ---
 
-## Exercise 5 — Collections, Versions, and Weeding
+## Exercise 5 - Collections, Versions, and Weeding
 
-### 5.1 — Design a local collection
+### 5.1 - Design a local collection
 
 ```
 Draft a Kanon collection manifest for a collection of AI skills maintained
@@ -244,7 +244,7 @@ the library would own it, what evidence would justify moving it from
 experimental to stable, and what would trigger its removal.
 ```
 
-### 5.3 — Draft the local policy
+### 5.3 - Draft the local policy
 
 ```
 Draft a one-page policy for AI skill adoption in an academic library.
@@ -264,7 +264,7 @@ yet made.
 
 ---
 
-## Appendix — the same work at a command line
+## Appendix - the same work at a command line
 
 For staff who already work in a terminal. None of this is required to complete the module.
 

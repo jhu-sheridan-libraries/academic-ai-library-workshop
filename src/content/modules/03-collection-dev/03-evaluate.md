@@ -7,7 +7,7 @@ steps:
   - index: 0
     label: "Draft a cautious synthesis to a file"
     type: "prompt"
-    instruction: "The matrix is now the evidence base. Not the topic, not the request, not anything Claude knows about open access — the nine columns and five rows you just built."
+    instruction: "Use the matrix as your only evidence base. Do not rely on the topic, the original request, or Claude's general knowledge about open access."
     prompt_text: |
       Read outputs/claim-evidence-matrix.xlsx from the connected folder and write a synthesis to outputs/synthesis.md. Keep it to about 180 words.
 
@@ -15,14 +15,14 @@ steps:
 
       Use only the matrix. Do not consult the original evidence log, your own knowledge of this literature, or anything outside the connected folder.
     checkpoint: "outputs/synthesis.md exists and does not turn five incomplete records into a finding about a field."
-    facilitator_note: "Word limits do real work here — a short synthesis has to choose what to drop, and what gets dropped first is usually the uncertainty. Sixteen learners produce sixteen different 180-word syntheses of the same five rows, which is the most persuasive thing you can show a cohort: ask two people to paste theirs into office hours and let everyone see what went missing from each."
+    facilitator_note: "Word limits do real work here - a short synthesis has to choose what to drop, and what gets dropped first is usually the uncertainty. Sixteen learners produce sixteen different 180-word syntheses of the same five rows, which is the most persuasive thing you can show a cohort: ask two people to paste theirs into office hours and let everyone see what went missing from each."
   - index: 1
     label: "Ask for the strongest alternative reading"
     type: "prompt"
     instruction: |
-      A synthesis is a set of weighting decisions presented as prose, and the decisions are invisible once the prose is smooth. The way to make them visible is to ask for a different set of weights applied to the same five rows.
+      A synthesis reflects choices about which evidence to emphasize, but those choices can disappear when the writing is polished. Make them visible by asking for a second interpretation of the same five rows.
 
-      The constraint matters more than the request. An alternative reading that contradicts the records is worthless; one that stays inside them and still lands somewhere else tells you exactly how load-bearing your weighting was.
+      The second interpretation must use the same evidence. If it contradicts the records, it is not useful; if it stays within the records and reaches a different emphasis, it shows which weighting choices shaped the first synthesis.
     prompt_text: |
       Write the strongest plausible alternative interpretation of the same matrix, and append it to outputs/synthesis.md under the heading "Alternative reading."
 
@@ -32,11 +32,11 @@ steps:
   - index: 2
     label: "Map the gaps as next actions"
     type: "prompt"
-    instruction: "A limitation you cannot act on is decoration. Convert each one into something a librarian could do on Monday."
+    instruction: "A limitation is useful only when it leads to a possible next step. Turn each limitation into a concrete action a librarian could take."
     prompt_text: |
       Append a gap map to outputs/synthesis.md under the heading "Gaps and next actions", in four categories: missing populations or regions, missing outcome measures, missing study designs, and verification gaps.
 
-      For each gap give one concrete next action, and state what it requires — a licensed database, a repository or registry, a publisher or index record, correspondence with an author, or human subject expertise. Mark separately any action that cannot be done from this connected folder at all.
+      For each gap give one concrete next action, and state what it requires - a licensed database, a repository or registry, a publisher or index record, correspondence with an author, or human subject expertise. Mark separately any action that cannot be done from this connected folder at all.
     checkpoint: "Each gap has one specific next action, and actions requiring resources outside the folder are marked as such."
   - index: 3
     label: "Check every ID against the matrix"
@@ -46,7 +46,7 @@ steps:
 
       Then append two lines to `outputs/session-log.md`: which claim in the synthesis was strongest in the prose and weakest in the matrix, and what you changed or would change as a result.
     checkpoint: "Every bracketed ID resolves to a row that supports the claim at that strength, and your session log records the widest gap you found between prose and matrix."
-    facilitator_note: "This step catches the drift the previous three introduce, and it is also the one learners drop when they are running out of day — so tell them which to drop instead: the gap map. What they record in the session log here, the widest gap between prose and matrix, is the single most quotable line the module produces and worth asking for in office hours."
+    facilitator_note: "This step catches the drift the previous three introduce, and it is also the one learners drop when they are running out of day - so tell them which to drop instead: the gap map. What they record in the session log here, the widest gap between prose and matrix, is the single most quotable line the module produces and worth asking for in office hours."
   - index: 4
     label: "Check the synthesis"
     type: "observe"
@@ -61,7 +61,7 @@ steps:
   - index: 5
     label: "Reflect on synthesis"
     type: "reflect"
-    instruction: "Fluent prose is a compression, and compression is where methodological conflict goes to die. The question is never whether to simplify but which distinctions survive the simplification."
+    instruction: "Fluent prose compresses information, and compression is where methodological nuance disappears. The question is never whether to simplify - it is which distinctions survive."
     reflection_prompt: "Which single caveat has to appear in the body for your intended reader, and which ones honestly belong in a methods note they will not read?"
 ---
 
@@ -91,10 +91,10 @@ the one that gets approved and the one that fails.
 Write `outputs/archives-processing-plan.md` from the matrix and nothing else:
 
 ```cowork-prompt
-Read outputs/archives-evidence-matrix.xlsx from the connected folder and write a processing proposal to outputs/archives-processing-plan.md. Keep it to about 220 words. Organize by decision rather than by material: what can be described now, what cannot be described until something else is resolved, what cannot be opened until it is surveyed, and what no amount of processing will settle. Refer to each body of material as the matrix names it. Use only the matrix — not the accession note, not your own knowledge of archival practice, and nothing outside the connected folder. Do not propose a timeline the matrix gives you no basis for.
+Read outputs/archives-evidence-matrix.xlsx from the connected folder and write a processing proposal to outputs/archives-processing-plan.md. Keep it to about 220 words. Organize by decision rather than by material: what can be described now, what cannot be described until something else is resolved, what cannot be opened until it is surveyed, and what no amount of processing will settle. Refer to each body of material as the matrix names it. Use only the matrix - not the accession note, not your own knowledge of archival practice, and nothing outside the connected folder. Do not propose a timeline the matrix gives you no basis for.
 ```
 
-Then ask for the strongest alternative reading — a different order of priorities built from the same
+Then ask for the strongest alternative reading - a different order of priorities built from the same
 rows, contradicting nothing:
 
 ```cowork-prompt
@@ -102,13 +102,13 @@ Write the strongest plausible alternative ordering of priorities from the same m
 ```
 
 Researcher demand against risk of harm is the weighting that will do the most work here, and it is the
-one worth arguing out properly — with yourself on paper now, and with whoever would have to approve
+one worth arguing out properly - with yourself on paper now, and with whoever would have to approve
 the plan afterwards.
 
 Then convert the limitations into things somebody could act on:
 
 ```cowork-prompt
-Append a gap map to outputs/archives-processing-plan.md under the heading "Gaps and next actions", in four categories: unmeasured extent, unsurveyed content, unresolved rights and conditions, and unreadable formats. For each gap give one concrete next action, and state what it requires — a conservator, a records survey, the donor, counsel, imaging equipment, or a decision by someone with more authority than the processing archivist. Mark separately every action that cannot be done from this connected folder at all.
+Append a gap map to outputs/archives-processing-plan.md under the heading "Gaps and next actions", in four categories: unmeasured extent, unsurveyed content, unresolved rights and conditions, and unreadable formats. For each gap give one concrete next action, and state what it requires - a conservator, a records survey, the donor, counsel, imaging equipment, or a decision by someone with more authority than the processing archivist. Mark separately every action that cannot be done from this connected folder at all.
 ```
 
 Then do the check that catches the drift the last three prompts introduced, and do it yourself: open

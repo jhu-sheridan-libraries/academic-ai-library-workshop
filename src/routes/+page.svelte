@@ -51,7 +51,7 @@ Sources enabled
   ✓ WORKSPACE-BRIEF.md
   ✓ research-request.txt
   ✓ public web
-  — connected drives off
+  - connected drives off
 
 Research question
   How does open access affect
@@ -83,8 +83,8 @@ Human review
 					Agents and Skills with Claude
 				</h1>
 				<p class="mx-auto mt-4 max-w-lg text-[0.9375rem] leading-7 text-gray-600">
-					What an agentic desktop can do, and how to compose a Skill of your own. For library staff;
-					no programming experience required.
+					How an AI workspace can work with files, and how to create reusable instructions of your own.
+					For library staff; no programming experience required.
 				</p>
 				<div class="my-6 h-px bg-jhu-blue/10"></div>
 				<p class="font-mono text-[0.6875rem] tracking-wide text-jhu-blue/60">
@@ -107,9 +107,9 @@ Human review
 					</p>
 					<p class="mt-3 text-sm leading-6 text-gray-500">
 						You work through this alone and at your own pace. Each step explains what counts as enough,
-						and stopping partway is fine — your place is saved. Your facilitator is remote: they can see
-						which steps you have completed and anything you type into a reflection box, which is how they
-						know where people are getting stuck. Bring whatever will not resolve itself to the optional
+						and stopping partway is fine - your place is saved. Your facilitator is remote: they can see
+						which steps you have completed and anything you type into a reflection box, which helps them
+						identify where people are getting stuck. Bring questions that remain unresolved to the optional
 						walkthrough or the office hours in your invitation.
 					</p>
 				</div>

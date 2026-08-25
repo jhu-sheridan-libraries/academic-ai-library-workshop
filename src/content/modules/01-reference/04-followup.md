@@ -37,11 +37,11 @@ steps:
     prompt_text: |
       Append a task record to outputs/session-log.md, the file created in the first exercise. Include: date, which files in the connected folder you read, which files you created, whether web research was used, decisions made, unresolved questions, and human reviewer. Use "not used" or "not yet assigned" where appropriate.
     checkpoint: "outputs/session-log.md now distinguishes inputs, outputs, settings, decisions, and review responsibility."
-    facilitator_note: "The log is appended to across all four modules and becomes the methods record in the final exercise, so a learner who skipped the first exercise has to create it here — the prompt will do that by itself, and nobody needs rescuing. If someone reaches Module 4 and reports an empty methods note, this is the step that did not happen."
+    facilitator_note: "The log is appended to across all four modules and becomes the methods record in the final exercise, so a learner who skipped the first exercise has to create it here - the prompt will do that by itself, and nobody needs rescuing. If someone reaches Module 4 and reports an empty methods note, this is the step that did not happen."
   - index: 4
     label: "Reflect on transparency"
     type: "reflect"
-    instruction: "Disclosure should inform the patron, not shift responsibility to them."
+    instruction: "Disclosure should inform the patron without shifting responsibility to them."
     reflection_prompt: "What level of AI-use disclosure does your institution require, and where should it appear?"
 ---
 
@@ -51,7 +51,7 @@ ALA's June 2026 guidance calls for clear disclosure, meaningful human review, an
 
 ## Archives track
 
-The concept is the same — a handoff that is accurate about what has and has not happened — and the
+The concept is the same - a handoff that is accurate about what has and has not happened - and the
 archival version carries one extra burden. A reading room request rests on assumptions about which
 collection holds the material, who created it, and what may be reproduced from it. Whichever of those
 your scoping work has put in question, the reply has to address politely and early, or it costs both

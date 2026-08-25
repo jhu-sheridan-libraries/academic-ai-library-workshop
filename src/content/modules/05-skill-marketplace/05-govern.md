@@ -1,6 +1,6 @@
 ---
 id: "05-govern"
-title: "Collections, Versions, and Weeding"
+title: "Manage Skill Collections and Versions"
 estimated_minutes: 15
 discovery_moment: false
 steps:
@@ -19,10 +19,10 @@ steps:
   - index: 1
     label: "Read the lifecycle vocabulary"
     type: "observe"
-    instruction: "Kanon encodes governance as required metadata rather than as convention. Check what each field commits you to."
+    instruction: "Kanon uses metadata fields to record governance decisions. Check what each field requires and what it does not verify."
     observe_items:
       - "`maturity`: experimental → beta → stable → deprecated, with `deprecated` requiring a `successor` field naming the replacement"
-      - "`trust`: official, partner, community, or experimental — and a non-community lane should declare a license"
+      - "`trust`: official, partner, community, or experimental - and a non-community lane should declare a license"
       - "`risk-level`: an artifact marked high risk without a trust lane fails validation"
       - "`visibility`: public appears everywhere, unlisted stays in the catalog but out of default listings, private is excluded from the catalog entirely"
       - "`version` on every artifact, so an install can be pinned and an upgrade can be reviewed"
@@ -54,12 +54,12 @@ steps:
     label: "Reflect on stewardship"
     type: "reflect"
     instruction: "You already own a version of this problem for databases, platforms, and licensed content."
-    reflection_prompt: "If your library adopted a shared skill library tomorrow, what would go wrong first — and would it be a technical failure or a maintenance one?"
+    reflection_prompt: "If your library adopted a shared skill library tomorrow, what would go wrong first - and would it be a technical failure or a maintenance one?"
 ---
 
-## Collections, Versions, and Weeding
+## Manage Skill Collections and Versions
 
-A shared skill library fails the same way an unmaintained collection fails: not at acquisition, but three years later, when nobody remembers who selected an item, what it was for, or whether it still works.
+A shared skill library can fail like an unmaintained collection: not when an item is acquired, but later, when nobody remembers who selected it, what it was for, or whether it still works.
 
 Kanon builds the answer into metadata. Maturity is a lifecycle, and deprecating an artifact requires naming its successor. Trust is a declared lane. Visibility controls what appears in the catalog at all. Versions are mandatory, so an install can be pinned and an upgrade reviewed. For teams, a manifest describes what should be installed and `guild status` reports the drift between that and reality.
 

@@ -2,7 +2,7 @@
 
 Working sheets for the bonus module, *The Skill Marketplace*. Three tools: an appraisal crosswalk, a vetting checklist, and a policy template.
 
-Everything here works on paper. You do not need a terminal, a plugin, or an installed tool to use any of it — which matters, because the judgments these sheets support are the ones you should be making **before** anything is installed.
+Everything here works on paper. You do not need a terminal, a plugin, or an installed tool to use any of it - which matters, because the judgments these sheets support are the ones you should be making **before** anything is installed.
 
 This handout is workshop material under MPL-2.0. It describes third-party tooling but bundles none of it. Copy it, adapt it, put your library's name on it.
 
@@ -21,9 +21,9 @@ Use when reading a marketplace listing or an artifact's metadata. The left colum
 | `version` | An edition | Which version did you review? Is that written down anywhere? |
 | `license` | Rights | Does it permit your intended use, including internal redistribution? |
 | `harnesses` | Supported platforms | Does it cover the tool your staff actually use? |
-| `audience` | Reading level | Beginner, intermediate, advanced — asserted by whom? |
+| `audience` | Reading level | Beginner, intermediate, advanced - asserted by whom? |
 | `maturity` | Edition status | `experimental`, `beta`, `stable`, `deprecated`. A deprecated item must name a successor. |
-| `trust` | Provenance / authority | `official`, `partner`, `community`, `experimental` — **self-declared by the author, not awarded by a reviewer** |
+| `trust` | Provenance / authority | `official`, `partner`, `community`, `experimental` - **self-declared by the author, not awarded by a reviewer** |
 | `collections` | Series membership | Who curates the series, and to what standard? |
 | Provenance note | A source citation | Does it name an upstream source and a specific commit or version? |
 
@@ -48,15 +48,15 @@ Automated scanners exist and are worth running. Treat them as a floor. They matc
 
 **A. Instruction hijacking.** Does the body try to override the tool's existing instructions?
 - [ ] Phrasing like *ignore previous instructions* or *disregard your guidelines*
-- [ ] Identity overrides — *you are now …*
+- [ ] Identity overrides - *you are now …*
 - [ ] Counterfeit system markers, e.g. a bracketed `[SYSTEM]` block
 - [ ] Named jailbreak references
 
 **B. Reach.** What can it touch beyond the conversation?
 - [ ] Hooks that run shell commands
-- [ ] Outbound network calls — `curl`, `wget`, a raw socket to an IP address
+- [ ] Outbound network calls - `curl`, `wget`, a raw socket to an IP address
 - [ ] Inline interpreted code (`python -c`, `node -e`) or an encoded payload piped to a shell
-- [ ] Declared MCP servers — what command does each one actually run?
+- [ ] Declared MCP servers - what command does each one actually run?
 - [ ] Environment variables whose names suggest credentials (`key`, `secret`, `token`, `password`)
 
 **C. Concealment.** Is anything hidden from the reader but not from the model?
@@ -82,9 +82,9 @@ Artifact and version: ______________________________
 
 Circle one:
 
-- **Accept** — install, record the version, and set a review date.
-- **Reject** — record the reason; a rejected item should stay rejected until something changes.
-- **Escalate** — name who decides, and what evidence they need.
+- **Accept** - install, record the version, and set a review date.
+- **Reject** - record the reason; a rejected item should stay rejected until something changes.
+- **Escalate** - name who decides, and what evidence they need.
 
 Reason (one or two sentences, including anything you accepted on trust rather than verified):
 
@@ -96,7 +96,7 @@ _________________________________________________________________
 
 ## 3. Local Policy Template
 
-Fill in. Where your library has not decided, write **OPEN** rather than a plausible guess — the open items are the useful output of this exercise.
+Fill in. Where your library has not decided, write **OPEN** rather than a plausible guess - the open items are the useful output of this exercise.
 
 **Scope.** This policy covers AI skills, plugins, and marketplaces installed on ______________ (which machines? whose? managed or personal?).
 
@@ -136,8 +136,8 @@ Fill in. Where your library has not decided, write **OPEN** rather than a plausi
 
 | Exercise | Sheet |
 |---|---|
-| 2 — Read the Catalog Record | Appraisal crosswalk (section 1) |
-| 3 — Vet a Skill Before You Install It | Vetting checklist (section 2) |
-| 5 — Collections, Versions, and Weeding | Policy template (section 3) |
+| 2 - Read the Catalog Record | Appraisal crosswalk (section 1) |
+| 3 - Vet a Skill Before You Install It | Vetting checklist (section 2) |
+| 5 - Collections, Versions, and Weeding | Policy template (section 3) |
 
 Exercises 1 and 4 need no handout. Exercise 4 works from the authoring guide bundled with the `kanon` skill itself.

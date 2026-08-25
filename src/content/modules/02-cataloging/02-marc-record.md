@@ -7,7 +7,7 @@ steps:
   - index: 0
     label: "Work backwards to the plan"
     type: "prompt"
-    instruction: "Nobody showed you the plan behind this run. Recover it from the artifact — a report tells you what it searched for whether or not it means to."
+    instruction: "Nobody showed you the research plan behind this run. Recover it from the artifact - a finished report reveals what it searched for, whether the author meant to show you or not."
     prompt_text: |
       Read sample-data/research-scan-draft.md and outputs/research-brief.md from the connected folder.
 
@@ -25,7 +25,7 @@ steps:
   - index: 1
     label: "Check the plan against the outcome families"
     type: "prompt"
-    instruction: "You already did the conceptual work this plan needed. Bring it back and hold the scan to it."
+    instruction: "You already built the conceptual framework this plan needed in Module 1. Now use it to evaluate how the scan divided the question."
     prompt_text: |
       Read the "Outcome families" sheet of outputs/concept-map.xlsx and the body of sample-data/research-scan-draft.md.
 
@@ -35,7 +35,7 @@ steps:
 
       Append this to outputs/session-log.md under a new heading "Module 2 - outcome coverage".
     checkpoint: "All five families are accounted for, each judgment cites a specific passage, and merged or missing families are named as such."
-    facilitator_note: "This step depends on Module 1 exercise 3, and it is the most likely cross-module break in the course. Anyone without concept-map.xlsx should read the five families out of that exercise and carry on rather than rebuilding the workbook now — say that in reply to the support question, which will arrive worded as 'the prompt cannot find my file'."
+    facilitator_note: "This step depends on Module 1 exercise 3, and it is the most likely cross-module break in the course. Anyone without concept-map.xlsx should read the five families out of that exercise and carry on rather than rebuilding the workbook now - say that in reply to the support question, which will arrive worded as 'the prompt cannot find my file'."
   - index: 2
     label: "Write the revisions you would have required"
     type: "workspace"
@@ -50,7 +50,7 @@ steps:
     prompt_text: |
       Record the following under a new heading "Module 2 - plan revisions I would have required" in outputs/session-log.md. Copy my wording exactly. Do not improve it, expand it, or add revisions of your own.
     checkpoint: "The file holds your revisions in your own words, and each one names the specific weakness it would have addressed."
-    facilitator_note: "The verbatim instruction is the point, and working alone makes it easy to let Claude draft the revisions instead — so the step says three in five minutes is a complete answer. What to do with this remotely: the session log holds the learner's own wording beside the model's, which is the sharpest artifact in the module to read aloud from in office hours, with permission."
+    facilitator_note: "The verbatim instruction is the point, and working alone makes it easy to let Claude draft the revisions instead - so the step says three in five minutes is a complete answer. What to do with this remotely: the session log holds the learner's own wording beside the model's, which is the sharpest artifact in the module to read aloud from in office hours, with permission."
   - index: 3
     label: "Compare plan with execution"
     type: "observe"
@@ -65,12 +65,12 @@ steps:
   - index: 4
     label: "Reflect on the point of intervention"
     type: "reflect"
-    instruction: "A plan is only useful if someone can change it while changing it is still cheap. After the report is written, every correction costs more than the run did."
+    instruction: "A plan is only useful if someone can change it while changes are still cheap. After the report is written, every correction costs more than the original run."
     reflection_prompt: "Which of your revisions would the tool never have made on its own, and why not?"
   - index: 5
     label: "One question to take further"
     type: "reflect"
-    instruction: "The question this exercise exists to raise about your own work rather than about the scan. Record it here, or take it to office hours."
+    instruction: "The question this exercise raises about your own work, not just about this scan. Record it here, or take it to office hours."
     reflection_prompt: "Where in your own workflow is the last moment a scope decision is still cheap to change, and who is consulted before it passes?"
 ---
 
@@ -91,7 +91,7 @@ Keep your reconstruction. Exercises 3 and 4 test it against the sources themselv
 
 A finding aid is evidence about its own processing, in the same way a report is evidence about its
 own method. Nobody wrote down the arrangement decisions, the appraisal decisions, or the point at
-which the original processor ran out of time — but the description records all three whether it
+which the original processor ran out of time - but the description records all three whether it
 means to or not. Granularity is the clearest trace: how finely each series is described tells you what
 the processor thought mattered, and it also tells you where they stopped.
 
@@ -104,7 +104,7 @@ Read sample-data/archives/finding-aid-draft.md and outputs/archives-request-brie
 Then hold the finding aid to the map you already built:
 
 ```cowork-prompt
-Read the "Candidate units" sheet and the access point rows of outputs/archives-access-points.xlsx, then read sample-data/archives/finding-aid-draft.md. For each access point and each candidate unit, state whether the finding aid makes it findable, buries it somewhere a researcher would not look, or omits it entirely — citing the element you are judging from. Do not decide whether the finding aid is correct about anything; report only what it makes discoverable. Append this to outputs/session-log.md under a new heading "Module 2 - discoverability check".
+Read the "Candidate units" sheet and the access point rows of outputs/archives-access-points.xlsx, then read sample-data/archives/finding-aid-draft.md. For each access point and each candidate unit, state whether the finding aid makes it findable, buries it somewhere a researcher would not look, or omits it entirely - citing the element you are judging from. Do not decide whether the finding aid is correct about anything; report only what it makes discoverable. Append this to outputs/session-log.md under a new heading "Module 2 - discoverability check".
 ```
 
 Now the part that has to be yours. Decide on three to five changes you would have required before this

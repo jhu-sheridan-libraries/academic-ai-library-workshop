@@ -24,7 +24,7 @@ steps:
     prompt_text: |
       Practise a reference interview with me. Intermediate difficulty, about six minutes.
     checkpoint: "You completed a role-played interview and received a debrief naming at least one question that came too late or went unasked."
-    facilitator_note: "This is a skill, not a scripted prompt, so no two runs are identical — that is the point, and it also means nobody's run can be compared with anyone else's. The prompt asks for six minutes because the role-play is absorbing and will otherwise overrun by twenty. The commonest support request of the whole course lands here: the skill does not trigger, and the fix is to say 'use the reference interview practice skill' by name. Worth putting in a pre-cohort message rather than answering four times."
+    facilitator_note: "This is a skill, not a scripted prompt, so no two runs are identical - that is the point, and it also means nobody's run can be compared with anyone else's. The prompt asks for six minutes because the role-play is absorbing and will otherwise overrun by twenty. The commonest support request of the whole course lands here: the skill does not trigger, and the fix is to say 'use the reference interview practice skill' by name. Worth putting in a pre-cohort message rather than answering four times."
   - index: 2
     label: "Generate questions for the real request"
     type: "prompt"
@@ -53,7 +53,7 @@ steps:
   - index: 5
     label: "Reflect on professional judgment"
     type: "reflect"
-    instruction: "AI can organize a question. It cannot do the relational work of a reference interview — reading hesitation, noticing what someone is reluctant to say, deciding what not to ask."
+    instruction: "AI can organize a question. It cannot do the relational work of a reference interview - reading hesitation, noticing what someone is reluctant to say, or deciding what not to ask."
     reflection_prompt: "Which follow-up question requires the most librarian judgment, and why?"
 ---
 

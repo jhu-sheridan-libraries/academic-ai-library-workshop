@@ -10,16 +10,16 @@ steps:
     instruction: |
       Build on the brief you wrote, and keep the map as a spreadsheet you can hand to a colleague.
 
-      The verification status column stays empty for now. You fill it in yourself in Module 4, when you check each candidate term against the platform's thesaurus — so leaving it blank is the point rather than an omission.
+      The verification status column stays empty for now. You fill it in yourself in Module 4, when you check each candidate term against the platform's thesaurus - so leaving it blank is the point rather than an omission.
     prompt_text: |
       Read outputs/research-brief.md. Build a search concept map and write it to outputs/concept-map.xlsx in the connected folder, one row per concept. Cover at least:
       - open-access publishing,
       - public-health research,
       - research reach or use.
 
-      Columns: concept, keywords, spelling and regional variants, candidate controlled vocabulary, verification status. Label every controlled term "candidate — verify in the database thesaurus" and leave verification status blank for me to fill in. Do not write database syntax yet.
+      Columns: concept, keywords, spelling and regional variants, candidate controlled vocabulary, verification status. Label every controlled term "candidate - verify in the database thesaurus" and leave verification status blank for me to fill in. Do not write database syntax yet.
     checkpoint: "outputs/concept-map.xlsx exists, separates concepts by row, and does not present candidate subject terms as verified headings."
-    facilitator_note: "A spreadsheet rather than a chat table is deliberate: Module 4 adds tested syntax, result counts, and thesaurus findings to this same file. A learner who produces Markdown instead has not done anything wrong but will retype it in Module 4 — cheap to mention in a cohort message, awkward to discover on their own at the end of the day."
+    facilitator_note: "A spreadsheet rather than a chat table is deliberate: Module 4 adds tested syntax, result counts, and thesaurus findings to this same file. A learner who produces Markdown instead has not done anything wrong but will retype it in Module 4 - cheap to mention in a cohort message, awkward to discover on their own at the end of the day."
   - index: 1
     label: "Map ambiguous outcomes"
     type: "prompt"
@@ -29,7 +29,7 @@ steps:
 
       Add these as a second sheet in outputs/concept-map.xlsx named "Outcome families."
     checkpoint: "The workbook has a second sheet, and it notes for example that downloads do not prove reading or application."
-    facilitator_note: "These five families recur in Modules 2 and 3, and the distinction drawn here is what makes a later failure visible at all. A learner who skips this sheet will get through Module 2 exercise 2 without noticing anything — so if someone reports that the scan looked fine, check whether they built this sheet before concluding anything about their reading."
+    facilitator_note: "These five families recur in Modules 2 and 3, and the distinction drawn here is what makes a later failure visible at all. A learner who skips this sheet will get through Module 2 exercise 2 without noticing anything - so if someone reports that the scan looked fine, check whether they built this sheet before concluding anything about their reading."
   - index: 2
     label: "Choose source types"
     type: "prompt"
@@ -55,12 +55,12 @@ steps:
   - index: 4
     label: "Reflect on search design"
     type: "reflect"
-    instruction: "A polished AI query can still be conceptually weak."
+    instruction: "A polished AI-generated query can still have weak concepts underneath."
     reflection_prompt: "Which concept would you test first in a real database, and what would make you revise it?"
   - index: 5
     label: "One question to take further"
     type: "reflect"
-    instruction: "The question this exercise raises and cannot answer. Write it down here if you want it recorded, or save it for office hours — a vocabulary question is one of the better things to bring to someone else."
+    instruction: "The question this exercise raises but cannot answer. Write it down here if you want it recorded, or save it for office hours - a vocabulary question is a good one to bring to someone else."
     reflection_prompt: "Which of the terms in your map reflect dominant scholarly language, and whose perspective is missing from the vocabulary you were handed?"
 ---
 
@@ -84,7 +84,7 @@ actually supports.
 Build the access point map first:
 
 ```cowork-prompt
-Read outputs/archives-request-brief.md, sample-data/archives/finding-aid-draft.md, and sample-data/archives/accession-note.txt. Build an access point map and write it to outputs/archives-access-points.xlsx in the connected folder, one row per access point. Columns: access point; type (person, corporate body, place, subject, function, format, date); which of the three source files supports it and in what words; candidate authorized form; verification status. Label every authorized form "candidate — verify in the authority file" and leave verification status blank for me to fill in. Do not supply an authority record identifier for anything.
+Read outputs/archives-request-brief.md, sample-data/archives/finding-aid-draft.md, and sample-data/archives/accession-note.txt. Build an access point map and write it to outputs/archives-access-points.xlsx in the connected folder, one row per access point. Columns: access point; type (person, corporate body, place, subject, function, format, date); which of the three source files supports it and in what words; candidate authorized form; verification status. Label every authorized form "candidate - verify in the authority file" and leave verification status blank for me to fill in. Do not supply an authority record identifier for anything.
 ```
 
 Next, split the subject into the units the inquiry cannot distinguish between:

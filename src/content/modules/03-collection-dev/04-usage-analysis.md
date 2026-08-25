@@ -12,7 +12,7 @@ steps:
 
       Look hard at the two numeric column headers. They are report identifiers from a usage-reporting standard, not descriptions of what was counted. A header does not define its own metric, and a ratio built from two columns is only as sound as your account of what each column measures. Write down, on paper or in a scratch note, what you believe each of the two numeric columns counts and how confident you are.
     checkpoint: "You can name the ten titles' shared reporting period, and you have written down what you think each numeric column counts and how sure you are."
-    facilitator_note: "Most learners read the headers as self-explanatory, and the next step is built so that the assumption gets written down and becomes checkable rather than corrected. Anyone who already knows the reporting standard loses nothing by doing it anyway. If this comes up in office hours before people have done step 1, do not settle what the columns mean — that is the exercise."
+    facilitator_note: "Most learners read the headers as self-explanatory, and the next step is built so that the assumption gets written down and becomes checkable rather than corrected. Anyone who already knows the reporting standard loses nothing by doing it anyway. If this comes up in office hours before people have done step 1, do not settle what the columns mean - that is the exercise."
   - index: 1
     label: "Profile the data and surface the assumptions"
     type: "prompt"
@@ -24,7 +24,7 @@ steps:
 
       Do not calculate anything yet, and do not compare titles.
     checkpoint: "The profile names the zero value and the extreme values, and states the column-meaning assumptions as assumptions rather than as facts."
-    facilitator_note: "The learner compares what came back with what they wrote down in step 0, and where the two differ the disagreement is the lesson: nobody can settle it from the file, which is exactly what makes it an assumption to verify against the platform's documentation. In office hours, asking what people wrote in step 0 makes the point faster than any explanation — the answers will not match."
+    facilitator_note: "The learner compares what came back with what they wrote down in step 0, and where the two differ the disagreement is the lesson: nobody can settle it from the file, which is exactly what makes it an assumption to verify against the platform's documentation. In office hours, asking what people wrote in step 0 makes the point faster than any explanation - the answers will not match."
   - index: 2
     label: "Require formulas with every number"
     type: "prompt"
@@ -32,22 +32,22 @@ steps:
     prompt_text: |
       Analyze sample-data/usage-report.csv and write the analysis to outputs/usage-analysis.md in the connected folder.
 
-      Show the formula, the inputs, the denominator, and the rounding for every derived metric. Identify the three highest and three lowest titles on each numeric column, and compute for every title the ratio of the second numeric column to the first — the second column divided by the first, in that order, so the first column is the denominator. Flag every row where that denominator is zero or the ratio is undefined.
+      Show the formula, the inputs, the denominator, and the rounding for every derived metric. Identify the three highest and three lowest titles on each numeric column, and compute for every title the ratio of the second numeric column to the first - the second column divided by the first, in that order, so the first column is the denominator. Flag every row where that denominator is zero or the ratio is undefined.
 
       Label the ratio with the assumption it depends on, in the same line as the number. Add three data-quality cautions specific to this file. Do not recommend cancelling, retaining, or renewing anything.
     checkpoint: "outputs/usage-analysis.md shows a formula for every derived figure, handles the undefined case explicitly rather than printing a number, and contains no collection recommendation."
-    facilitator_note: "The thing to look for is a zero denominator silently rendered as 0, blank, or dropped from the table — the failure a reader cannot see, and one the learner will only catch in the next step. Worth asking about directly in office hours, since a learner who did not notice will not report it."
+    facilitator_note: "The thing to look for is a zero denominator silently rendered as 0, blank, or dropped from the table - the failure a reader cannot see, and one the learner will only catch in the next step. Worth asking about directly in office hours, since a learner who did not notice will not report it."
   - index: 3
     label: "Recalculate three rows yourself"
     type: "workspace"
     instruction: |
-      Pick at least three titles and recalculate their ratios independently — a calculator, a phone, or a spreadsheet of your own. Include the row with a zero and the row with the most extreme values. Do not ask Claude to check its own work; that is not an independent check.
+      Pick at least three titles and recalculate their ratios independently - a calculator, a phone, or a spreadsheet of your own. Include the row with a zero and the row with the most extreme values. Do not ask Claude to check its own work; that is not an independent check.
 
-      Compare your figures with the file. Then open `outputs/usage-analysis.md` and add a section called `Spot check` in your own words, recording for each row you checked: your value, the file's value, the difference, and — where they differ — whether the cause was rounding, a divide-by-zero, a column selection error, or something else.
+      Compare your figures with the file. Then open `outputs/usage-analysis.md` and add a section called `Spot check` in your own words, recording for each row you checked: your value, the file's value, the difference, and - where they differ - whether the cause was rounding, a divide-by-zero, a column selection error, or something else.
 
-      Append one line to `outputs/session-log.md` naming what you checked and what you found, including "no discrepancies" if that is the honest answer. A clean result is a real finding and this step is done when you have three rows checked — about five minutes — whether or not anything turned out to be wrong.
+      Append one line to `outputs/session-log.md` naming what you checked and what you found, including "no discrepancies" if that is the honest answer. A clean result is a real finding and this step is done when you have three rows checked - about five minutes - whether or not anything turned out to be wrong.
     checkpoint: "At least three rows including the zero and the extreme have been recalculated by you, and the result is written into both files."
-    facilitator_note: "Highest dropout and highest value in the module, and the one step that is entirely on the learner's honour when there is nobody in the room. The step now says three rows in five minutes is complete and that a clean result is a finding. For anyone who found nothing, the follow-up question is what a discrepancy would have looked like and whether they would have noticed — that is worth asking in office hours whatever their spot check says."
+    facilitator_note: "Highest dropout and highest value in the module, and the one step that is entirely on the learner's honour when there is nobody in the room. The step now says three rows in five minutes is complete and that a clean result is a finding. For anyone who found nothing, the follow-up question is what a discrepancy would have looked like and whether they would have noticed - that is worth asking in office hours whatever their spot check says."
   - index: 4
     label: "Challenge the interpretation"
     type: "prompt"
@@ -73,7 +73,7 @@ steps:
   - index: 6
     label: "Reflect on data review"
     type: "reflect"
-    instruction: "A correct calculation can support a bad decision, and it is more persuasive than a wrong one. The judgment about which titles matter to which programmes is not in this file and cannot be derived from it."
+    instruction: "A calculation can be correct and still lead to a bad decision because this file does not show which titles matter to which programs. That judgment requires subject and curriculum expertise."
     reflection_prompt: "Which part of this analysis needed subject or curriculum expertise rather than arithmetic, and who in your library would have to sign off on it?"
 ---
 
@@ -84,7 +84,7 @@ is genuinely useful, and it is useful on exactly one condition: the file shows t
 have independently reproduced some of them. Analysis you cannot check is not analysis, however
 cleanly it is formatted.
 
-Two things are outside the file and stay outside it. The first is what the columns mean — the headers
+Two things are outside the file and stay outside it. The first is what the columns mean - the headers
 here are reporting-standard identifiers, and any ratio you build depends on an account of the metrics
 that has to come from the platform's documentation rather than from the data. The second is the
 decision. Usage data describes what was retrieved in one period on one platform. It does not know
@@ -100,7 +100,7 @@ cancellation list built from a single year of one report.
 
 The lesson transfers exactly. A digitization batch looks like a countable thing, and a completion
 rate looks like a fact about progress. Both depend on an account of what the columns hold and of what
-belongs in the batch at all — and that account has to come from somewhere other than the spreadsheet.
+belongs in the batch at all - and that account has to come from somewhere other than the spreadsheet.
 
 Open `sample-data/archives/digitization-inventory.csv` yourself first, and before you prompt anything,
 write down on paper or in a scratch note two things: how many items you think are in the batch, and
@@ -110,11 +110,11 @@ exercise is about the difference between an assumption you have written down and
 Then ask for a description of the file with nothing computed:
 
 ```cowork-prompt
-Read sample-data/archives/digitization-inventory.csv from the connected folder. Report the row count, the column names, every distinct value in each of the date, condition, rights, access, and transcription columns, and any empty fields. Then state explicitly which column identifies an item, how a count of the items in this batch would be derived from the file, and what you are assuming the transcription status column measures — on what basis, and what would have to be checked to confirm it. Do not calculate anything and do not normalize any value.
+Read sample-data/archives/digitization-inventory.csv from the connected folder. Report the row count, the column names, every distinct value in each of the date, condition, rights, access, and transcription columns, and any empty fields. Then state explicitly which column identifies an item, how a count of the items in this batch would be derived from the file, and what you are assuming the transcription status column measures - on what basis, and what would have to be checked to confirm it. Do not calculate anything and do not normalize any value.
 ```
 
 Compare what came back with what you wrote down. Where the two differ, nothing in the file can settle
-it — not for you and not for anyone else who opens it — and that is exactly what makes it an
+it - not for you and not for anyone else who opens it - and that is exactly what makes it an
 assumption to be verified rather than a fact to be used.
 
 Now the arithmetic, into a file, with every derivation shown:
@@ -124,7 +124,7 @@ Analyze sample-data/archives/digitization-inventory.csv and write the analysis t
 ```
 
 **Now check the arithmetic yourself.** Pick at least three figures, including the completion rate, and
-recalculate them independently — a calculator, a phone, or a spreadsheet of your own. For the
+recalculate them independently - a calculator, a phone, or a spreadsheet of your own. For the
 completion rate, derive the denominator from the file rather than accepting the one you were handed.
 Do not ask Claude to check its own work; that produces a second answer, not an independent check.
 

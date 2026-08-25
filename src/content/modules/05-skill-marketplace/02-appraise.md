@@ -7,14 +7,14 @@ steps:
   - index: 0
     label: "Survey the collections"
     type: "prompt"
-    instruction: "The plugin gives your assistant three catalog tools: one lists collections, one lists artifacts, one reads an artifact in full. Something is genuinely being read rather than recalled. Start at the top."
+    instruction: "The plugin provides three catalog tools: one lists collections, one lists the artifacts in them, and one reads an artifact's full content. Use them to inspect the actual catalog rather than relying on memory."
     prompt_text: |
       List the Context Bazaar collections with their member counts and descriptions.
 
       Then tell me which ones an academic library might have any use for,
       and which are aimed at software teams.
-    checkpoint: "You see six collections — kiro-official, neon-caravan, jh-drcc, byron-powers, library-ai-workshop, archon — with counts."
-    facilitator_note: "The counts are derived at runtime from artifact metadata, so a collection manifest never lists its own members. Worth asking the room why a catalogue would be built that way — deleting an item removes it from its collections automatically."
+    checkpoint: "You see six collections - kiro-official, neon-caravan, jh-drcc, byron-powers, library-ai-workshop, archon - with counts."
+    facilitator_note: "The counts are derived at runtime from artifact metadata, so a collection manifest never lists its own members. Worth asking the room why a catalogue would be built that way - deleting an item removes it from its collections automatically."
   - index: 1
     label: "Find yourself in the catalog"
     type: "prompt"
@@ -39,14 +39,14 @@ steps:
   - index: 3
     label: "Map metadata to selection criteria"
     type: "observe"
-    instruction: "Open the appraisal crosswalk in `SKILL-MARKETPLACE-HANDOUT.md` and work down it. Every field in that frontmatter is doing a job you already do under a different name; check which ones are present and which are only asserted."
+    instruction: "Open the appraisal crosswalk in `SKILL-MARKETPLACE-HANDOUT.md` and check each field. The fields describe format, oversight, lifecycle, responsibility, provenance, and intended users; note which values are present and which are only claims by the author."
     observe_items:
-      - "`type` — skill, rule, workflow, agent, prompt, template, reference-pack: format, not subject"
-      - "`trust` — official, partner, community, or experimental: a declared oversight lane, self-assigned by the author"
-      - "`maturity` — experimental, beta, stable, or deprecated: edition status, and a weeding signal"
-      - "`license` and `author` — rights and responsibility, stated but not verified by the marketplace"
-      - "`version` plus a provenance note citing an upstream commit — the closest thing here to a fixity check"
-      - "`harnesses` and `audience` — who and what this is for; not a subject heading"
+      - "`type` - skill, rule, workflow, agent, prompt, template, reference-pack: format, not subject"
+      - "`trust` - official, partner, community, or experimental: a declared oversight lane, self-assigned by the author"
+      - "`maturity` - experimental, beta, stable, or deprecated: edition status, and a weeding signal"
+      - "`license` and `author` - rights and responsibility, stated but not verified by the marketplace"
+      - "`version` plus a provenance note citing an upstream commit - the closest thing here to a fixity check"
+      - "`harnesses` and `audience` - who and what this is for; not a subject heading"
       - "No peer review, no controlled vocabulary, no authority record for the author, no independent integrity check"
   - index: 4
     label: "Reflect on description"
@@ -57,9 +57,9 @@ steps:
 
 ## Read the Catalog Record
 
-The catalog here is a generated file, `catalog.json`, rebuilt from the artifacts themselves whenever the library changes. Collections do not list their members; each artifact declares which collections it belongs to, and membership is derived. Delete an artifact and it leaves its collections automatically — a deliberate design choice, and a familiar one to anyone who has maintained a bib record and a holdings record separately.
+The catalog here is a generated file, `catalog.json`, rebuilt from the artifacts themselves whenever the library changes. Collections do not list their members; each artifact declares which collections it belongs to, and membership is derived. Delete an artifact and it leaves its collections automatically - a deliberate design choice, and a familiar one to anyone who has maintained a bib record and a holdings record separately.
 
-When you ask "what's in this collection", something is actually being read: the plugin gave your assistant three catalogue tools, and they open the real index. That is worth noticing, because for most of this workshop you have been training yourself to assume the opposite. It is also worth testing — ask a follow-up about a detail and see whether the answer stays consistent.
+When you ask "what's in this collection", something is actually being read: the plugin gave your assistant three catalogue tools, and they open the real index. That is worth noticing, because for most of this workshop you have been training yourself to assume the opposite. It is also worth testing - ask a follow-up about a detail and see whether the answer stays consistent.
 
 The `library-ai-workshop` collection is the four Skills from this repository, imported into someone else's library, given a version, assigned a trust lane, and stamped with the commit they were taken from. This is your work as a catalog record. Read it the way you would read a vendor's description of your own institutional repository.
 

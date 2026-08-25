@@ -25,17 +25,17 @@ exercises:
 
 ## About This Module
 
-Modules 1–4 treat the AI tool as a fixed product you work inside. This bonus module inverts that: it treats the instructions an AI tool follows as **acquirable, describable, reviewable objects** — and treats the place they come from as a collection you are responsible for.
+Modules 1–4 treat the AI tool as a fixed product you work inside. This bonus module flips that perspective: it treats the instructions an AI tool follows as **objects you can acquire, describe, review, and manage** - and treats the repository they come from as a collection you are responsible for.
 
-The worked example is [Kanon](https://github.com/jhu-sheridan-libraries/agentic-skill-library), a tool from the Johns Hopkins Digital Research and Curation Center, and the artifact library it distributes — published as the **Context Bazaar** marketplace. Kanon's premise is *author once, compile to every harness*: you write one canonical **knowledge artifact**, and Kanon compiles it into the native format each AI coding assistant expects.
+The worked example is [Kanon](https://github.com/jhu-sheridan-libraries/agentic-skill-library), a tool from the Johns Hopkins Digital Research and Curation Center, and the artifact library it distributes - published as the **Context Bazaar** marketplace. Kanon's premise is *author once, compile to every harness*: you write one canonical **knowledge artifact**, and Kanon compiles it into the native format each AI coding assistant expects.
 
-That library already contains a `library-ai-workshop` collection — the four Skills from this repository, imported, described, and versioned by someone else. You are about to look at your own work as a catalog record.
+That library already contains a `library-ai-workshop` collection - the four skills from this course, imported, described, and versioned by someone else. You are about to look at your own work as a catalog record.
 
 ### The library comes with its own guide
 
-You are not expected to memorise a command-line tool. The marketplace ships a skill called **`kanon`** whose entire job is to teach you Kanon — and once it is installed, you use it by asking questions in plain language.
+You are not expected to memorise a command-line tool. The marketplace ships a skill called **`kanon`** whose entire job is to teach you Kanon - and once it is installed, you use it by asking questions in plain language.
 
-`kanon` is written for library staff, and it practises what this module preaches: a short skill file loads first, and six longer references load only when they are needed.
+`kanon` is written for library staff, and it follows the same pattern this module teaches: a short skill file loads first, and six longer references load only when they are needed.
 
 | Ask for | You get |
 |---|---|
@@ -50,7 +50,7 @@ This module is the 90-minute library-facing pass. Those references are where you
 
 ### What you need before you start
 
-This module works against a real installed plugin. Before the session you need **Claude Cowork or a coding agent, and permission to install a plugin on the machine you are using**. If your institution has not decided who may install what, that decision has to happen first — which is itself a preview of Exercise 5.
+This module works against a real installed plugin. Before the session you need **Claude Cowork or a coding agent, and permission to install a plugin on the machine you are using**. If your institution has not decided who may install what, that decision has to happen first - which is exactly the kind of governance question Exercise 5 addresses.
 
 Two paths are supported, and all five exercises work the same way on both:
 
@@ -59,14 +59,14 @@ Two paths are supported, and all five exercises work the same way on both:
 | **Cowork** (default) | Claude Cowork | Install through menus, then work by asking questions in plain language. No terminal. |
 | **Coding agent** | Claude Code or Codex | The same, plus a terminal if you want to compile and publish your own artifact |
 
-**To install in Cowork**: open Customize in the sidebar, then Plugins, then Browse plugins, then Add marketplace. Enter `jhu-sheridan-libraries/agentic-skill-library` — the short owner/repo form is enough. Then install the plugin named `context-bazaar`.
+**To install in Cowork**: open Customize in the sidebar, then Plugins, then Browse plugins, then Add marketplace. Enter `jhu-sheridan-libraries/agentic-skill-library` - the short owner/repo form is enough. Then install the plugin named `context-bazaar`.
 
 **In Claude Code**: run `/plugin marketplace add` with the repository URL, then `/plugin install context-bazaar`.
 
 Two companion files sit in the workshop folder beside `WORKSPACE-BRIEF.md`:
 
-- `SKILL-MARKETPLACE-PROMPTS.md` — every prompt in this module, ready to copy and paste into Cowork.
-- `SKILL-MARKETPLACE-HANDOUT.md` — the three working sheets: an appraisal crosswalk, a vetting checklist, and a local policy template.
+- `SKILL-MARKETPLACE-PROMPTS.md` - every prompt in this module, ready to copy and paste into Cowork.
+- `SKILL-MARKETPLACE-HANDOUT.md` - the three working sheets: an appraisal crosswalk, a vetting checklist, and a local policy template.
 
 You will not need a terminal for any exercise. You will need the plugin.
 
@@ -94,10 +94,10 @@ Installing a skill means agreeing that an AI tool will follow instructions writt
 
 ### Going further
 
-Ninety minutes is a survey. When someone wants depth, the `kanon` skill already carries it — ask for the reference by name:
+Ninety minutes is a survey. For more depth, the `kanon` skill already carries it - ask for the reference by name:
 
-- **the tutorial** — twenty sequential lessons, each self-contained, running from "what is a coding agent" through catalog, import, scaffold, validate, build, install, collections, evals, publish, upgrade, and team sync.
-- **the self-paced course** — three to four hours on skill creation, with a safe practice artifact, assessments, an answer key, and a capstone review.
-- **the curriculum guide** — written for a library that wants to teach this: learning paths, a curriculum map, facilitation notes, assessment strategy, accessibility considerations, and a production-readiness gate.
+- **the tutorial** - twenty sequential lessons, each self-contained, running from "what is a coding agent" through catalog, import, scaffold, validate, build, install, collections, evals, publish, upgrade, and team sync.
+- **the self-paced course** - three to four hours on skill creation, with a safe practice artifact, assessments, an answer key, and a capstone review.
+- **the curriculum guide** - written for a library that wants to teach this: learning paths, a curriculum map, facilitation notes, assessment strategy, accessibility considerations, and a production-readiness gate.
 
-One honest caveat about all of it. The `kanon` skill's setup instructions still tell you to clone `agentic-skill-forge`, the repository's former name. The old name redirects, so nothing breaks — but you found a documentation drift in the guide you are being asked to trust, on your first read, without looking for it. Note where you found it. Exercise 3 is about exactly this habit.
+One honest caveat. The `kanon` skill's setup instructions still tell you to clone `agentic-skill-forge`, the repository's former name. The old name redirects, so nothing breaks - but you have just found a documentation inconsistency in the guide you are being asked to trust, on your first read, without looking for it. Note where you found it. Exercise 3 is about exactly this habit.

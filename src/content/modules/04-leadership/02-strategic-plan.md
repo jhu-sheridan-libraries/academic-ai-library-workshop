@@ -15,20 +15,20 @@ steps:
 
       Add this as a new sheet in outputs/concept-map.xlsx named "Concept lines."
     checkpoint: "The logic is readable as concepts before any platform-specific syntax is added, and it is saved into the workbook."
-    facilitator_note: "This extends the Module 1 workbook rather than starting a new file, which is the point of having used .xlsx there. A learner who made a Markdown concept map retypes it here; that is a consequence rather than a failure, and it is the clearest example in the course of why the deliverable format matters — worth naming in office hours if anyone hits it."
+    facilitator_note: "This extends the Module 1 workbook rather than starting a new file, which is the point of having used .xlsx there. A learner who made a Markdown concept map retypes it here; that is a consequence rather than a failure, and it is the clearest example in the course of why the deliverable format matters - worth naming in office hours if anyone hits it."
   - index: 1
     label: "Get an unverified draft translation"
     type: "prompt"
     instruction: |
       The platform for this exercise is supplied: the Wexford Abstracts and Index on the Perihelion 6 interface. It is fictional, its documentation is in the connected folder, and nobody has to sign into anything.
 
-      What you want from this step is an ordinary unverified draft — the thing you would get if you asked and then stopped. So the prompt tells Claude not to open the platform's documentation. Do not remove that line; the draft is the specimen you are about to examine.
+      This step creates a deliberately unverified draft: the kind of search syntax you would receive if you asked an AI tool for a translation and did not check its work. The prompt tells Claude not to open the platform's documentation. Keep that instruction; you will compare the draft with the documentation in the next step.
     prompt_text: |
       Read the "Concept lines" sheet of outputs/concept-map.xlsx and translate the strategy into search lines for the Wexford Abstracts and Index on the Perihelion 6 interface.
 
       Do not read sample-data/mock-database/HELP-syntax-reference.md or any other file in that folder. Draft from general bibliographic search conventions only, so that I have an unverified draft to examine.
 
-      Cover field codes, phrase searching, truncation, proximity, nesting and operator precedence, controlled vocabulary, date limits, and export. Mark every element "unverified — check against platform documentation." Do not state that any syntax is valid.
+      Cover field codes, phrase searching, truncation, proximity, nesting and operator precedence, controlled vocabulary, date limits, and export. Mark every element "unverified - check against platform documentation." Do not state that any syntax is valid.
 
       Write this to outputs/search-translation-log.xlsx with columns: platform and interface, date checked, draft line, what the documentation says, checked line, result count, what happened, change made, reason, reviewer initials. Fill in only the draft-line column and leave the rest blank for me.
     checkpoint: "outputs/search-translation-log.xlsx exists, has a draft line for every concept line, and claims nothing about validity."
@@ -39,15 +39,15 @@ steps:
     instruction: |
       This step is yours, not Claude's. Asking the model to check its own draft gets you a second draft. Open the documentation and read it.
 
-      Open sample-data/mock-database/HELP-syntax-reference.md beside the draft lines in your log. Work through the draft one element at a time — every field code, the phrase rule, the truncation and wildcard characters, the proximity form, the nesting and precedence rule, the date limit, the thesaurus convention, the export behaviour — and for each one decide: confirmed by the documentation, contradicted by it, or not addressed at all.
+      Open sample-data/mock-database/HELP-syntax-reference.md beside the draft lines in your log. Work through the draft one element at a time - every field code, the phrase rule, the truncation and wildcard characters, the proximity form, the nesting and precedence rule, the date limit, the thesaurus convention, the export behaviour - and for each one decide: confirmed by the documentation, contradicted by it, or not addressed at all.
 
       Then open sample-data/mock-database/thesaurus-extract.md and check every controlled term the draft proposed. A term is a descriptor, a non-preferred form with a pointer, or absent. Those are three different findings and they call for three different lines in the log.
 
-      This is also where the concept map gets finished. Open `outputs/concept-map.xlsx` and fill in the verification status you left blank in Module 1 — descriptor, non-preferred, or absent — for each candidate term you just looked up. That column has been waiting for a thesaurus since the first module.
+      This is also where the concept map gets finished. Open `outputs/concept-map.xlsx` and fill in the verification status you left blank in Module 1 - descriptor, non-preferred, or absent - for each candidate term you just looked up. That column has been waiting for a thesaurus since the first module.
 
       Write the checked line yourself, in the platform's own syntax, and write what the documentation said next to it. Quote the documentation rather than paraphrasing it.
-    checkpoint: "For every draft element you have recorded confirmed, contradicted, or not addressed, with the documentation's own wording against the contradicted ones — and at least one controlled term has been reclassified."
-    facilitator_note: "The exercise turns on this step and it is the one that gets compressed when the day runs long. The failure to look for is a learner who hands the help file to Claude and accepts a summary — the test is whether they can point to the sentence in the documentation that settles a specific element, which is a fair thing to ask in office hours. Anyone who found a drafted element the platform does not support has the lesson; ask them to say which one, because the answers differ."
+    checkpoint: "For every draft element you have recorded confirmed, contradicted, or not addressed, with the documentation's own wording against the contradicted ones - and at least one controlled term has been reclassified."
+    facilitator_note: "The exercise turns on this step and it is the one that gets compressed when the day runs long. The failure to look for is a learner who hands the help file to Claude and accepts a summary - the test is whether they can point to the sentence in the documentation that settles a specific element, which is a fair thing to ask in office hours. Anyone who found a drafted element the platform does not support has the lesson; ask them to say which one, because the answers differ."
   - index: 3
     label: "Read the session history"
     type: "workspace"
@@ -60,9 +60,9 @@ steps:
 
       Record the result count and what happened against the matching row of your log. Where the session shows an outcome your checked line would also have produced, change the checked line and record why.
 
-      If you are short of time, start with the line that did not run and the lines whose counts look surprising, and mark the rest unexamined. Finish whichever line you are on rather than stopping inside one — a half-accounted line is worse in the log than an honestly unexamined one.
+      If you are short of time, start with the line that did not run and the lines whose counts look surprising, and mark the rest unexamined. Finish whichever line you are on rather than stopping inside one - a half-accounted line is worse in the log than an honestly unexamined one.
     checkpoint: "Every line of the session is accounted for in your log, including the failures, and at least one of your checked lines changed because of something the session revealed rather than something the documentation said."
-    facilitator_note: "People move at very different speeds here, and alone there is no pooling lines across a group — so the step now says which lines to account for first if time is short, and to finish a line rather than stop inside one. The lines whose counts look unremarkable are the ones worth surfacing in office hours; nobody volunteers those on their own."
+    facilitator_note: "People move at very different speeds here, and alone there is no pooling lines across a group - so the step now says which lines to account for first if time is short, and to finish a line rather than stop inside one. The lines whose counts look unremarkable are the ones worth surfacing in office hours; nobody volunteers those on their own."
   - index: 4
     label: "Finish the log"
     type: "prompt"
@@ -98,20 +98,20 @@ steps:
     label: "One question to take further"
     type: "reflect"
     instruction: "The test this log has to pass in real work, which is not a test you can apply to your own log alone. Record your answer here, or bring the log to office hours and ask someone to try it."
-    reflection_prompt: "Could a peer reviewer reproduce your final search from this log alone — and what would they have to ask you for?"
+    reflection_prompt: "Could a peer reviewer reproduce your final search from this log alone - and what would they have to ask you for?"
 ---
 
 ## Translate and Test Search Syntax
 
 Claude can draft a translation across database interfaces quickly, and the draft is genuinely useful
-— it gives you a structure and a checklist. What it cannot do is establish that a field code, a
+- it gives you a structure and a checklist. What it cannot do is establish that a field code, a
 truncation character, or a proximity operator exists on your platform, in your subscription, this
 year. The platform's own documentation, its thesaurus, and what actually came back when the search
 ran are the authority.
 
 So the authority for this exercise is in the connected folder rather than behind a login. Under
-`sample-data/mock-database/` there is a fictional platform — the Wexford Abstracts and Index on
-Perihelion 6 — with its syntax reference, a thesaurus extract, and the history of a search session
+`sample-data/mock-database/` there is a fictional platform - the Wexford Abstracts and Index on
+Perihelion 6 - with its syntax reference, a thesaurus extract, and the history of a search session
 someone ran on it. Nothing in this exercise needs a subscription, an account, or a live search, and
 the syntax you are checking against is the platform's, not the one you already know.
 
@@ -123,7 +123,7 @@ makes the search rerunnable by someone else.
 ## Archives track
 
 The concept is identical and the authority is different. A drafted authorized form of a name, a
-drafted subject heading, a drafted date normalization — each is a hypothesis, and no amount of
+drafted subject heading, a drafted date normalization - each is a hypothesis, and no amount of
 fluency establishes that the form exists in the vocabulary you are obliged to use, in the version
 your system is running, this year.
 
@@ -136,24 +136,22 @@ repository assigns.
 Start from the access points you already have:
 
 ```cowork-prompt
-Read outputs/archives-access-points.xlsx from the connected folder. Add a sheet named "Proposed forms" turning each access point into a proposed authorized form: one row per access point, with columns for the access point as recorded, the kind of term it is, the vocabulary the form would have to come from, and the proposed form itself. Mark every proposed form "unverified — check against the authority file." Do not state that any form is correct.
+Read outputs/archives-access-points.xlsx from the connected folder. Add a sheet named "Proposed forms" turning each access point into a proposed authorized form: one row per access point, with columns for the access point as recorded, the kind of term it is, the vocabulary the form would have to come from, and the proposed form itself. Mark every proposed form "unverified - check against the authority file." Do not state that any form is correct.
 ```
 
-Now get an ordinary unverified draft — the thing you would get if you asked and then stopped. The
-prompt below tells Claude not to open the authority file or the thesaurus. Do not remove that line;
-the draft is the specimen you are about to examine.
+Now get a deliberately unverified draft - the search syntax you would receive if you asked an AI tool for a translation and did not check its work. The prompt tells Claude not to open the platform's documentation. Keep that instruction; you will compare the draft with the documentation in the next step.
 
 ```cowork-prompt
-Read the "Proposed forms" sheet of outputs/archives-access-points.xlsx. Draft, for each proposed form, the authorized form you would expect a regional name authority file or a subject thesaurus to hold, and the record identifier you would expect it to carry. Do not read sample-data/mock-database/mock-authority-file.md, sample-data/mock-database/thesaurus-extract.md, or any other file in that folder. Draft from general descriptive convention only, so that I have an unverified draft to examine. Mark every element "unverified — check against the authority file." Do not state that any form or identifier is valid. Write this to outputs/archives-authority-check-log.xlsx with columns: vocabulary and version; date checked; drafted form; form actually found; identifier of the record found; discrepancy or unexpected outcome; change made; reason; reviewer initials. Fill in only the drafted-form column and leave every other cell blank for me.
+Read the "Proposed forms" sheet of outputs/archives-access-points.xlsx. Draft, for each proposed form, the authorized form you would expect a regional name authority file or a subject thesaurus to hold, and the record identifier you would expect it to carry. Do not read sample-data/mock-database/mock-authority-file.md, sample-data/mock-database/thesaurus-extract.md, or any other file in that folder. Draft from general descriptive convention only, so that I have an unverified draft to examine. Mark every element "unverified - check against the authority file." Do not state that any form or identifier is valid. Write this to outputs/archives-authority-check-log.xlsx with columns: vocabulary and version; date checked; drafted form; form actually found; identifier of the record found; discrepancy or unexpected outcome; change made; reason; reviewer initials. Fill in only the drafted-form column and leave every other cell blank for me.
 ```
 
-If a draft comes back already correct, the do-not-read line was dropped — start a fresh conversation
+If a draft comes back already correct, the do-not-read line was dropped - start a fresh conversation
 and send it again.
 
 **Now check the draft yourself.** This is the part the exercise turns on and it is not delegable:
 asking the model to check its own draft gets you a second draft. Open
 `sample-data/mock-database/mock-authority-file.md` beside the drafted forms and look each one up.
-Record what came back in the file's own wording — the established form and its identifier, a variant
+Record what came back in the file's own wording - the established form and its identifier, a variant
 form with a pointer to the form you must use instead, a referral that will not resolve until you decide
 something from the material in hand, or no record at all. "No record found" is a result, and inventing
 a record rather than recording its absence is the failure this step exists to catch. Then open the

@@ -1,4 +1,4 @@
-# SIMULATED HARVESTED WEB PAGE — WORKSHOP MATERIAL
+# SIMULATED HARVESTED WEB PAGE - WORKSHOP MATERIAL
 
 > **What this file is.** A simulated copy of a web page as an AI research mode might have retrieved
 > it while working on the request in `research-request.txt`. It is fictional. It is included so you

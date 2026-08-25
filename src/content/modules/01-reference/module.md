@@ -23,17 +23,17 @@ exercises:
 ## About This Module
 
 The most valuable work happens before a search begins: knowing what the tool can reach, clarifying
-the decision behind the question, defining scope, and choosing appropriate sources. This module
-establishes the two habits everything else depends on — scoping a connected folder deliberately, and
-producing work as files rather than as conversation.
+the real question, defining scope, and choosing appropriate sources. This module builds two
+foundational habits - deciding what goes in the connected folder, and saving your work as files
+instead of losing it in a chat conversation.
 
 ## What You'll Learn
 
-- What a connected folder grants, and how that differs from attaching a file to a message
-- How to check the data boundary before you begin, and read an action before approving it
-- How to use an agent to support — not replace — the reference interview
+- What a connected folder gives the agent access to, and how that differs from attaching a single file
+- How to check what data the agent can see before you begin, and how to read its proposed actions before approving them
+- How to use an agent to support - not replace - the reference interview
 - How to separate search concepts, controlled vocabulary, filters, and unanswered questions
-- How to disclose AI assistance and preserve a human path
+- How to disclose AI assistance and ensure a non-AI path remains available
 
 ## Skills in This Module
 
@@ -69,30 +69,28 @@ archives section gives you two substitutions and says plainly that the rest stan
 You do this alone, at your own pace, in your own week. There is no room to keep up with and nobody
 waiting on you.
 
-That has consequences worth knowing at the start. Every step tells you roughly how long it should
-take and what counts as a complete answer, because there is no one beside you to say "that's enough,
-move on" — where a step says four sources or three revisions or five minutes, take it literally. Some
-steps are designed to fail: a record that comes back empty, a citation that cannot be found, a skill
-that does not load. Where that is expected, the step says so. If something looks like it went wrong
-and nothing tells you it was meant to, that one is worth asking about.
+Every step tells you roughly how long it should take and what counts as a complete answer. Where a
+step says four sources or three revisions or five minutes, take it literally - there is no one beside
+you to say "that's enough, move on." Some steps are designed to fail on purpose: a record that comes
+back empty, a citation that cannot be found, a skill that does not load. Where that is expected, the
+step says so. If something looks wrong and nothing tells you it was meant to, ask about it.
 
 Stopping partway is fine. Your place is saved, and the work you produce is a set of files on your own
 disk rather than a conversation you have to keep alive.
 
 Your facilitator is remote. They can see which steps you have marked complete and anything you type
-into a reflection box, and nothing else — no prompts, no conversations, no files. That visibility
-exists so they can tell where people are getting stuck without asking. Reflection boxes are optional
-throughout; skipping one is a legitimate answer.
+into a reflection box - no prompts, no conversations, no files. This helps them spot where people get
+stuck without having to ask. Reflection boxes are optional throughout; skipping one is fine.
 
-Each exercise ends with a question worth more than the exercise. Answer it in the box, or save it for
-the optional walkthrough or the office hours listed in your invitation. Two things are worth bringing
-to a person rather than solving alone: anything where your own library's policy is the answer, and
-anything where you want to know whether a colleague got the same result you did.
+Each exercise ends with a discussion question. Answer it in the reflection box, or save it for
+the optional walkthrough or office hours. Two things are worth bringing to a person rather than
+solving alone: anything where your library's local policy is the answer, and anything where you want
+to compare results with a colleague.
 
 ## Before You Begin
 
 Open your workshop project, with the workshop folder attached, as set up in the participant
-guide. Everything you need is in that folder — there is nothing to upload. Use only the supplied
+guide. Everything you need is in that folder - there is nothing to upload. Use only the supplied
 simulated data.
 
 The practice baseline for this course comes from the
