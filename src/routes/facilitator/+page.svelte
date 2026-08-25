@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { invalidate } from '$app/navigation';
+	import { base } from '$app/paths';
 	import PacingAlert from '$lib/components/facilitator/PacingAlert.svelte';
 	import CohortProgressTable from '$lib/components/facilitator/CohortProgressTable.svelte';
 	import ModuleHeatmap from '$lib/components/facilitator/ModuleHeatmap.svelte';
@@ -8,6 +9,33 @@
 
 	let { data } = $props();
 	let alertDismissed = $state(false);
+	let exporting = $state(false);
+	let exportError = $state('');
+
+	async function exportReport() {
+		exporting = true;
+		exportError = '';
+		try {
+			const response = await fetch(`${base}/api/facilitator/report`, {
+				headers: { 'x-facilitator-token': data.token }
+			});
+			if (!response.ok) throw new Error('Report download failed');
+
+			const blob = await response.blob();
+			const filename =
+				response.headers.get('content-disposition')?.match(/filename="([^"]+)"/)?.[1] ??
+				'library-workshop-report.md';
+			const link = document.createElement('a');
+			link.href = URL.createObjectURL(blob);
+			link.download = filename;
+			link.click();
+			URL.revokeObjectURL(link.href);
+		} catch {
+			exportError = 'The report could not be downloaded. Check the facilitator token and try again.';
+		} finally {
+			exporting = false;
+		}
+	}
 
 	onMount(() => {
 		const interval = setInterval(() => invalidate('app:cohort'), 30_000);
@@ -16,25 +44,41 @@
 </script>
 
 <div class="mx-auto max-w-7xl px-4 py-8">
-	<div class="mb-6 flex items-center justify-between">
+	<div class="mb-6 flex items-center justify-between gap-4">
 		<div>
 			<h1 class="text-2xl font-bold text-gray-900">Facilitator Dashboard</h1>
 			<p class="text-sm text-gray-500">Cohort: {data.cohort} · {data.totalLearners} learners</p>
 		</div>
-		{#if data.persistence.degraded}
-			<span class="rounded-full bg-red-100 px-3 py-1 text-xs font-medium text-red-700">
-				Not recording
-			</span>
-		{:else if !data.persistence.expected}
-			<span class="rounded-full bg-amber-100 px-3 py-1 text-xs font-medium text-amber-800">
-				In-memory only
-			</span>
-		{:else}
-			<span class="rounded-full bg-green-100 px-3 py-1 text-xs font-medium text-green-700">
-				Live · refreshes every 30s
-			</span>
-		{/if}
+		<div class="flex items-center gap-3">
+			<button
+				onclick={exportReport}
+				disabled={exporting}
+				class="inline-flex items-center gap-2 rounded-lg border border-jhu-blue/20 bg-white px-3 py-2 text-xs font-semibold text-jhu-blue shadow-sm transition-colors hover:bg-jhu-blue/5 disabled:cursor-wait disabled:opacity-60"
+			>
+				<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" class="h-3.5 w-3.5" aria-hidden="true">
+					<path stroke-linecap="round" stroke-linejoin="round" d="M8 1.5v8m0 0 3-3m-3 3-3-3M2.5 10.5v3h11v-3"/>
+				</svg>
+				{exporting ? 'Preparing report…' : 'Export report'}
+			</button>
+			{#if data.persistence.degraded}
+				<span class="rounded-full bg-red-100 px-3 py-1 text-xs font-medium text-red-700">
+					Not recording
+				</span>
+			{:else if !data.persistence.expected}
+				<span class="rounded-full bg-amber-100 px-3 py-1 text-xs font-medium text-amber-800">
+					In-memory only
+				</span>
+			{:else}
+				<span class="rounded-full bg-green-100 px-3 py-1 text-xs font-medium text-green-700">
+					Live · refreshes every 30s
+				</span>
+			{/if}
+		</div>
 	</div>
+
+	{#if exportError}
+		<p class="-mt-3 mb-6 text-sm text-red-700" role="alert">{exportError}</p>
+	{/if}
 
 	{#if data.persistence.degraded}
 		<div class="mb-6 rounded-lg border border-red-300 bg-red-50 px-5 py-4">
