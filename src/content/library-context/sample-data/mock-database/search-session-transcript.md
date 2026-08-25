@@ -1,4 +1,4 @@
-# PERIHELION 6 — SEARCH SESSION HISTORY — SIMULATED WORKSHOP MATERIAL
+# PERIHELION 6 - SEARCH SESSION HISTORY - SIMULATED WORKSHOP MATERIAL
 
 > **What this file is.** A simulated session history from a database platform that does not exist. The
 > platform, the database, the thesaurus, the result counts, and the error codes were all invented for
@@ -11,7 +11,7 @@
 ---
 
 ```
-PERIHELION 6.4 — SESSION HISTORY
+PERIHELION 6.4 - SESSION HISTORY
 Database:  Wexford Abstracts and Index (WAI)
 Thesaurus: Wexford Thesaurus, 2026 release
 Session:   11 March 2026, 09:41–10:18
@@ -28,7 +28,7 @@ SU=(open access OR open-access publishing)
 ```
 
 ```
-Set S1 — 0 records
+Set S1 - 0 records
 ```
 
 ---
@@ -40,7 +40,7 @@ DE=Open access publishing OR AT=open access OR AB=open access
 ```
 
 ```
-Set S2 — 14,208 records
+Set S2 - 14,208 records
 ```
 
 ---
@@ -52,7 +52,7 @@ AT=(polic% OR health%) OR AB=(polic% OR health%)
 ```
 
 ```
-Set S3 — 1,942,660 records
+Set S3 - 1,942,660 records
 [TRUNC] 'polic%' expanded to 3,412 terms
 [TRUNC] 'health%' expanded to 1,196 terms
 ```
@@ -79,7 +79,7 @@ DE=Research impact metrics
 ```
 
 ```
-Set S4 — 3,117 records
+Set S4 - 3,117 records
 [T-FALLBACK] Term not found in Wexford Thesaurus; searched as core-fields keyword.
 ```
 
@@ -92,7 +92,7 @@ Set S4 — 3,117 records
 ```
 
 ```
-Set S5 — 46 records
+Set S5 - 46 records
 ```
 
 ---
@@ -104,7 +104,7 @@ S2 AND PY=2015/2025
 ```
 
 ```
-Set S6 — 9,430 records
+Set S6 - 9,430 records
 ```
 
 ---
@@ -116,7 +116,7 @@ DE+=Public health AND YR:2015/2025
 ```
 
 ```
-Set S7 — 88,512 records
+Set S7 - 88,512 records
 ```
 
 ---
@@ -128,12 +128,12 @@ S2 AND S4 OR S7
 ```
 
 ```
-Set S8 — 89,704 records
+Set S8 - 89,704 records
 ```
 
 ---
 
-**Line 10 — export request**
+**Line 10 - export request**
 
 ```
 Export S8 · Full record + index terms · 89,704 records
@@ -146,6 +146,6 @@ E-22: Export request exceeds 500 records per operation. Nothing exported.
 ---
 
 ```
-END OF HISTORY — 10 lines submitted, 8 sets created.
+END OF HISTORY - 10 lines submitted, 8 sets created.
 Session history export writes the last 20 lines only.
 ```

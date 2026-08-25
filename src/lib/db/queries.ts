@@ -23,7 +23,7 @@ import {
 
 /**
  * True when reads and writes should go to the in-process store instead of
- * DynamoDB — either because persistence was never switched on, or because a
+ * DynamoDB - either because persistence was never switched on, or because a
  * DynamoDB call already failed unrecoverably in this process.
  */
 function useLocal(): boolean {
@@ -211,7 +211,7 @@ export async function getLearnersByCohort(cohort: string): Promise<LearnerItem[]
 					ScanIndexForward: false // most recently seen first
 				})
 			);
-			// GSI returns all items including progress/notes if they have cohort attr — filter to META
+			// GSI returns all items including progress/notes if they have cohort attr - filter to META
 			return ((result.Items ?? []) as LearnerItem[]).filter((i) => i.sk === 'META');
 		},
 		() => localGetLearnersByCohort(cohort)

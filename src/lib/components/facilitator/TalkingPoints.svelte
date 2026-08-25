@@ -26,7 +26,7 @@
 						class="flex w-full items-center justify-between px-4 py-3 text-left text-sm font-medium text-gray-700"
 					>
 						<span>
-							<span class="mr-2 text-gray-400">{point.exerciseTitle} —</span>
+							<span class="mr-2 text-gray-400">{point.exerciseTitle} -</span>
 							{point.stepLabel}
 						</span>
 						<span class="text-gray-400">{openIndex === i ? '▲' : '▼'}</span>

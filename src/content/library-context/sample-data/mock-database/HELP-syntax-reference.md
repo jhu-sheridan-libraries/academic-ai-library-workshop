@@ -1,4 +1,4 @@
-# PERIHELION 6 — SEARCH SYNTAX REFERENCE — SIMULATED WORKSHOP MATERIAL
+# PERIHELION 6 - SEARCH SYNTAX REFERENCE - SIMULATED WORKSHOP MATERIAL
 
 > **What this file is.** The syntax help page of a database platform that does not exist. Perihelion,
 > the Wexford Abstracts and Index, the Wexford Thesaurus, and every code, operator, and error number
@@ -21,7 +21,7 @@
 ## 1. How a line is read
 
 Search lines are submitted one at a time from the command line box. Each line that executes is
-assigned a set number — `S1`, `S2`, `S3` — and set numbers may be reused as operands in later lines.
+assigned a set number - `S1`, `S2`, `S3` - and set numbers may be reused as operands in later lines.
 
 **A line that returns an error does not execute and is not assigned a set number.** Set numbering is
 continuous across successful lines only. If line 4 of your session fails, the set produced by line 5
@@ -39,19 +39,19 @@ consequence of their history in Perihelion 4 and has not been harmonised.
 
 | Code | Searches |
 |---|---|
-| `AT=` | Article title — the title of the individual item |
-| `TI=` | Title of the source publication — journal, book, or report series title |
+| `AT=` | Article title - the title of the individual item |
+| `TI=` | Title of the source publication - journal, book, or report series title |
 | `AB=` | Abstract text as supplied by the abstracting agency |
 | `AU=` | Personal author, indexed surname-first |
 | `CA=` | Corporate author or issuing body |
 | `DE=` | Wexford Thesaurus descriptor, exact descriptor only |
 | `DE+=` | Wexford Thesaurus descriptor, exploded to include all narrower terms |
 | `KW=` | Author-supplied keywords only. Does not search the article title or the abstract. |
-| `SU=` | Supplementary material present — accepted values are `dataset`, `appendix`, `code`, `protocol`, `audio`, `video` |
-| `PY=` | Processing year — the year in which the record was added to WAI |
+| `SU=` | Supplementary material present - accepted values are `dataset`, `appendix`, `code`, `protocol`, `audio`, `video` |
+| `PY=` | Processing year - the year in which the record was added to WAI |
 | `YR:` | Year of publication |
 | `LN:` | Language of publication, three-letter code |
-| `DT=` | Document type — `article`, `review`, `report`, `conference`, `chapter`, `editorial`, `preprint` |
+| `DT=` | Document type - `article`, `review`, `report`, `conference`, `chapter`, `editorial`, `preprint` |
 | `AF=` | Author affiliation as printed on the item |
 | `FU=` | Funder name as recorded in the item's funding statement |
 
@@ -90,7 +90,7 @@ returns `E-09`.
 
 A hyphen inside a term is treated as a word boundary, and the hyphenated pair is searched as an
 ordered adjacent pair. `open-access` and `"open access"` retrieve the same set. `open access`
-without quotation marks does not — see section 5.
+without quotation marks does not - see section 5.
 
 ## 4. Truncation and wildcards
 
@@ -119,8 +119,8 @@ term1 3ADJ term2
 term1 5NEAR term2
 ```
 
-- `nADJ` — within *n* words, **in the order given**.
-- `nNEAR` — within *n* words, **in either order**.
+- `nADJ` - within *n* words, **in the order given**.
+- `nNEAR` - within *n* words, **in either order**.
 - *n* counts intervening words. `1ADJ` means directly adjacent.
 
 `n` is required. A bare `ADJ` or `NEAR` returns `E-12`; there is no default distance.
@@ -143,7 +143,7 @@ Evaluated:  (cats OR dogs) AND fleas
 ```
 
 This is the opposite of the convention used by several other platforms, and it is the single most
-common cause of a set that is far smaller — or far larger — than the searcher expected. An
+common cause of a set that is far smaller - or far larger - than the searcher expected. An
 unparenthesised synonym list followed by `AND` will narrow the whole list rather than one term of it.
 Perihelion does not warn about this.
 

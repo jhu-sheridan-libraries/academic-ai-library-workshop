@@ -13,7 +13,7 @@
 	 * gate, no ordering, open it whenever. Collapsed by default so the exercise
 	 * still reads as one flow for the majority who are not on this track.
 	 *
-	 * `html` is the section with its own `<h2>` already stripped — this card
+	 * `html` is the section with its own `<h2>` already stripped - this card
 	 * supplies the heading.
 	 */
 	let { html }: { html: string } = $props();
@@ -36,7 +36,7 @@
 				Archives track
 			</span>
 			<span class="mt-0.5 block text-xs leading-relaxed text-gray-500">
-				The same exercise on archival material — a finding aid, an accession record, a digitization
+				The same exercise on archival material - a finding aid, an accession record, a digitization
 				batch. Work this instead of the numbered steps if archives or special collections is your
 				work.
 			</span>

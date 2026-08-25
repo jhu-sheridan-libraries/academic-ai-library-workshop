@@ -1,4 +1,4 @@
-# SIMULATED RETRIEVAL RESULTS — WORKSHOP MATERIAL
+# SIMULATED RETRIEVAL RESULTS - WORKSHOP MATERIAL
 
 > **What this file is.** A simulated set of retrieval results for the eleven citations in the source
 > table of `research-scan-draft.md`. Every file in this folder is fictional and was created for the
@@ -12,7 +12,7 @@ discovery layer, opening a landing page. Nobody in this workshop has web search,
 would also mean eleven different results for eleven different people.
 
 So the retrieval has been done for you and captured here. One file per cited source, named by the ID
-the scan gives it. Each file is what came back — a landing page, an abstract page, a repository
+the scan gives it. Each file is what came back - a landing page, an abstract page, a repository
 record, a search result, or an error. Some of them came back with nothing, which is a result too.
 
 What has **not** been done for you is the judgment. Nothing in this folder tells you whether a
@@ -25,17 +25,17 @@ Read the record before you read the claim it is attached to. Then go back to the
 
 | ID | File | Result |
 |---|---|---|
-| A1 | `A1.md` | Resolver error — the identifier did not resolve |
-| B1 | `B1.md` | Resolved — report record with front matter and methods note |
-| C1 | `C1.md` | Not found — database search returned no results |
-| D1 | `D1.md` | Resolved — article record with abstract |
-| E1 | `E1.md` | Resolved — report record with front matter |
-| F1 | `F1.md` | Resolved — article record with abstract |
-| G1 | `G1.md` | Paywalled — record and abstract visible, full text restricted |
-| H1 | `H1.md` | Resolved — article record with abstract |
-| I1 | `I1.md` | Resolved — organisational document record |
-| J1 | `J1.md` | Resolved — article record with abstract |
-| K1 | `K1.md` | Access denied — HTTP 403 from the publisher platform |
+| A1 | `A1.md` | Resolver error - the identifier did not resolve |
+| B1 | `B1.md` | Resolved - report record with front matter and methods note |
+| C1 | `C1.md` | Not found - database search returned no results |
+| D1 | `D1.md` | Resolved - article record with abstract |
+| E1 | `E1.md` | Resolved - report record with front matter |
+| F1 | `F1.md` | Resolved - article record with abstract |
+| G1 | `G1.md` | Paywalled - record and abstract visible, full text restricted |
+| H1 | `H1.md` | Resolved - article record with abstract |
+| I1 | `I1.md` | Resolved - organisational document record |
+| J1 | `J1.md` | Resolved - article record with abstract |
+| K1 | `K1.md` | Access denied - HTTP 403 from the publisher platform |
 
 Four of the eleven did not produce a usable full text. Treat each of those as a distinct outcome:
 an identifier that does not resolve, a record that cannot be located, a record you can see but not

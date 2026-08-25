@@ -1,4 +1,4 @@
-# WELDON HARBOR REGIONAL NAME AUTHORITY FILE — EXTRACT — SIMULATED WORKSHOP MATERIAL
+# WELDON HARBOR REGIONAL NAME AUTHORITY FILE - EXTRACT - SIMULATED WORKSHOP MATERIAL
 
 > **What this file is.** An extract from a name authority file that does not exist, describing people
 > and organisations that do not exist, in a city that does not exist. The identifiers, established
@@ -94,7 +94,7 @@ public playgrounds. Record established 1988.
 
   WHA-N-00415   Ferris, Ada Whitcomb, 1897–1979
   (no record)   Ferris, Ada, daughter of Harlan Ferris and Ada Whitcomb Ferris
-                — referenced in WHA-N-00415, no authority record established
+                - referenced in WHA-N-00415, no authority record established
 
 Determine from the material in hand which person is intended before assigning
 an access point. Do not assign an undifferentiated form.

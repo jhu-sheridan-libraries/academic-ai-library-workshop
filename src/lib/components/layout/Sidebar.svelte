@@ -23,7 +23,7 @@
 	const isOnOverview = $derived(currentExerciseId === '');
 </script>
 
-<!-- Mobile backdrop — z-index below AppNav so the top bar stays on top -->
+<!-- Mobile backdrop - z-index below AppNav so the top bar stays on top -->
 {#if open}
 	<div
 		class="fixed inset-0 z-10 bg-black/40 md:hidden"

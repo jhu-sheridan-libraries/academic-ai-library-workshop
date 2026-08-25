@@ -1,4 +1,4 @@
-# LEGACY FINDING AID DRAFT — SIMULATED WORKSHOP MATERIAL
+# LEGACY FINDING AID DRAFT - SIMULATED WORKSHOP MATERIAL
 
 > **What this file is.** A simulated legacy finding aid for a fictional collection at a fictional
 > repository, retyped from an older typescript guide and lightly reformatted for the web. It has not
@@ -71,9 +71,9 @@ Portions of this collection are restricted. Consult the archivist.
 
 ### Subject Headings
 
-- Municipal engineering — Weldon Harbor
+- Municipal engineering - Weldon Harbor
 - City planning
-- Slums — Weldon Harbor
+- Slums - Weldon Harbor
 - Harbors
 - Ferris, Harlan, 1889–1968
 
@@ -103,27 +103,27 @@ Portions of this collection are restricted. Consult the archivist.
 
 | Box | Folder | Title | Dates |
 |---|---|---|---|
-| 5 | 1 | Sewer extension, second district — report | 1937 |
-| 5 | 2 | Sewer extension, second district — specifications | 1937 |
-| 5 | 3 | Seawall reconstruction — report | 1941 |
-| 5 | 4 | Seawall reconstruction — drawings | 1941–1943 |
-| 6 | — | Waterfront plan — drafts and drawings (oversize) | 1952–1954 |
-| 7 | — | Tidal Flats clearance — surveys, appraisals, relocation schedules | 1954–1959 |
-| 8 | 1 | Harbor dredging — report | 1901 |
+| 5 | 1 | Sewer extension, second district - report | 1937 |
+| 5 | 2 | Sewer extension, second district - specifications | 1937 |
+| 5 | 3 | Seawall reconstruction - report | 1941 |
+| 5 | 4 | Seawall reconstruction - drawings | 1941–1943 |
+| 6 | - | Waterfront plan - drafts and drawings (oversize) | 1952–1954 |
+| 7 | - | Tidal Flats clearance - surveys, appraisals, relocation schedules | 1954–1959 |
+| 8 | 1 | Harbor dredging - report | 1901 |
 | 8 | 2–9 | Sundry engineering files | undated |
 
 **Series 3. Miscellaneous papers**
 
 | Box | Folder | Title | Dates |
 |---|---|---|---|
-| 9–12 | — | Miscellaneous papers | n.d. |
+| 9–12 | - | Miscellaneous papers | n.d. |
 
 **Series 4. Photographs**
 
 | Box | Folder | Title | Dates |
 |---|---|---|---|
-| 13 | — | Photographs, municipal works and portraits | undated |
-| 14 | — | Photographs, Tidal Flats | undated |
+| 13 | - | Photographs, municipal works and portraits | undated |
+| 14 | - | Photographs, Tidal Flats | undated |
 
 ---
 

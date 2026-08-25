@@ -1,12 +1,12 @@
 /**
  * DynamoDB table definition for LibraryWorkshop.
  *
- * Single table design — all entities share one table with prefixed keys:
+ * Single table design - all entities share one table with prefixed keys:
  *   Learner:  pk="learner#<id>"  sk="META"
  *   Progress: pk="learner#<id>"  sk="progress#<moduleId>#<exerciseId>#<padded-stepIndex>"
  *   Note:     pk="learner#<id>"  sk="note#<moduleId>#<exerciseId>"
  *
- * GSI1 (cohort-lastSeen-index): pk=cohort, sk=lastSeen — used by facilitator dashboard.
+ * GSI1 (cohort-lastSeen-index): pk=cohort, sk=lastSeen - used by facilitator dashboard.
  */
 export const TABLE_DEFINITION = {
 	TableName: 'LibraryWorkshop',

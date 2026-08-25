@@ -1,11 +1,11 @@
-# WEXFORD THESAURUS — EXTRACT — SIMULATED WORKSHOP MATERIAL
+# WEXFORD THESAURUS - EXTRACT - SIMULATED WORKSHOP MATERIAL
 
 > **What this file is.** An extract from the controlled vocabulary of a database that does not exist.
 > The descriptors, scope notes, identifiers, and hierarchy below were invented for this workshop.
 > They are not the terms of any real thesaurus and they must not be assigned to a real record.
 >
-> **This extract is complete for the two branches it covers** — *Scholarly communication* and
-> *Public health* — as of the 2026 release, together with the subject-authority terms used by the
+> **This extract is complete for the two branches it covers** - *Scholarly communication* and
+> *Public health* - as of the 2026 release, together with the subject-authority terms used by the
 > Calderwood Institute Archives at the end of the file. A term in one of these subject areas that
 > does not appear here is not a descriptor in this release. That is a finding, not a gap in the
 > extract.
@@ -212,7 +212,7 @@ substitution is yours to make.
 
 ---
 
-## Subject-authority terms — Calderwood Institute Archives
+## Subject-authority terms - Calderwood Institute Archives
 
 The Institute assigns subject access points from this list. Deprecated forms are retained here so
 that legacy description can be identified; they must not be assigned to new description.
@@ -252,10 +252,10 @@ SN: Use for persons and communities of African descent in the United States, and
 documenting them.
 
 ### Colored people
-`WT-04501` — **DEPRECATED 1998**
+`WT-04501` - **DEPRECATED 1998**
 Do not assign. USE: African Americans
 
 ### Negro districts
-`WT-04502` — **DEPRECATED 1998**
+`WT-04502` - **DEPRECATED 1998**
 Do not assign. No replacement descriptor has been established in this vocabulary. Where a specific
 community or place name is known, assign the place name and describe the community in the scope note.

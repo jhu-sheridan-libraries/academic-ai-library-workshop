@@ -3,14 +3,14 @@
  *
  * The workshop is a self-paced module. A learner working through it on their own
  * machine should not need an AWS account, a DynamoDB table, or any credential at
- * all — so persistence is optional, and this is what runs when it is switched off
+ * all - so persistence is optional, and this is what runs when it is switched off
  * or when DynamoDB is configured but unreachable.
  *
  * Scope and limits, deliberately: this lives in the Node process. It is lost on
  * restart, it is not shared between server instances, and the facilitator
  * dashboard backed by it only sees learners who used *this* process. That is fine
  * for self-paced use and for a local demo. Cohort tracking across a real group
- * needs DynamoDB — see docs/DEPLOYMENT.md.
+ * needs DynamoDB - see docs/DEPLOYMENT.md.
  */
 
 import { ttlEpoch } from './schema.js';

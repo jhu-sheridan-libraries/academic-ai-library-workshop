@@ -69,7 +69,7 @@
 					</td>
 					<td class="px-4 py-3 text-gray-500">{row.role}</td>
 					<td class="px-4 py-3 text-gray-600">
-						{row.currentModule ? `${row.currentModule} / ${row.currentExercise}` : '—'}
+						{row.currentModule ? `${row.currentModule} / ${row.currentExercise}` : '-'}
 					</td>
 					<td class="px-4 py-3 text-gray-600">{row.stepsCompleted}</td>
 					<td class="px-4 py-3 text-gray-500">{formatRelativeTime(row.lastSeen)}</td>

@@ -8,7 +8,7 @@ Support research librarians with question negotiation, search planning, source e
 
 A simulated academic research library serving undergraduate students, graduate researchers, faculty, clinicians, and community borrowers, with archives and special collections. Staff provide research consultations, systematic-search support, research-impact guidance, scholarly communication services, instruction, archival reference, description and processing, and digitization.
 
-All workshop material is simulated. Where an exercise asks what your own institution requires — data classification, approved disclosure language, who may reject or escalate an output — that is a real question to answer locally, not something to infer from this file.
+All workshop material is simulated. Where an exercise asks what your own institution requires - data classification, approved disclosure language, who may reject or escalate an output - that is a real question to answer locally, not something to infer from this file.
 
 ## Working Rules
 
@@ -49,7 +49,7 @@ Before any output is shared or used in a research decision, a librarian must:
 
 ## Working in a Connected Folder
 
-This file sits in the connected workshop folder, so it is already available — there is nothing to
+This file sits in the connected workshop folder, so it is already available - there is nothing to
 upload or attach. Claude reads it from the folder alongside everything else there.
 
 Two consequences follow, and they matter more than they first appear.
