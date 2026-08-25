@@ -1,10 +1,10 @@
 ---
 id: "02-cataloging"
 title: "Audit an AI Research Scan"
-tagline: "A cited report is not a verified one"
+tagline: "Verify an AI-generated research report before sharing it"
 icon: "tag"
 estimated_minutes: 70
-role_tags: ["reference", "liaison", "systematic_review", "research_support", "archives"]
+role_tags: ["research_support", "liaison"]
 exercises:
   - id: "01-orient"
     title: "Open the Scan and Size the Task"

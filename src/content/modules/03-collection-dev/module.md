@@ -1,10 +1,10 @@
 ---
 id: "03-collection-dev"
 title: "Evidence Synthesis & Data"
-tagline: "Keep claims tied to evidence, limitations, and calculations"
+tagline: "Synthesize evidence and analyze data without hiding gaps"
 icon: "chart-bar"
 estimated_minutes: 70
-role_tags: ["research_support", "assessment", "data", "liaison", "archives"]
+role_tags: ["assessment", "data"]
 exercises:
   - id: "01-orient"
     title: "Bound the Evidence and Test the Edge"

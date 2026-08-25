@@ -1,10 +1,10 @@
 ---
 id: "01-reference"
 title: "Connect, Scope, and Ask"
-tagline: "Set the boundary before you ask an agent to work"
+tagline: "Scope what the agent can reach before you start"
 icon: "book-open"
 estimated_minutes: 65
-role_tags: ["reference", "liaison", "research_support", "archives"]
+role_tags: ["reference", "research_support"]
 exercises:
   - id: "01-orient"
     title: "Connect the Folder and Set the Boundary"

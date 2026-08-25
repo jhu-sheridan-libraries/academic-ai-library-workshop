@@ -1,10 +1,10 @@
 ---
 id: "05-skill-marketplace"
 title: "Bonus: The Skill Marketplace"
-tagline: "Appraise, install, author, and govern AI skills as a collection"
+tagline: "Evaluate, install, and manage shared AI skills"
 icon: "puzzle-piece"
 estimated_minutes: 90
-role_tags: ["systems", "technical_services", "collection_development", "instruction", "research_support"]
+role_tags: ["systems", "collection_development"]
 exercises:
   - id: "01-orient"
     title: "Add the Marketplace and Meet Your Guide"

@@ -1,10 +1,10 @@
 ---
 id: "04-leadership"
 title: "Compose a Skill of Your Own"
-tagline: "Turn the day's workflow into something a colleague can load and run"
+tagline: "Package your workflow into a reusable AI skill"
 icon: "briefcase"
 estimated_minutes: 76
-role_tags: ["research_support", "systematic_review", "instruction", "scholarly_communication", "archives"]
+role_tags: ["instruction", "research_support"]
 exercises:
   - id: "01-orient"
     title: "Design the Workflow You Will Build Into a Skill"
