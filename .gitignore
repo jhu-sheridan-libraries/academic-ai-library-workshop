@@ -46,3 +46,6 @@ vite.config.ts.timestamp-*
 .claude/agents/kfc/*
 .claude/system-prompts/*
 .claude/settings/kfc-settings.json
+
+# Kiro MCP Manager - Sensitive configuration files
+.kiro/settings/
