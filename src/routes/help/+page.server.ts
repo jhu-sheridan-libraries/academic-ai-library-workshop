@@ -6,7 +6,7 @@ import type { PageServerLoad } from './$types.js';
 /**
  * The participant setup guide, served as a help page.
  *
- * `docs/PARTICIPANT-SETUP.md` stays the single source of truth — it is also
+ * `docs/PARTICIPANT-SETUP.md` stays the single source of truth - it is also
  * distributed as a file and rendered to HTML for people who have not got the site
  * yet, so this route reads it rather than keeping a second copy that would drift.
  *

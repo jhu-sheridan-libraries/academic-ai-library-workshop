@@ -43,7 +43,7 @@
 	/>
 
 	<div class="flex-1 overflow-y-auto">
-		<!-- Module accent bar — mirrors the card's top color strip -->
+		<!-- Module accent bar - mirrors the card's top color strip -->
 		<div class="h-1.5 w-full" style="background-color: {topBarColor}"></div>
 
 		<div class="mx-auto max-w-2xl px-5 py-8 sm:px-10 sm:py-10">
@@ -67,7 +67,7 @@
 					<svg viewBox="0 0 16 16" fill="currentColor" class="h-4 w-4 shrink-0" aria-hidden="true">
 						<path d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1zm3.354 5.146a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708 0l-2-2a.5.5 0 1 1 .708-.708L7 9.793l3.646-3.647a.5.5 0 0 1 .708 0z"/>
 					</svg>
-					All exercises complete — well done.
+					All exercises complete - well done.
 				</div>
 			{/if}
 

@@ -29,7 +29,7 @@
 		-moz-osx-font-smoothing: grayscale;
 	}
 
-	/* Serif is opt-in via .font-serif — not applied globally to headings */
+	/* Serif is opt-in via .font-serif - not applied globally to headings */
 	code, pre, kbd {
 		font-family: var(--font-mono);
 	}

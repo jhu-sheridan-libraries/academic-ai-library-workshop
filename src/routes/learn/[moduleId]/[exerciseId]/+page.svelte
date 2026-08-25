@@ -85,8 +85,8 @@
 
 	// The body carries up to three parts in a fixed order: the exercise introduction,
 	// the `## Archives track` alternative, and `## Discussion`. They go to three
-	// different places — intro above the steps, archives track to the bonus card
-	// below them, discussion to the interstitial — so split rather than strip.
+	// different places - intro above the steps, archives track to the bonus card
+	// below them, discussion to the interstitial - so split rather than strip.
 	const ARCHIVES_HEADING = /<h2[^>]*>\s*Archives track\s*<\/h2>/i;
 
 	const bodyBeforeDiscussion = $derived(

@@ -96,7 +96,7 @@
 				(<code>npm run start</code> passes <code>--env-file=.env</code>; a bare
 				<code>node build/index.js</code> does not), an expired SSO session
 				(<code>aws sso login</code>), a table name that does not match, or a missing
-				<code>cohort-lastSeen-index</code> GSI. Restart the server after fixing it — the fallback
+				<code>cohort-lastSeen-index</code> GSI. Restart the server after fixing it - the fallback
 				latches for the life of the process.
 			</p>
 		</div>
@@ -105,7 +105,7 @@
 			<p class="text-sm leading-relaxed text-amber-800">
 				Persistence is off, so this dashboard shows only learners served by this server process and
 				nothing survives a restart. That is the expected state for a learner running the course
-				locally. To track a cohort, set <code>DYNAMODB_TABLE</code> and an AWS credential source —
+				locally. To track a cohort, set <code>DYNAMODB_TABLE</code> and an AWS credential source -
 				see <code>docs/DEPLOYMENT.md</code>.
 			</p>
 		</div>

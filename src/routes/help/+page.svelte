@@ -11,7 +11,7 @@
 </script>
 
 <svelte:head>
-	<title>Setup help — Agents and Skills with Claude</title>
+	<title>Setup help - Agents and Skills with Claude</title>
 	<meta
 		name="description"
 		content="How to install Claude, connect it to the workshop account, and attach the workshop folder to a project."

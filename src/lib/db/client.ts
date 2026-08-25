@@ -10,7 +10,7 @@ let _docClient: DynamoDBDocumentClient | null = null;
  * Auto-detected, so that both audiences work without configuration gymnastics:
  * a facilitator who has provisioned the table and an AWS profile gets real
  * persistence, and a learner who cloned this to work through the course on their
- * own machine gets the in-process store in `local-store.ts` — no AWS account, no
+ * own machine gets the in-process store in `local-store.ts` - no AWS account, no
  * credential, no error.
  *
  * Detection is "is a table named AND is there any credential source to reach it
@@ -38,7 +38,7 @@ export function isDynamoEnabled(): boolean {
 }
 
 /**
- * Set once if a DynamoDB call fails in a way that will keep failing — missing or
+ * Set once if a DynamoDB call fails in a way that will keep failing - missing or
  * invalid credentials, no such table. Flips the process to the local store rather
  * than returning a 500 to a learner who only wanted to start an exercise.
  */
@@ -100,7 +100,7 @@ export function getDocClient(): DynamoDBDocumentClient {
 		const region = process.env.AWS_REGION ?? 'us-east-1';
 		const roleArn = process.env.AWS_ROLE_ARN;
 
-		// Resolve credentials from the standard chain — instance profile, ECS task
+		// Resolve credentials from the standard chain - instance profile, ECS task
 		// role, SSO, or a named `~/.aws/credentials` profile. Passing `profile`
 		// explicitly matters: it honours AWS_PROFILE even when the ambient chain
 		// would not pick it up, which is the common case for a facilitator running

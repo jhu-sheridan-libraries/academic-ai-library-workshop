@@ -35,7 +35,7 @@
 						<div class="flex-1">
 							<p class="text-sm text-gray-700">
 								<span class="font-medium">{item.moduleTitle}</span> /
-								{item.exerciseTitle} — Step {item.stepIndex + 1}
+								{item.exerciseTitle} - Step {item.stepIndex + 1}
 							</p>
 						</div>
 						<span class="text-xs text-gray-400">{item.completedAt}</span>

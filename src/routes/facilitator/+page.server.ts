@@ -86,7 +86,7 @@ export const load: PageServerLoad = async ({ url }) => {
 		) as 'inactive' | 'slow' | 'on-pace'
 	}));
 
-	// Build heatmap cells — count learners who actually have progress in each exercise
+	// Build heatmap cells - count learners who actually have progress in each exercise
 	const heatmapCells = allModules.flatMap((mod) =>
 		mod.exercises.map((ex) => ({
 			moduleId: mod.id,
@@ -118,7 +118,7 @@ export const load: PageServerLoad = async ({ url }) => {
 					note: s.facilitator_note!
 				}));
 		} catch {
-			// content file not found — skip
+			// content file not found - skip
 		}
 	}
 

@@ -71,7 +71,7 @@ export const GET: RequestHandler = async ({ request }) => {
 			: 'In-memory store';
 
 	const lines = [
-		'# Library AI Workshop — Facilitator Report',
+		'# Library AI Workshop - Facilitator Report',
 		'',
 		`- Generated: ${new Date().toISOString()}`,
 		`- Cohort: ${asInlineText(cohort)}`,
@@ -119,7 +119,7 @@ export const GET: RequestHandler = async ({ request }) => {
 			`- Recorded completed steps: ${orderedSteps.length}`,
 			`- Latest completed step: ${
 				lastStep
-					? `${exerciseLabel(lastStep.moduleId, lastStep.exerciseId)} — step ${lastStep.stepIndex + 1} (${lastStep.completedAt})`
+					? `${exerciseLabel(lastStep.moduleId, lastStep.exerciseId)} - step ${lastStep.stepIndex + 1} (${lastStep.completedAt})`
 					: 'No progress recorded'
 			}`
 		);
@@ -128,7 +128,7 @@ export const GET: RequestHandler = async ({ request }) => {
 			lines.push('', '#### Step log', '');
 			for (const step of orderedSteps) {
 				lines.push(
-					`- ${step.completedAt} — ${exerciseLabel(step.moduleId, step.exerciseId)} — step ${step.stepIndex + 1}`
+					`- ${step.completedAt} - ${exerciseLabel(step.moduleId, step.exerciseId)} - step ${step.stepIndex + 1}`
 				);
 			}
 		}

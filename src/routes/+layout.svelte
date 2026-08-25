@@ -17,7 +17,7 @@
 	// unbranded site is a worse failure than losing the configurability.
 	const ORG = 'The Sheridan Libraries';
 	const ORG_PARENT = 'Johns Hopkins University';
-	const TITLE = 'Agents and Skills with Claude — Sheridan Libraries';
+	const TITLE = 'Agents and Skills with Claude - Sheridan Libraries';
 </script>
 
 <svelte:head>
