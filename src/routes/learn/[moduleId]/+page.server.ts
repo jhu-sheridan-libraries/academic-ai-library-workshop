@@ -22,7 +22,11 @@ export const load: PageServerLoad = async ({ params, cookies }) => {
 		return { module: mod, completedSteps: [], completedExerciseIds: [] };
 	}
 
-	const learnerId = cookies.get('wid')!;
+	const learnerId = cookies.get('wid');
+	if (!learnerId) {
+		return { module: mod, completedSteps: [], completedExerciseIds: [] };
+	}
+
 	const progressItems = await getLearnerProgress(learnerId);
 	const completedSteps = progressItems
 		.filter((i) => i.moduleId === moduleId)

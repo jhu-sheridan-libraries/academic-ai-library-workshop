@@ -26,7 +26,11 @@ export const load: PageServerLoad = async ({ params, cookies }) => {
 		return { exercise, module: mod, completedStepIndices: [], completedExerciseIds: [] };
 	}
 
-	const learnerId = cookies.get('wid')!;
+	const learnerId = cookies.get('wid');
+	if (!learnerId) {
+		return { exercise, module: mod, completedStepIndices: [], completedExerciseIds: [] };
+	}
+
 	const progressItems = await getLearnerProgress(learnerId);
 	const completedStepIndices = progressItems
 		.filter((i) => i.moduleId === moduleId && i.exerciseId === exerciseId)
