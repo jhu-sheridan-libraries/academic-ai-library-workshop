@@ -22,8 +22,8 @@ step is.
 **The audience is mixed by design.** Three groups will be present:
 
 - **Set up and ready** — installed Claude, Bedrock configured, folder connected. They want to start.
-- **Has Claude, no Cowork** — an account on the wrong plan, or Cowork not enabled by an
-  administrator. They think they are set up and are about to find out they are not.
+- **Has Claude, cannot attach a folder** — an account on the wrong plan, or the capability not
+  enabled by an administrator. They think they are set up and are about to find out they are not.
 - **No access at all** — curious, possibly deciding whether to ask for a license. They cannot do a
   single hands-on step and must not spend an hour watching other people work.
 
@@ -44,7 +44,7 @@ required for the hour to have worked.
 - [ ] Create a **clean copy of the simulated workshop folder** at a shallow path with a boring name,
       for example `~/workshop-demo/`. This is the only folder you will connect while sharing a
       screen.
-- [ ] Confirm nothing personal is in that folder or its parent. Cowork shows paths, and a file tree
+- [ ] Confirm nothing personal is in that folder or its parent. Claude shows paths, and a file tree
       is legible at a glance to forty people.
 - [ ] Confirm the two practice `.skill` files are packaged, current, and available as download links.
 - [ ] Have spare credential cards ready — key, region, model identifier — for people who never
@@ -64,7 +64,8 @@ required for the hour to have worked.
 - [ ] Send `Reply with the single word: connected.` through your own Bedrock configuration to confirm
       the account is live.
 - [ ] Open the chat or Q&A panel and pin one message: *"Two questions to answer in chat: do you have
-      the Cowork tab, yes or no? And are you research support or archives?"*
+      can you attach a folder on your own computer to a project in Claude, yes or no? And are you
+      research support or archives?"*
 
 ### Screen-sharing caution
 
@@ -91,8 +92,8 @@ State the frame in one sentence:
 > and write, and by the end of the self-paced module you will have written a small instruction file
 > of your own that it loads without being asked.
 
-Then sort the room with the two pinned chat questions — Cowork tab yes/no, and research support or
-archives. You need the count before minute twenty. Say plainly that some people here have no access
+Then sort the room with the two pinned chat questions — can you attach a local folder to a project,
+yes or no, and research support or archives. You need the count before minute twenty. Say plainly that some people here have no access
 and that the session is built for them too; there is a segment where they get a decision to take
 away rather than a task to fail at.
 
@@ -135,10 +136,10 @@ during this block; the value is in people typing.
 
 That is the opening of Module 1, exercise 2. They have started the course. Tell them so.
 
-**Track B — has Claude, no Cowork tab.** This diagnosis is the most valuable thing you can do for
-them, because it is the blocker they would otherwise hit alone on a Thursday night. Have them post a
-screenshot in chat. Two causes: a plan without Cowork, or a Team/Enterprise account where an
-administrator has not switched it on. Neither is fixable from their own settings. Give each of them
+**Track B — has Claude, cannot attach a local folder to a project.** This diagnosis is the most
+valuable thing you can do for them, because it is the blocker they would otherwise hit alone on a
+Thursday night. Have them post a screenshot in chat. Two causes: a plan that does not include the
+capability, or a Team/Enterprise account where an administrator has not switched it on. Neither is fixable from their own settings. Give each of them
 the name or the team to ask, written down.
 
 **Track C — no access.** Give them a task that does not need the tool and produces something they
@@ -198,8 +199,8 @@ Three sentences and stop:
 
 1. Office hours are Fridays, 2:30–3:15, through September 4. Bring the thing that is stuck.
 2. The follow-up message with every link is going out now.
-3. One next action each — either "start Module 1 this week" or "ask [named person] about a plan with
-   Cowork by Friday."
+3. One next action each — either "start Module 1 this week" or "ask [named person] by Friday about a
+   plan that lets me attach a folder."
 
 End on time. People who want to keep going will stay.
 
@@ -255,11 +256,13 @@ Rehearse these. Hedging on any of them costs more credibility than the honest an
 
 ### "What does this cost, and what plan do I need?"
 
-Cowork is not on the free tier. It requires Pro, Max, Team, or Enterprise, and on Team or Enterprise
-an administrator has to enable it for the organization. For this workshop, model usage runs through a
-Bedrock account we pay for, so the API side costs you nothing — but the Cowork feature itself comes
-from your Claude plan, and that is the part that blocks people. If you do not have it, the useful
-next step is a named person to ask, not a workaround. Say that you will help draft the ask.
+Nothing. A free Claude account is enough, and model usage runs through a Bedrock account we pay for,
+so the API side costs you nothing either. You are not being asked to buy a plan or to expense
+anything.
+
+The one thing that does block people is an institution-managed account with restrictions on
+attaching local folders — that is a permissions question, not a billing one. If someone hits it, the
+useful next step is a named person to ask, not a workaround. Say that you will help draft the ask.
 
 ### "Where does my data go, and can it see everything on my machine?"
 
@@ -314,8 +317,8 @@ Send within the hour, in one message:
    for the route that keeps all four rungs of the skills ladder. Written down, in the message.
 6. `docs/OTHER-PLATFORMS.md`, for anyone on Codex or Kiro.
 7. Office hours: Fridays, 2:30–3:15 pm, through September 4, with the joining link.
-8. One line for the no-access group: who to ask, what to ask for — a Claude plan with Cowork enabled
-   — and an offer to write the request with them.
+8. One line for the no-access group: who to ask, what to ask for — a Claude plan that allows a folder
+   on your own computer to be attached to a project — and an offer to write the request with them.
 
 Say in the message that office hours are the intended support channel and that turning up with
 something broken is the expected use of them, not an imposition.
@@ -326,7 +329,7 @@ something broken is the expected use of them, not an imposition.
 
 Note three things while they are fresh, for the next run of this session:
 
-- how many people had the Cowork tab, against how many thought they did;
+- how many people could actually attach a folder, against how many thought they could;
 - which of the three questions above came first, and in what wording;
 - anything in the demo that did not land, or that you had to explain twice.
 

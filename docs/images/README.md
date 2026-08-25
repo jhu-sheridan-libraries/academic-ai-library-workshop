@@ -1,9 +1,10 @@
 # Figures for PARTICIPANT-SETUP
 
-All eleven figures currently exist as SVG diagrams and render in the guide today. They are
-schematic illustrations of the interface, not captures of a real screen, and each one says so
-in small grey type along its bottom edge. They are meant to be replaced by real screenshots
-when someone has a machine in front of them, but the guide is complete and usable as it stands.
+Eleven figure slots are defined. Ten render in the guide today; figure 9 is unused (the interface
+element it depicted no longer exists) and its `.svg` is retained only to keep later figure numbers
+stable. The diagrams are schematic illustrations, not captures of a real screen, and each one says
+so in small grey type along its bottom edge. They are meant to be replaced by real screenshots when
+someone has a machine in front of them, but the guide is complete and usable as it stands.
 
 Why diagrams rather than screenshots: the figures show the Claude desktop application on macOS
 and Windows, which can only be captured by a person running it. A diagram that is obviously a
@@ -33,11 +34,18 @@ so it does not need rewriting when the image is swapped.
 | 6 | `figure-06-devmode-windows` | Windows | Sign-in screen, hamburger menu open, Help then Troubleshooting expanded | Circle the hamburger button; box around Enable Developer Mode |
 | 7 | `figure-07-developer-menu` | Either | The Developer menu open | Box around Configure Third-Party Inference |
 | 8 | `figure-08-bedrock-config` | Either | The third-party inference window, Amazon Bedrock selected, all fields filled | Number each field 1–5 to match the steps in Step 5 |
-| 9 | `figure-09-cowork-tab` | Either | Main Claude window with Cowork selected | Box around the Cowork tab |
-| 10 | `figure-10-connect-folder` | Either | Cowork's confirmation of the connected folder | Box around the connected folder path |
+| 9 | `figure-09-cowork-tab` | — | **Unused** — interface element no longer exists. Do not capture or replace | — |
+| 10 | `figure-10-connect-folder` | Either | The confirmation that the folder is attached to the project | Box around the connected folder path |
 | 11 | `figure-11-save-skill` | Either | A `.skill` file opened in Claude, showing its card before it is saved | Box around the Save skill button |
 | 12 | `figure-12-releases-download` | Either | The repository's `workshop-materials` release page, scrolled so the Assets list is visible | Box around `library-context.zip`. **Not yet drawn** — see below |
-| 13 | `figure-13-folder-picker` | Either | Cowork's folder chooser, opened to show `library-context` nested inside the unzipped parent folder | Box around `library-context`; a lighter marker on the parent to show which one *not* to pick. **Not yet drawn** — see below |
+| 13 | `figure-13-folder-picker` | Either | The folder chooser, opened to show `library-context` nested inside the unzipped parent folder | Box around `library-context`; a lighter marker on the parent to show which one *not* to pick. **Not yet drawn** — see below |
+
+## Figure 9 — unused
+
+Figure 9 depicted a tab that no longer exists in the Claude desktop application. A folder is now
+attached to a project rather than accessed through a separate tab. The guide does not reference this
+figure. Its `.svg` is kept only so figures 10 and 11 keep their numbers. Do not draw a replacement
+under this number and do not renumber anything.
 
 ## Figures 12 and 13 — identified, not yet made
 
@@ -81,7 +89,7 @@ away closes the menu.
 ## Reviewing the diagrams
 
 `contact-sheet.html` shows all eleven side by side with their figure numbers, which is the
-quickest way to check them after an edit.
+quickest way to check them after an edit. It includes the unused figure 9; ignore it there.
 
 ## The HTML guide is generated
 

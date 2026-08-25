@@ -1,13 +1,13 @@
 ---
 name: run-library-ai-workshop-cohort
-description: Plan, facilitate, and debrief the "Agents and Skills with Claude" workshop for a cohort of library staff. Use when an instructor asks for a run of show, a time-boxed agenda for the one-hour walkthrough or office hours, workshop preflight, Cowork setup troubleshooting, discussion prompts, short-path or pacing help, dashboard interpretation, mixed research-support and archives cohort support, accessibility or no-premium alternatives, fixture-key guidance, or an end-of-session debrief for the bundled Library AI Workshop.
+description: Plan, facilitate, and debrief the "Agents and Skills with Claude" workshop for a cohort of library staff. Use when an instructor asks for a run of show, a time-boxed agenda for the one-hour walkthrough or office hours, workshop preflight, connected-folder setup troubleshooting, discussion prompts, short-path or pacing help, dashboard interpretation, mixed research-support and archives cohort support, accessibility or no-premium alternatives, fixture-key guidance, or an end-of-session debrief for the bundled Library AI Workshop.
 ---
 
 # Run a Library AI Workshop Cohort
 
 Support the human facilitator before, during, or after a session. Keep the facilitator in charge of teaching decisions and participant welfare.
 
-The course is primarily self-paced in Claude Cowork against a connected folder, supported by an optional one-hour walkthrough and office hours. Plan for that shape: the facilitator is removing blockers and running discussions, not pacing a room through sixteen exercises.
+The course is primarily self-paced in Claude, working against a connected folder attached to a project, supported by an optional one-hour walkthrough and office hours. Plan for that shape: the facilitator is removing blockers and running discussions, not pacing a room through sixteen exercises.
 
 ## Load the Right Context
 
@@ -28,7 +28,7 @@ Ask for only the missing essentials:
 - whether the facilitator is preparing, running the walkthrough, holding office hours, or debriefing;
 - available minutes and expected cohort size;
 - in-person, remote, or hybrid delivery;
-- the mix of research-support and archives staff, and whether Cowork access is confirmed for everyone;
+- the mix of research-support and archives staff, and whether everyone can attach a local folder to a project;
 - accessibility, technology, or local-policy constraints already known.
 
 If details are unavailable, provide a clearly labeled draft based on the full course sequence and list the assumptions.
@@ -42,9 +42,9 @@ Create a practical run of show with:
 - facilitator actions, learner actions, and the file each activity produces as evidence of progress;
 - a no-premium and non-AI route for each selected activity;
 - planned pauses for the risk sort, folder scope, action approval, source checks, reflection, and cleanup;
-- a short contingency for Cowork access, credential, app, or network failure.
+- a short contingency for folder access, credential, app, or network failure.
 
-Use the preflight checklist in `FACILITATOR.md`. Two items block whole cohorts and are worth surfacing unprompted: a Claude plan that includes Cowork, with Cowork switched on by an administrator on Team or Enterprise; and a stale AWS credential taking priority over the issued key.
+Use the preflight checklist in `FACILITATOR.md`. Two items block whole cohorts and are worth surfacing unprompted: a Claude plan that allows a folder on the learner's own computer to be attached to a project, with that capability switched on by an administrator on Team or Enterprise; and a stale AWS credential taking priority over the issued key.
 
 Treat the bundled simulated files as the default. Never recommend collecting real patron, student, health, personnel, unpublished research, licensed full text, credential, or restricted or un-accessioned archival data for a demonstration.
 
@@ -88,8 +88,8 @@ The capstone has each learner author, save, and test a skill of their own. It is
 
 Use the troubleshooting section in `FACILITATOR.md`. In particular:
 
-- missing Cowork tab, unsupported plan, or Cowork not enabled by an administrator;
-- Cowork cannot see the workshop files — folder connected, wrong scope, or not unzipped;
+- no way to attach a local folder — an unsupported plan, or the capability not enabled by an administrator;
+- Claude cannot see the workshop files — folder connected, wrong scope, or not unzipped;
 - a stale AWS credential taking priority over the issued key;
 - a `.skill` file with no Save skill button, which means the packaging is wrong rather than the skill;
 - a skill that never triggers, in Module 1 as well as Module 4;

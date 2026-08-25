@@ -22,7 +22,7 @@ Most facilitation effort goes here, not into the walkthrough.
 **Audience**: Research, reference, liaison, systematic-review, data, and scholarly communication
 staff, plus archives staff. Both tracks are in the same material — see *Supporting a Mixed Cohort*.
 
-**Platform**: Claude Cowork with a connected folder, routed through Amazon Bedrock. Participants set
+**Platform**: Claude, with a connected folder attached to a project, routed through Amazon Bedrock. Participants set
 this up themselves following `docs/PARTICIPANT-SETUP.md`. Portability to other agentic desktops is
 handled in exactly one place, `docs/OTHER-PLATFORMS.md`; point a learner there and do not improvise
 alternatives inside an exercise.
@@ -147,7 +147,7 @@ data boundary:
 The connected folder sharpens this. With uploads, the blast radius of a mistake is what the user
 attached. With a connected folder, it is everything in the folder and every folder inside it. That
 is the concrete reason the setup guide insists on connecting the narrowest useful folder, and it is
-worth repeating whenever someone asks whether they can just point Cowork at Documents.
+worth repeating whenever someone asks whether they can just attach Documents.
 
 ## The Skills Ladder
 
@@ -172,9 +172,11 @@ If a learner asks for the YAML specification at any point, tell them the format 
 
 - Confirm the Bedrock account, key issuance, region, and model identifier, and test one key end to
   end yourself on a clean machine.
-- Confirm that participants' Claude accounts are on a plan that includes Cowork (Pro, Max, Team, or
-  Enterprise), and that on Team or Enterprise an administrator has switched Cowork on. This is the
-  single most common blocker and it cannot be fixed from the learner's settings.
+- A free Claude account is enough. The workshop's Bedrock key covers model usage, so nothing depends
+  on a participant's plan and nobody needs to buy anything. The residual blocker is an
+  institution-managed account with restrictions the learner cannot change from their own settings —
+  ask anyone on a managed machine to confirm they can create a project and attach a local folder
+  before the session, and be ready to name who they ask if they cannot.
 - Ask the privacy, security, or IT owner whether connected folders, file writing, and any configured
   search provider are approved.
 - Package and send the two practice skills (see *Distribute Two Practice Skills to Participants*).
@@ -204,7 +206,7 @@ module, and to be available at a predictable time.
 
 **What actually stops people**, in rough order of frequency:
 
-1. Setup — no Cowork tab, a stale AWS credential taking priority over the issued key, or a `.skill`
+1. Setup — no way to attach a local folder, a stale AWS credential taking priority over the issued key, or a `.skill`
    file that arrived rewritten by a mail system and shows no Save skill button.
 2. Time — hitting Module 3 with forty minutes left. Answer with the short path above, not with
    encouragement.
@@ -252,7 +254,7 @@ its own generated response as proof that the learner finished a step.
 
 Use one of these modes and name it at the start of the session:
 
-- **Coach mode (recommended)**: The learner works in their own Cowork window, database, browser, or
+- **Coach mode (recommended)**: The learner works in their own Claude window, database, browser, or
   spreadsheet. The agent gives instructions and the learner reports what they saw. This is the normal
   mode for a self-paced learner.
 - **In-chat mode**: The agent performs course prompts itself against the connected folder. It must
@@ -764,7 +766,7 @@ Run at least these scenarios in fresh tasks:
 3. A learner resumes at Module 2's claim ledger.
 4. A learner pastes what appears to be real patron information.
 5. An archives-track learner asks whether they can use a real accession record.
-6. A learner has no Cowork tab.
+6. A learner cannot attach a folder from their own computer.
 7. A learner says "done" without describing any result or naming a file.
 8. A learner reports that the fixture scan looks fine to them.
 9. A learner asks the agent directly what is wrong with `research-scan-draft.md`.
@@ -784,13 +786,13 @@ infers the defects and volunteers them, destroys Module 2 for that learner.
 
 ## Troubleshooting
 
-### The Cowork tab is missing
+### There is no way to attach a local folder
 
-The account is on a plan without Cowork, or an administrator has not enabled it for the
-organization. Not fixable from the learner's settings. Ask for a screenshot and resolve it on your
-side.
+The account is on a plan that does not include working against a folder on your own computer, or an
+administrator has not enabled it for the organization. Not fixable from the learner's settings. Ask
+for a screenshot and resolve it on your side.
 
-### Cowork cannot see the workshop files
+### Claude cannot see the workshop files
 
 Wrong folder connected, or the archive was never unzipped. Reconnect to the folder that directly
 contains `WORKSPACE-BRIEF.md`.

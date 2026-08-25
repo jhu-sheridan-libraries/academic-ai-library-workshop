@@ -6,7 +6,7 @@
 
 ## About this guide
 
-This guide walks you through installing the Claude desktop application on your own computer and connecting it to the Amazon Bedrock account the workshop provides. When you finish, you will be able to open Claude Cowork, point it at the workshop folder, and begin the exercises.
+This guide walks you through installing the Claude desktop application on your own computer and connecting it to the Amazon Bedrock account the workshop provides. When you finish, you will have a project with the workshop folder attached to it, and you can begin the exercises.
 
 You do not need any programming experience. You will not write code, use a command line, or install developer software. You will, however, turn on a setting called Developer Mode. That name is misleading: in this context it does nothing more than reveal the menu that lets you tell Claude which company's servers to use. There is an explanation of what it does and does not do at the end of this guide, in case the name gives you pause.
 
@@ -25,10 +25,10 @@ Collect these items. Three of them come from your facilitator on a credential ca
 | What you need | Where it comes from | What it looks like |
 |---|---|---|
 | A computer running macOS 11 (Big Sur) or later, or Windows 10 or later | Your own machine | — |
-| Your Claude account sign-in, **on a paid plan** | Your institution, or the account you registered for the workshop | An email address and password, or a single sign-on button |
-| A Bedrock API key | Facilitator's credential card | One long unbroken string of characters |
+| A Claude account | Your own — sign up free at claude.ai if you do not have one. A paid plan is not required | An email address and password, or a single sign-on button |
+| A Bedrock bearer token | Facilitator's credential card | One long unbroken string of characters |
 | An AWS region | Facilitator's credential card | Something like `us-east-1` |
-| A model identifier | Facilitator's credential card | Something like `us.anthropic.claude-sonnet-4-5-20250929-v1:0` |
+| A model card identifier | Facilitator's credential card | `anthropic.claude-sonnet-5` unless your card says otherwise |
 | Two practice skills | Facilitator, sent separately | Two files whose names end in `.skill`; you install them in Step 8 |
 
 You also need the workshop folder on your computer. Download it yourself from the workshop repository's releases page:
@@ -39,7 +39,9 @@ Take the file called **`library-context.zip`**, unzip it, and note where it live
 
 **Download the release asset, not the whole repository.** Cloning or downloading the repository gets you the application source code, the facilitator's materials, and a set of notes that spoil several exercises. It is also far larger than you need. The zip on the releases page contains exactly the workshop folder and nothing else, which is the point — and connecting the narrowest folder that holds what you need is a habit the first exercise is about.
 
-**Check the plan before you start installing.** Cowork, the part of the application the whole workshop runs in, needs a paid Claude plan — Pro, Max, Team, or Enterprise. It is not in the free tier, and on a Team or Enterprise account an administrator may additionally need to switch it on. This is worth confirming now rather than after you have installed the application and configured a credential: sign in at claude.ai and check that a **Cowork** tab appears alongside Chat and Code. If it does not, send your facilitator a screenshot before going further, because it is not something you can fix from your own settings.
+**What the workshop provides, and what you bring.** The workshop provides the three items on the credential card — the Bedrock bearer token, the region, and the model card identifier — and the two practice skills. That is all. The Claude account is your own, and a free one is fine: the workshop's Bedrock key pays for the model usage, so you are not being asked to buy anything.
+
+If your computer is managed by your institution, it is worth signing in and confirming you can create a project before you install anything, since a managed account can have restrictions you cannot change from your own settings. If you hit one, send your facilitator a screenshot before going further.
 
 **A note on the API key.** The key is a password. It authorizes spending against the workshop's Amazon account. Do not post it in a shared chat, commit it to a repository, paste it into a support ticket, or forward it to a colleague who missed the session. If you think it has been exposed, tell your facilitator; keys are quick to revoke and reissue, and nobody will be annoyed with you for reporting it.
 
@@ -151,22 +153,24 @@ After you enable it, a new **Developer** menu appears. If you do not see it imme
 
 ## Step 5 — Connect Claude to Bedrock
 
-Now tell Claude to send your requests to the workshop's Amazon Bedrock account instead of to Anthropic's own service.
+Now tell Claude to send your requests to the workshop's Bedrock account instead of to Anthropic's own service.
 
-From the newly visible menu, choose:
+From the newly visible **Developer** menu, open the third-party inference settings — the entry that leads to a panel headed **Connection**. The exact wording of the menu item has changed between releases; you are looking for the place that lets you choose where Claude Desktop sends inference requests.
 
-**Developer → Configure Third-Party Inference…**
+A **Connection** panel opens, headed "Choose where Claude Desktop sends inference requests." Fill it in using the credential card from your facilitator:
 
-A configuration window opens. Fill it in using the credential card from your facilitator:
+1. From the provider list at the top, choose **Bedrock Mantle**. Other providers are listed; ignore them. The panel below should then be headed "Bedrock Mantle credentials."
+2. Set **Credential kind** to **Static API key**. This matters more than it looks: the field's own note says that when a credential kind is set, only that source is used, with no fallback. Choosing it explicitly is what guarantees your key is the credential actually used, rather than some older AWS sign-in on the machine.
+3. Enter the **AWS region** from the card, for example `us-east-1`.
+4. Leave **Bedrock base URL** alone unless your card gives you one. It defaults correctly from the region — for `us-east-1` that is `https://bedrock-mantle.us-east-1.api.aws/anthropic`. Only change it if you were told to.
+5. Paste the key into **AWS bearer token**. Copy and paste rather than typing. Take care not to include a trailing space, and check that your email or chat client has not inserted a line break in the middle of it. The field masks what you type; the eye icon at its right reveals it if you need to check.
+6. Leave **Artifact preview iframe origin** and **Custom inference headers** empty. Neither is needed for the workshop.
+7. Further down the same panel, set the default **model card** to `anthropic.claude-sonnet-5`, unless your card names a different one.
+8. Save, and restart Claude if prompted.
 
-1. For the **provider**, choose **Amazon Bedrock**. Other options such as Google Vertex AI may be listed; ignore them.
-2. For the **authentication method**, choose the option for an **API key** or **bearer token**, rather than the options for AWS sign-in, a named profile, or a credential helper. Your facilitator issued you a key, which is the simplest of the four methods.
-3. Paste the **API key** exactly as supplied. Copy and paste it rather than typing it. Take care not to include a trailing space, and check that your email or chat client has not inserted a line break in the middle of it.
-4. Enter the **region**, for example `us-east-1`. It must match the card exactly.
-5. Enter the **model identifier** from the card, for example `us.anthropic.claude-sonnet-4-5-20250929-v1:0`. The leading `us.` is part of the identifier and is required. Do not remove it.
-6. Save the configuration and, if prompted, restart Claude.
+Two of those fields are marked with a red asterisk — the region and the bearer token. Those are the ones the panel will not let you leave blank.
 
-The exact wording of the labels in this window may differ a little from the words above, since the application is updated frequently. Match by meaning rather than by exact phrase: one field takes the provider, one takes the key, one takes the region, and one takes the model.
+The application is updated often and the wording of these labels may drift. Match by meaning rather than by exact phrase: one field chooses the provider, one chooses how the credential is supplied, one takes the region, one takes the key, and one names the model.
 
 > **Figure 7 — The Developer menu**
 >
@@ -177,20 +181,22 @@ The exact wording of the labels in this window may differ a little from the word
 
 > **Figure 8 — The third-party inference configuration window**
 >
-> ![The third-party inference configuration window with Amazon Bedrock selected and each field numbered to match the steps above; the API key is masked](images/figure-08-bedrock-config.svg)
+> ![The Connection panel with Bedrock Mantle selected and each field numbered to match the steps above; the bearer token is masked](images/figure-08-bedrock-config.svg)
 >
-> <!-- Capture: the configuration window with Amazon Bedrock selected and every field filled in.
->      Highlight: number each field to match steps 1 through 5 above.
+> <!-- Capture: the Connection panel with Bedrock Mantle selected, Credential kind set to Static API key, and every required field filled in.
+>      Highlight: number each field to match the steps above.
 >      Before publishing this figure, replace the API key with a masked value such as bdrk-••••••••••••.
 >      Do not distribute a screenshot containing a live key. -->
 
-**If you have signed into AWS in this application before.** Claude accepts four kinds of Bedrock credential and uses whichever it finds first, in this order: an in-app AWS sign-in, a named profile, a credential helper, and last of all a bearer token. Your API key is a bearer token, so it sits at the bottom of that list. If an old AWS sign-in or profile is still configured, it will be used instead of your key and the workshop account will not be billed correctly. If you have any history of AWS configuration on this machine, clear it in this window before saving, or ask your facilitator to check the screen with you.
+**If you have signed into AWS in this application before.** Setting **Credential kind** to **Static API key** is what protects you here. The panel states that when a credential kind is set, only that source is used and there is no fallback — so an older AWS sign-in or named profile on the machine cannot quietly take precedence over your key and bill the wrong account. If you leave the credential kind unset and have AWS history on this machine, that is exactly what can happen. Set it explicitly.
 
 ---
 
 ## Step 6 — Check that the connection works
 
-Sign in to Claude if you have not already, then open a new conversation and send something short, such as:
+Before you leave the Connection panel, use the **Test connection** button at the top right of the credentials section. It checks the credential without spending anything and tells you immediately whether the key, region, and base URL agree. If it fails here, fix it here — the error is far easier to read than the one you get from a failed conversation.
+
+Then sign in to Claude if you have not already, open a new conversation, and send something short, such as:
 
 > Reply with the single word: connected.
 
@@ -202,32 +208,28 @@ The exercises are built around this, and none of them need web access at all. Ev
 
 ---
 
-## Step 7 — Open Cowork and connect the workshop folder
+## Step 7 — Create a project and attach the workshop folder
 
-Cowork is the part of the application that can read and write files in a folder you choose. It is where the workshop exercises take place.
+The workshop runs in a **project** with the workshop folder attached to it. A project that has a folder attached can read and write the files in that folder directly — that is the capability the whole course depends on, and it is what makes this different from an ordinary chat.
 
-1. In the main Claude window, click the **Cowork** tab along the top, alongside Chat and Code.
-2. Add the workshop folder as Cowork's working folder, using the option to add a local folder. Select the `library-context` folder you unzipped earlier — the one that directly contains `WORKSPACE-BRIEF.md` and `sample-data`, not the folder above it — then confirm.
-3. Claude will confirm which folder it can see. Check that the path shown is the workshop folder and not your whole Documents folder or your home directory. Cowork can create and change files in the folder you give it, so give it the narrowest folder that contains what you need.
+The application is updated often and the names and positions of things move, so this step describes what you are looking for rather than a fixed sequence of clicks. If your screen does not match, look for the same idea rather than the same words, and ask your facilitator if you cannot find it.
+
+1. Create a new project, or open an existing one you are happy to use for the workshop.
+2. Attach the workshop folder to that project, using whatever option it offers for adding a local folder. Select the `library-context` folder you unzipped earlier — the one that directly contains `WORKSPACE-BRIEF.md` and `sample-data`, not the folder above it — then confirm. You may be asked to approve the folder; that prompt is expected.
+3. Check the path Claude shows you. It should be the workshop folder, not your whole Documents folder and not your home directory. Claude can create and change files anywhere inside the folder you give it, so give it the narrowest folder that contains what you need.
+4. Confirm it worked before moving on. Ask Claude: `List the files you can see in the attached folder.` You should get `WORKSPACE-BRIEF.md` and a `sample-data` folder. If you get nothing, or a list of unrelated files, the wrong folder is attached — see the troubleshooting table.
 
 Inside the folder you will find `WORKSPACE-BRIEF.md`, which sets the standards Claude works to throughout the workshop, and a `sample-data` folder holding the simulated material the exercises use — a research request, an evidence log, a serials usage report, a draft AI research report, and a retrieved web page. Inside that there are three subfolders. `mock-sources/` holds the captured retrieval result for each citation in the draft report, so you check sources by opening a file rather than by going online. `mock-database/` holds a fictional search platform's syntax help, thesaurus extract, search session history, and name authority file, which is what Module 4 tests search syntax and authorized name forms against. `archives/` holds a reading room inquiry, a legacy finding aid, a digitization inventory, and an accession note; if you work in archives or special collections, those are the files your track uses. All of it is invented for teaching. Your own work will be written into this folder as you go, so by the end it also holds the briefs, matrices, logs, and records you produced.
 
-This is the main way Cowork differs from a chat window, and it is worth pausing on. You will not upload files. The files are simply there, and Claude reads and writes them in place. When an exercise asks you to produce something, the result is a file you can open in Word, Excel, or a text editor after the workshop ends — not a block of text in a conversation you have to copy out before you lose it.
+This is the main way an attached folder differs from a chat window, and it is worth pausing on. You will not upload files. The files are simply there, and Claude reads and writes them in place. When an exercise asks you to produce something, the result is a file you can open in Word, Excel, or a text editor after the workshop ends — not a block of text in a conversation you have to copy out before you lose it.
 
-Cowork requires a paid Claude plan: Pro, Max, Team, or Enterprise. It is not part of the free tier. If the Cowork tab is missing, your account is most likely on the wrong plan, or, on a Team or Enterprise account, an administrator has not switched Cowork on for the organization. Either way this is not something you can fix from your own settings — send your facilitator a screenshot of your Claude window and they will sort it out.
+A free Claude account is enough for this. The workshop's Bedrock key covers the model usage, so nothing here depends on your plan. If you cannot find any way to attach a folder at all, the likely cause is a restriction on an institution-managed account rather than anything you have done wrong — send your facilitator a screenshot of your window and they will sort it out.
 
-Note that Cowork itself does not require Developer Mode. You enabled Developer Mode only to reach the Bedrock setting in Step 5.
-
-> **Figure 9 — The Cowork tab**
->
-> ![The main Claude window with the Cowork tab selected and outlined](images/figure-09-cowork-tab.svg)
->
-> <!-- Capture: the main Claude window with the Cowork tab selected.
->      Highlight: draw a box around the Cowork tab. -->
+Note that none of this requires Developer Mode. You enabled Developer Mode only to reach the Bedrock setting in Step 5.
 
 > **Figure 10 — Connecting the workshop folder**
 >
-> ![Cowork confirming the connected workshop folder, with the folder path outlined](images/figure-10-connect-folder.svg)
+> ![Claude confirming the attached workshop folder, with the folder path outlined](images/figure-10-connect-folder.svg)
 >
 > <!-- Capture: the folder selection step, and then the confirmation showing the connected folder name.
 >      Highlight: draw a box around the connected folder path. -->
@@ -275,7 +277,7 @@ To use them, describe the task rather than naming the skill:
 
 The exercises themselves live on the workshop site, not in the connected folder. If you are reading this page on that site already, the modules are in the navigation at the top. If you are reading this as a file, open the site in a browser — your facilitator will have given you the address.
 
-Work through the modules one exercise at a time. Each exercise tells you what to do, and where it supplies a prompt you can either copy it or click **Open in Claude Cowork**, which opens Claude with the prompt already in place. Keep the site in one window and Claude in another; you will be moving between them all the way through.
+Work through the modules one exercise at a time. Each exercise tells you what to do, and where it supplies a prompt you can either copy it or click **Open in Claude**, which opens Claude with the prompt already in place. Keep the site in one window and Claude in another; you will be moving between them all the way through.
 
 You are set up. Nothing else needs configuring.
 
@@ -291,10 +293,11 @@ If you would rather not use the site, the exercises are also readable as plain M
 |---|---|---|
 | No **Developer** menu after Step 4 | The application needs restarting, or the menu was enabled on a different screen | Quit Claude completely and reopen it, then check the menu bar (macOS) or hamburger menu (Windows) again |
 | An error mentioning credentials, authorization, or access denied | The API key is wrong, incomplete, or an older AWS credential is taking priority | Re-paste the key, checking for a trailing space or a line break inserted by email; then clear any earlier AWS sign-in or profile as described at the end of Step 5 |
-| An error naming the model, or saying a model was not found | The model identifier does not match, or the region does not offer that model | Re-enter both the model identifier and the region exactly as printed on the card, including the leading `us.` |
+| An error naming the model, or saying a model was not found | The model card identifier does not match, or the region does not offer it | Re-enter both the model card and the region exactly as printed on the card. The default is `anthropic.claude-sonnet-5`, with no region prefix — older instructions showed a longer identifier beginning `us.`, and that form is out of date |
 | A quota, throttling, or rate limit message | The workshop account is busy, or your key's allowance is exhausted | Wait a minute and try again; if it persists, tell your facilitator, who can check the account |
-| No **Cowork** tab | Your plan does not include Cowork, or an administrator has not enabled it | Send your facilitator a screenshot of the window; this is fixed on their side |
-| Cowork cannot see the workshop files | A different folder was connected, or the archive was never unzipped | Confirm the archive is unzipped, then reconnect, selecting the `library-context` folder itself — the one directly containing `WORKSPACE-BRIEF.md`. Selecting the folder one level above is the usual mistake |
+| No way to attach a local folder to a project | Usually a restriction on an institution-managed account, not your plan — a free account is enough | Send your facilitator a screenshot of the window; this is fixed on their side |
+| The instructions do not match what you see | The application has been updated and things have moved | Look for the same idea under a different name — a project, and an option to add a local folder to it. Tell your facilitator what you see; the guide may need correcting |
+| Claude cannot see the workshop files | A different folder was attached, or the archive was never unzipped | Confirm the archive is unzipped, then attach again, selecting the `library-context` folder itself — the one directly containing `WORKSPACE-BRIEF.md`. Selecting the folder one level above is the usual mistake |
 | Claude lists far more files than expected, including source code | You connected a clone of the whole repository rather than the workshop folder | Download `library-context.zip` from the releases page instead, and connect that folder. The repository contains notes that spoil several exercises |
 | Windows blocks the installer and offers no "Run anyway" | Your institution manages this computer and restricts installations | Contact your IT service desk, or use a personal machine for the workshop |
 | No **Save skill** button when you open a `.skill` file | The file was altered in transit, or it was unzipped before being opened | Ask your facilitator to resend it, ideally as a download link rather than a mail attachment, and open the `.skill` file itself rather than its contents |
@@ -310,7 +313,7 @@ Developer Mode has an intimidating name and a narrow effect. It reveals a menu c
 
 It does not install anything, does not grant Claude new access to your computer, and does not turn off any safety behavior. You can switch it off again through the same menu path once the workshop is over, though leaving it on causes no harm.
 
-Cowork's ability to read and change files is a separate matter, and it is the one worth paying attention to. That access comes from the folder you connect in Step 7, not from Developer Mode, and it extends to that folder and the folders inside it. This is why the guide asks you to connect the workshop folder specifically rather than your Documents folder or your entire user account.
+Claude's ability to read and change files is a separate matter, and it is the one worth paying attention to. That access comes from the folder you attach in Step 7, not from Developer Mode, and it extends to that folder and the folders inside it. This is why the guide asks you to attach the workshop folder specifically rather than your Documents folder or your entire user account.
 
 ---
 

@@ -85,7 +85,7 @@ Human review
 				What an agentic desktop can do, and how to compose a Skill of your own. For library staff; no programming experience required.
 			</p>
 			<p class="mt-2 font-mono text-[0.6875rem] tracking-wide text-gray-400">
-				exercises run in <a href="{base}/terminal-primer" class="text-jhu-blue/50 underline underline-offset-2 hover:text-jhu-blue transition-colors">Claude Cowork</a> &nbsp;·&nbsp; no coding &nbsp;·&nbsp; self-paced
+				exercises run in <a href="{base}/terminal-primer" class="text-jhu-blue/50 underline underline-offset-2 hover:text-jhu-blue transition-colors">Claude, with a folder attached</a> &nbsp;·&nbsp; no coding &nbsp;·&nbsp; self-paced
 			</p>
 			<p class="mt-5 text-sm text-gray-500">
 				First time here?

@@ -56,8 +56,9 @@ are `outputs/archives-request-brief.md`, `outputs/archives-access-points.xlsx`, 
 
 ## Before You Begin
 
-Open Cowork with the workshop folder connected, as set up in the participant guide. Everything you
-need is in that folder — there is nothing to upload. Use only the supplied simulated data.
+Open your workshop project, with the workshop folder attached, as set up in the participant
+guide. Everything you need is in that folder — there is nothing to upload. Use only the supplied
+simulated data.
 
 The practice baseline for this course comes from the
 [ACRL AI Competencies for Academic Library Workers](https://www.ala.org/acrl/standards/ai) and the

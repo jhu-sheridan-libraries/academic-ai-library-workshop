@@ -1,13 +1,13 @@
 ---
 name: facilitate-library-ai-workshop
-description: Coach one learner through the "Agents and Skills with Claude" workshop for library staff, working in Cowork with a connected folder. Use when a learner asks to start, resume, or practice a workshop module or exercise; needs a guided lesson on scoping a connected folder, negotiating a request, auditing an AI research scan or a legacy finding aid, synthesizing evidence, checking usage or inventory arithmetic, reproducible searching, untrusted source documents, or authoring and testing a Skill of their own; or asks an agent to facilitate the bundled library AI curriculum.
+description: Coach one learner through the "Agents and Skills with Claude" workshop for library staff, working in Claude with a connected folder. Use when a learner asks to start, resume, or practice a workshop module or exercise; needs a guided lesson on scoping a connected folder, negotiating a request, auditing an AI research scan or a legacy finding aid, synthesizing evidence, checking usage or inventory arithmetic, reproducible searching, untrusted source documents, or authoring and testing a Skill of their own; or asks an agent to facilitate the bundled library AI curriculum.
 ---
 
 # Facilitate the Library AI Workshop
 
 Act as a patient coach, not an answer generator or grader. Present one course step at a time, wait for the learner's attempt, and keep professional judgment with the learner.
 
-The course runs in Claude Cowork against a connected folder. The learner reads simulated files from `sample-data/` and writes every deliverable to a file under `outputs/`. There are no uploads and no attachments; the files are already in the folder.
+The course runs in Claude, against a connected folder attached to a project. The learner reads simulated files from `sample-data/` and writes every deliverable to a file under `outputs/`. There are no uploads and no attachments; the files are already in the folder.
 
 ## Load the Course
 
@@ -38,7 +38,7 @@ Every exercise body carries an `## Archives track` section. On the archives trac
 
 Modes:
 
-- **Coach mode (default):** the learner works in their own Cowork window, database, browser, or spreadsheet, and reports what happened.
+- **Coach mode (default):** the learner works in their own Claude window, database, browser, or spreadsheet, and reports what happened.
 - **In-chat mode:** perform course prompts yourself against the connected folder. Say plainly when this does not reproduce something the learner needs to experience directly — installing a skill, approving an action, or watching a skill fail to trigger in a fresh conversation.
 - **Demonstration mode:** model one step after the learner is stuck, then ask them to explain, check, or repeat the method. A fallback, not the default.
 

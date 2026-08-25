@@ -1,6 +1,6 @@
 # Working Through This Course on Another Platform
 
-The exercises are written for Claude Cowork. That is a deliberate choice: writing them for one tool
+The exercises are written for Claude, working against a folder attached to a project. That is a deliberate choice: writing them for one tool
 lets them say "read `sample-data/evidence-notes.csv` from the connected folder" instead of "attach
 or upload your file, or open your project, depending on which product you are using." Hedged
 instructions are harder to follow, not more inclusive.
@@ -65,18 +65,18 @@ What degrades:
 Treat this as orientation, not documentation. These products change monthly and I am not going to
 give you a menu path I cannot verify today.
 
-| In Cowork | On ChatGPT Codex | In Kiro | In a plain chat window |
+| In Claude | On ChatGPT Codex | In Kiro | In a plain chat window |
 |---|---|---|---|
 | Connected folder — standing read and write access to a folder you choose | A workspace or repository the agent operates in. Roughly equivalent in effect, though it is oriented around code repositories rather than a folder of documents | The project or workspace the IDE has open. Roughly equivalent in effect, same code-first orientation | No equivalent. Per-message uploads only |
 | File outputs — the tool writes real files into the folder, which you open afterward | Supported; the agent writes files in its workspace. How you get them back onto your own machine depends on whether you are running locally or in a hosted environment — check before you rely on it | Supported; files land in the open project on your own disk | No equivalent. Output is text in the conversation |
 | Skills — named, reusable instruction bundles the tool loads when it recognizes the task | Closest equivalent is a directory containing an instruction file, plus an `AGENTS.md` for standing project instructions. This repo already carries `agents/openai.yaml` files for Codex alongside each skill. Whether these load automatically the way a Claude skill does is something to verify on your own installation rather than assume | Kiro has its own structured-document conventions — specs and steering files kept under `.kiro/` — which serve a similar purpose of standing, reusable instructions. The format is not the same and I would not promise automatic invocation. There is a `kiro-specs` skill available in some Claude environments that reads and writes those specs, which is a useful bridge if you have it | No equivalent. Paste your instructions at the top of each conversation and keep them in a text file you reuse |
-| Action approval — the tool shows what it intends to do and waits | Codex has approval controls over the actions it takes. The granularity and defaults differ from Cowork's and have changed across versions, so look at what your installation is actually configured to ask about before you assume it will stop and check with you | Kiro asks before applying changes in the IDE. The specifics depend on version and settings | No equivalent |
+| Action approval — the tool shows what it intends to do and waits | Codex has approval controls over the actions it takes. The granularity and defaults differ from Claude's and have changed across versions, so look at what your installation is actually configured to ask about before you assume it will stop and check with you | Kiro asks before applying changes in the IDE. The specifics depend on version and settings | No equivalent |
 | `WORKSPACE-BRIEF.md` in the connected folder, setting the standards the tool works to | Put the same content in `AGENTS.md` at the root of the workspace, or point the agent at the brief directly | Put the same content wherever your setup keeps standing project instructions, or point Kiro at the brief directly | Paste the brief at the start of every conversation. Tedious, and worth doing |
 
 Where a cell hedges, the hedge is the honest answer. If you know your platform well and find that
 something here is out of date, tell the facilitator rather than working around it silently.
 
-## What specifically will not work off Cowork
+## What specifically will not work outside Claude
 
 **The two `.skill` files.** A `.skill` file is a zip archive containing a `SKILL.md`, and the Claude
 desktop application is what renders it as a card with a Save skill button. Nothing else does. On

@@ -14,7 +14,7 @@
 
 	// Many workspace steps ask the learner to do something themselves AND to send a
 	// specific prompt. Where a step carries `prompt_text`, offer the same one-click
-	// hand-off to Cowork that prompt steps get, rather than making them retype it.
+	// hand-off to Claude that prompt steps get, rather than making them retype it.
 	// See PromptStep.svelte for why the URL takes this exact form.
 	const coworkUrl = $derived(
 		step.prompt_text
@@ -49,7 +49,7 @@
 					<polyline points="15 3 21 3 21 9" />
 					<line x1="10" y1="14" x2="21" y2="3" />
 				</svg>
-				Open in Claude Cowork
+				Open in Claude
 			</a>
 		{/if}
 	{/if}

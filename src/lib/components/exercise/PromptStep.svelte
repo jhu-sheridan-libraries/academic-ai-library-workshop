@@ -14,6 +14,8 @@
 
 	// Documented deep-link form is `claude://cowork/new?q=<url-encoded prompt>`.
 	// The `/new` segment is required; `claude://cowork?q=` does not open a session.
+	// The `cowork` segment keeps the old product name and still works, even though
+	// the interface no longer uses the word — do not "modernise" it.
 	// `folder=` is deliberately omitted — the learner connected their own folder in
 	// Module 1, and a folder passed by link is treated as untrusted and re-prompts.
 	// Prompts are truncated around 14,000 characters; ours are far shorter.
@@ -50,7 +52,7 @@
 					<polyline points="15 3 21 3 21 9" />
 					<line x1="10" y1="14" x2="21" y2="3" />
 				</svg>
-				Open in Claude Cowork
+				Open in Claude
 			</a>
 		{/if}
 	{/if}

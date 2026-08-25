@@ -8,7 +8,7 @@ steps:
     label: "Confirm what Claude can reach"
     type: "workspace"
     instruction: |
-      Open Cowork and confirm the workshop folder is connected. The folder path should be the workshop folder itself, not your Documents folder and not your home directory.
+      Open your workshop project, with the workshop folder attached, then confirm which folder Claude actually has. The path you see should be the workshop folder itself, not your Documents folder and not your home directory.
 
       Then send Claude the prompt below and read the answer against what you expected. This is the data boundary, and unlike a chat window it is a boundary you set deliberately and can see.
     prompt_text: |
@@ -43,7 +43,7 @@ steps:
     label: "Watch an action before you approve it"
     type: "workspace"
     instruction: |
-      Cowork can change files, so it will ask before it does. Give it something to ask about by sending the prompt below.
+      Claude can change files, so it will ask before it does. Give it something to ask about by sending the prompt below.
 
       Before you approve, read what it proposes to do: which file, where, and what goes in it. Approve it, then open the file yourself to confirm it says what you expected.
     prompt_text: |
@@ -59,9 +59,10 @@ steps:
 
 ## Connect the Folder and Set the Boundary
 
-Cowork works differently from a chat window, and the difference is the first thing to understand
-rather than a detail to pick up later. There is no upload step. You connect a folder once, and from
-then on Claude can read what is in it and write new files into it, subject to your approval.
+Working with a connected folder is different from working in a chat window, and the difference is
+the first thing to understand rather than a detail to pick up later. There is no upload step. You
+attach a folder once, and from then on Claude can read what is in it and write new files into it,
+subject to your approval.
 
 That is more useful than uploading — your work persists as real files you keep after the workshop —
 and it moves the privacy question. In a chat product you decide, message by message, what to attach.
@@ -89,4 +90,4 @@ cannot.
 
 - What is in the folder you connected, including anything you did not expect?
 - How is folder scope a different privacy decision from choosing a file to upload?
-- What does Cowork retain after the session ends, and what is simply a file on your own disk?
+- What does Claude retain after the session ends, and what is simply a file on your own disk?

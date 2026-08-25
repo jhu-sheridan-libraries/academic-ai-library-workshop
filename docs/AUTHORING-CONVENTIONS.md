@@ -1,13 +1,13 @@
 # Authoring Conventions
 
-Internal reference for anyone editing `src/content/`. Written 2026-08-24 during the Cowork
-conversion. Read this before changing an exercise.
+Internal reference for anyone editing `src/content/`. Written 2026-08-24 during the conversion to
+connected-folder exercises. Read this before changing an exercise.
 
 ## What the course is
 
 A self-paced module, roughly 2–4 hours, titled "Agents and Skills with Claude." Two headline
 objectives: what an agentic desktop can do, and **how to compose custom Skills with no programming
-experience**. Delivered primarily in Claude Cowork with a connected folder. A one-hour optional
+experience**. Delivered primarily in Claude, working against a connected folder attached to a project. A one-hour optional
 walkthrough and Friday office hours support it.
 
 Composing a skill is the **capstone**, in Module 4. The earlier modules build toward it so that the
@@ -26,7 +26,7 @@ is editing a format they have already read three times rather than meeting it fo
 
 ## Platform stance
 
-Cowork-first, not product-neutral. Write exercises natively for a connected folder. Do not
+Connected-folder-first, not product-neutral. Write exercises natively for a connected folder. Do not
 reintroduce "your AI tool," "project or notebook," "upload," or menu-name hedging.
 
 Portability to other agentic desktops (Codex, Kiro) is handled in one place —
@@ -53,6 +53,9 @@ the learner produced — is always fine.
 Any prompt a learner is meant to send must be reachable in one click. Two mechanisms, both of which
 build the `claude://cowork/new?q=…` deep link and URL-encode it for you. **Never hand-write a
 `claude://` URL** — encoding mistakes there fail silently, which is the worst way for a link to fail.
+The `cowork` segment of that scheme, and the `cowork-prompt` fence and `expandCoworkPrompts()` named
+after it, keep the old name: the scheme still works, even though the interface no longer uses the
+word. Leave them alone, and keep the word out of learner-facing prose.
 
 **In a step:** put the prompt in `prompt_text`. This works on `prompt` steps and, since the
 components were unified, on `workspace` steps too — a workspace step that asks the learner to do
@@ -79,15 +82,43 @@ paragraph breaks work. `instruction` on `observe` and `reflect` steps is rendere
 Markdown, because those components print it directly. `prompt_text`, `checkpoint`,
 `reflection_prompt`, and `observe_items` are never rendered as Markdown; write them as plain prose.
 
-## Cowork vocabulary
+## Naming the interface: don't
+
+The instructions once told participants to click a **Cowork** tab. That tab no longer exists — the
+application's tabs are Home and Code, the word is gone from the interface entirely, and a local
+folder is now attached to a **project**. The guide was wrong in a way that stopped a learner at
+step one.
+
+The lesson is not "say project instead of Cowork." It is that naming a tab, a menu path, or a
+product surface dates the material to one release. Write what the reader is looking for and let them
+find it:
+
+| Do not write | Write |
+|---|---|
+| click the Cowork tab | create a project and attach the workshop folder to it |
+| open Cowork | open your workshop project |
+| Cowork can change files | Claude can change files |
+| Cowork requires a paid plan | (drop it — a free account is enough; the workshop's Bedrock key covers usage) |
+
+Two exceptions, both deliberate. `claude://cowork/new` is a working URL scheme and keeps the old
+name; so do the ```cowork-prompt``` fence and `expandCoworkPrompts()` in the loader. None is
+learner-facing. Do not "modernise" them.
+
+**Verb and noun.** *Attach* is the action — you attach a folder to a project. *Connected folder* is
+the standing state and the course's established noun; it appears in dozens of places including
+prompts learners send to Claude. So: attach it once, then call it the connected folder. Do not
+sweep-rename the noun.
+
+## Course vocabulary
 
 | Do not write | Write |
 |---|---|
 | upload the file | read `sample-data/x.csv` from the connected folder |
 | attach both files | the files are already in the folder |
 | start a new project or notebook | start a new conversation |
-| your AI tool | Claude, or Cowork |
-| the tool's research mode | (removed — Module 2 audits a fixture) |
+| your AI tool | Claude |
+| the Cowork tab, or any tab or menu name | the capability — "a project with the folder attached" |
+| the tool's research mode | (not used — Module 2 audits a fixture instead) |
 | copy this table into a spreadsheet | write it to `outputs/x.xlsx` |
 
 ## Every deliverable is a file

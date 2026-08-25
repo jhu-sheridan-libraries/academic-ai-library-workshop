@@ -21,7 +21,9 @@ function escapeHtml(s: string): string {
 
 /**
  * Expand ```cowork-prompt fenced blocks into a prompt box with a one-click
- * hand-off to Claude Cowork.
+ * hand-off to Claude. The `cowork` names here — the fence, this function, and the
+ * `claude://cowork/new` scheme — keep the old product name deliberately: the URL
+ * scheme still works even though the interface no longer uses the word.
  *
  * Exists for prompts that live in an exercise's body markdown rather than in a
  * step — chiefly the `## Archives track` sections, which substitute their own
@@ -45,7 +47,7 @@ function expandCoworkPrompts(src: string): string {
 			'',
 			'<div style="border:1px solid rgba(0,45,114,0.2);background:rgba(0,45,114,0.05);border-radius:0.5rem;padding:1rem;margin:1rem 0;">',
 			`<pre style="white-space:pre-wrap;overflow-x:auto;margin:0;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:0.875rem;line-height:1.6;color:#002D72;">${escapeHtml(prompt)}</pre>`,
-			`<a href="${escapeHtml(href)}" style="display:inline-flex;align-items:center;gap:0.5rem;margin-top:0.75rem;border:1px solid #fde68a;background:#fffbeb;border-radius:0.5rem;padding:0.5rem 0.875rem;font-size:0.875rem;font-weight:500;color:#78350f;text-decoration:none;">Open in Claude Cowork &#8599;</a>`,
+			`<a href="${escapeHtml(href)}" style="display:inline-flex;align-items:center;gap:0.5rem;margin-top:0.75rem;border:1px solid #fde68a;background:#fffbeb;border-radius:0.5rem;padding:0.5rem 0.875rem;font-size:0.875rem;font-weight:500;color:#78350f;text-decoration:none;">Open in Claude &#8599;</a>`,
 			'</div>',
 			''
 		].join('\n');

@@ -107,9 +107,10 @@ the course exists.
 
 ## What you need
 
-- **An agentic desktop.** The course is written for Claude Desktop with Cowork, which requires a
-  paid Claude plan (Pro, Max, Team, or Enterprise). Cowork is the part of the application that reads
-  and writes files in a folder you choose, and it is where the exercises take place. If you are on
+- **An agentic desktop.** The course is written for the Claude desktop application. A free Claude
+  account is enough — the workshop supplies a credential that covers the model usage, so you are not
+  asked to buy anything. What the exercises rely on is its ability to read
+  and write files in a folder you attach to a project, and that is where the work takes place. If you are on
   another agentic platform such as ChatGPT Codex or Kiro, read `docs/OTHER-PLATFORMS.md` before you
   start; most of the course transfers, and that file says honestly which parts do not.
 - **The workshop folder.** Download `library-context.zip` from the

@@ -15,7 +15,7 @@
 		<p class="mb-3 text-xs font-medium uppercase tracking-wider text-jhu-blue/50">Before you begin</p>
 		<h1 class="font-serif text-4xl font-bold leading-tight tracking-tight text-jhu-blue">What an agentic desktop does</h1>
 		<p class="mt-5 text-[1.0625rem] leading-relaxed text-gray-500">
-			This course runs in Claude Cowork with a folder on your own computer connected to it. That is a different thing from a chat window, and the difference is worth five minutes before you start. Everything you need is in the folder — there is nothing to upload, and your work comes out as files you keep.
+			This course runs in Claude, in a project with a folder on your own computer attached to it. That is a different thing from a chat window, and the difference is worth five minutes before you start. Everything you need is in the folder — there is nothing to upload, and your work comes out as files you keep.
 		</p>
 		<p class="mt-4 text-[1.0625rem] leading-relaxed text-gray-500">
 			Working on ChatGPT Codex, Kiro, or another agentic desktop instead? The concepts carry over. Ask your facilitator for the <span class="font-medium text-jhu-blue">Other Platforms</span> note, which says what maps across and what does not.
@@ -31,7 +31,7 @@
 					<tr><th class="p-4">Course term</th><th class="p-4">What it means</th></tr>
 				</thead>
 				<tbody class="divide-y divide-slate-100 text-gray-600">
-					<tr><td class="p-4 font-medium text-gray-800">Connected folder</td><td class="p-4">A folder on your computer Claude can read and write. Standing access to everything inside it, including files added later — so scope it narrowly</td></tr>
+					<tr><td class="p-4 font-medium text-gray-800">Connected folder</td><td class="p-4">A folder on your computer that you attach to a project so Claude can read and write it. Standing access to everything inside it, including files added later — so scope it narrowly</td></tr>
 					<tr><td class="p-4 font-medium text-gray-800">Standing brief</td><td class="p-4"><code>WORKSPACE-BRIEF.md</code> in that folder. The professional standards Claude works to, already in place</td></tr>
 					<tr><td class="p-4 font-medium text-gray-800">File output</td><td class="p-4">Deliverables written to <code>outputs/</code> as documents and spreadsheets you keep, not text in a conversation</td></tr>
 					<tr><td class="p-4 font-medium text-gray-800">Action approval</td><td class="p-4">Claude asks before it changes a file. Read what it proposes, then decide — this is the habit worth building</td></tr>
