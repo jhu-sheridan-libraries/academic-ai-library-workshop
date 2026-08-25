@@ -42,6 +42,7 @@ The course is aligned with the [ACRL AI Competencies for Academic Library Worker
 - Disable or ask participants not to enable email, drives, calendars, and organizational connectors.
 - Test Modules 1 and 2 in at least two of the products participants will use.
 - Share the workshop URL and the `src/content/library-context/` folder.
+- If you are running the optional bonus module, confirm that participants may install a plugin on the machine they will use, and which route is permitted. That module depends on it.
 
 ### Day Before
 
@@ -188,7 +189,7 @@ plugins/library-ai-workshop-facilitator/
 
 The learner-coaching Skill triggers when a learner asks to start or resume the course. The cohort Skill serves the human facilitator, the interview Skill runs fictional role-play, and the review Skill audits an artifact without grading its author. Keep these roles separate so one agent does not silently switch from patron to instructor or evaluator.
 
-The learner and cohort Skills read this guide completely at the start of a new session, then load only the selected module and exercise. This keeps the full 16-exercise curriculum from crowding the conversation. The other two Skills load their focused scenario or rubric reference instead.
+The learner and cohort Skills read this guide completely at the start of a new session, then load only the selected module and exercise. This keeps the full 16-exercise core curriculum — 21 with the optional bonus module — from crowding the conversation. The other two Skills load their focused scenario or rubric reference instead.
 
 ### Plugin Structure
 
@@ -340,6 +341,66 @@ For the teaching exercise, emphasize three points:
 3. learners without premium AI access must be able to meet the same learning objective.
 
 Close with the handoff package and cleanup. Participants should remove unnecessary uploads and connections, then follow local retention policy.
+
+## Bonus Module: The Skill Marketplace (90 minutes, optional)
+
+This module sits outside the product-neutral core. It uses [Kanon and the agentic-skill-library](https://github.com/jhu-sheridan-libraries/agentic-skill-library) — a command-line tool and the artifact library it distributes as the **Context Bazaar** marketplace — to treat AI instructions as objects a library can appraise, describe, vet, author, and weed.
+
+Offer it when a cohort includes systems, technical services, or scholarly communications staff, or when someone asks how the workshop's own Skills were built. Do not offer it as a required continuation of Modules 1–4.
+
+### Two paths, no terminal required
+
+| Path | Requires | Scope |
+|---|---|---|
+| **Cowork** (default) | Claude Cowork | Install through menus, then work by asking questions |
+| **Coding agent** | Claude Code or Codex | The same, plus optional authoring, compiling, and publishing |
+
+Both install the plugin; the module works against it throughout. `SKILL-MARKETPLACE-PROMPTS.md` carries every prompt ready to paste, so no participant needs a terminal at any point.
+
+In Cowork the install is Customize → Plugins → Browse plugins → Add marketplace, entering `jhu-sheridan-libraries/agentic-skill-library`, then installing `context-bazaar`. In Claude Code it is `/plugin marketplace add` with the repository URL, then `/plugin install context-bazaar`.
+
+### Before you run it
+
+- **Install permission is a prerequisite, and it is institutional rather than personal.** Confirm a week out that participants may add a marketplace on the machine they will use. Organisations can restrict which plugins staff may add, and Anthropic publishes admin guidance on managing plugins org-wide. Without that permission the module cannot run as written — resolve it before the session, not in the room.
+- **Use scratch workspaces.** No repository holding patron data, assessment data, or licensed content.
+- Do not have anyone connect institutional email, cloud storage, or library systems.
+- The optional `souk-compass` MCP server expects a local Solr instance. Skip it.
+
+### The turn to watch for
+
+Exercise 2 has learners find *this workshop* in the catalog — the `library-ai-workshop` collection is these four Skills, imported, versioned, and stamped with the commit they came from. Seeing their own work as somebody else's catalog record is what makes the appraisal exercise land.
+
+Exercise 3 carries the discovery moment: a skill is a document that an AI tool executes as instructions, and learners installed the marketplace in Exercise 1 before doing any review. Let that sequencing error stand and then name it. Kanon's `validate --security` pass is a floor — prompt injection, dangerous hook commands, dangerous MCP servers, credential-shaped environment variables, invisible Unicode — not a guarantee.
+
+Collect the open questions learners mark in Exercise 5's policy draft. They are the agenda for whoever owns this after the workshop.
+
+### Let the tool teach itself
+
+Do not prepare to teach Kanon from the front of the room. The marketplace ships a skill called `kanon` whose job is to teach the tool in plain language, and it was written for library staff — its authoring guide teaches artifact metadata through Dublin Core. Exercise 1 has learners meet it; Exercise 4 has them work from its authoring guide rather than from the exercise page.
+
+It carries six references, reachable by asking for them by name: the authoring guide, the command reference, a twenty-lesson tutorial, a three-to-four hour self-paced course on skill creation, a curriculum guide, and an optional Souk Compass practice.
+
+Point learners who want depth at the last three rather than extending the session. The curriculum guide in particular is aimed at whoever would own this programme afterwards: it carries learning paths, a curriculum map, assessment strategy, accessibility considerations, and a production-readiness gate.
+
+One thing to know before you are asked: the `kanon` skill's setup instructions still name `agentic-skill-forge`, the repository's former name. The old name redirects, so nothing breaks. The module treats this as a teaching moment about documentation drift rather than as an erratum — if a learner spots it before Exercise 3, that is the exercise working early.
+
+### How learners get it
+
+Two things for this module ship, both in `library-context.zip` and in this plugin at `references/course/`:
+
+- `SKILL-MARKETPLACE-PROMPTS.md` — every prompt in the module, numbered by exercise and step, with the install instructions at the top. This is what a learner without a terminal works from.
+- `SKILL-MARKETPLACE-HANDOUT.md` — the three working sheets: an appraisal crosswalk for Exercise 2, a vetting checklist and decision block for Exercise 3, and a fill-in local policy template for Exercise 5. Print it.
+
+Between them the module runs with no terminal. The plugin itself is not bundled — see below.
+
+Kanon and the Context Bazaar marketplace themselves are not bundled. The module runs against the upstream repository live, so there is no third-party copy to keep current.
+
+If the Cowork marketplace route is unavailable to your learners, there are other ways in:
+
+- A single skill can be **copied by hand**: `kanon/skills/<name>/` upstream is a plain `SKILL.md` plus `references/`, and dropping that directory into `.claude/skills/` (project) or `~/.claude/skills/` (personal) is the whole installation. The `kanon` skill is the one worth copying.
+- A pinned install is `kanon install <artifact> --harness <harness> --from-release <tag>`, against upstream's tagged releases.
+
+Settle this before the session. Which route your institution permits is a preparation question, not something to discover with twenty people watching.
 
 ## Product-Neutral Troubleshooting
 

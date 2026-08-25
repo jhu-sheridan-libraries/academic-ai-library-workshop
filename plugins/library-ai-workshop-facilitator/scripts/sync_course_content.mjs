@@ -22,12 +22,28 @@ const aiGuideSource = resolve(
 	'library-context',
 	'WORKSPACE-BRIEF.md'
 );
+const handoutSource = resolve(
+	repoRoot,
+	'src',
+	'content',
+	'library-context',
+	'SKILL-MARKETPLACE-HANDOUT.md'
+);
+const promptPackSource = resolve(
+	repoRoot,
+	'src',
+	'content',
+	'library-context',
+	'SKILL-MARKETPLACE-PROMPTS.md'
+);
 const modulesSource = resolve(repoRoot, 'src', 'content', 'modules');
 const sampleDataSource = resolve(repoRoot, 'src', 'content', 'library-context', 'sample-data');
 
 const requiredSources = [
 	resolve(repoRoot, 'FACILITATOR.md'),
 	aiGuideSource,
+	handoutSource,
+	promptPackSource,
 	modulesSource,
 	sampleDataSource
 ];
@@ -54,6 +70,8 @@ for (const referencesRoot of [learnerReferences, cohortReferences]) {
 	cpSync(resolve(repoRoot, 'FACILITATOR.md'), resolve(referencesRoot, 'FACILITATOR.md'));
 	cpSync(modulesSource, resolve(courseRoot, 'modules'), { recursive: true });
 	cpSync(sampleDataSource, resolve(courseRoot, 'sample-data'), { recursive: true });
+	cpSync(handoutSource, resolve(courseRoot, 'SKILL-MARKETPLACE-HANDOUT.md'));
+	cpSync(promptPackSource, resolve(courseRoot, 'SKILL-MARKETPLACE-PROMPTS.md'));
 }
 
 console.log(`Synced workshop content to ${allReferenceRoots.length} skill reference sets`);
