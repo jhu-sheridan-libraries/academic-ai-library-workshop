@@ -86,14 +86,16 @@ export const load: PageServerLoad = async ({ url }) => {
 		) as 'inactive' | 'slow' | 'on-pace'
 	}));
 
-	// Build heatmap cells
-	const heatmapCells = allModules.flatMap((mod, mIdx) =>
-		mod.exercises.map((ex, eIdx) => ({
+	// Build heatmap cells — count learners who actually have progress in each exercise
+	const heatmapCells = allModules.flatMap((mod) =>
+		mod.exercises.map((ex) => ({
 			moduleId: mod.id,
 			moduleTitle: mod.title,
 			exerciseId: ex.id,
 			exerciseTitle: ex.title,
-			reachedCount: learnerRows.filter((r) => r.maxScore >= mIdx * 100 + eIdx).length,
+			reachedCount: progressByLearner.filter((p) =>
+				p.steps.some((s) => s.moduleId === mod.id && s.exerciseId === ex.id)
+			).length,
 			totalLearners: learnerItems.length
 		}))
 	);

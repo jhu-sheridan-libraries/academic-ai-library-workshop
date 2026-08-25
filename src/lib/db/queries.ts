@@ -2,7 +2,9 @@ import {
 	PutCommand,
 	GetCommand,
 	QueryCommand,
-	UpdateCommand
+	UpdateCommand,
+	DeleteCommand,
+	BatchWriteCommand
 } from '@aws-sdk/lib-dynamodb';
 import { getDocClient, TABLE, isDynamoEnabled, isDegraded, degradeIfUnusable } from './client.js';
 import { ttlEpoch } from './schema.js';
@@ -15,7 +17,8 @@ import {
 	localRecordStepComplete,
 	localGetLearnerProgress,
 	localUpsertNote,
-	localGetLearnerNotes
+	localGetLearnerNotes,
+	localDeleteLearner
 } from './local-store.js';
 
 /**
@@ -326,5 +329,51 @@ export async function getLearnerNotes(learnerId: string): Promise<NoteItem[]> {
 			return (result.Items ?? []) as NoteItem[];
 		},
 		() => localGetLearnerNotes(learnerId)
+	);
+}
+
+// ─── Delete operations ───────────────────────────────────────────────────────
+
+/**
+ * Remove a learner and all their associated records (progress + notes).
+ * Used by facilitators to clean up test accounts.
+ */
+export async function deleteLearner(learnerId: string): Promise<void> {
+	if (useLocal()) return localDeleteLearner(learnerId);
+	const db = getDocClient();
+
+	await writeWithFallback(
+		async () => {
+			// Query all items under this partition key
+			const result = await db.send(
+				new QueryCommand({
+					TableName: TABLE,
+					KeyConditionExpression: 'pk = :pk',
+					ExpressionAttributeValues: { ':pk': learnerPk(learnerId) }
+				})
+			);
+
+			const items = result.Items ?? [];
+			if (items.length === 0) return;
+
+			// BatchWrite supports up to 25 items per call
+			const batches: { pk: string; sk: string }[][] = [];
+			for (let i = 0; i < items.length; i += 25) {
+				batches.push(items.slice(i, i + 25).map((item) => ({ pk: item.pk, sk: item.sk })));
+			}
+
+			for (const batch of batches) {
+				await db.send(
+					new BatchWriteCommand({
+						RequestItems: {
+							[TABLE]: batch.map((key) => ({
+								DeleteRequest: { Key: key }
+							}))
+						}
+					})
+				);
+			}
+		},
+		() => localDeleteLearner(learnerId)
 	);
 }

@@ -61,11 +61,9 @@
 				bind:value={role}
 				class="mt-1 block w-full rounded-lg border border-gray-300 px-3 py-2 text-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
 			>
-				<option value="reference">Reference / Research Services</option>
+				<option value="reference">Reference / Research</option>
 				<option value="liaison">Subject Liaison</option>
-				<option value="systematic_review">Evidence Synthesis / Systematic Review</option>
-				<option value="scholarly_communication">Scholarly Communication</option>
-				<option value="data">Data Services / Assessment</option>
+				<option value="data">Data Services</option>
 				<option value="other">Other / Administration</option>
 			</select>
 		</div>

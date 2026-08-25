@@ -85,6 +85,6 @@
 	</div>
 
 	<div class="mt-6">
-		<CohortProgressTable learners={data.learners} />
+		<CohortProgressTable learners={data.learners} token={data.token} />
 	</div>
 </div>

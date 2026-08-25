@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { formatRelativeTime } from '$lib/utils/format.js';
+	import { invalidateAll } from '$app/navigation';
 	import { base } from '$app/paths';
 
 	interface LearnerRow {
@@ -13,7 +14,25 @@
 		status: 'on-pace' | 'slow' | 'inactive';
 	}
 
-	let { learners }: { learners: LearnerRow[] } = $props();
+	let { learners, token }: { learners: LearnerRow[]; token: string } = $props();
+
+	let confirmingId = $state<string | null>(null);
+	let deleting = $state(false);
+
+	async function handleDelete(learnerId: string) {
+		deleting = true;
+		try {
+			const res = await fetch(`${base}/api/learner/${learnerId}?token=${encodeURIComponent(token)}`, {
+				method: 'DELETE'
+			});
+			if (res.ok) {
+				confirmingId = null;
+				await invalidateAll();
+			}
+		} finally {
+			deleting = false;
+		}
+	}
 
 	const statusColors = {
 		'on-pace': 'text-green-700 bg-green-100',
@@ -37,6 +56,7 @@
 				<th class="px-4 py-3 text-left font-medium">Steps</th>
 				<th class="px-4 py-3 text-left font-medium">Last Active</th>
 				<th class="px-4 py-3 text-left font-medium">Status</th>
+				<th class="px-4 py-3 text-left font-medium"><span class="sr-only">Actions</span></th>
 			</tr>
 		</thead>
 		<tbody class="divide-y divide-gray-100">
@@ -57,6 +77,35 @@
 						<span class="rounded-full px-2 py-0.5 text-xs font-medium {statusColors[row.status]}">
 							{statusLabels[row.status]}
 						</span>
+					</td>
+					<td class="px-4 py-3">
+						{#if confirmingId === row.id}
+							<span class="inline-flex items-center gap-1">
+								<button
+									onclick={() => handleDelete(row.id)}
+									disabled={deleting}
+									class="rounded bg-red-600 px-2 py-0.5 text-xs font-medium text-white hover:bg-red-700 disabled:opacity-50"
+								>
+									{deleting ? 'Removing…' : 'Confirm'}
+								</button>
+								<button
+									onclick={() => (confirmingId = null)}
+									disabled={deleting}
+									class="rounded px-2 py-0.5 text-xs text-gray-500 hover:text-gray-700"
+								>
+									Cancel
+								</button>
+							</span>
+						{:else}
+							<button
+								onclick={() => (confirmingId = row.id)}
+								class="text-xs text-gray-400 hover:text-red-600"
+								title="Remove learner"
+								aria-label="Remove {row.name}"
+							>
+								✕
+							</button>
+						{/if}
 					</td>
 				</tr>
 			{/each}

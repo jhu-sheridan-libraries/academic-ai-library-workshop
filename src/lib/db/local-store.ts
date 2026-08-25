@@ -124,3 +124,9 @@ export function localUpsertNote(opts: {
 export function localGetLearnerNotes(learnerId: string): NoteItem[] {
 	return [...(notes.get(learnerId)?.values() ?? [])];
 }
+
+export function localDeleteLearner(learnerId: string): void {
+	learners.delete(learnerId);
+	progress.delete(learnerId);
+	notes.delete(learnerId);
+}
