@@ -47,8 +47,9 @@ required for the hour to have worked.
 - [ ] Confirm nothing personal is in that folder or its parent. Claude shows paths, and a file tree
       is legible at a glance to forty people.
 - [ ] Confirm the two practice `.skill` files are packaged, current, and available as download links.
-- [ ] Have spare credential cards ready — key, region, model identifier — for people who never
-      received one.
+- [ ] Have spare credential cards ready — bearer token, region, model card identifier — for people
+      who never received one. Check the card against Step 5 of `docs/PARTICIPANT-SETUP.md` before you
+      print it; the panel's field names and the model card have both changed between releases.
 - [ ] Prepare a single follow-up message you can send within the hour: workshop folder link, both
       `.skill` links, `docs/PARTICIPANT-SETUP.md`, the module URL, `docs/OTHER-PLATFORMS.md`, and the
       office-hours time.
@@ -273,7 +274,7 @@ your Documents folder unless you connect your Documents folder — which is why 
 you to connect the narrowest folder that holds what you need, and why the demo folder today had four
 files in it. Connecting widely is the actual risk here, not the model.
 
-*Where it goes:* for this workshop, requests go to Amazon Bedrock under the workshop's account rather
+*Where it goes:* for this workshop, requests go to Bedrock under the workshop's own account rather
 than to Anthropic's consumer service. That is what the Developer Mode setting in the install guide is
 for, and it is the only thing that setting does.
 

@@ -33,12 +33,13 @@ so it does not need rewriting when the image is swapped.
 | 5 | `figure-05-devmode-macos` | macOS | Menu bar, Help open, Troubleshooting submenu expanded | Box around Enable Developer Mode |
 | 6 | `figure-06-devmode-windows` | Windows | Sign-in screen, hamburger menu open, Help then Troubleshooting expanded | Circle the hamburger button; box around Enable Developer Mode |
 | 7 | `figure-07-developer-menu` | Either | The Developer menu open | Box around Configure Third-Party Inference |
-| 8 | `figure-08-bedrock-config` | Either | The third-party inference window, Amazon Bedrock selected, all fields filled | Number each field 1–5 to match the steps in Step 5 |
+| 8 | `figure-08-bedrock-config` | Either | The panel headed Connection, with the provider set to Bedrock Mantle, Credential kind set to Static API key, and the region, base URL, bearer token, and model card filled in | Number the fields to match the steps in Step 5 |
 | 9 | `figure-09-cowork-tab` | — | **Unused** — interface element no longer exists. Do not capture or replace | — |
 | 10 | `figure-10-connect-folder` | Either | The confirmation that the folder is attached to the project | Box around the connected folder path |
 | 11 | `figure-11-save-skill` | Either | A `.skill` file opened in Claude, showing its card before it is saved | Box around the Save skill button |
 | 12 | `figure-12-releases-download` | Either | The repository's `workshop-materials` release page, scrolled so the Assets list is visible | Box around `library-context.zip`. **Not yet drawn** — see below |
 | 13 | `figure-13-folder-picker` | Either | The folder chooser, opened to show `library-context` nested inside the unzipped parent folder | Box around `library-context`; a lighter marker on the parent to show which one *not* to pick. **Not yet drawn** — see below |
+| 14 | `figure-14-models-section` | Either | The Models section of the Connection panel, with one entry expanded | Box around the Model ID and the Tier alias; a marker on the first-entry position, since first is default. **Not yet drawn** — see below |
 
 ## Figure 9 — unused
 
@@ -59,6 +60,11 @@ the green *Code* button or the auto-generated "Source code (zip)" instead of `li
 Those give them the whole repository — larger, and containing facilitator notes that spoil several
 exercises. This is the single most useful figure still missing.
 
+**Figure 14** supports the Models subsection of Step 5. It is the most fiddly part of setup: a list
+where position carries meaning, several toggles that should be left alone, and a Model ID field too
+narrow to show its own contents. A capture with one entry expanded would answer most of it at a
+glance. Second most useful after figure 12.
+
 **Figure 13** supports Step 7. The recurring mistake is selecting the folder one level above
 `library-context`, which leaves Claude unable to see `WORKSPACE-BRIEF.md`. The troubleshooting table
 names this twice, which is a sign it wants a picture instead. What matters is showing the nesting,
@@ -73,10 +79,17 @@ saving.
 
 ## Before you publish figure 8
 
-Figure 8 shows a filled-in credential window. Replace the API key with a masked value such as
-`bdrk-••••••••••••` before saving, and check the region and model fields reveal nothing beyond
-what is already printed on the credential card. A screenshot containing a live key is a leaked
-key. The SVG stand-in already shows the key masked.
+Figure 8 shows the credentials section of the Connection panel filled in. Replace the AWS bearer
+token with a masked value such as `bdrk-••••••••••••` before saving, and check that the region,
+base URL, and model card fields reveal nothing beyond what is already printed on the credential
+card. A screenshot containing a live token is a leaked token — the credential is a bearer token,
+not a per-user API key, and it authorizes spending against the workshop's account. The SVG
+stand-in already shows it masked, and says so in the figure.
+
+Two labels in that figure are the ones most likely to date it: the provider name, currently
+**Bedrock Mantle**, and the **Credential kind** value, currently **Static API key**. Both have
+changed before. If the panel in front of you says something different, match Step 5 by meaning and
+tell whoever maintains the guide, rather than editing the figure to say two things at once.
 
 ## Capture tools
 

@@ -37,7 +37,7 @@ steps:
     prompt_text: |
       Append a task record to outputs/session-log.md, the file created in the first exercise. Include: date, which files in the connected folder you read, which files you created, whether web research was used, decisions made, unresolved questions, and human reviewer. Use "not used" or "not yet assigned" where appropriate.
     checkpoint: "outputs/session-log.md now distinguishes inputs, outputs, settings, decisions, and review responsibility."
-    facilitator_note: "The log is appended to across all four modules and becomes the methods record in the final exercise. Learners who skipped the first exercise will need to create it now."
+    facilitator_note: "The log is appended to across all four modules and becomes the methods record in the final exercise, so a learner who skipped the first exercise has to create it here — the prompt will do that by itself, and nobody needs rescuing. If someone reaches Module 4 and reports an empty methods note, this is the step that did not happen."
   - index: 4
     label: "Reflect on transparency"
     type: "reflect"
@@ -57,16 +57,30 @@ collection holds the material, who created it, and what may be reproduced from i
 your scoping work has put in question, the reply has to address politely and early, or it costs both
 of you a wasted visit.
 
-Write `outputs/archives-researcher-followup.md`:
+Draft the reply first:
 
 ```cowork-prompt
 Read outputs/archives-request-brief.md and outputs/archives-access-points.xlsx. Draft a 200-260 word reply to the researcher and write it to outputs/archives-researcher-followup.md. Summarize how the request has been scoped, name the candidate units of description without choosing between them, state plainly which of the requester's stated assumptions we will need to correct and what the actual position is, list the next three archivist actions, and identify the one question we need them to answer before a visit is worth booking. Do not state that any material is open, digitized, or cleared for publication. Do not promise a reproduction turnaround. Offer a consultation.
 ```
 
-Then add the disclosure sentence as in step 1, and run the send gate in step 2 with two items added:
-nothing in the reply asserts an access condition or a rights position that the description actually
-supports, and nothing in it promises a reproduction the condition of the material may not allow.
-Append your task record to the shared `outputs/session-log.md` as written.
+Then the disclosure:
+
+```cowork-prompt
+Add one plain-language sentence to outputs/archives-researcher-followup.md disclosing that an AI tool helped organize the de-identified inquiry and that an archivist will verify the description, the access conditions, and the rights position before anything is supplied. Do not name a product unless local policy requires it.
+```
+
+Now open `outputs/archives-researcher-followup.md` and read it yourself, as if it were going to a real
+researcher. Check that no identifying detail about the requester has crept in; that no access
+condition or rights position is asserted beyond what the description supports; that nothing promises a
+reproduction the condition of the material may not allow; that the researcher can correct the scope;
+that the AI's role and the archivist's review are described accurately; and that a human path is
+offered.
+
+Last, keep the record:
+
+```cowork-prompt
+Append a task record to outputs/session-log.md, the file created in the first exercise. Include: date, which files in the connected folder you read, which files you created, whether web research was used, decisions made, unresolved questions, and human reviewer. Use "not used" or "not yet assigned" where appropriate.
+```
 
 ## Discussion
 

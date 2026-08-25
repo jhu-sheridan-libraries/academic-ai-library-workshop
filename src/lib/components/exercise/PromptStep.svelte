@@ -36,7 +36,7 @@
 	</div>
 
 	{#if step.prompt_text}
-		<div class="relative rounded-lg border border-jhu-blue/20 bg-jhu-blue/5">
+		<div class="relative rounded-lg border border-[#C9D6E8] bg-[#EEF2F8]">
 			<div class="absolute right-2 top-2 flex items-center gap-1.5">
 				<CopyButton text={step.prompt_text} />
 			</div>

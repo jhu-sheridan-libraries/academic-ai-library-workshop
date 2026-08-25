@@ -16,7 +16,7 @@ steps:
 
       Copy them; do not improve, reorder, or rename them. Add nothing of your own. Then tell me which file in the skill they came from.
     checkpoint: "outputs/local-verification-standard.md exists and reproduces the skill's statuses unchanged, and you know which file inside the skill they came from."
-    facilitator_note: "If the skill does not trigger, have the learner say 'use the review-ai-research-output skill' — the exact name, which is also the fix they will need in Module 4. Some learners are surprised that a skill can be asked to show its own contents — let that surprise land, because Module 4 depends on skills feeling editable rather than sealed."
+    facilitator_note: "If the skill does not trigger, the fix is the exact name — 'use the review-ai-research-output skill' — which is also the fix they will need in Module 4, so it is worth them learning it here. Some learners are surprised a skill can be asked to show its own contents; that surprise is load-bearing, because Module 4 depends on skills feeling editable rather than sealed. If office hours fall between Modules 3 and 4, this is the thing to ask about."
   - index: 1
     label: "Make it yours"
     type: "workspace"
@@ -29,8 +29,10 @@ steps:
       4. Keep the rule about not collapsing unchecked or inaccessible material into supported, in whatever words you prefer. That rule is the reason the vocabulary exists.
 
       This is the whole of what modifying a skill amounts to. No code, no syntax, no programming — a Markdown file with headings and a list, edited by the person who has to live with it.
+
+      Five minutes, not twenty. The temptation is to redesign the rubric; resist it. What matters is that you have edited one and can see there was nothing to it.
     checkpoint: "The file has a stated purpose, your own status list, a mapping from the log's three values that never maps upward, and the no-collapsing rule preserved."
-    facilitator_note: "Timebox to five minutes; the temptation is to redesign the whole rubric. What matters is that a non-programmer has now edited a skill artifact and can see there was nothing to it. Anyone who maps 'metadata-only' onto a supported status has produced the most useful discussion material in the exercise — surface it without correcting it first."
+    facilitator_note: "The five-minute limit is now in the step, because alone the temptation is to redesign the whole rubric. What matters is that a non-programmer has edited a skill artifact and can see there was nothing to it — that is the ladder rung Module 4 stands on. The local standards learners write differ from one another more than anything else they produce today, which makes this the best exercise to open office hours with: ask two people to read their status list."
   - index: 2
     label: "Build the matrix on your own vocabulary"
     type: "prompt"
@@ -42,7 +44,7 @@ steps:
 
       For verification status use only the statuses defined in outputs/local-verification-standard.md, applying the mapping in that file. Use only these two files. Quote no text that is not in the evidence log, and add no bibliographic detail of any kind.
     checkpoint: "outputs/claim-evidence-matrix.xlsx exists, every row states both what the record may support and what it cannot, and every status value comes from your standard."
-    facilitator_note: "This file is read by both remaining exercises in the module. A learner who falls behind can cut anything else here, but not this."
+    facilitator_note: "Both remaining exercises in the module read this file, so it is the one step here that cannot be cut. If someone is running out of day, the ranking step below is the one to drop — say that explicitly rather than leaving them to guess which work is load-bearing."
   - index: 3
     label: "Separate the outcome from the proxy"
     type: "prompt"
@@ -53,7 +55,7 @@ steps:
 
       Justify each classification in no more than fifteen words, using the wording of the record itself. Do not upgrade downloads, requests, or citations into practical use or into impact. Where the record's own note contradicts its reported outcome label, say so in the justification.
     checkpoint: "Attention and access proxies are classified separately from direct use, and no justification silently promotes a proxy."
-    facilitator_note: "The five outcome families from Module 1 exercise 3 are the vocabulary here. Learners who built that sheet should be told to open it alongside the matrix."
+    facilitator_note: "The five outcome families from Module 1 exercise 3 are the vocabulary here, and the step reads better with that sheet open beside the matrix — worth saying in a cohort message at the start of Module 3, since nobody will think to go back for it on their own."
   - index: 4
     label: "Rank what to verify first"
     type: "prompt"
@@ -78,6 +80,11 @@ steps:
     type: "reflect"
     instruction: "You changed a vocabulary that came out of a skill, and then a deliverable was built on your version rather than the original. That is a small act with a long reach."
     reflection_prompt: "Who in your library would have to agree to your version of these statuses before it could be used on real work, and what in it would they argue with first?"
+  - index: 7
+    label: "One question to take further"
+    type: "reflect"
+    instruction: "The question this exercise poses and then leaves open. Answer it here, or bring it to office hours — the answers differ by unit, which is what makes it worth asking out loud."
+    reflection_prompt: "When should a matrix like this be maintained outside an AI tool entirely, and what would make you move it?"
 ---
 
 ## Adapt the Rubric, Then Build the Matrix
@@ -105,35 +112,56 @@ research reviewer uses do not fit description. "Citation mismatch" has no archiv
 judgments description actually calls for — about whose voice a statement is written in, and about how
 far a rights position has been established — have no research-review equivalent at all.
 
-Do step 0 as written — get the skill's statuses out of the skill and into a file — but save it as
-`outputs/archives-description-standard.md`. Then make the same four changes in step 1, with this
-substitution: derive the statuses description requires rather than taking them from a list. Work back
-through `outputs/archives-description-ledger.xlsx` row by row, and wherever your cut-down vocabulary
-cannot carry a row's judgment without distorting it, write the status that row needs and define it in
-a sentence. Then add a mapping from the statuses you used in the ledger to this standard. Keep the
-no-mapping-upward rule: nothing unresolved may land on a status meaning cleared, and nothing
-unmeasured may land on a status meaning measured.
+So you take a working vocabulary out of a skill, change it yourself until it fits archival
+description, and then have the deliverable built on your version rather than the original.
+
+First, get the vocabulary out of the skill and into a file of your own:
+
+```cowork-prompt
+Use the review-ai-research-output skill. Show me its verification statuses exactly as the skill defines them, including the rule about what must not be collapsed into what, and write them to outputs/archives-description-standard.md in the connected folder. Copy them; do not improve, reorder, or rename them. Add nothing of your own. Then tell me which file inside the skill they came from.
+```
+
+**Now edit that file yourself.** This part is not delegable, and it is the whole of what modifying a
+skill amounts to: no code, no syntax, a Markdown file with headings and a list, edited by the person
+who has to live with it. Open `outputs/archives-description-standard.md` and make four changes.
+
+1. Add a first line saying what this version is for — one sentence, naming the artifact type and who uses it.
+2. Open `outputs/archives-description-ledger.xlsx` beside it and work back through it row by row. Cut the statuses that have no archival use. Wherever the copied vocabulary cannot carry a row's judgment without distorting it, write the status that row actually needs and define it in a sentence of your own.
+3. Add a mapping from the statuses you used in the ledger to the statuses in this standard.
+4. Keep the rule about not collapsing unchecked material into supported, in whatever words you prefer. In archival terms: nothing unresolved may land on a status meaning cleared, and nothing unmeasured may land on a status meaning measured.
+
+Five minutes, not twenty. The point is that a non-programmer has now edited a skill artifact and can
+see there was nothing to it.
 
 Then build the matrix at the level archives decisions are actually made at — the accession, not the
 item:
 
 ```cowork-prompt
-Read sample-data/archives/accession-note.txt and outputs/archives-description-standard.md from the connected folder. Build an appraisal and processing matrix and write it to outputs/archives-evidence-matrix.xlsx, one row per body of material the accession note distinguishes. Columns: material; extent as stated in the note; whether that extent was measured or estimated; formats; what the note establishes about it; what the note explicitly does not establish; donor condition attached, if any; access status; status from my standard; next action. Use only these two files. Do not total any extent the note does not total, do not estimate an unmeasured extent, and add no fact about the records that the note does not state.
+Read sample-data/archives/accession-note.txt and outputs/archives-description-standard.md from the connected folder. Build an appraisal and processing matrix and write it to outputs/archives-evidence-matrix.xlsx, one row per body of material the accession note distinguishes. Columns: material; extent as stated in the note; whether that extent was measured or estimated; formats; what the note establishes about it; what the note explicitly does not establish; donor condition attached, if any; access status; status from my standard; next action. For the status column use only the statuses defined in outputs/archives-description-standard.md, applying the mapping in that file. Use only these two files. Do not total any extent the note does not total, do not estimate an unmeasured extent, and add no fact about the records that the note does not state.
 ```
 
-For step 3, the distinction the module turns on has an exact archival form. Add a column classifying
-each row as: a rights position established by an agreement; a rights position asserted without one; an
-access condition set by the repository; an access condition requested by the donor and not yet agreed;
-or unclear. Justify each in fifteen words from the note's own wording, and do not upgrade a request
-into an agreement.
+The distinction this module turns on has an exact archival form — the difference between a position
+that has been established and one that has only been asserted. Add it as a column:
 
-Then rank for processing priority as step 4 does, scoring on researcher demand, risk of harm if the
-material stays undescribed, risk of harm if it is opened without survey, and current status under your
-standard. Save it as a second sheet named "Processing priority."
+```cowork-prompt
+Add a column to outputs/archives-evidence-matrix.xlsx classifying each row as one of: a rights position established by an agreement; a rights position asserted without one; an access condition set by the repository; an access condition requested by the donor and not yet agreed; or unclear. Justify each classification in no more than fifteen words, using the accession note's own wording. Do not upgrade a request into an agreement or an assertion into an established position. Where the note's own wording undercuts the classification a field appears to claim, say so in the justification.
+```
+
+Then rank what to process first, into a sheet Claude adds to the workbook for you:
+
+```cowork-prompt
+Rank the bodies of material in outputs/archives-evidence-matrix.xlsx for processing priority. Score each on four criteria: researcher demand as recorded in sample-data/archives/accession-note.txt and sample-data/archives/collection-request.txt, risk of harm if the material stays undescribed, risk of harm if it is opened without survey, and current status under outputs/archives-description-standard.md. Show every criterion score, not just the total, and explain any tie. Add this as a sheet named "Processing priority" in outputs/archives-evidence-matrix.xlsx.
+```
+
+Finally, open the workbook yourself and read it as something you would hand to a colleague who has not
+seen the accession note. Every status value should appear in your standard; nothing should have been
+mapped upward from the ledger's original value; no donor request should have become a donor agreement
+on its way into a cell; and each row's limitation should be specific to that material rather than the
+same caution repeated down the column.
 
 ## Discussion
 
 - What did you cut from the rubric's status list, and what did cutting it cost?
-- Where does `metadata-only` belong, and did the group agree?
+- Where does `metadata-only` belong on your list, and would a colleague have put it there?
 - What belongs at the source level in a matrix, and what belongs at the claim level?
 - When should a matrix like this be maintained outside the AI tool entirely?

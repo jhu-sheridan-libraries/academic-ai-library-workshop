@@ -29,7 +29,7 @@ steps:
     prompt_text: |
       Show me the SKILL.md file for the reference-interview practice skill I installed, exactly as it is written. Then show me the one for the review-ai-research-output skill.
     checkpoint: "You have read both SKILL.md files and can name the two frontmatter fields and say which one determines whether the skill triggers."
-    facilitator_note: "Spend real time here — two or three minutes of reading buys back ten minutes of debugging later. The insight to land is descriptions describe situations, not procedures. If anyone asks about YAML, tell them the format is a name and a description between two rows of dashes and move on. Nobody needs the specification."
+    facilitator_note: "Two or three minutes of reading here buys back ten minutes of debugging at step 4, and the step says so. The insight is that descriptions describe situations, not procedures — the single most useful thing to repeat in the walkthrough and in every office hours before the capstone. If anyone asks about YAML, the answer is a name and a description between two rows of dashes; nobody needs the specification."
   - index: 1
     label: "Write your description first"
     type: "workspace"
@@ -44,7 +44,7 @@ steps:
     prompt_text: |
       Here is a draft skill description. Does it describe situations someone would find themselves in, or does it describe steps the skill performs? Rewrite it as situations if I have got that wrong, and tell me which realistic requests it would fail to catch.
     checkpoint: "You have a description written in situational language, naming several distinct circumstances, in the vocabulary a colleague would use."
-    facilitator_note: "Almost everyone writes a procedure description on the first attempt — 'this skill takes a request and produces a search log.' That is the mistake worth making here rather than at step four. Do not correct it for them; let Claude's rewrite show the difference."
+    facilitator_note: "Almost everyone writes a procedure description on the first attempt — 'this skill takes a request and produces a search log' — and that is the mistake worth making here rather than at step 4. The step hands the correction to Claude rather than to you, which is the right arrangement when you are not in the room: the rewrite arrives in seconds and it arrives for everyone."
   - index: 2
     label: "Build the skill file"
     type: "prompt"
@@ -60,7 +60,7 @@ steps:
 
       Then package the folder as outputs/reproducible-search-handoff.skill so I can install it.
     checkpoint: "SKILL.md exists with a name and a description, its body carries your stop conditions and human-only markings intact, and a .skill file has been created."
-    facilitator_note: "Two failure modes: the description gets silently rewritten (check it against what they wrote in the previous step), and the stop conditions get diluted into advice. Have them open the file and compare. If the .skill packaging fails, they can still test by asking Claude to treat the SKILL.md as the instructions, but the install path is worth getting working."
+    facilitator_note: "Two failure modes, both silent: the description gets rewritten despite the instruction, and the stop conditions get diluted into advice. The step tells the learner to open the file and compare, which is the only check available when nobody is looking over their shoulder. If the .skill packaging fails they can still test by asking Claude to treat the SKILL.md as the instructions — but the install path is worth a support message, because the next two steps depend on it."
   - index: 3
     label: "Install it"
     type: "workspace"
@@ -71,7 +71,7 @@ steps:
 
       Click **Save skill**. It is now available in every conversation, including ones already open.
     checkpoint: "The skill is saved and appears among your available skills."
-    facilitator_note: "If no Save skill button appears, the packaging is wrong rather than the skill. Have Claude repackage. This is the same flow as setup Step 8, so most people will recognise it."
+    facilitator_note: "If no Save skill button appears, the packaging is wrong rather than the skill, and asking Claude to repackage fixes it. Same flow as setup Step 8, so most people will recognise it — the ones who do not are the ones whose facilitator installed the skills for them, and they will need the two sentences of the participant guide that describe the card."
   - index: 4
     label: "Test whether it triggers"
     type: "workspace"
@@ -86,7 +86,7 @@ steps:
     prompt_text: |
       A faculty member has sent me a literature request and I need to produce a search record I can hand to another librarian.
     checkpoint: "You have run a plainly worded request in a fresh conversation and can say whether the skill loaded and whether its behaviour matched your workflow."
-    facilitator_note: "Insist on the fresh conversation; testing in context is the mistake that makes people think a broken skill works. Expect roughly half the room to see it fail to trigger. That is a good outcome and the next step is the most valuable minutes of the course — do not rescue anyone here."
+    facilitator_note: "The fresh conversation is not optional: testing in context is the mistake that makes people think a broken skill works. Roughly half will see it fail to trigger, which is a good outcome — and the step says so plainly, because a learner alone reads a failure as their own. Do not rescue anyone here; the next step is the most valuable five minutes of the course. If someone messages for help, send them to step 5 rather than fixing their description for them."
   - index: 5
     label: "Fix the description"
     type: "workspace"
@@ -98,10 +98,12 @@ steps:
       Then revise the description in `outputs/reproducible-search-handoff/SKILL.md` — usually by adding the plain vocabulary you actually used and the neighbouring situations you did not think of. Repackage, save the skill again, start another fresh conversation, and test again with *different* wording than last time.
 
       If it triggered the first time, do not stop. Test it with a request that should *not* match — ask for help finding a book on the shelf — and confirm it stays out of the way. A description broad enough to catch everything is its own failure.
+
+      Give this about five minutes and then stop, even if the skill still triggers unreliably. Roughly half the people who do this exercise see it fail to load, and knowing why it failed is worth more than leaving with a skill that always fires. Understanding the loop is the outcome; a perfect artifact is not.
     prompt_text: |
       Read my reproducible-search-handoff skill's description. I asked you for help with a faculty literature request and a search record, and the skill did not load. Which words in my request should have matched, and what is the description missing?
     checkpoint: "You have revised the description and retested in a fresh conversation, and you can name the specific change that fixed the triggering, or confirm the skill correctly stays out of an unrelated request."
-    facilitator_note: "The durable lesson of the whole course is here: authoring a skill is a test-and-revise loop, and the description is the part under test. Timebox to about five minutes and accept a skill that triggers unreliably — knowing why is worth more than a working artifact. Ask two or three people to read out the words they had to add."
+    facilitator_note: "The durable lesson of the whole course is here: authoring a skill is a test-and-revise loop, and the description is the part under test. The five-minute limit and the permission to leave with an unreliable skill are now in the step. The words people had to add are the best single artifact the course produces and they differ every time — ask for them in office hours, and keep the good ones for the next cohort's walkthrough."
   - index: 6
     label: "Run it for real"
     type: "prompt"
@@ -115,7 +117,7 @@ steps:
       1. an AI-use disclosure written for the patron, in plain language, saying which tasks Claude assisted with and which a librarian verified;
       2. a methods note written for another librarian, naming the tool and configuration, the connected folder, which files were supplied, whether external sources were available, and the known limits on reproducing this. Draw on outputs/session-log.md for what actually happened, and use placeholders where we never recorded a value.
     checkpoint: "outputs/handoff-package.md exists, distinguishes completed from pending from not-applicable, and contains both a patron-facing disclosure and an operational methods note."
-    facilitator_note: "This is the first time the learner's own skill does work for them, and the moment usually lands. If the skill does not produce all sections, that is diagnostic information about their instructions, not a failure of the exercise — note it and move on rather than repairing the skill."
+    facilitator_note: "First time the learner's own skill does work for them, and the moment lands even without anyone there to see it. A skill that does not produce all the sections is diagnostic information about their instructions rather than a failure of the exercise — worth saying if someone reports it, and worth resisting the urge to repair the skill for them by message."
   - index: 7
     label: "Run the final review gate"
     type: "observe"
@@ -141,7 +143,7 @@ steps:
 
       Your skill is a separate decision. It stays installed until you remove it, and it will keep loading on requests that match its description. If you would not want it running on real patron work in its current state, remove it now and rebuild it when you would.
     checkpoint: "Retention and deletion have been decided deliberately for the files, the conversation, and the skill, and the decision is written into outputs/session-log.md."
-    facilitator_note: "The skill-retention point is easy to skip and worth making. Participants leave with an installed skill built on simulated data and untested stop conditions; someone will otherwise use it on real work on Monday. Give them explicit permission to uninstall it."
+    facilitator_note: "The skill-retention point is the last thing anyone will read and the one with real consequences: participants finish with an installed skill built on simulated data and untested stop conditions, and someone will use it on real work on Monday. The step gives explicit permission to uninstall. Worth repeating in the closing cohort message, because this is the step people skip when they have finished and closed the tab."
   - index: 9
     label: "Reflect on the course"
     type: "reflect"
@@ -185,43 +187,99 @@ is kept. Your skill produces the first two. You do the third. This exercise fini
 
 ## Archives track
 
-Compose your skill from your own workflow. Everything in this exercise transfers unchanged — the
-format, the description-writing, the packaging, the fresh-conversation test, the failure to trigger,
-and the fix — and the only thing that changes is what the skill does.
+The capstone is the same capstone. You compose a skill from the workflow you designed at the start of
+this module, and the only thing that changes is what the skill does.
 
-Do step 0 as written: read the two installed skills before you write anything. Then write your
-description in step 1 for the workflow you chose in exercise 1, and think hard about the vocabulary. A
-colleague would say "this finding aid needs remediating before it goes back on the web" or "I have a
-digitization batch and I need to know what we can actually publish" — not "performs a twelve-stage
-descriptive audit."
-
-For step 2, substitute:
+Read one before writing one:
 
 ```cowork-prompt
-Read outputs/archives-workflow.md from the connected folder. Turn it into a skill. Write outputs/description-remediation-review/SKILL.md with frontmatter containing exactly two fields, name and description. Use name: description-remediation-review. For description, use the wording I gave you, unchanged — do not improve it. Below the frontmatter, write the instructions as prose and numbered steps, addressed to you rather than to me: what to read, what to produce, which file each stage writes, where to stop and ask, and which decisions to hand back to the archivist. Carry across every stop-or-escalate condition and every human-only marking from outputs/archives-workflow.md. Do not soften them. Include a final section instructing you to assemble a review package with the sections named in the workflow, marking anything not completed as pending rather than filling it in. Then package the folder as outputs/description-remediation-review.skill so I can install it.
+Show me the SKILL.md file for the reference-interview practice skill I installed, exactly as it is written. Then show me the one for the review-ai-research-output skill.
 ```
 
-If you chose digitization rights triage instead, use `outputs/digitization-rights-triage/SKILL.md` and
-the matching name and package. Either way, one stop condition has to survive into the skill intact: it
-may not determine a rights position, and it may not propose replacement wording for language requiring
-remediation. Both of those are archivist decisions with institutional consequences, and a skill that
-makes them is worse than no skill.
+Each is a Markdown file with a `name` and a `description` between two rows of dashes, then ordinary
+prose. Read the two `description` lines side by side: neither describes what the skill does. Both
+describe the situations in which it applies, in the words someone with that problem would use. The
+`description` is the only part Claude reads when deciding whether to load a skill.
 
-Install and test it in steps 3 through 5 exactly as written, including the negative test — describe a
-request that should not match and confirm your skill stays out of the way.
+**Write your description yourself**, before anything else, for the workflow you chose earlier —
+description remediation review, or digitization rights triage. Two or three sentences answering only
+this: in what situations should Claude reach for it? Name several circumstances, in the vocabulary a
+colleague actually uses. Someone would say "this finding aid needs remediating before it goes back on
+the web" or "I have a digitization batch and I need to know what we can actually publish" — not
+"performs a twelve-stage descriptive audit." Then check it:
 
-Then run it for real in step 6, writing to `outputs/archives-handoff-package.md`. Read what you
-already have: `outputs/archives-request-brief.md`, `outputs/archives-access-points.xlsx`,
-`outputs/archives-authority-check-log.xlsx`, `outputs/archives-description-ledger.xlsx`,
-`outputs/archives-processing-plan.md`, and `outputs/session-log.md`. Mark every section you did not
-complete as pending and every section that does not apply as not applicable, and add both pieces the
-research version asks for: a researcher-facing disclosure and an internal methods note for the next
-archivist to pick this up.
+```cowork-prompt
+Here is a draft skill description. Does it describe situations someone would find themselves in, or does it describe steps the skill performs? Rewrite it as situations if I have got that wrong, and tell me which realistic archival requests it would fail to catch.
+```
 
-Step 8's retention decision matters more here than on the research track, and for a specific reason:
-your skill was written against simulated material and its stop conditions have never been tested on a
-collection with a living donor, an unsigned deed, or personal information about identifiable people. If
-you would not want it running on that on Monday, uninstall it now and rebuild it when you would.
+Now build the skill from your workflow file:
+
+```cowork-prompt
+Read outputs/archives-workflow.md from the connected folder. Turn it into a skill. Write outputs/description-remediation-review/SKILL.md with frontmatter containing exactly two fields, name and description. Use name: description-remediation-review. For description, use the wording I gave you, unchanged — do not improve it. Below the frontmatter, write the instructions as prose and numbered steps, addressed to you rather than to me: what to read, what to produce, which file each stage writes, where to stop and ask, and which decisions to hand back to the archivist. Carry across every stop-or-escalate condition and every human-only marking from outputs/archives-workflow.md. Do not soften them. State two stop conditions explicitly: you may not determine a rights position, and you may not propose replacement wording for language requiring remediation. Include a final section instructing you to assemble a review package with the sections named in the workflow, marking anything not completed as pending rather than filling it in. Then package the folder as outputs/description-remediation-review.skill so I can install it.
+```
+
+If you chose digitization rights triage, use `outputs/digitization-rights-triage/SKILL.md`, the matching
+name, and `outputs/digitization-rights-triage.skill`. Either way those two stop conditions have to
+survive into the skill intact. Determining a rights position and rewording description requiring
+remediation are archivist decisions with institutional consequences, and a skill that makes them is
+worse than no skill. Open the file and confirm both are still there in the words you meant, and that
+your description was not quietly improved.
+
+**Install it.** Open the `.skill` file, the same way you opened the two skills your facilitator sent you
+during setup. Claude shows a card with a **Save skill** button. Read the card before you click it — this
+is the one time you know exactly what you are giving standing availability to, because you wrote it.
+Then click **Save skill**.
+
+**Test whether it triggers.** Start a fresh conversation, not a new message in this one; the context
+here would help it along and tell you nothing. Then describe the task in ordinary words, without naming
+the skill or the file:
+
+```cowork-prompt
+A researcher has asked about a collection and the finding aid needs work before I can point anyone at it. I need a record of what I changed and what I could not decide.
+```
+
+If you chose rights triage, describe that task instead, in your own plain words. Watch two things:
+whether your skill loaded at all, and whether what followed resembles your workflow — the same stages,
+the same files, and the same places where it stops and asks you.
+
+**Fix the description.** Expect it not to trigger. That happens to about half the people who do this
+exercise, and it is the most valuable part of it. The failure is almost always the description rather than the
+instructions, and it fails silently — Claude answers helpfully from general knowledge and nothing tells
+you the skill sat unused. Diagnose it:
+
+```cowork-prompt
+Read my skill's description. I asked you for help with a finding aid that needs remediating and a record of what changed, and the skill did not load. Which words in my request should have matched, and what is the description missing?
+```
+
+Then revise the description in your `SKILL.md` yourself — usually by adding the plain vocabulary you
+actually used and the neighbouring situations you did not think of. Repackage, save the skill again,
+start another fresh conversation, and test with *different* wording than last time. If it triggered
+first time, do not stop: ask for something that should not match — help finding a book on the shelf —
+and confirm it stays out of the way. A description broad enough to catch everything is its own failure.
+
+Then run it for real:
+
+```cowork-prompt
+Using my skill, assemble the handoff package for the workshop request and write it to outputs/archives-handoff-package.md. Read what we already have: outputs/archives-request-brief.md, outputs/archives-access-points.xlsx, outputs/archives-authority-check-log.xlsx, outputs/archives-description-ledger.xlsx, outputs/archives-processing-plan.md, and outputs/session-log.md. Use the sections my skill specifies. Mark every section we did not complete as pending and every section that does not apply as not applicable. Do not fill a gap with anything plausible. Then add two short pieces at the end: an AI-use disclosure written for the researcher, in plain language, saying which tasks Claude assisted with and which an archivist verified; and an internal methods note for the next archivist to pick this up, naming the tool and configuration, the connected folder, which files were supplied, whether external sources were available, and the known limits on reproducing this. Draw on outputs/session-log.md for what actually happened, and use placeholders where we never recorded a value.
+```
+
+Open it and read it in full yourself. Nothing in it has been reviewed until you have, and the skill you
+wrote cannot do that for you.
+
+Then close the work deliberately. Decide yourself, file by file, which of your outputs belongs in your
+institution's designated repository, which is working material to discard, and how long anything you
+keep is retained and by whom. Then record the decision:
+
+```cowork-prompt
+Append a section to outputs/session-log.md called "Retention decision" recording exactly what I dictate below: for each file in outputs/, whether it goes to the repository, is discarded, or is retained locally, with a retention period and an owner where I give one. Then record my decision about the conversation itself and my decision about the skill. Record what I state and do not propose retention periods of your own.
+```
+
+The skill is the decision easiest to skip, and it matters more on this track than on the research one,
+for a specific reason: your skill was written against simulated material, and its stop conditions have
+never been tested on a collection with a living donor, an unsigned deed, or personal information about
+identifiable people. It stays installed until you remove it, and it will keep loading on requests that
+match its description. If you would not want it running on that on Monday, uninstall it now and rebuild
+it when you would.
 
 ## Discussion
 

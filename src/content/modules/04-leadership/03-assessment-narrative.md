@@ -14,7 +14,7 @@ steps:
 
       Then look at the raw text rather than a rendered view — in a plain text editor, or by asking Claude to show you the file's exact contents including anything a formatted view would hide. Something is in this file that reading it as prose will not show you.
     checkpoint: "You have read the page as a source, and you have found the part of the file that is addressed to the assistant rather than to you."
-    facilitator_note: "Let people find it. The delay between reading the prose and finding the hidden instruction is the whole pedagogical effect, and telling them ruins it. Most will need the nudge about raw text. If someone reads only the rendered version and reports the page is fine, that is the demonstration — say so kindly."
+    facilitator_note: "The delay between reading the prose and finding the hidden instruction is the whole effect, so never name it in a message, an office-hours answer, or the walkthrough — it cannot be un-named for a cohort working through at different times. The nudge about raw text is already in the step, which is as far as the help should go. Anyone who reports that the page looks fine has demonstrated the point on themselves; say so kindly, and only to them."
   - index: 1
     label: "Name what made it credible"
     type: "reflect"
@@ -37,7 +37,7 @@ steps:
 
       Be specific about the difference between those last two.
     checkpoint: "The response distinguishes the reach of the same instruction under folder access versus a single attachment, and treats the source content as evidence rather than as instructions."
-    facilitator_note: "This is the payoff for the folder-scoping work in Module 1 exercise 1. Make the link explicit if nobody does: the reason folder scope mattered then is that folder scope is the blast radius now. Do not let the discussion drift into whether Claude would in fact comply — the point is the size of what is exposed, not the odds."
+    facilitator_note: "The payoff for the folder-scoping work in Module 1 exercise 1, and the link is worth making explicitly in office hours: the reason folder scope mattered on the first page is that folder scope is the blast radius on this one. If someone wants to argue about whether Claude would in fact comply, redirect once — the point is the size of what is exposed, not the odds — and leave it there."
   - index: 3
     label: "Draft the mini-lesson"
     type: "prompt"
@@ -95,22 +95,23 @@ it is best taught by letting people find it in a real file rather than by descri
 
 ## Archives track
 
-Do this exercise as written. The fixture is the right fixture, the concept is identical, and inventing
-a second injected document would add length without adding a lesson. Steps 0 through 2 stand unchanged
-— read `sample-data/harvested-source-page.md`, find the part addressed to the assistant, and reason
-about what folder access would have put within reach.
+The two tracks coincide here. `sample-data/harvested-source-page.md` is the right fixture for both, the
+concept is identical, and inventing a second injected document would add length without adding a
+lesson. Read the page yourself, find the part addressed to the assistant rather than to you, reason
+about what folder access would have put within reach, and build the mini-lesson — all of it applies
+unchanged. Two things differ: the file you write to is `outputs/archives-mini-lesson.md`, and the
+audience is your own — reading room researchers, or the colleagues who will point an assistant at
+collection material — rather than graduate researchers in general. The version that needs no paid
+account matters just as much on this track, so keep it.
 
-Two substitutions. Write the mini-lesson to `outputs/archives-mini-lesson.md` and pitch it at your own
-audience — reading room researchers, or the colleagues who will use an assistant on collection
-material — rather than at graduate researchers in general. And add one section the research version
-does not need: born-digital and donor-supplied material. `sample-data/archives/accession-note.txt`
-records an unlabeled hard drive of unestablished provenance, and the note says it should not be
-connected to anything until it has been imaged on isolated equipment. That instinct is correct and it
-is the same instinct this exercise is teaching. A donor transfer, a harvested web page, and a vendor's
-delivery of OCR are all content from outside your control that an assistant may be pointed at, and
-none of them should be inside a folder an assistant can read until someone has looked.
+Then add one section the research version does not need:
 
-Keep the equitable-access variation in step 4 exactly as written.
+```cowork-prompt
+Append a section to outputs/archives-mini-lesson.md on born-digital and donor-supplied material. Read sample-data/archives/accession-note.txt from the connected folder for the case: it records media received in a transfer whose provenance has not been established, and states the handling precaution the archivist applied before anything was connected or read. Use that precaution as the teaching case, and make the general point explicitly: a donor transfer, a harvested web page, and a vendor's delivery of OCR are all content from outside the repository's control that an assistant may be pointed at, and none of them belongs inside a folder an assistant can read until a person has looked. Do not ask learners to test this with real transferred material.
+```
+
+The archivist's instinct in that note is the same instinct this exercise teaches, arriving from the
+other direction.
 
 ## Discussion
 

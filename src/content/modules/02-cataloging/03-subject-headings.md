@@ -17,7 +17,7 @@ steps:
 
       Tell me how many of the eleven sources the body actually cites.
     checkpoint: "The workbook has one row per source, the metadata matches the file exactly, every row records either the claim it supports or that the body never uses it, and the two verification columns are empty."
-    facilitator_note: "The last line of the prompt produces a count learners will want to discuss immediately. Let them, briefly, then move on - step 2 is where it pays off. If a model tidies the metadata despite the instruction, that is worth naming as its own finding."
+    facilitator_note: "The last line of the prompt produces a count that lands hard and that a learner working alone has nobody to say it to — expect it in office hours, and let it come up there rather than pre-empting it. If a model tidies the metadata despite the instruction, that is a finding in its own right and worth collecting across the cohort; it varies by run."
   - index: 1
     label: "Open a sample of the records yourself"
     type: "workspace"
@@ -34,8 +34,10 @@ steps:
       For each, open the matching file in `sample-data/mock-sources/` and read it against the row you transcribed in step 0, field by field: author, title, venue, year, identifier. Then fill in "my verification level" in `outputs/source-inventory.xlsx` yourself, using exactly one of: identity confirmed; metadata mismatch; could not locate; full text inaccessible; not checked.
 
       Where a record came back with nothing, or came back and does not match the citation, that is a finding and not a mistake on your part. Record it and move on. Do not repair the citation, and do not let Claude repair it either.
+
+      Give this about eight minutes and stop at four sources. Checking all eleven is not a better version of this step, and if more than one verification level could apply to a row, pick the one that most limits what the source can support.
     checkpoint: "You have personally opened at least four records, compared each one against the citation that pointed at it, and every verification level in the workbook records what you saw rather than what the scan asserted."
-    facilitator_note: "Budget eight minutes and expect this to run long. Learners will want reassurance that a record that gives them nothing is a legitimate result to record rather than a task to keep grinding at. It is - hold them to four sources and move on. If a learner asks whether more than one verification level could apply to a row, have them pick the one that most limits what the source can support."
+    facilitator_note: "The highest-dropout step in Module 2, and the reassurance learners need — that a record which gives them nothing is a result rather than a failure to keep grinding at — is now in the step itself, along with the eight-minute budget and the four-source ceiling. Remotely, this is where people quietly stop for the day. A learner sitting on this step for a long stretch on the dashboard is worth a message that says four is enough."
   - index: 2
     label: "Cross-check against the library's own evidence log"
     type: "prompt"
@@ -47,7 +49,7 @@ steps:
 
       Fill the final column only from these two files. Do not reason about who is more likely to be right, and do not resolve any disagreement you find. Report it.
     checkpoint: "The sheet places the scan and the log side by side for all five sources, and every comparison is traceable to a cell in one of the two files."
-    facilitator_note: "This is the module's central step and its discovery moment. If time is short anywhere else, protect this one. Read the comparison column aloud in the debrief before discussing anything else."
+    facilitator_note: "The module's central step and its discovery moment, and the one to protect if a learner is short of time anywhere. Working alone, the finding lands without anyone to say it to, so the cross-check sheet is what to open first in office hours: ask someone to read their comparison column out before anything else is discussed."
   - index: 3
     label: "Audit the inventory"
     type: "observe"
@@ -94,28 +96,34 @@ is and wrong about who made it, when, or whether anyone may publish it — and t
 those judgments are the ones that get indexed, harvested, and reused, while the hedge sits in a notes
 column nobody exports.
 
-Build `outputs/archives-description-inventory.xlsx`:
+Transcribe the item metadata into a workbook first — transcription only, no corrections and no
+additions:
 
 ```cowork-prompt
 Read sample-data/archives/digitization-inventory.csv from the connected folder and write outputs/archives-description-inventory.xlsx, one row per record in the file. Copy every field exactly as given, including anything incomplete, inconsistent, or contradictory. Do not correct it, do not normalize the dates, do not complete it from your own knowledge, and do not merge or drop any row. Add four empty columns for me: my verification level; what this row asserts that its own notes do not support; remediation needed; my note. Then tell me how many distinct identifiers the file contains and how many rows.
 ```
 
-For step 1, do your own checking without leaving the folder. Choose at least four rows and read each
-one against the rest of the material: the finding aid, the accession note, and the row's own notes
-column. Set "my verification level" yourself, using exactly one of: confirmed from the record itself;
-supported by another file in the folder; contradicted by another file in the folder; asserted with no
-support available; cannot tell from the folder. A field you cannot confirm is a finding, not a task to
-keep grinding at.
+Now the checking, which is yours to do and needs nothing outside the folder. Open
+`outputs/archives-description-inventory.xlsx`, choose at least four rows, and read each one against
+the rest of the material: `sample-data/archives/finding-aid-draft.md`,
+`sample-data/archives/accession-note.txt`, and the row's own notes column. Then fill in "my
+verification level" yourself, using exactly one of: confirmed from the record itself; supported by
+another file in the folder; contradicted by another file in the folder; asserted with no support
+available; cannot tell from the folder. A field you cannot confirm is a finding rather than a task to
+keep grinding at — record it, move on, and do not let Claude tidy it.
 
-For step 2, the cross-check is the point of the exercise, and everything you need to check against is
-already in the folder. Three files describe photographic material from the same subject and place:
-`sample-data/archives/digitization-inventory.csv`, which you have just inventoried,
-`sample-data/archives/finding-aid-draft.md`, and `sample-data/archives/accession-note.txt`. Read all
-three and set their descriptions beside one another:
+Then set the descriptions beside one another. This is the centre of the exercise. Three files describe
+photographic material from the same subject and place, and nobody has reconciled them.
 
 ```cowork-prompt
-Add a sheet named "Cross-check" to outputs/archives-description-inventory.xlsx. Read sample-data/archives/finding-aid-draft.md and sample-data/archives/accession-note.txt. For every photographic holding described in any of the three files, put side by side: the file it comes from; the creator each file gives it; the dates each file gives it; the rights position each file takes; the access condition each file states; and a final column reading "agrees", "disagrees", or "cannot tell". Fill the final column only from these three files. Do not decide which file is right and do not resolve any disagreement. Report it.
+Add a sheet named "Cross-check" to outputs/archives-description-inventory.xlsx. Read sample-data/archives/finding-aid-draft.md and sample-data/archives/accession-note.txt alongside sample-data/archives/digitization-inventory.csv. For every photographic holding described in any of the three files, put side by side: the file it comes from; the creator each file gives it; the dates each file gives it; the rights position each file takes; the access condition each file states; and a final column reading "agrees", "disagrees", or "cannot tell". Fill the final column only from these three files. Do not decide which file is right and do not resolve any disagreement. Report it.
 ```
+
+Finish by opening the workbook and reading both sheets yourself, before you go on. Every verification
+level should reflect a row you read rather than what the file asserts; the rights position and whether
+anyone has checked it should sit in separate columns; no metadata should have been corrected,
+completed, or improved on its way into the workbook; and where the three files disagree, the
+disagreement should be recorded rather than settled.
 
 ## Discussion
 

@@ -165,8 +165,21 @@ A **Connection** panel opens, headed "Choose where Claude Desktop sends inferenc
 4. Leave **Bedrock base URL** alone unless your card gives you one. It defaults correctly from the region — for `us-east-1` that is `https://bedrock-mantle.us-east-1.api.aws/anthropic`. Only change it if you were told to.
 5. Paste the key into **AWS bearer token**. Copy and paste rather than typing. Take care not to include a trailing space, and check that your email or chat client has not inserted a line break in the middle of it. The field masks what you type; the eye icon at its right reveals it if you need to check.
 6. Leave **Artifact preview iframe origin** and **Custom inference headers** empty. Neither is needed for the workshop.
-7. Further down the same panel, set the default **model card** to `anthropic.claude-sonnet-5`, unless your card names a different one.
+7. Further down the same panel there is a **Models** section. Set up one model there, as described below.
 8. Save, and restart Claude if prompted.
+
+### The Models section
+
+This part is a list rather than a single field, and the note above it is the thing to read: **the first entry is the default**. You only need one entry for the workshop.
+
+Add a model and fill in two things:
+
+- **Model ID** — `anthropic.claude-sonnet-5`, unless your credential card names a different one. Type it exactly; the field is narrow and will show only part of what you have entered, which is normal.
+- **Tier alias** — `sonnet`, and turn **Default for tier** on.
+
+Leave everything else alone. **Display name** can stay blank, in which case it formats itself from the ID and appears in the picker as "Claude Sonnet 5". Leave **Offer 1M-context variant** off; it should only be set if the deployment actually accepts a million-token context for that model, and the workshop's does not. The **Default to 1M context** toggle at the top of the section has no effect while that variant is off, so you can ignore it too.
+
+If you see other models already listed, you can leave them. What matters is that `anthropic.claude-sonnet-5` is the first entry, because that is what makes it the default.
 
 Two of those fields are marked with a red asterisk — the region and the bearer token. Those are the ones the panel will not let you leave blank.
 

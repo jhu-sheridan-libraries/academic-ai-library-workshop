@@ -9,7 +9,9 @@ steps:
     type: "prompt"
     instruction: "One row per claim, with the verification status kept separate from the claim itself. This is the artifact a release decision is actually made from."
     prompt_text: |
-      Read sample-data/research-scan-draft.md and outputs/source-inventory.xlsx from the connected folder. Write outputs/claim-ledger.xlsx, one row for each material factual claim in the scan.
+      Read outputs/session-log.md, sample-data/research-scan-draft.md, and outputs/source-inventory.xlsx from the connected folder. The session log holds the claim list I made in the first exercise of this module, under "Module 2 - claims in the scan" — build the ledger from that list rather than enumerating the claims again, and use the scan to fill in anything the list does not carry. If that section is missing, work from the scan itself.
+
+      Write outputs/claim-ledger.xlsx, one row for each material factual claim in the scan.
 
       Columns: claim as written; section; source ID cited; what that source would have to show for the claim to hold as written; my verification level for that source from the inventory; status; smallest accurate revision.
 
@@ -17,7 +19,7 @@ steps:
 
       Where a claim in the summary restates a claim from the body in stronger terms, give it its own row.
     checkpoint: "Every material claim has a row, no claim is marked supported, and the column stating what the source would need to show is filled in for each one."
-    facilitator_note: "Module 4 exercise 4 reads this file. If a learner is behind, this is the step to protect and the record checks in exercise 3 are the ones to shorten."
+    facilitator_note: "Module 4 exercise 4 reads this file, so for anyone falling behind this is the step to protect and the record checks in exercise 3 are the ones to shorten. That trade is worth stating in a cohort message around the middle of the day, since a learner working alone will otherwise protect the visible work and drop the file the capstone needs."
   - index: 1
     label: "Set the statuses yourself"
     type: "workspace"
@@ -30,11 +32,11 @@ steps:
 
       Add no evidence. The revision has to be a subtraction.
     checkpoint: "You set the statuses for the cross-checked claims yourself, you checked each record's identity against the citation before judging fit, and every revision you wrote narrows a claim rather than replacing its support."
-    facilitator_note: "Learners find subtraction harder than rewriting and will drift into producing better-sourced versions of the claims. Redirect: the task is to say the least the evidence permits, which is sometimes nothing."
+    facilitator_note: "Learners find subtraction harder than rewriting and drift into producing better-sourced versions of the claims, which nobody is standing there to catch. The step says the revision has to be a subtraction; in office hours the useful move is to ask someone to read one of their revisions out and say what it no longer claims."
   - index: 2
     label: "Run the review skill on the scan"
     type: "prompt"
-    instruction: "Now bring in the review skill the facilitator plugin installed, and see what it finds without showing it your work."
+    instruction: "Now bring in the review skill you installed during setup, and see what it finds without showing it your work."
     prompt_text: |
       Use the review-ai-research-output skill on sample-data/research-scan-draft.md.
 
@@ -44,7 +46,7 @@ steps:
 
       Give me the review as the skill defines it, including its provisional state and what it could not check.
     checkpoint: "The review states a provisional release state, orders its findings by consequence, and names what the available evidence did not let it check - rather than scoring the scan."
-    facilitator_note: "If the skill does not trigger, have the learner say 'use the review-ai-research-output skill'. Runs vary; two learners will get differently ordered findings from the same file, and that variation is worth surfacing rather than smoothing over."
+    facilitator_note: "If the skill does not trigger, the fix is naming it exactly: 'use the review-ai-research-output skill'. Runs vary, so two learners get differently ordered findings from the same file — which is a strength of doing this apart rather than together, and worth pooling in office hours instead of smoothing over. Ask two people what their review put first."
   - index: 3
     label: "Compare the review with your ledger"
     type: "prompt"
@@ -57,14 +59,14 @@ steps:
 
       For section 3, do not defend the review and do not defend me. Just record what it did not reach and, where you can tell, why.
     checkpoint: "All three sections are populated, and section 3 is not empty."
-    facilitator_note: "Section 3 is the point of the step. If a learner reports it as empty, ask them to check the records they opened in exercise 3 against the review, then move on - do not manufacture entries."
+    facilitator_note: "Section 3 is the point of the step. A learner who reports it empty should check the records they opened in exercise 3 against the review and then move on rather than manufacturing entries — that is the whole of the reply if the question comes in. What the section actually contains varies by learner, which makes it good office-hours material."
   - index: 4
     label: "Read the skill"
     type: "workspace"
     instruction: |
       A skill is a document, not a feature. You can read this one.
 
-      If the facilitator plugin is installed on your machine, the file is at `plugins/library-ai-workshop-facilitator/skills/review-ai-research-output/SKILL.md`, with `references/REVIEW-RUBRIC.md` beside it. If you cannot find it on disk, ask Claude to show you the skill's own instructions and its rubric.
+      Send the prompt below to get the skill's own instructions and the rubric that comes with it. That works whether or not you can find the files yourself. (If your facilitator installed the workshop plugin on your machine, the same files sit at `plugins/library-ai-workshop-facilitator/skills/review-ai-research-output/`. Most participants will not have that folder, and do not need it.)
 
       Read for four things:
 
@@ -73,9 +75,11 @@ steps:
       3. what it treats as untrusted content,
       4. the point at which it stops and hands the decision back to a person.
 
-      Find the specific sentences that do the fourth. There is more than one.
+      Find the specific sentences that do the fourth. There is more than one. Five minutes of reading is enough.
+    prompt_text: |
+      Show me the review-ai-research-output skill's own instructions and its rubric, exactly as they are written.
     checkpoint: "You can quote at least one place where the skill declines to decide, and say who it expects to decide instead."
-    facilitator_note: "First time learners read a skill as a document rather than using one. Module 3 modifies a rubric and Module 4 authors a skill, so this is a dependency, not a digression. Point out that it is plain prose with a short header and no code."
+    facilitator_note: "First time a learner reads a skill as a document rather than using one, and a dependency rather than a digression: Module 3 modifies a rubric and Module 4 authors one. Anyone who skips it arrives at the capstone cold. The reassurance to repeat wherever you have their attention — cohort message, office hours, the walkthrough — is that a skill is plain prose with a two-line header and no code."
   - index: 5
     label: "Run the release gate"
     type: "observe"
@@ -127,21 +131,54 @@ date range."
 Read sample-data/archives/finding-aid-draft.md and outputs/archives-description-inventory.xlsx from the connected folder. Write outputs/archives-description-ledger.xlsx, one row for each assertion the finding aid or the item metadata makes. Columns: assertion as written; where it appears; what it would have to be checked against for it to hold as written; whether anything in the connected folder confirms or contradicts it; status; smallest accurate revision; remediation flag. Use only these statuses: contradicted by the records; unsupported; supported by another file; cannot tell from the available material; not yet checked. Do not use a status meaning verified — I have not told you that I checked anything against the physical records. Leave "smallest accurate revision" empty. Use the remediation flag only to mark assertions whose problem is the language they are written in rather than their accuracy, and do not propose replacement wording.
 ```
 
-Then take over the status column yourself for the assertions you cross-checked in the previous
-exercise, and write the smallest accurate revision for each — the narrowest statement the material in
-the folder actually carries. In archival description the revision is usually a subtraction too. An
-element the material does not support is better recorded as unknown than stated confidently, and
-"unknown" is a legitimate value in every one of these fields.
+Then open `outputs/archives-description-ledger.xlsx` and take over the status column yourself for the
+assertions you cross-checked in the previous exercise, setting each one from what you actually read in
+the folder. Write the smallest accurate revision for each yourself — the narrowest statement the
+material actually carries. In archival description the revision is usually a subtraction: an element
+the material does not support is better recorded as unknown than stated confidently, and "unknown" is a
+legitimate value in every one of these fields. Add no evidence.
 
-Run the review skill in step 2 on `sample-data/archives/finding-aid-draft.md`, telling it that this
-is a legacy finding aid retyped for web publication and that the deliverable is advice on whether it
-can stay published as it stands. Compare its findings with your ledger as in step 3. Then read the
-skill itself as in step 4, and note where a skill written for research output does and does not reach
+Now bring in the review skill, without showing it your work:
+
+```cowork-prompt
+Use the review-ai-research-output skill on sample-data/archives/finding-aid-draft.md.
+
+Context it needs: this is a legacy finding aid retyped for web publication, and the deliverable is advice on whether it can stay published as it is. I have not verified anything against the physical records; I have only compared files in this folder.
+
+I have my own ledger in outputs/archives-description-ledger.xlsx. Do not read it.
+
+Give me the review as the skill defines it, including its provisional state and what it could not check.
+```
+
+Two independent audits of one artifact are a better test than either alone, and the divergence is the
+useful part:
+
+```cowork-prompt
+Add a sheet named "Review comparison" to outputs/archives-description-ledger.xlsx with three sections:
+1. findings the review and my ledger agree on;
+2. findings the review made that my ledger does not contain;
+3. rows in my ledger that the review does not address.
+
+For section 3, do not defend the review and do not defend me. Just record what it did not reach and, where you can tell, why.
+```
+
+Then read the skill itself. You do not need to find the files on disk:
+
+```cowork-prompt
+Show me the review-ai-research-output skill's own instructions and its rubric, exactly as they are written.
+```
+
+Read for what it refuses to do, what it insists must stay
+recorded as unchecked, what it treats as untrusted content, and the sentences where it hands the
+decision back to a person. Then note where a skill written for research output does and does not reach
 a descriptive product — that gap is the material for your own skill in Module 4.
 
-For the release gate, the question is whether this finding aid can remain on the public web
-unchanged, and if not, what the minimum honest interim step is. A holding notice on a collection
-description is a legitimate answer.
+Last, make the release decision yourself. The question is whether this finding aid can remain on the
+public web unchanged, and if not, what the minimum honest interim step is; a holding notice on a
+collection description is a legitimate answer. Before you answer, satisfy yourself that every
+assertion in the ledger has a status a person set or is visibly marked unchecked, that nothing you
+could not check is presented as verified, that your revisions narrow claims rather than adding support
+nobody confirmed, and that a named person owns the remaining checks.
 
 ## Discussion
 

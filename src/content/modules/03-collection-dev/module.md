@@ -61,16 +61,22 @@ than a cold start.
 ## Archives track
 
 Archives staff work the same three problems — bounded evidence, a synthesis that keeps its
-disagreements, and arithmetic with its assumptions on the surface — on
-`sample-data/archives/accession-note.txt` and `sample-data/archives/digitization-inventory.csv`. You
-will appraise the accession note one body of material at a time, separating what it establishes from
-what it leaves open, and build a processing plan that stays defensible without pretending the open
-questions are settled. You will count the digitization inventory, compute on it with every formula
-and denominator shown, and reproduce some of that arithmetic yourself.
+disagreements, and arithmetic with its assumptions on the surface. The fixtures are
+`sample-data/archives/accession-note.txt` throughout, with
+`sample-data/archives/finding-aid-draft.md` for the boundary test,
+`sample-data/archives/collection-request.txt` for the demand side of the priority ranking, and
+`sample-data/archives/digitization-inventory.csv` for the arithmetic. You will appraise the accession
+note one body of material at a time, separating what it establishes from what it leaves open, and build
+a processing plan that stays defensible without pretending the open questions are settled. You will
+count the digitization inventory, compute on it with every formula and denominator shown, and reproduce
+some of that arithmetic yourself with a calculator — the one check nobody can delegate.
 
-Your outputs are `outputs/archives-description-standard.md` (your modified rubric),
+Your outputs are `outputs/archives-description-standard.md` (the rubric you edit yourself),
 `outputs/archives-evidence-matrix.xlsx`, `outputs/archives-processing-plan.md`, and
-`outputs/archives-digitization-analysis.md`. Follow the `## Archives track` section in each exercise.
+`outputs/archives-digitization-analysis.md`, plus entries appended to `outputs/session-log.md`. Follow
+the **Archives track** card under the steps in each exercise; each one runs on its own without the
+numbered steps. Mark the numbered steps complete as you go anyway — that is how the site records your
+progress and offers you the next exercise.
 
 ## Before You Begin
 
@@ -78,5 +84,9 @@ Open your workshop project, with the workshop folder attached. `sample-data/evid
 `sample-data/usage-report.csv` are already there — there is nothing to upload. Both are simulated
 workshop data. You should also have `outputs/session-log.md` from Module 1, since you will append to
 it here.
+
+Self-paced, as in Module 1. Two steps here are checks nobody else can do for you — recalculating rows
+by hand, and editing the rubric yourself — and both say how long they should take. A clean result on
+either is a finding, not a wasted step.
 
 Working on a different agentic desktop? See `docs/OTHER-PLATFORMS.md`.

@@ -120,9 +120,9 @@ committed; `.env.example` holds placeholders only, and `FACILITATOR_TOKEN` shoul
 `changeme` there and set to something real only in your local `.env`.
 
 Nothing in the tracked tree contains a credential. Every key reference is a placeholder: the setup
-guide describes the Bedrock key as "one long unbroken string of characters" rather than showing one,
-and figure 8 renders it masked. If you replace that diagram with a real screenshot, mask the key
-before saving — a screenshot containing a live key is a leaked key.
+guide describes the Bedrock bearer token as "one long unbroken string of characters" rather than
+showing one, and figure 8 renders it masked. If you replace that diagram with a real screenshot, mask
+the token before saving — a screenshot containing a live token is a leaked token.
 
 Turn on GitHub secret scanning and push protection for the repository. Both are free for public
 repositories and will reject a push containing a recognised credential format, which is a better
@@ -261,8 +261,8 @@ node build/index.js
 Set the environment variables in your deployment environment rather than in `.env`.
 
 For a single workshop, running the app on a machine on the same network as participants is a
-reasonable option. Participants still need their own internet access for their AI tool and for
-checking live sources.
+reasonable option. Participants still need their own internet access, since Claude reaches Bedrock
+over the network; no exercise needs anything else from the web.
 
 ### Static site (no database, no dashboard)
 

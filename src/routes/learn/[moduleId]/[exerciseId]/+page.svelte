@@ -12,6 +12,7 @@
 	import ObserveStep from '$lib/components/exercise/ObserveStep.svelte';
 	import ReflectStep from '$lib/components/exercise/ReflectStep.svelte';
 	import DiscoveryMoment from '$lib/components/exercise/DiscoveryMoment.svelte';
+	import ArchivesBonus from '$lib/components/exercise/ArchivesBonus.svelte';
 	import ModuleComplete from '$lib/components/exercise/ModuleComplete.svelte';
 
 	const accentColors: Record<string, string> = {
@@ -81,6 +82,18 @@
 		const match = html.match(/<h2[^>]*>Discussion<\/h2>([\s\S]*?)(?=<h2|$)/i);
 		return match ? `<h2>Discussion</h2>${match[1]}` : html;
 	}
+
+	// The body carries up to three parts in a fixed order: the exercise introduction,
+	// the `## Archives track` alternative, and `## Discussion`. They go to three
+	// different places — intro above the steps, archives track to the bonus card
+	// below them, discussion to the interstitial — so split rather than strip.
+	const ARCHIVES_HEADING = /<h2[^>]*>\s*Archives track\s*<\/h2>/i;
+
+	const bodyBeforeDiscussion = $derived(
+		exercise.body.replace(/<h2[^>]*>Discussion<\/h2>[\s\S]*/i, '')
+	);
+	const introHtml = $derived(bodyBeforeDiscussion.split(ARCHIVES_HEADING)[0]);
+	const archivesHtml = $derived(bodyBeforeDiscussion.split(ARCHIVES_HEADING)[1] ?? '');
 </script>
 
 {#if showModuleComplete}
@@ -134,9 +147,9 @@
 			/>
 
 			<!-- Exercise introduction -->
-			{#if exercise.body}
+			{#if introHtml.trim()}
 				<div class="prose mb-8 max-w-none text-gray-600">
-					{@html exercise.body.replace(/<h2[^>]*>Discussion<\/h2>[\s\S]*/i, '')}
+					{@html introHtml}
 				</div>
 			{/if}
 
@@ -176,7 +189,13 @@
 				{/each}
 			</div>
 
-			{#if exerciseComplete && !exercise.discovery_moment}
+			{#if archivesHtml.trim()}
+					<div class="mt-4">
+						<ArchivesBonus html={archivesHtml} />
+					</div>
+				{/if}
+
+				{#if exerciseComplete && !exercise.discovery_moment}
 				<div class="mt-8 rounded-xl border border-jhu-gold/40 bg-jhu-gold/8 p-6 text-center">
 					<p class="font-semibold text-jhu-blue">Exercise complete!</p>
 					<button

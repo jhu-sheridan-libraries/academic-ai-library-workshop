@@ -7,7 +7,10 @@ steps:
   - index: 0
     label: "Draft concepts and synonyms"
     type: "prompt"
-    instruction: "Build on the brief you wrote, and keep the map as a spreadsheet you can hand to a colleague."
+    instruction: |
+      Build on the brief you wrote, and keep the map as a spreadsheet you can hand to a colleague.
+
+      The verification status column stays empty for now. You fill it in yourself in Module 4, when you check each candidate term against the platform's thesaurus — so leaving it blank is the point rather than an omission.
     prompt_text: |
       Read outputs/research-brief.md. Build a search concept map and write it to outputs/concept-map.xlsx in the connected folder, one row per concept. Cover at least:
       - open-access publishing,
@@ -16,7 +19,7 @@ steps:
 
       Columns: concept, keywords, spelling and regional variants, candidate controlled vocabulary, verification status. Label every controlled term "candidate — verify in the database thesaurus" and leave verification status blank for me to fill in. Do not write database syntax yet.
     checkpoint: "outputs/concept-map.xlsx exists, separates concepts by row, and does not present candidate subject terms as verified headings."
-    facilitator_note: "A spreadsheet rather than a chat table is deliberate: Module 4 adds tested syntax and result counts to this same file. Learners who want Markdown instead should be allowed to, but point out they will be retyping it later."
+    facilitator_note: "A spreadsheet rather than a chat table is deliberate: Module 4 adds tested syntax, result counts, and thesaurus findings to this same file. A learner who produces Markdown instead has not done anything wrong but will retype it in Module 4 — cheap to mention in a cohort message, awkward to discover on their own at the end of the day."
   - index: 1
     label: "Map ambiguous outcomes"
     type: "prompt"
@@ -26,7 +29,7 @@ steps:
 
       Add these as a second sheet in outputs/concept-map.xlsx named "Outcome families."
     checkpoint: "The workbook has a second sheet, and it notes for example that downloads do not prove reading or application."
-    facilitator_note: "These five families recur in Modules 2 and 3. The scan Module 2 audits collapses several of them, so the distinction drawn here is what makes that failure visible later."
+    facilitator_note: "These five families recur in Modules 2 and 3, and the distinction drawn here is what makes a later failure visible at all. A learner who skips this sheet will get through Module 2 exercise 2 without noticing anything — so if someone reports that the scan looked fine, check whether they built this sheet before concluding anything about their reading."
   - index: 2
     label: "Choose source types"
     type: "prompt"
@@ -54,6 +57,11 @@ steps:
     type: "reflect"
     instruction: "A polished AI query can still be conceptually weak."
     reflection_prompt: "Which concept would you test first in a real database, and what would make you revise it?"
+  - index: 5
+    label: "One question to take further"
+    type: "reflect"
+    instruction: "The question this exercise raises and cannot answer. Write it down here if you want it recorded, or save it for office hours — a vocabulary question is one of the better things to bring to someone else."
+    reflection_prompt: "Which of the terms in your map reflect dominant scholarly language, and whose perspective is missing from the vocabulary you were handed?"
 ---
 
 ## Build a Search Concept Map
@@ -73,22 +81,31 @@ subject terms. They are creators, corporate bodies, functions, places, formats, 
 researcher who asks by subject has to be answered through whichever of those the description
 actually supports.
 
-Build `outputs/archives-access-points.xlsx` instead of the concept map:
+Build the access point map first:
 
 ```cowork-prompt
 Read outputs/archives-request-brief.md, sample-data/archives/finding-aid-draft.md, and sample-data/archives/accession-note.txt. Build an access point map and write it to outputs/archives-access-points.xlsx in the connected folder, one row per access point. Columns: access point; type (person, corporate body, place, subject, function, format, date); which of the three source files supports it and in what words; candidate authorized form; verification status. Label every authorized form "candidate — verify in the authority file" and leave verification status blank for me to fill in. Do not supply an authority record identifier for anything.
 ```
 
-Then, in place of step 1, split the subject into the units the request cannot distinguish between:
+Next, split the subject into the units the inquiry cannot distinguish between:
 
 ```cowork-prompt
-Add a second sheet named "Candidate units" listing every unit of description the request could mean. For each, give: the creator, the state of processing, what it would show that the others would not, what it cannot show, and one warning about treating it as equivalent to the others.
+Add a sheet named "Candidate units" to outputs/archives-access-points.xlsx listing every unit of description the inquiry could mean. For each, give: the creator, the state of processing, what it would show that the others would not, what it cannot show, and one warning about treating it as equivalent to the others.
 ```
 
-Keep step 2 in spirit and change what you are planning: instead of database categories, plan the
-finding aid, the accession record, the authority file, the photographic inventory, and the sources
-outside the repository. Save it as a third sheet named "Discovery plan." Module 4 exercise 2 adds
-tested authority forms to this same workbook.
+Then plan the discovery route. An archival question is not answered out of database categories; it is
+answered out of the finding aid, the accession record, the authority file, the item-level photographic
+inventory, and sources that sit outside the repository altogether.
+
+```cowork-prompt
+Add a sheet named "Discovery plan" to outputs/archives-access-points.xlsx. One row per place a researcher's question could be answered from: the finding aid, the accession record, the authority file, the item-level photographic inventory, and sources outside this repository. For each, state what it can establish, what it cannot establish, and what would have to be checked before anyone relies on it. Mark every access condition and rights position as "verify".
+```
+
+Finally, open `outputs/archives-access-points.xlsx` yourself and read all three sheets before any of
+it drives a search. Check that access points are grouped by type rather than run together, that every
+authorized form is still labeled for verification, that the candidate units are not presented as
+interchangeable, and that nothing in the workbook states an access condition or a rights position as
+settled. Module 4 adds tested authority forms to this same workbook.
 
 ## Discussion
 

@@ -15,7 +15,7 @@ steps:
 
       Use only the matrix. Do not consult the original evidence log, your own knowledge of this literature, or anything outside the connected folder.
     checkpoint: "outputs/synthesis.md exists and does not turn five incomplete records into a finding about a field."
-    facilitator_note: "Word limits do real work here — a short synthesis has to choose what to drop, and what gets dropped first is usually the uncertainty. Have a couple of learners read theirs aloud and ask the group what went missing."
+    facilitator_note: "Word limits do real work here — a short synthesis has to choose what to drop, and what gets dropped first is usually the uncertainty. Sixteen learners produce sixteen different 180-word syntheses of the same five rows, which is the most persuasive thing you can show a cohort: ask two people to paste theirs into office hours and let everyone see what went missing from each."
   - index: 1
     label: "Ask for the strongest alternative reading"
     type: "prompt"
@@ -28,7 +28,7 @@ steps:
 
       Contradict nothing in the records. Show how different weighting of geography, of outcome definitions, or of verification status could shift the emphasis. After it, add two or three sentences naming which specific weighting choices separate the two readings.
     checkpoint: "The alternative reading is constrained by the same five records, and the file names the weighting choices that distinguish the two versions."
-    facilitator_note: "The failure mode is a contrarian rewrite that quietly invents a sixth consideration. Ask learners to point at the row each claim in the alternative reading rests on; anything that cannot be pointed at is the finding."
+    facilitator_note: "The failure mode is a contrarian rewrite that quietly invents a sixth consideration. The self-check to hand anyone who asks: point at the row each claim in the alternative reading rests on, and treat anything that cannot be pointed at as the finding rather than as a problem with the prompt."
   - index: 2
     label: "Map the gaps as next actions"
     type: "prompt"
@@ -46,7 +46,7 @@ steps:
 
       Then append two lines to `outputs/session-log.md`: which claim in the synthesis was strongest in the prose and weakest in the matrix, and what you changed or would change as a result.
     checkpoint: "Every bracketed ID resolves to a row that supports the claim at that strength, and your session log records the widest gap you found between prose and matrix."
-    facilitator_note: "This is the step that catches the drift the previous three steps introduce. It is also the step learners skip when time is short, so protect it — cut the gap map instead if you must."
+    facilitator_note: "This step catches the drift the previous three introduce, and it is also the one learners drop when they are running out of day — so tell them which to drop instead: the gap map. What they record in the session log here, the widest gap between prose and matrix, is the single most quotable line the module produces and worth asking for in office hours."
   - index: 4
     label: "Check the synthesis"
     type: "observe"
@@ -94,20 +94,33 @@ Write `outputs/archives-processing-plan.md` from the matrix and nothing else:
 Read outputs/archives-evidence-matrix.xlsx from the connected folder and write a processing proposal to outputs/archives-processing-plan.md. Keep it to about 220 words. Organize by decision rather than by material: what can be described now, what cannot be described until something else is resolved, what cannot be opened until it is surveyed, and what no amount of processing will settle. Refer to each body of material as the matrix names it. Use only the matrix — not the accession note, not your own knowledge of archival practice, and nothing outside the connected folder. Do not propose a timeline the matrix gives you no basis for.
 ```
 
-Then ask for the strongest alternative reading, as step 1 does — a different order of priorities built
-from the same rows, contradicting nothing, and a short statement of which weighting choices separate
-the two. Researcher demand against risk of harm is the weighting that will do the most work, and it is
-the one worth arguing about in the room.
+Then ask for the strongest alternative reading — a different order of priorities built from the same
+rows, contradicting nothing:
 
-Append the gap map as step 2 does, in four categories: unmeasured extent, unsurveyed content,
-unresolved rights and conditions, and unreadable formats. Give each one concrete next action and name
-what it requires — a conservator, a records survey, the donor, counsel, imaging equipment, or a
-decision by someone above you. Mark separately anything that cannot be done from the connected folder
-at all, which here will be most of it.
+```cowork-prompt
+Write the strongest plausible alternative ordering of priorities from the same matrix, and append it to outputs/archives-processing-plan.md under the heading "Alternative reading." Contradict nothing in the matrix rows. Show how different weighting of researcher demand, of risk of harm from leaving material undescribed, and of risk of harm from opening material unsurveyed could shift the order. After it, add two or three sentences naming which specific weighting choices separate the two versions.
+```
 
-Then do step 3's check, which is where the drift shows: read the plan against the matrix row by row and
-confirm that nothing described as processable in the prose is marked unresolved in the matrix, and that
-no donor request has become a donor agreement on its way into a sentence.
+Researcher demand against risk of harm is the weighting that will do the most work here, and it is the
+one worth arguing out properly — with yourself on paper now, and with whoever would have to approve
+the plan afterwards.
+
+Then convert the limitations into things somebody could act on:
+
+```cowork-prompt
+Append a gap map to outputs/archives-processing-plan.md under the heading "Gaps and next actions", in four categories: unmeasured extent, unsurveyed content, unresolved rights and conditions, and unreadable formats. For each gap give one concrete next action, and state what it requires — a conservator, a records survey, the donor, counsel, imaging equipment, or a decision by someone with more authority than the processing archivist. Mark separately every action that cannot be done from this connected folder at all.
+```
+
+Then do the check that catches the drift the last three prompts introduced, and do it yourself: open
+`outputs/archives-processing-plan.md` and `outputs/archives-evidence-matrix.xlsx` side by side and read
+the plan against the matrix row by row. Confirm that nothing described as processable in the prose is
+marked unresolved in the matrix, that no extent has acquired a total the matrix does not give it, and
+that no donor request has become a donor agreement on its way into a sentence. Then record what you
+found:
+
+```cowork-prompt
+Append two lines to outputs/session-log.md, under a heading "Module 3 archives plan check", recording exactly what I dictate below: which claim in outputs/archives-processing-plan.md was strongest in the prose and weakest in the matrix, and what I changed or would change as a result. Record it as I state it and do not add a third line of your own.
+```
 
 ## Discussion
 

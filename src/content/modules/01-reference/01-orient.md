@@ -14,18 +14,17 @@ steps:
     prompt_text: |
       List the files you can see in the connected folder, and tell me what you cannot reach.
     checkpoint: "You can state which folder Claude can read and write, and name something outside it that Claude cannot reach."
-    facilitator_note: "Learners coming from ChatGPT or Copilot often expect an upload button. Draw out the difference: a connected folder is standing access to everything inside it, including files added later, rather than a per-message attachment."
+    facilitator_note: "This is where a remote cohort stalls invisibly: a learner showing no progress here almost certainly never got the folder attached, and will not say so. Treat an empty first exercise as a setup problem and send Step 7 of the participant guide rather than waiting for a question. Worth raising in office hours for anyone arriving from ChatGPT or Copilot, who will be looking for an upload button: a connected folder is standing access to everything inside it, including files added later, rather than a per-message attachment."
   - index: 1
     label: "Apply the data-minimization gate"
     type: "observe"
-    instruction: "The folder scope is now the question, not the individual file. Check it before you go further."
+    instruction: "The folder scope is now the question, not the individual file. Check it before you go further. Then hold one question in mind as you work through the list: if you connected a folder from your real work tomorrow, what would be in it that should not be?"
     observe_items:
       - "Everything in the connected folder is simulated and contains no patron identifiers"
       - "No reference transcript, reading history, student record, unpublished manuscript, or licensed full text is anywhere in the folder or its subfolders"
       - "The folder contains nothing you would not want Claude to read"
       - "Your library permits this tool and this configuration for training material"
       - "A non-AI path remains available"
-    reflection_prompt: "If you connected a folder from your real work tomorrow, what would be in it that should not be?"
   - index: 2
     label: "Read the brief and the request"
     type: "prompt"
@@ -49,12 +48,17 @@ steps:
     prompt_text: |
       Create a file called outputs/session-log.md in the connected folder. Put today's date in it and a one-line note that I have started the workshop.
     checkpoint: "The file exists in outputs/, you read the proposed action before approving it, and its contents match what you asked for."
-    facilitator_note: "First encounter with an approval prompt. The habit being built is reading the action rather than clicking through it. If someone approves without reading, that is the teachable moment, not a failure."
+    facilitator_note: "First encounter with an approval prompt, and the habit being built is reading the action rather than clicking through it — which nobody can check for them at a distance. The exercise says so plainly instead. If the session log never appears for a learner, write access or approval is the likely blocker and is worth a direct message. A good office-hours opener is asking what people approved without reading; several will admit it, and the admission is the lesson."
   - index: 4
     label: "Reflect on the boundary"
     type: "reflect"
     instruction: "A connected folder is more capable than an upload button and correspondingly less forgiving. It grants standing read and write access to everything inside it, including files you add later and files you forgot were there."
     reflection_prompt: "What would you need to confirm with your institution before connecting a folder containing real consultation material?"
+  - index: 5
+    label: "One question to take further"
+    type: "reflect"
+    instruction: "Each exercise ends with one question worth more than the ten minutes you have just spent. Answer it here if you want a record of it, or bring it to office hours. Anything you type into a reflection box is saved and visible to your facilitator; anything you leave blank stays blank, and skipping is a legitimate answer."
+    reflection_prompt: "What is actually in the folder you connected, including anything you did not expect to find there?"
 ---
 
 ## Connect the Folder and Set the Boundary
@@ -71,20 +75,30 @@ responsible first move is to know exactly what you have granted.
 
 ## Archives track
 
-This exercise serves archives staff as written, and there is no useful variant to invent. Folder
+This exercise serves archives staff unchanged, and there is no useful variant to invent. Folder
 scope, the approval prompt, and the difference between standing access and a per-message attachment
 are properties of the tool, not of your workflow.
 
-Two substitutions and nothing else. In step 2, read `sample-data/archives/collection-request.txt`
-instead of `sample-data/research-request.txt` — it is a reading room inquiry, and the ambiguity to
-find is about the unit of description rather than the meaning of an outcome. In step 1, add one item
-to the data-minimization checklist: nothing in the folder is a record containing living people's
-names, addresses, household or financial details, or health information, and nothing in it is
-unresolved custody, donor, or rights documentation. Archives folders are the ones most likely to fail
-that test, because the restricted material is usually inside the collection rather than beside it. The
-distinction to carry into your own work is between describing such material and reproducing it: a
-survey note about a restricted series can safely go in front of an assistant, and the series itself
-cannot.
+Two substitutions and nothing else. The first is the request you point Claude at: work from the
+reading room inquiry rather than the faculty request, where the ambiguity to find is about the unit of
+description rather than the meaning of an outcome.
+
+```cowork-prompt
+Read WORKSPACE-BRIEF.md and sample-data/archives/collection-request.txt from the connected folder. Then list:
+1. the requested deliverable,
+2. two privacy or evidence rules from the brief that govern this work, and
+3. one ambiguity in the request that must be clarified before anything is pulled.
+
+Cite the file name after each answer. Use only these two files — no model memory, no web.
+```
+
+The second is one extra item on the data-minimization checklist you work through yourself: nothing in
+the folder is a record containing living people's names, addresses, household or financial details, or
+health information, and nothing in it is unresolved custody, donor, or rights documentation. Archives
+folders are the ones most likely to fail that test, because the restricted material is usually inside
+the collection rather than beside it. The distinction to carry into your own work is between
+describing such material and reproducing it: a survey note about a restricted series can safely go in
+front of an assistant, and the series itself cannot.
 
 ## Discussion
 

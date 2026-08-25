@@ -67,9 +67,18 @@ a restriction, a rights statement, and a creator attribution are all claims. A f
 all in one flat voice, and so does the scan's source table — one register for claims that were checked
 to very different depths. You will build `outputs/archives-description-inventory.xlsx` and
 `outputs/archives-description-ledger.xlsx`, reading both against
-`sample-data/archives/accession-note.txt`, the repository's own record of related material.
+`sample-data/archives/accession-note.txt`, the repository's own record of related material, and
+appending your working notes to the shared `outputs/session-log.md`. The second exercise also reads
+the access point workbook you built in Module 1, `outputs/archives-access-points.xlsx`.
 
-Follow the `## Archives track` section in each exercise. The steps in the frontmatter stay on the
-research scan; the archives section gives you the substitutions.
+Open the **Archives track** card under the steps in each exercise and work it top to bottom instead of
+the numbered steps. The numbered steps stay on the research scan; the card is a complete alternative,
+with a prompt for every file it produces and the checks it expects you to make yourself. Mark the
+numbered steps complete as you go anyway — that is how the site records your progress and offers you
+the next exercise.
+
+Self-paced, as in Module 1: each step names its own time budget and what counts as enough, several
+steps are designed to come back empty, and the closing question of each exercise is the one to save
+for office hours if you want a second opinion on it.
 
 Working on a different agentic desktop? See `docs/OTHER-PLATFORMS.md`.

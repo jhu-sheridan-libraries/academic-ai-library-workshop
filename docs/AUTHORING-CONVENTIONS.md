@@ -228,6 +228,21 @@ keys are copied into neither — they are hand-maintained in the cohort skill on
 analysis, headline findings, and answer-shaped discussion questions belong in a key, and
 `FACILITATOR.md` gets a pointer.
 
+## Discussion sections, and the closing reflect step
+
+`## Discussion` is stripped from the exercise page and rendered only in the `DiscoveryMoment`
+interstitial, which appears only on exercises with `discovery_moment: true`. On the other eight
+exercises, nothing in the section ever reaches a learner. Keep writing it — it is the office-hours
+agenda, and `extractDiscussionHtml()` falls back to rendering the *entire body* if the heading is
+missing from an exercise that has a discovery moment, so the heading must stay exactly `## Discussion`.
+
+But do not rely on it to reach anyone. Every exercise therefore ends with a `reflect` step, and on the
+eight exercises without a discovery moment the last of those is labelled "One question to take
+further": the strongest question from the Discussion section, rewritten so one person can answer it
+alone, plus the standing offer to bring it to office hours instead. Anything typed there is saved and
+visible to the facilitator, which is the course's only channel back from a learner working alone —
+worth saying in the step rather than assuming.
+
 ## Adaptivity: the archives track
 
 The published description promises the module "adapts to learners and presents scenarios and
@@ -241,8 +256,14 @@ it renders for the learner without any schema change. It teaches the same concep
 material. Do not fork the frontmatter steps; the steps stay research-support and the body offers the
 alternative.
 
-Placement: after the main body prose and *before* `## Discussion`, so discussion still closes the
-page. Every section names the fixture it reads and the output file it writes. All sixteen exercises
+Placement in the file is unchanged: after the main body prose and *before* `## Discussion`. The
+exercise page now splits the body on that heading and renders the section in the `ArchivesBonus` card
+*below* the numbered steps — folded shut, never locked, no completion gate. It used to render inline
+above step 0, which cost both audiences: archives learners met the alternative before knowing what it
+was an alternative to, and everyone else read several hundred words of a different scenario before
+reaching the first instruction. The heading must stay exactly `## Archives track` (lowercase t) or the
+section falls back into the introduction, and the module-level `## Archives track` paragraph in
+`module.md` still renders inline, since module pages have no steps. Every section names the fixture it reads and the output file it writes. All sixteen exercises
 carry one. Two of them — M1 e1 and M4 e3 — say plainly that the default exercise already serves
 archives staff and give only the substitutions, because the concept in both is domain-neutral. Say
 that when it is true; a forced variant is worse than none.
@@ -266,7 +287,35 @@ checking arithmetic, or approving an action. `prompt` when a prompt is supplied 
 for a checklist against something already produced. `reflect` for a question with no right answer —
 never supply the answer.
 
+Two `observe` traps, both found in the field on 2026-08-24 and both silent:
+
+**Every item must be honestly tickable.** `ObserveStep` disables its button until every box is
+checked, so an item the material is designed to make *false* traps the learner at a dead button and
+teaches them to certify something untrue. Diagnostic questions about a defective fixture are not
+observe items. Write them as checks the learner performs and records — "You have traced every number
+to a source ID, and noted any that does not trace" — or use `workspace`. Mutually exclusive items
+("if it declined… / if it complied…") are the same bug and belong in a `workspace` instruction.
+
+**`reflection_prompt` is ignored on `observe` steps.** `ObserveStep.svelte` renders `instruction`,
+`observe_items`, and `checkpoint` only. Three questions were written into observe steps and never
+displayed to anyone. Put the question in `instruction`, or make the step `reflect`.
+
 ## Facilitator notes
+
+The course is advertised as self-paced, and `facilitator_note` never reaches the learner page — only
+the facilitator dashboard. So anything a person working alone *needs* has to be in `instruction`:
+how long a step should take, what counts as enough, that a dead end is a legitimate result, and that
+a failure the exercise expects is not their failure. A note that says "timebox firmly, hold them to
+four sources" is guidance for a room; the same step still owes the solo learner a sentence saying
+four is enough. Write both.
+
+**The facilitator is remote.** There is no room to manage, so a note that says "hold the room,"
+"read it aloud," or "assign lines across the group" describes work nobody is in a position to do.
+Write instead for the three things a remote facilitator actually has: the dashboard (what a stall on
+this step looks like, and what it means), a cohort message (what to say before people hit the step),
+and office hours (what to ask for, and which artifact to open). Where a step's outcome varies between
+learners, say so — variation is the best office-hours material the course produces, and it only exists
+because people work apart.
 
 `facilitator_note` is internal and must not read as an answer key. Use it for what a facilitator
 needs to *do*: where learners stall, what to timebox, which dependency breaks if the step is

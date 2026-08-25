@@ -43,16 +43,51 @@ that feels like, because in Module 4 you will write one.
 
 ## Archives track
 
-If you work in archives or special collections, each exercise carries an `## Archives track` section
-below the steps. Follow the steps as written where they are about the tool, and follow the archives
-section where the material matters — it teaches the same thing on archival records and names the file
-you produce. The default exercises run on a faculty research request; the archives track runs on a
-reading room inquiry.
+If you work in archives or special collections, every exercise carries an **Archives track** card
+underneath its numbered steps. It is folded shut until you open it, it is never locked, and you can
+open it at any point in the exercise. Work that card top to bottom instead of the numbered steps: it
+teaches the same thing on archival records, names every file it reads, and gives you the prompt for
+every file it produces. The default exercises run on a faculty research request; the archives track
+runs on a reading room inquiry.
 
-In this module you will use `sample-data/archives/collection-request.txt` and, from the third exercise,
+One practical note, and it holds for all four modules. This site records your progress from the
+numbered steps and will not offer you the next exercise until they are all marked complete. So as you
+finish each piece of the archives work, mark the matching numbered step complete. Otherwise you will
+reach the end of the day with nothing recorded and no way forward.
+
+In this module you will read `sample-data/archives/collection-request.txt` and, from the third exercise,
 `sample-data/archives/finding-aid-draft.md` and `sample-data/archives/accession-note.txt`. Your outputs
 are `outputs/archives-request-brief.md`, `outputs/archives-access-points.xlsx`, and
-`outputs/archives-researcher-followup.md`. The session log is shared with the research track.
+`outputs/archives-researcher-followup.md`. The session log, `outputs/session-log.md`, is shared with
+the research track.
+
+The first exercise is the exception: it is about the connected folder and the approval prompt, so its
+archives section gives you two substitutions and says plainly that the rest stands.
+
+## How This Runs
+
+You do this alone, at your own pace, in your own week. There is no room to keep up with and nobody
+waiting on you.
+
+That has consequences worth knowing at the start. Every step tells you roughly how long it should
+take and what counts as a complete answer, because there is no one beside you to say "that's enough,
+move on" — where a step says four sources or three revisions or five minutes, take it literally. Some
+steps are designed to fail: a record that comes back empty, a citation that cannot be found, a skill
+that does not load. Where that is expected, the step says so. If something looks like it went wrong
+and nothing tells you it was meant to, that one is worth asking about.
+
+Stopping partway is fine. Your place is saved, and the work you produce is a set of files on your own
+disk rather than a conversation you have to keep alive.
+
+Your facilitator is remote. They can see which steps you have marked complete and anything you type
+into a reflection box, and nothing else — no prompts, no conversations, no files. That visibility
+exists so they can tell where people are getting stuck without asking. Reflection boxes are optional
+throughout; skipping one is a legitimate answer.
+
+Each exercise ends with a question worth more than the exercise. Answer it in the box, or save it for
+the optional walkthrough or the office hours listed in your invitation. Two things are worth bringing
+to a person rather than solving alone: anything where your own library's policy is the answer, and
+anything where you want to know whether a colleague got the same result you did.
 
 ## Before You Begin
 

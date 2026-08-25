@@ -95,6 +95,13 @@ Human review
 					>Set up Claude first</a
 				> — about twenty minutes, once.
 			</p>
+			<p class="mx-auto mt-3 max-w-lg text-[0.8125rem] leading-6 text-gray-400">
+				You work through this alone and at your own pace. Each step says how long it should take and
+				what counts as enough, and stopping partway is fine — your place is saved. Your facilitator is
+				remote: they can see which steps you have completed and anything you type into a reflection
+				box, which is how they know where people are getting stuck. Bring whatever will not resolve
+				itself to the optional walkthrough or the office hours in your invitation.
+			</p>
 			<div class="mx-auto mt-6 h-px w-10 bg-jhu-gold"></div>
 		</div>
 
