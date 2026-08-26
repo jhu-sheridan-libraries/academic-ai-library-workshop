@@ -65,7 +65,7 @@ steps:
     label: "Install it"
     type: "workspace"
     instruction: |
-      Open `outputs/reproducible-search-handoff.skill` - the same way you opened the two skills your facilitator sent you during setup. Claude shows a card for the file with a **Save skill** button.
+      Open `outputs/reproducible-search-handoff.skill` - the same way you opened the two skills from the `skills/` folder during setup. Claude shows a card for the file with a **Save skill** button.
 
       Before you click it, read the card. It is telling you what you are about to give standing availability to, and it is your own file, so this is the one time you know exactly what is in it.
 
@@ -225,7 +225,7 @@ remediation are archivist decisions with institutional consequences, and a skill
 worse than no skill. Open the file and confirm both are still there in the words you meant, and that
 your description was not quietly improved.
 
-**Install it.** Open the `.skill` file, the same way you opened the two skills your facilitator sent you
+**Install it.** Open the `.skill` file, the same way you opened the two skills from the `skills/` folder
 during setup. Claude shows a card with a **Save skill** button. Read the card before you click it - this
 is the one time you know exactly what you are giving standing availability to, because you wrote it.
 Then click **Save skill**.
