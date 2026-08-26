@@ -29,7 +29,7 @@ Collect these items. Three of them come from your facilitator on a credential ca
 | A Bedrock bearer token | Facilitator's credential card | One long unbroken string of characters |
 | An AWS region | Facilitator's credential card | Something like `us-east-1` |
 | A model card identifier | Facilitator's credential card | `anthropic.claude-sonnet-5` unless your card says otherwise |
-| Two practice skills | Facilitator, sent separately | Two files whose names end in `.skill`; you install them in Step 8 |
+| Two practice skills | Included in the workshop folder download | Two files in `skills/` whose names end in `.skill`; you install them in Step 8 |
 
 You also need the workshop folder on your computer. Download it yourself from the workshop repository's releases page:
 
@@ -39,7 +39,7 @@ Take the file called **`library-context.zip`**, unzip it, and note where it live
 
 **Download the release asset, not the whole repository.** Cloning or downloading the repository gets you the application source code, the facilitator's materials, and a set of notes that spoil several exercises. It is also far larger than you need. The zip on the releases page contains exactly the workshop folder and nothing else, which is the point — and connecting the narrowest folder that holds what you need is a habit the first exercise is about.
 
-**What the workshop provides, and what you bring.** The workshop provides the three items on the credential card — the Bedrock bearer token, the region, and the model card identifier — and the two practice skills. That is all. The Claude account is your own, and a free one is fine: the workshop's Bedrock key pays for the model usage, so you are not being asked to buy anything.
+**What the workshop provides, and what you bring.** The workshop provides the three items on the credential card — the Bedrock bearer token, the region, and the model card identifier. The two practice skills are included in the workshop folder download. The Claude account is your own, and a free one is fine: the workshop's Bedrock key pays for the model usage, so you are not being asked to buy anything.
 
 If your computer is managed by your institution, it is worth signing in and confirming you can create a project before you install anything, since a managed account can have restrictions you cannot change from your own settings. If you hit one, send your facilitator a screenshot before going further.
 
@@ -183,6 +183,10 @@ If you see other models already listed, you can leave them. What matters is that
 
 Two of those fields are marked with a red asterisk — the region and the bearer token. Those are the ones the panel will not let you leave blank.
 
+### Set model effort to Low or Medium
+
+Once the model is configured, look for a **Model effort** or **Thinking effort** setting in the same area (it may appear as a slider, a dropdown, or a toggle labelled "Extended thinking"). Set it to **Low** or **Medium**. The workshop exercises are short, focused tasks where a lower effort setting produces faster, cheaper responses without any loss in quality. You can always raise it later if a particular task seems to need it, but for normal workshop use Low or Medium is the right default.
+
 The application is updated often and the wording of these labels may drift. Match by meaning rather than by exact phrase: one field chooses the provider, one chooses how the credential is supplied, one takes the region, one takes the key, and one names the model.
 
 > **Figure 7 — The Developer menu**
@@ -229,7 +233,8 @@ The application is updated often and the names and positions of things move, so 
 
 1. Create a new project, or open an existing one you are happy to use for the workshop.
 2. Attach the workshop folder to that project, using whatever option it offers for adding a local folder. Select the `library-context` folder you unzipped earlier — the one that directly contains `WORKSPACE-BRIEF.md` and `sample-data`, not the folder above it — then confirm. You may be asked to approve the folder; that prompt is expected.
-3. Check the path Claude shows you. It should be the workshop folder, not your whole Documents folder and not your home directory. Claude can create and change files anywhere inside the folder you give it, so give it the narrowest folder that contains what you need.
+3. **If the folder does not appear or you receive a permissions error**, you may need to add it (or a parent folder) to your **Trusted Cowork folders**. Open **Settings → Cowork**, find the **Trusted Cowork folders** section, click **Manage**, then **+ Add folder** and select the folder that contains your workshop material (for example, your Documents folder or user folder). Click **Done**. Cowork tasks may use these folders and everything inside them without asking first, so choose the narrowest parent that covers where you put the workshop folder. Once the trust is set, try attaching the folder again.
+4. Check the path Claude shows you. It should be the workshop folder, not your whole Documents folder and not your home directory. Claude can create and change files anywhere inside the folder you give it, so give it the narrowest folder that contains what you need.
 4. Confirm it worked before moving on. Ask Claude: `List the files you can see in the attached folder.` You should get `WORKSPACE-BRIEF.md` and a `sample-data` folder. If you get nothing, or a list of unrelated files, the wrong folder is attached — see the troubleshooting table.
 
 Inside the folder you will find `WORKSPACE-BRIEF.md`, which sets the standards Claude works to throughout the workshop, and a `sample-data` folder holding the simulated material the exercises use — a research request, an evidence log, a serials usage report, a draft AI research report, and a retrieved web page. Inside that there are three subfolders. `mock-sources/` holds the captured retrieval result for each citation in the draft report, so you check sources by opening a file rather than by going online. `mock-database/` holds a fictional search platform's syntax help, thesaurus extract, search session history, and name authority file, which is what Module 4 tests search syntax and authorized name forms against. `archives/` holds a reading room inquiry, a legacy finding aid, a digitization inventory, and an accession note; if you work in archives or special collections, those are the files your track uses. All of it is invented for teaching. Your own work will be written into this folder as you go, so by the end it also holds the briefs, matrices, logs, and records you produced.
@@ -251,11 +256,14 @@ Note that none of this requires Developer Mode. You enabled Developer Mode only 
 
 ## Step 8 — Add the two practice skills
 
-Two of the workshop exercises are run by *skills* rather than by instructions you read off a page — the reference interview in Module 1 and the output review in Module 2. A skill is a set of instructions Claude loads by itself when it recognises the kind of task you are describing. Once a skill is saved you never have to name a file or paste anything in: you describe what you want in ordinary words and Claude picks it up.
+Two of the workshop exercises use *skills* — the reference interview in Module 1 and the output review in Module 2. A skill is a set of instructions Claude loads by itself when it recognises the kind of task you are describing. Once a skill is saved you never have to name a file or paste anything in: you describe what you want in ordinary words and Claude picks it up.
 
 Skills matter beyond those two exercises, which is why they are worth installing properly rather than treating as a formality. By the end of Module 4 you will write one yourself, turning the workflow you have built over the day into something your colleagues can load and use. The two below are the worked examples you learn from first.
 
-Your facilitator will send you two files whose names end in `.skill`.
+Both skill files are already in your workshop folder, inside the `skills/` subfolder:
+
+- `skills/practice-library-reference-interview.skill`
+- `skills/review-ai-research-output.skill`
 
 **Practice a library reference interview.** Claude plays a fictional patron while you practise the interview. It holds back the things a real patron would not think to volunteer, so you have to ask for the details that actually change a search, and it introduces at most one complication once you have established the core need. When you are done it steps out of character and debriefs what worked, which question came too late, and where a privacy or access boundary came up. It does not score you, and it does not run the search — the interview itself is the exercise.
 
@@ -263,11 +271,13 @@ Your facilitator will send you two files whose names end in `.skill`.
 
 To install each one:
 
-1. Save both files somewhere you can find them again.
-2. Open one of them. Claude shows a card for the file with a **Save skill** button.
-3. Click **Save skill**, then do the same for the second file.
+1. In Claude, open the project you created in Step 7.
+2. Use your system's file browser (Finder on macOS, Explorer on Windows) to navigate to the `skills/` folder inside your workshop folder.
+3. Open (double-click) `practice-library-reference-interview.skill`. Claude shows a card for the file with a **Save skill** button.
+4. Click **Save skill**.
+5. Do the same for `review-ai-research-output.skill`.
 
-Both skills are then available in every conversation, including ones you have already started.
+Both skills are then available in every conversation in the project, including ones you have already started.
 
 To use them, describe the task rather than naming the skill:
 
@@ -309,11 +319,12 @@ If you would rather not use the site, the exercises are also readable as plain M
 | An error naming the model, or saying a model was not found | The model card identifier does not match, or the region does not offer it | Re-enter both the model card and the region exactly as printed on the card. The default is `anthropic.claude-sonnet-5`, with no region prefix — older instructions showed a longer identifier beginning `us.`, and that form is out of date |
 | A quota, throttling, or rate limit message | The workshop account is busy, or your key's allowance is exhausted | Wait a minute and try again; if it persists, tell your facilitator, who can check the account |
 | No way to attach a local folder to a project | Usually a restriction on an institution-managed account, not your plan — a free account is enough | Send your facilitator a screenshot of the window; this is fixed on their side |
+| The folder is visible but Claude cannot use it, or attaching it fails silently | The folder is not listed under Trusted Cowork folders | Open Settings → Cowork → Trusted Cowork folders → Manage, click + Add folder, and add the folder (or a parent such as your user folder). Then try attaching again |
 | The instructions do not match what you see | The application has been updated and things have moved | Look for the same idea under a different name — a project, and an option to add a local folder to it. Tell your facilitator what you see; the guide may need correcting |
 | Claude cannot see the workshop files | A different folder was attached, or the archive was never unzipped | Confirm the archive is unzipped, then attach again, selecting the `library-context` folder itself — the one directly containing `WORKSPACE-BRIEF.md`. Selecting the folder one level above is the usual mistake |
 | Claude lists far more files than expected, including source code | You connected a clone of the whole repository rather than the workshop folder | Download `library-context.zip` from the releases page instead, and connect that folder. The repository contains notes that spoil several exercises |
 | Windows blocks the installer and offers no "Run anyway" | Your institution manages this computer and restricts installations | Contact your IT service desk, or use a personal machine for the workshop |
-| No **Save skill** button when you open a `.skill` file | The file was altered in transit, or it was unzipped before being opened | Ask your facilitator to resend it, ideally as a download link rather than a mail attachment, and open the `.skill` file itself rather than its contents |
+| No **Save skill** button when you open a `.skill` file | The file was corrupted during download, or you opened the folder rather than the `.skill` file itself | Re-download `library-context.zip` from the releases page, unzip it fresh, and open the `.skill` file from inside `skills/` |
 | A saved skill never seems to trigger | The request did not read as the kind of task the skill is for | Name it directly, as in "use the reference interview practice skill", and tell your facilitator which wording failed |
 
 When you write to your facilitator, a screenshot of the error is worth several paragraphs of description. Cover or crop the API key first.

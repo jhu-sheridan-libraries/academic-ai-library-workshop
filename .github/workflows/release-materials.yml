@@ -9,6 +9,9 @@ on:
     branches: [jhu-main]
     paths:
       - 'src/content/library-context/**'
+      - 'plugins/library-ai-workshop-facilitator/skills/practice-library-reference-interview/**'
+      - 'plugins/library-ai-workshop-facilitator/skills/review-ai-research-output/**'
+      - 'scripts/package-workshop-skills.sh'
   workflow_dispatch:
 
 permissions:
@@ -19,6 +22,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
+
+      - name: Package practice skills
+        run: bash scripts/package-workshop-skills.sh src/content/library-context/skills
 
       - name: Package library-context
         run: |
