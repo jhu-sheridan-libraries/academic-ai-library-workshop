@@ -22,6 +22,9 @@ repo_root="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 skills_root="$repo_root/plugins/library-ai-workshop-facilitator/skills"
 out_dir="${1:-$repo_root/dist-skills}"
 
+# Resolve to absolute so the path remains correct inside subshells that cd.
+out_dir="$(mkdir -p "$out_dir" && cd "$out_dir" && pwd)"
+
 # The other two skills in the plugin (facilitate-, run-cohort-) are for
 # facilitators and are not distributed this way.
 skills=(practice-library-reference-interview review-ai-research-output)
@@ -30,8 +33,6 @@ if ! command -v zip >/dev/null 2>&1; then
   echo "error: zip is required but was not found on PATH" >&2
   exit 1
 fi
-
-mkdir -p "$out_dir"
 
 for skill in "${skills[@]}"; do
   src="$skills_root/$skill"
