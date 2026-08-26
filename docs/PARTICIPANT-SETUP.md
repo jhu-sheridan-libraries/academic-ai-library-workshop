@@ -329,6 +329,8 @@ If you would rather not use the site, the exercises are also readable as plain M
 
 When you write to your facilitator, a screenshot of the error is worth several paragraphs of description. Cover or crop the API key first.
 
+If you get stuck on any setup step, you can also ask Claude for help directly: type `/setup-cowork` in a conversation and it will walk you through the configuration interactively.
+
 ---
 
 ## What Developer Mode actually does
